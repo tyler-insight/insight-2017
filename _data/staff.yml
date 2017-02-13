@@ -2,9 +2,9 @@
   job_title: President
   bio: "As founder of the agency, Jim has overseen the growth and success of Insight since 1988. His client-centered approach and thorough study of clients and their industries set the stage for Insight’s long relationships with a diverse list of established clients including retail, consumer and business-to-business. A UW-Green Bay graduate, Jim’s desire to offer comprehensive marketing communications capabilities makes him—and Insight—unique in our area."
   color: red
-  image-1: /img/employees/bart-1.png
-  image-2: /img/employees/bart-2.png
-  image-3: /img/employees/bart-3.png
+  image-1: /img/employees/bart/bart-1.png
+  image-2: /img/employees/bart/bart-2.png
+  image-3: /img/employees/bart/bart-3.png
 
 - name: Niki Petit
   job_title: Director of Business Development
