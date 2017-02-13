@@ -2,71 +2,110 @@
   job_title: President
   bio: "As founder of the agency, Jim has overseen the growth and success of Insight since 1988. His client-centered approach and thorough study of clients and their industries set the stage for Insight’s long relationships with a diverse list of established clients including retail, consumer and business-to-business. A UW-Green Bay graduate, Jim’s desire to offer comprehensive marketing communications capabilities makes him—and Insight—unique in our area."
   color: red
-  image-1: /img/employees/bart/bart-1.png
-  image-2: /img/employees/bart/bart-2.png
-  image-3: /img/employees/bart/bart-3.png
+  image1: /img/employees/bart/bart-1.png
+  image2: /img/employees/bart/bart-2.png
+  image3: /img/employees/bart/bart-3.png
 
 - name: Niki Petit
   job_title: Director of Business Development
   bio: "Niki brings a strong background in business, radio and media negotiation, as well as practical marketing savvy, to her account management role. Clients rely on Niki for an honest assessment of their needs and expert strategic direction. A graduate of the University of Wisconsin, her never-ending drive and commitment to her clients makes her a leader and an integral part of Insight’s success."
-  image: /img/niki-new.jpg
+  color: yellow
+  image1: /img/employees/bart/bart-1.png
+  image2: /img/employees/bart/bart-2.png
+  image3: /img/employees/bart/bart-3.png
 
 - name: Stacy Allen
   job_title: Director of Brand Strategy
   bio: "After more than a dozen years at several Milwaukee-area agencies and manufacturers, Stacy is responsible for brand development and copywriting at Insight. A graduate of the University of Wisconsin, she has provided strategic planning and award-winning creative executions for a variety of clients including national foodservice, heavy equipment and pharmaceuticals manufacturers for over two decades."
-  image: /img/stacy.jpg
+  color: blue
+  image1: /img/employees/bart/bart-1.png
+  image2: /img/employees/bart/bart-2.png
+  image3: /img/employees/bart/bart-3.png
 
 - name: Jay Bauer
   job_title: Creative Director
   bio: "After several years at Milwaukee and Fox Valley ad agencies, Jay made the jump north and brought his award-winning concepts, design skills, technical savvy and creative management experience to Insight. His understanding of current design and marketing trends and comprehensive approach to projects make him a natural creative leader. Jay combines more than 20 years of experience with a degree from UW-Milwaukee."
-  image: /img/jay.jpg
+  color: black
+  image1: /img/employees/bart/bart-1.png
+  image2: /img/employees/bart/bart-2.png
+  image3: /img/employees/bart/bart-3.png
 
 - name: Andy VanRemortel
   job_title: Media Director/Account Executive
   bio: "Andy brings over 20 years of marketing, media buying and client services experience to his management role at insight. His outgoing personality makes him approachable and easy to work with on all projects, from big picture strategy to daily tasks. Andy’s well-rounded experience—including in-house marketing coordination, media buying with a Green Bay ad agency and ad sales at TV stations and newspapers—gives him a unique and knowledgeable perspective to ensure Insight clients get the most from their media budgets. Andy holds a marketing degree from the University of Wisconsin—Whitewater."
-  image: /img/andy.jpg
+  color: darkgray
+  image1: /img/employees/bart/bart-1.png
+  image2: /img/employees/bart/bart-2.png
+  image3: /img/employees/bart/bart-3.png
 
 - name: Cindy Struensee
   job_title: Business Director
   bio: "Cindy oversees job traffic, making sure jobs move efficiently through the agency — and stay within budget — as well as handling billing and accounting services. She has a degree in accounting from Fox Valley Technical College and previously worked her way up at Ideas that Deliver as accountant, traffic manager and finally business director. Cindy brings over 25 years of agency experience to her position at Insight."
-  image: /img/cindy.jpg
+  color: orange
+  image1: /img/employees/bart/bart-1.png
+  image2: /img/employees/bart/bart-2.png
+  image3: /img/employees/bart/bart-3.png
 
 - name: Molly Setzer
   job_title: Senior Media Buyer
   bio: "Molly brings years of TV station, video production and creative copywriting experience to her media role at Insight. With wide-ranging broadcast knowledge, and an impressive gift for organization, Molly ensures every detail is accounted for in our clients’ media buys. A UW-Green Bay graduate, Molly’s professional talents are well complemented by her outgoing personality and upbeat attitude."
-  image: /img/molly.jpg
+  color: purple
+  image1: /img/employees/bart/bart-1.png
+  image2: /img/employees/bart/bart-2.png
+  image3: /img/employees/bart/bart-3.png
 
 - name: Andrea Lasecki
   job_title: Senior Social Media Specialist
   bio: "Andrea leads Insight's social media efforts on behalf of many clients. She has a wealth of experience in national social media strategies in the sports and entertainment industries in addition to a natural curiosity and strong understanding of emerging digital trends. Andrea graduated from the University of Wisconsin with a degree in Life Sciences Communication."
-  image: /img/andrea.jpg
+  color: pink
+  image1: /img/employees/bart/bart-1.png
+  image2: /img/employees/bart/bart-2.png
+  image3: /img/employees/bart/bart-3.png
 
 - name: Jenny Brandenburg
   job_title: Media Buyer
   bio: "Formerly an account relationship specialist at the Oshkosh Northwestern, Jenny brings over five years of experience in news, media, ad sales and customer relations to her role at Insight. Possessing a can-do attitude, keen attention to detail and natural talent for organization, Jenny is a valuable part of the media department at Insight. She holds a journalism degree from UW-Oshkosh, with an emphasis in advertising/public relations."
-  image: /img/jenny-new.jpg
+  color: darkblue
+  image1: /img/employees/bart/bart-1.png
+  image2: /img/employees/bart/bart-2.png
+  image3: /img/employees/bart/bart-3.png
 
 - name: Jen Haas
   job_title: Account Executive
   bio: "Jen brings diverse client relations experience, meticulous organization skills and strategic focus to her Account Executive role at Insight. As an Account Manager/Producer in her previous position, Jen managed projects and guided clients through the creative process. She currently serves in a leadership role at PRSA Northeast Wisconsin, Club Red of Northeast Wisconsin and Current-Young Professionals Network. Jen holds a degree from the University of Wisconsin in communications with an emphasis in mass media studies."
-  image: /img/jen.jpg
+  color: midblue
+  image1: /img/employees/bart/bart-1.png
+  image2: /img/employees/bart/bart-2.png
+  image3: /img/employees/bart/bart-3.png
 
 - name: Bart Raboin
   job_title: Interactive/Web Designer
   bio: "As an interactive designer, Bart’s responsibilities include website design, development and programming along with the implementation of interactive media. A graduate of Northern Michigan University, he previously worked at Bearing Point and as a web developer for Shopko Corporation. Bart has done significant freelance web development, taking many websites from concept to layout to programming and completion."
-  image: /img/bart.jpg
+  color: brown
+  image1: /img/employees/bart/bart-1.png
+  image2: /img/employees/bart/bart-2.png
+  image3: /img/employees/bart/bart-3.png
 
 - name: Zane Statz
   job_title: Graphic Designer/Web Developer
   bio: "Zane held a design internship position with St. Norbert College creating promotional materials for over 60 student organizations while also doing freelance design work for bands across the country. His detail-oriented and innovative creative skills, plus his passion for both print and web design, make Zane a great fit for Insight’s art department and diverse client base. He is a graduate of St. Norbert College holding a degree in graphic design, with a minor in business administration."
-  image: /img/zane-new.jpg
+  color: green
+  image1: /img/employees/zane/zane-1.png
+  image2: /img/employees/zane/zane-2.png
+  image3: /img/employees/zane/zane-3.png
 
 - name: Tyler Bramer
   job_title: Graphic Designer/Web Developer
   bio: "Tyler's passion for creativity pushes his design and development skills to the edge. As a graduate of UW-Green Bay, he has also developed a passion for fine arts and photography. With his wide skill set&mdash;including print, web, 3D and photography&mdash;Tyler is the Swiss Army knife of design. Aside from the dedication to his work, he tries to bring as much fun to the workplace as he can."
-  image: /img/tyler.jpg
+  color: malechite
+  image1: /img/employees/bart/bart-1.png
+  image2: /img/employees/bart/bart-2.png
+  image3: /img/employees/bart/bart-3.png
 
 - name: Jennifer Rogers
   job_title: Copywriter/PR Specialist
   bio: "Jennifer brings a unique blend of corporate and agency experience in her role as copywriter and public relations specialist. As an essential part of the content department, she is able to showcase her diverse writing, creativity and expertise throughout all of her efforts. Jennifer holds a degree from UW-Whitewater in public relations, with an emphasis in journalism."
-  image: /img/jennifer.jpg
+  color: magenta
+  image1: /img/employees/bart/bart-1.png
+  image2: /img/employees/bart/bart-2.png
+  image3: /img/employees/bart/bart-3.png
