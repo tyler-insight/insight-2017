@@ -1275,7 +1275,7 @@ img {
 
 .nav-trigger {
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   right: 5%;
   top: 40px;
   height: 54px;
@@ -1373,7 +1373,7 @@ img {
     width: 100vw;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    z-index: 99;
+    z-index: 100;
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
@@ -1391,7 +1391,7 @@ img {
         -webkit-transform: translateX(100%);
         transform: translateX(100%); } }
     .cd-primary-nav .cd-navigation-wrapper > ul {
-      z-index: 2;
+      z-index: 1000;
       left: 0;
       width: 100%;
       margin-right: 0;
@@ -1866,7 +1866,7 @@ img {
 
 .intro h1 {
   position: relative;
-  z-index: 200;
+  z-index: 1;
   display: table-cell;
   text-align: center;
   vertical-align: middle;

@@ -8,6 +8,7 @@ $(function () {
     $(document).on('click', 'a', function (e) {
         e.preventDefault();
         $("html, body").animate({ scrollTop: 0 }, 0);
+        $('.cd-auto-hide-header').removeClass('nav-open');
         var $this = $(this),
             url = $this.attr("href"),
             title = $this.text();

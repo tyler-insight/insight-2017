@@ -124,7 +124,7 @@
 }
 .nav-trigger {
     position: fixed;
-    z-index:100;
+    z-index:1000;
     right: 5%;
     top: 40px;
     height: 54px;
@@ -236,7 +236,7 @@
         width: 100vw;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        z-index:99;
+        z-index:100;
         /* Force Hardware Acceleration in WebKit */
         @include transform(translateZ(0));
         -webkit-backface-visibility: hidden;
@@ -252,7 +252,7 @@
         }
 
         > ul {
-            z-index: 2;
+            z-index:1000;
             left: 0;
             width: 100%;
             margin-right: 0;
