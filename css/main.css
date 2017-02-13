@@ -1397,7 +1397,8 @@ img {
       margin-right: 0;
       background: #d31145;
       height: 100vh;
-      padding-top: 40px; }
+      padding-top: 40px;
+      position: absolute; }
       .cd-primary-nav .cd-navigation-wrapper > ul a {
         /* target primary-nav links */
         display: inline-block;

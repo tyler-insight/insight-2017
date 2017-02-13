@@ -7,9 +7,9 @@ title: Culture
 
     <div class="intro">
         <div id="slideshow">
-            <img src="../img/culture/header-1.jpg">
-            <img src="../img/culture/header-2.jpg">
-            <img src="../img/culture/header-3.jpg">
+            <img src="../culture/header-1.jpg">
+            <img src="../culture/header-2.jpg">
+            <img src="../culture/header-3.jpg">
         </div>
         <h1 class="headline slide">
         <span>We</span>
@@ -24,17 +24,17 @@ title: Culture
     <!--
     <div class="snapshots">
         <h1>Snapshots</h1>
-        <img class="image-1" data-aos="fade-up" src="../img/culture/culture-1.jpg">
-        <img class="image-2" data-aos="fade-up" src="../img/culture/culture-3.jpg">
-        <img class="image-3" data-aos="fade-up" src="../img/culture/culture-5.jpg">
-        <img class="image-4" data-aos="fade-up" src="../img/culture/culture-7.jpg">
-        <img class="image-5" data-aos="fade-up" src="../img/culture/culture-9.jpg">
-        <img class="image-6" data-aos="fade-up" src="../img/culture/culture-11.jpg">
-        <img class="image-7" data-aos="fade-up" src="../img/culture/culture-2.jpg">
-        <img class="image-8" data-aos="fade-up" src="../img/culture/culture-4.jpg">
-        <img class="image-9" data-aos="fade-up" src="../img/culture/culture-6.jpg">
-        <img class="image-10" data-aos="fade-up" src="../img/culture/culture-8.jpg">
-        <img class="image-11" data-aos="fade-up" src="../img/culture/culture-10.jpg">
+        <img class="image-1" data-aos="fade-up" src="../culture/culture-1.jpg">
+        <img class="image-2" data-aos="fade-up" src="../culture/culture-3.jpg">
+        <img class="image-3" data-aos="fade-up" src="../culture/culture-5.jpg">
+        <img class="image-4" data-aos="fade-up" src="../culture/culture-7.jpg">
+        <img class="image-5" data-aos="fade-up" src="../culture/culture-9.jpg">
+        <img class="image-6" data-aos="fade-up" src="../culture/culture-11.jpg">
+        <img class="image-7" data-aos="fade-up" src="../culture/culture-2.jpg">
+        <img class="image-8" data-aos="fade-up" src="../culture/culture-4.jpg">
+        <img class="image-9" data-aos="fade-up" src="../culture/culture-6.jpg">
+        <img class="image-10" data-aos="fade-up" src="../culture/culture-8.jpg">
+        <img class="image-11" data-aos="fade-up" src="../culture/culture-10.jpg">
     </div>
   -->
 
@@ -48,9 +48,22 @@ title: Culture
     </div>
 
     <div class="employees">
-        <div class="employee images-rotation" data-color="red" data-images='["img/culture/zane/zane-1.png", "img/culture/zane/zane-2.png", "img/culture/zane/zane-3.png"]'>
+      {% for staff in site.data.staff %}
+      <div class="employee images rotation" data-color="{{ staff.color }}" data-images='["{{ staff.image-1 }}", "{{ staff.image-2 }}", "{{ staff.image-3 }}"]'>
+        <div class="employee-left">
+          <img src="{{ staff.image-1 }}" />
+        </div>
+        <div class="bio">
+          <h1>{{ staff.name }}</h1>
+          <h2>{{ staff.job_title }}</h2>
+          <p>{{ staff.bio }}</p>
+        </div>
+      </div>
+      {% endfor %}
+      <!--
+        <div class="employee images-rotation" data-color="red" data-images='["/img/employees/zane/zane/zane-1.png", "/img/employees/zane/zane/zane-2.png", "/img/employees/zane/zane/zane-3.png"]'>
             <div class="employee-left">
-                <img src="img/culture/zane/zane-1.png" alt="">
+                <img src="/img/employees/zane/zane/zane-1.png" alt="">
             </div>
 
             <div class="bio">
@@ -62,8 +75,8 @@ title: Culture
             </div>
         </div>
         <div class="employee employee-right" data-color="yellow">
-            <div class="images-rotation" data-images='["img/culture/zane/bart-1.png", "img/culture/zane/bart-2.png", "img/culture/zane/bart-3.png"]'>
-                <img src="img/culture/zane/bart-1.png" alt="">
+            <div class="images-rotation" data-images='["/img/employees/zane/zane/bart-1.png", "/img/employees/zane/zane/bart-2.png", "/img/employees/zane/zane/bart-3.png"]'>
+                <img src="/img/employees/zane/zane/bart-1.png" alt="">
             </div>
             <div class="bio">
                 <h1>Niki Petit</h1>
@@ -73,8 +86,8 @@ title: Culture
             </div>
         </div>
         <div class="employee employee-left" data-color="blue">
-            <div class="images-rotation" data-images='["img/culture/zane/zane-1.png", "img/culture/zane/zane-2.png", "img/culture/zane/zane-3.png"]'>
-                <img src="img/culture/zane/zane-1.png" alt="">
+            <div class="images-rotation" data-images='["/img/employees/zane/zane/zane-1.png", "/img/employees/zane/zane/zane-2.png", "/img/employees/zane/zane/zane-3.png"]'>
+                <img src="/img/employees/zane/zane/zane-1.png" alt="">
             </div>
             <div class="bio">
                 <h1>Stacy Allen</h1>
@@ -84,8 +97,8 @@ title: Culture
             </div>
         </div>
         <div class="employee employee-right" data-color="black">
-            <div class="images-rotation" data-images='["img/culture/zane/bart-1.png", "img/culture/zane/bart-2.png", "img/culture/zane/bart-3.png"]'>
-                <img src="img/culture/zane/bart-1.png" alt="">
+            <div class="images-rotation" data-images='["/img/employees/zane/zane/bart-1.png", "/img/employees/zane/zane/bart-2.png", "/img/employees/zane/zane/bart-3.png"]'>
+                <img src="/img/employees/zane/zane/bart-1.png" alt="">
             </div>
             <div class="bio">
                 <h1>Jay Bauer</h1>
@@ -95,8 +108,8 @@ title: Culture
             </div>
         </div>
         <div class="employee employee-left" data-color="darkgray">
-            <div class="images-rotation" data-images='["img/culture/zane/zane-1.png", "img/culture/zane/zane-2.png", "img/culture/zane/zane-3.png"]'>
-                <img src="img/culture/zane/zane-1.png" alt="">
+            <div class="images-rotation" data-images='["/img/employees/zane/zane/zane-1.png", "/img/employees/zane/zane/zane-2.png", "/img/employees/zane/zane/zane-3.png"]'>
+                <img src="/img/employees/zane/zane/zane-1.png" alt="">
             </div>
             <div class="bio">
                 <h1>Andy VanRemortel</h1>
@@ -107,8 +120,8 @@ title: Culture
             </div>
         </div>
         <div class="employee employee-right" data-color="orange">
-            <div class="images-rotation" data-images='["img/culture/zane/bart-1.png", "img/culture/zane/bart-2.png", "img/culture/zane/bart-3.png"]'>
-                <img src="img/culture/zane/bart-1.png" alt="">
+            <div class="images-rotation" data-images='["/img/employees/zane/zane/bart-1.png", "/img/employees/zane/zane/bart-2.png", "/img/employees/zane/zane/bart-3.png"]'>
+                <img src="/img/employees/zane/zane/bart-1.png" alt="">
             </div>
             <div class="bio">
                 <h1>Cindy Struensee</h1>
@@ -118,8 +131,8 @@ title: Culture
             </div>
         </div>
         <div class="employee employee-left" data-color="purple">
-            <div class="images-rotation" data-images='["img/culture/zane/zane-1.png", "img/culture/zane/zane-2.png", "img/culture/zane/zane-3.png"]'>
-                <img src="img/culture/zane/zane-1.png" alt="">
+            <div class="images-rotation" data-images='["/img/employees/zane/zane/zane-1.png", "/img/employees/zane/zane/zane-2.png", "/img/employees/zane/zane/zane-3.png"]'>
+                <img src="/img/employees/zane/zane/zane-1.png" alt="">
             </div>
             <div class="bio">
                 <h1>Molly Setzer</h1>
@@ -129,8 +142,8 @@ title: Culture
             </div>
         </div>
         <div class="employee employee-right" data-color="pink">
-            <div class="images-rotation" data-images='["img/culture/zane/bart-1.png", "img/culture/zane/bart-2.png", "img/culture/zane/bart-3.png"]'>
-                <img src="img/culture/zane/bart-1.png" alt="">
+            <div class="images-rotation" data-images='["/img/employees/zane/zane/bart-1.png", "/img/employees/zane/zane/bart-2.png", "/img/employees/zane/zane/bart-3.png"]'>
+                <img src="/img/employees/zane/zane/bart-1.png" alt="">
             </div>
             <div class="bio">
                 <h1>Andrea Lasecki</h1>
@@ -140,8 +153,8 @@ title: Culture
             </div>
         </div>
         <div class="employee employee-left" data-color="darkblue">
-            <div class="images-rotation" data-images='["img/culture/zane/zane-1.png", "img/culture/zane/zane-2.png", "img/culture/zane/zane-3.png"]'>
-                <img src="img/culture/zane/zane-1.png" alt="">
+            <div class="images-rotation" data-images='["/img/employees/zane/zane/zane-1.png", "/img/employees/zane/zane/zane-2.png", "/img/employees/zane/zane/zane-3.png"]'>
+                <img src="/img/employees/zane/zane/zane-1.png" alt="">
             </div>
             <div class="bio">
                 <h1>Jenny Brandenburg</h1>
@@ -151,8 +164,8 @@ title: Culture
             </div>
         </div>
         <div class="employee employee-right" data-color="brown">
-            <div class="images-rotation" data-images='["img/culture/zane/bart-1.png", "img/culture/zane/bart-2.png", "img/culture/zane/bart-3.png"]'>
-                <img src="img/culture/zane/bart-1.png" alt="">
+            <div class="images-rotation" data-images='["/img/employees/zane/zane/bart-1.png", "/img/employees/zane/zane/bart-2.png", "/img/employees/zane/zane/bart-3.png"]'>
+                <img src="/img/employees/zane/zane/bart-1.png" alt="">
             </div>
             <div class="bio">
                 <h1>Bart Raboin</h1>
@@ -162,8 +175,8 @@ title: Culture
             </div>
         </div>
         <div class="employee employee-left" data-color="midblue">
-            <div class="images-rotation" data-images='["img/culture/zane/bart-1.png", "img/culture/zane/bart-2.png", "img/culture/zane/bart-3.png"]'>
-                <img src="img/culture/zane/bart-1.png" alt="">
+            <div class="images-rotation" data-images='["/img/employees/zane/zane/bart-1.png", "/img/employees/zane/zane/bart-2.png", "/img/employees/zane/zane/bart-3.png"]'>
+                <img src="/img/employees/zane/zane/bart-1.png" alt="">
             </div>
             <div class="bio">
                 <h1>Jen Haas</h1>
@@ -174,8 +187,8 @@ title: Culture
             </div>
         </div>
         <div class="employee employee-right" data-color="green">
-            <div class="images-rotation" data-images='["img/culture/zane/zane-1.png", "img/culture/zane/zane-2.png", "img/culture/zane/zane-3.png"]'>
-                <img src="img/culture/zane/zane-1.png" alt="">
+            <div class="images-rotation" data-images='["/img/employees/zane/zane/zane-1.png", "/img/employees/zane/zane/zane-2.png", "/img/employees/zane/zane/zane-3.png"]'>
+                <img src="/img/employees/zane/zane/zane-1.png" alt="">
             </div>
             <div class="bio">
                 <h1>Zane Statz</h1>
@@ -187,8 +200,8 @@ title: Culture
             </div>
         </div>
         <div class="employee employee-left" data-color="malechite">
-            <div class="images-rotation" data-images='["img/culture/zane/bart-1.png", "img/culture/zane/bart-2.png", "img/culture/zane/bart-3.png"]'>
-                <img src="img/culture/zane/bart-1.png" alt="">
+            <div class="images-rotation" data-images='["/img/employees/zane/zane/bart-1.png", "/img/employees/zane/zane/bart-2.png", "/img/employees/zane/zane/bart-3.png"]'>
+                <img src="/img/employees/zane/zane/bart-1.png" alt="">
             </div>
             <div class="bio">
                 <h1>Tyler Bramer</h1>
@@ -198,8 +211,8 @@ title: Culture
             </div>
         </div>
         <div class="employee employee-right" data-color="peach">
-            <div class="images-rotation" data-images='["img/culture/zane/zane-1.png", "img/culture/zane/zane-2.png", "img/culture/zane/zane-3.png"]'>
-                <img src="img/culture/zane/zane-1.png" alt="">
+            <div class="images-rotation" data-images='["/img/employees/zane/zane/zane-1.png", "/img/employees/zane/zane/zane-2.png", "/img/employees/zane/zane/zane-3.png"]'>
+                <img src="/img/employees/zane/zane/zane-1.png" alt="">
             </div>
             <div class="bio">
                 <h1>Emily Morehart</h1>
@@ -209,8 +222,8 @@ title: Culture
             </div>
         </div>
         <div class="employee employee-left" data-color="magenta">
-            <div class="images-rotation" data-images='["img/culture/zane/bart-1.png", "img/culture/zane/bart-2.png", "img/culture/zane/bart-3.png"]'>
-                <img src="img/culture/zane/bart-1.png" alt="">
+            <div class="images-rotation" data-images='["/img/employees/zane/zane/bart-1.png", "/img/employees/zane/zane/bart-2.png", "/img/employees/zane/zane/bart-3.png"]'>
+                <img src="/img/employees/zane/zane/bart-1.png" alt="">
             </div>
             <div class="bio">
                 <h1>Jennifer Rogers</h1>
@@ -219,6 +232,7 @@ title: Culture
                     all of her social media efforts. Jennifer holds a degree from UW-Whitewater in public relations, with an emphasis in journalism.</p>
             </div>
         </div>
+      -->
     </div>
 
     <div class="contact-us" data-aos="fade-up">
@@ -249,13 +263,10 @@ title: Culture
 <!-- Animate on Scroll end -->
 
 <!-- Navigation mobile and scroll animations -->
-<script src="js/hide-navigation.js"></script>
-
-<!-- Animate culture page header -->
-<script src="js/culture-header.js"></script>
+<script src="/js/hide-navigation.js"></script>
 
 <!-- Animate employee bio images start -->
-<script src="js/employees.js"></script>
+<script src="/js/employees.js"></script>
 
 <script>
     $('.images-rotation').imagesRotation();
