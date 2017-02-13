@@ -1,6 +1,12 @@
 @import "reset";
 @import "syntax";
-
-body {
-    background: white;
-}
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+@import "variables";
+@import "aos";
+@import "general";
+@import "navigation";
+@import "home";
+@import "culture";
+@import "footer";

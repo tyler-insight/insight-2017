@@ -1,13 +1,84 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Insight Creative, Inc
+slug: index
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+<div class="wrapper">
+
+    <div class="home-slider">
+        <div class="info">
+            <h2>Be Smart. Plan Ahead. Billboard</h2>
+            <h3>for <b>Bank of Luxemburg</b></h3>
+        </div>
+    </div>
+
+
+    <div class="projects-services">
+
+        <div class="projects-block">
+            <a href="culture.html">
+                <h1>Projects</h1>
+                <img src="../img/home/projects.jpg" />
+            </a>
+        </div>
+
+        <div class="services-block">
+            <a href="#">
+                <h1>Services</h1>
+                <img src="../img/home/services.jpg" />
+            </a>
+        </div>
+
+    </div>
+
+    <div class="description-statement">
+        <h2>Insight Creative is a <a href="#">full service agency</a>. We offer a complete range of services to help you reach your goals from big picture strategy to fine details of copywriting, design, photography, web development, social media and media buying.</h2>
+    </div>
+
+    <div class="recent-blog">
+        <h1>From the Blog</h1>
+        <div class="recent-blog-photo">
+            <img src="../img/zane.png" />
+        </div>
+        <div class="recent-blog-block">
+            <h1><a href="#">From Concept to Completion</a></h1>
+            <h2>by <b><a href="#">Zane Statz</a></b></h2>
+            <h3>Graphic Designer/Web Developer</h3>
+        </div>
+    </div>
+
+    <div class="testimonial">
+        <h1 id="testimonial-quote">Words from a Client</h1>
+        <div class="quote">
+            <p>
+                Insight Creative and its team have distinguished themselves by spotting technology trends and thoughtfully assessing whether new channels are a strategic fit for our health care organization. They do a ton of homework. I’ve been consistently pleased by
+                their level of preparedness, which has included an impressive ability to impart knowledge as well as anticipate questions.
+            </p>
+        </div>
+        <h2>Tim Huffcut</h2>
+        <h3>Ministry Health System</h3>
+    </div>
+    <div class="contact-us" data-aos="fade-up">
+        <a class="contact-link" href="#" data-letters="Contact Us">Contact Us</a>
+    </div>
+
+    <div class="footer">
+        <h3>We’re a little bit of crazy with a whole lot of talent.</h3>
+        <p>
+            © Insight Creative, Inc. All rights reserved.
+        </p>
+    </div>
+  </div>
+  <!-- wrapper end -->
+  </div>
+  <!-- content end -->
+
+<script src="js/jquery-3.1.1.min.js"></script>
+
+<!-- pushState ajax script -->
+<script src="js/push.js"></script>
+
+
+<!-- Navigation mobile and scroll animations -->
+<script src="js/hide-navigation.js"></script>
