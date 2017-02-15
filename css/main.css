@@ -1132,34 +1132,6 @@ img {
     .wrapper {
       padding: 0 300px; } }
 
-@-webkit-keyframes slideInUp {
-  from {
-    -webkit-transform: translate3d(0, 10px, 0);
-    transform: translate3d(0, 10px, 0);
-    opacity: 0; }
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    opacity: 1; } }
-
-@keyframes slideInUp {
-  from {
-    -webkit-transform: translate3d(0, 50px, 0);
-    transform: translate3d(0, 50px, 0);
-    opacity: 0; }
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    opacity: 1; } }
-
-.section {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: slideInUp;
-  animation-name: slideInUp; }
-
 .cd-auto-hide-header {
   position: fixed;
   z-index: 10;
@@ -1839,6 +1811,71 @@ img {
     font-size: 3em;
     font-weight: bold;
     font-style: normal; }
+
+.projects {
+  float: left;
+  display: block;
+  margin-right: 6.66667%;
+  width: 100%;
+  margin-bottom: 80px; }
+  .projects:last-child {
+    margin-right: 0; }
+  .projects h1 {
+    font-weight: 400;
+    margin-bottom: 1em; }
+    .projects h1 strong {
+      font-weight: 600; }
+  @media screen and (min-width: 600px) {
+    .projects {
+      margin-bottom: 200px; } }
+
+.project {
+  float: left;
+  display: block;
+  margin-right: 6.66667%;
+  width: 100%;
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center; }
+  .project:last-child {
+    margin-right: 0; }
+  .project .project-info {
+    position: absolute;
+    display: none;
+    height: 100%;
+    width: 100%; }
+    .project .project-info .text {
+      position: relative;
+      display: table-cell;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      vertical-align: middle; }
+      .project .project-info .text h3 {
+        font-weight: 400; }
+        .project .project-info .text h3 strong {
+          font-weight: 600; }
+  @media screen and (min-width: 600px) {
+    .project {
+      height: 300px; } }
+  @media screen and (min-width: 900px) {
+    .project {
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 48.93617%;
+      height: 300px; }
+      .project:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 1200px) {
+    .project {
+      height: 400px; } }
+
+.project:hover .project-info {
+  display: table; }
 
 .intro {
   position: relative;
