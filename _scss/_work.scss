@@ -17,7 +17,7 @@
 .project{
   @include span-columns(4);
   position: relative;
-  height:250px;
+  height:300px;
   overflow:hidden;
   object-fit:cover;
   background-size:cover;
@@ -51,14 +51,20 @@
     }
   }
   @include media($tablet){
-    height:300px;
+    height:500px;
   }
   @include media($desktop){
     @include span-columns(6);
-    height:300px;
+    height:400px;
   }
   @include media($desktop-large){
-    height:400px;
+    height:500px;
+  }
+  @include media($desktop-largest){
+    height:550px;
+  }
+  @include media($desktop-super){
+    height:650px;
   }
 
 }

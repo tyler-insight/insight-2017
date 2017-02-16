@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: project
 title: Test Project
 client: Insight Creative, Inc.
 cover-image: test-project/cover-image.jpg
-cover-text-color: fff
+cover-text-color: fffff
 back-color1: 59bc6b
 back-color2: 97cc7b
 tags:

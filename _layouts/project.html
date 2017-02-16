@@ -1,0 +1,86 @@
+---
+layout: default
+title: {{ page.title }}
+---
+<div class="wrapper">
+    <div class="project-cover" style="background-image:url('/img/projects/{{ page.cover-image }}')">
+        <div class="text">
+            <h1>{{ page.title }}</h1>
+            <h2>for <strong>{{ page.client }}</strong></h2>
+        </div>
+    </div>
+    <div class="project-description">
+        <h2>{{ page.description }}</h2>
+    </div>
+    <div class="project-body">
+        {{ content }}
+    </div>
+
+    <div class="nextprevious">
+      <div class="previous-project">
+        {% if page.previous.url %}
+        <a href="{{page.previous.url}}">
+          <div class="center-text">
+            <h2 style="background-image: -webkit-linear-gradient(left, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});
+                background-image:    -moz-linear-gradient(left, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});
+                background-image:     -ms-linear-gradient(left, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});
+                background-image:      -o-linear-gradient(left, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});
+                background-image:         linear-gradient(to right, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});
+                color:transparent;
+                -webkit-background-clip: text;
+                background-clip: text;">Previous Project</h2>
+          </div>
+          <div class="project" style="background-image:url('/img/projects/{{ page.previous.cover-image }}')">
+              <div class="project-info">
+                  <div class="text">
+                      <h2 style="color:#{{ page.previous.cover-text-color }}">{{ page.previous.title }}</h2>
+                      <h3 style="color:#{{ page.previous.cover-text-color }}">for <strong>{{ page.previous.client }}</strong></h3>
+                  </div>
+              </div>
+
+        </div>
+        </a>
+        {% endif %}
+      </div>
+      <div class="next-project">
+        {% if page.next.url %}
+        <a href="{{page.next.url}}">
+        <div class="center-text">
+          <h2 style="background-image: -webkit-linear-gradient(left, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
+              background-image:    -moz-linear-gradient(left, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
+              background-image:     -ms-linear-gradient(left, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
+              background-image:      -o-linear-gradient(left, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
+              background-image:         linear-gradient(to right, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
+              color:transparent;
+              -webkit-background-clip: text;
+              background-clip: text;">Next Project</h2>
+        </div>
+
+
+            <div class="project" style="background-image:url('/img/projects/{{ page.next.cover-image }}')">
+
+                <div class="project-info">
+                    <div class="text">
+                        <h2 style="color:#{{ page.next.cover-text-color }}">{{ page.next.title }}</h2>
+                        <h3 style="color:#{{ page.next.cover-text-color }}">for <strong>{{ page.next.client }}</strong></h3>
+                    </div>
+                </div>
+
+          </div>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="contact-us">
+        <a class="contact-link" href="#" data-letters="Contact Us">Contact Us</a>
+    </div>
+
+    <div class="footer">
+        <h3>We’re a little bit of crazy with a whole lot of talent.</h3>
+        <p>
+            © Insight Creative, Inc. All rights reserved.
+        </p>
+    </div>
+</div>
+<!-- wrapper end -->

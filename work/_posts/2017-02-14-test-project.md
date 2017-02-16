@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: project
 title: Test Project
+description: A billboard design created for Bank of Luxemburg to promote their lorem ipsum.
 client: Insight Creative, Inc.
 cover-image: test-project/cover-image.jpg
 cover-text-color: fff

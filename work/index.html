@@ -4,27 +4,28 @@ title: Work
 ---
 <div class="wrapper">
 
-  <div class="projects">
-    <h1><strong>Projects</strong> and <strong>Case Studies</strong></h1>
+    <div class="projects">
+        <h1><strong>Projects</strong> and <strong>Case Studies</strong></h1>
+        {% for post in site.categories.work %}
 
-    {% for post in site.categories.work %}
-      <a href="{{ post.url }}">
-          <div class="project" style="background-image:url('/img/projects/{{ post.cover-image }}')">
-              <div class="project-info" style="background: -webkit-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+        <a href="{{ post.url }}">
+            <div class="project" style="background-image:url('/img/projects/{{ post.cover-image }}')">
+                <div class="project-info" style="background: -webkit-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
             background: -o-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
             background: -moz-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
             background: linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});">
-                  <div class="text">
-                      <h2 style="color:#{{ post.cover-text-color }}">{{ post.title }}</h2>
-                      <h3 style="color:#{{ post.cover-text-color }}">for <strong>{{ post.client }}</strong></h3>
-                  </div>
-          </div>
+                    <div class="text">
+                        <h2 style="color:#{{ post.cover-text-color }}">{{ post.title }}</h2>
+                        <h3 style="color:#{{ post.cover-text-color }}">for <strong>{{ post.client }}</strong></h3>
+                    </div>
+                </div>
 
           </div>
-      </a>
-    {% endfor %}
+        </a>
+        
+        {% endfor %}
 
-</div>
+  </div>
 </div>
 
 <div class="contact-us">

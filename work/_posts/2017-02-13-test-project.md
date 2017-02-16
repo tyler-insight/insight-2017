@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Test Project
 client: Insight Creative, Inc.
 cover-image: test-project/cover-image.jpg
