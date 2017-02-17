@@ -3,8 +3,8 @@
     text-align: center;
     margin-bottom: $mobile-spacing;
 
-
     @include span-columns(4);
+
     @include media($tablet){
       @include span-columns(8);
     }

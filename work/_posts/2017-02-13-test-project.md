@@ -4,8 +4,8 @@ title: Test Project
 client: Insight Creative, Inc.
 cover-image: test-project/cover-image.jpg
 cover-text-color: fff
-back-color1: 59bc6b
-back-color2: 97cc7b
+back-color1: e27670
+back-color2: 6f4c7c
 tags:
 - Print & Packaging
 

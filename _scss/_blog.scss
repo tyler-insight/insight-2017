@@ -1,0 +1,255 @@
+.blogs {
+    @include span-columns(4);
+    position: relative;
+    margin-bottom:$mobile-spacing;
+    @include media($desktop-large){
+      @include span-columns(10);
+      @include shift(1);
+    }
+
+    .featured-blog {
+        height: 300px;
+        background: #eee;
+        position: relative;
+        @include media($tablet){
+          height:400px;
+        }
+        @include media($desktop){
+          height:500px;
+        }
+        @include media($desktop-largest){
+          height:600px;
+        }
+        @include media($desktop-super){
+          height:700px;
+        }
+
+        .blog-thumbnail {
+            @include span-columns(4);
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            position: relative;
+        }
+
+        .blog-info {
+            @include span-columns(4);
+            height: auto;
+            padding: 1em;
+            @include media($tablet){
+              min-height:200px;
+            }
+            @include media($desktop-large){
+              padding:3em;
+              min-height:200px;
+            }
+
+            h2 {
+                text-align: left;
+                line-height: 1.1em;
+                margin-bottom: 0.3em;
+            }
+
+            h3 {
+                font-weight: 400;
+                text-align: left;
+
+                strong {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .secondary-blogs {
+      @include span-columns(4);
+      margin-top:20px;
+
+        .blog-right,
+        .blog-left {
+            @include span-columns(4);
+            position: relative;
+            height:auto;
+            overflow:hidden;
+            margin-bottom:20px;
+
+            .blog-info{
+              height:auto;
+              @include span-columns(4);
+              padding:1em;
+
+              h2 {
+                  text-align: left;
+                  line-height: 1.1em;
+                  margin-bottom: 0.3em;
+
+              }
+
+              h3 {
+                  font-weight: 400;
+                  text-align: left;
+
+                  strong {
+                      font-weight: 600;
+                  }
+
+              }
+            }
+            .blog-thumbnail{
+              height:300px;
+              @include span-columns(4);
+              background-size:cover;
+              @include media($desktop-large){
+                height:400px;
+              }
+              @include media($desktop-largest){
+                height:500px;
+              }
+            }
+        }
+        .blog-right{
+          .blog-info{
+            @include media($tablet){
+              width:50%;
+              height:300px;
+              float:left;
+            }
+            @include media($desktop-large){
+              padding:3em;
+              height:400px;
+            }
+            @include media($desktop-largest){
+              height:500px;
+            }
+          }
+          .blog-thumbnail{
+            @include media($tablet){
+              width:50%;
+              float:right;
+              margin:0;
+            }
+          }
+        }
+        .blog-left{
+          .blog-info{
+            @include media($tablet){
+              width:50%;
+              height:300px;
+              float:right;
+            }
+            @include media($desktop-large){
+              padding:3em;
+              height:400px;
+            }
+            @include media($desktop-largest){
+              height:500px;
+            }
+          }
+          .blog-thumbnail{
+            @include media($tablet){
+              width:50%;
+              float:left;
+              margin:0;
+            }
+          }
+        }
+
+    }
+}
+.archives{
+  margin-bottom:$mobile-spacing;
+  @include media($desktop-large){
+    @include span-columns(10);
+    @include shift(1);
+  }
+  h1{
+    text-align: left;
+  }
+  @include span-columns(4);
+  ul.post-list{
+    @include span-columns(4);
+
+    h1{
+      color: $light-gray;
+      text-align: left;
+      margin-bottom:0;
+    }
+    li a{
+      color:$dark-gray;
+      text-decoration: none;
+      font-size:1.2em;
+      line-height: 1.5em;
+
+      @include media($tablet){
+        font-size:1.4em;
+      }
+      @include media($desktop-largest){
+        font-size:1.6em;
+      }
+    }
+  }
+}
+.blog-post{
+  @include span-columns(4);
+
+
+  .blog-title{
+    margin-bottom:20px;
+    @include media($desktop-largest){
+      @include span-columns(8);
+      @include shift(2 of 12);
+    }
+
+    h1{
+
+    }
+    h3{
+      font-weight:400;
+      font-size:1.2em;
+      strong{
+        font-weight:600;
+      }
+      @include media($desktop-large){
+        font-size:1.4em;
+      }
+    }
+  }
+  .blog-body{
+    margin-bottom:$mobile-spacing;
+    @include span-columns(4);
+
+    @include media($desktop-large){
+      @include span-columns(10);
+      @include shift(1 of 12);
+    }
+    p{
+      margin-top:1em;
+    }
+    h1{
+      @include span-columns(4);
+    }
+    h2{
+      @include span-columns(4);
+      margin-bottom:1em;
+    }
+    iframe {
+      margin:30px 0;
+      @include span-columns(4);
+      min-height:400px;
+      @include media($desktop-large){
+        @include span-columns(8);
+        @include shift(2 of 12);
+      }
+    }
+    img{
+      width:100%;
+    }
+    .video{
+      width:100%;
+      @include media($desktop-large){
+        @include span-columns(8);
+        @include shift(2 of 12);
+      }
+    }
+  }
+}

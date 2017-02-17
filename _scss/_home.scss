@@ -284,10 +284,16 @@
 
     h2 {
         text-align: center;
+        @include media($desktop-large){
+          @include span-columns(12);
+        }
     }
 
     h3 {
         text-align: center;
+        @include media($desktop-large){
+          @include span-columns(12);
+        }
     }
 
     .quote {

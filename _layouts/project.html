@@ -2,6 +2,7 @@
 layout: default
 title: {{ page.title }}
 ---
+
 <div class="wrapper">
     <div class="project-cover" style="background-image:url('/img/projects/{{ page.cover-image }}')">
         <div class="text">
@@ -19,16 +20,10 @@ title: {{ page.title }}
     <div class="nextprevious">
       <div class="previous-project">
         {% if page.previous.url %}
+        {% if page.previous.categories contains 'work' %}
         <a href="{{page.previous.url}}">
           <div class="center-text">
-            <h2 style="background-image: -webkit-linear-gradient(left, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});
-                background-image:    -moz-linear-gradient(left, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});
-                background-image:     -ms-linear-gradient(left, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});
-                background-image:      -o-linear-gradient(left, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});
-                background-image:         linear-gradient(to right, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});
-                color:transparent;
-                -webkit-background-clip: text;
-                background-clip: text;">Previous Project</h2>
+            <h2 style="color:#{{ page.previous.back-color1 }};">Previous Project</h2>
           </div>
           <div class="project" style="background-image:url('/img/projects/{{ page.previous.cover-image }}')">
               <div class="project-info">
@@ -41,19 +36,14 @@ title: {{ page.title }}
         </div>
         </a>
         {% endif %}
+        {% endif %}
       </div>
       <div class="next-project">
-        {% if page.next.url %}
+        {% if page.next.url  %}
+        {% if page.next.categories contains 'work' %}
         <a href="{{page.next.url}}">
         <div class="center-text">
-          <h2 style="background-image: -webkit-linear-gradient(left, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
-              background-image:    -moz-linear-gradient(left, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
-              background-image:     -ms-linear-gradient(left, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
-              background-image:      -o-linear-gradient(left, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
-              background-image:         linear-gradient(to right, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
-              color:transparent;
-              -webkit-background-clip: text;
-              background-clip: text;">Next Project</h2>
+          <h2 style="color:#{{ page.next.back-color1 }};">Next Project</h2>
         </div>
 
 
@@ -68,6 +58,7 @@ title: {{ page.title }}
 
           </div>
           </a>
+          {% endif %}
         {% endif %}
       </div>
     </div>

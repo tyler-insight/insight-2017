@@ -1,0 +1,38 @@
+.services{
+  @include span-columns(4);
+
+  margin-bottom: $mobile-spacing;
+
+  @include media($tablet) {
+      margin-bottom: $tablet-spacing;
+  }
+
+  p{
+    margin-bottom: $mobile-spacing;
+  }
+
+  .service{
+    @include span-columns(4);
+
+    position: relative;
+
+    h2{
+      margin-bottom:.5em;
+      padding-right:1em;
+    }
+
+    @include media($tablet){
+      @include span-columns(4);
+      @include omega;
+
+    }
+  }
+  .service-description{
+    @include span-columns(4);
+    margin-top:3em;
+    p{
+
+    }
+  }
+
+}
