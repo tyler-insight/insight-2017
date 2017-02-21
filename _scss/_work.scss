@@ -1,75 +1,102 @@
-.projects{
-  @include span-columns(4);
-  h1{
-    font-weight: 400;
-    margin-bottom:1em;
+.projects {
+    @include span-columns(4);
 
-    strong{
-      font-weight: 600;
-    }
-  }
-  margin-bottom: $mobile-spacing;
+    h1 {
+        font-weight: 400;
+        margin-bottom: 1em;
 
-  @include media($tablet) {
-      margin-bottom: $tablet-spacing;
-  }
-}
-.project{
-  @include span-columns(4);
-  position: relative;
-  height:300px;
-  overflow:hidden;
-  object-fit:cover;
-  background-size:cover;
-  background-position: center;
-
-  .project-info{
-    position: absolute;
-    display:none;
-    height:100%;
-    width:100%;
-
-    .text{
-      position: relative;
-      display:table-cell;
-      height:100%;
-      width:100%;
-
-      text-align: center;
-      vertical-align: middle;
-
-      h2{
-
-      }
-      h3{
-        font-weight:400;
-
-        strong{
-          font-weight:600;
+        strong {
+            font-weight: 600;
         }
-      }
     }
-  }
-  @include media($tablet){
-    height:500px;
-  }
-  @include media($desktop){
-    @include span-columns(6);
-    height:400px;
-  }
-  @include media($desktop-large){
-    height:500px;
-  }
-  @include media($desktop-largest){
-    height:550px;
-  }
-  @include media($desktop-super){
-    height:650px;
-  }
-
+    margin-bottom: $mobile-spacing;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
+    }
 }
-.project:hover{
-  .project-info{
-    display:table;
-  }
+
+.project {
+    @include span-columns(4);
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+
+    .project-info {
+        position: absolute;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        display: table;
+
+
+        .text {
+            position: relative;
+            display: table-cell;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            vertical-align: middle;
+
+            h2 {
+                @include transform(translateY(-2em));
+                margin-bottom:.2em;
+                opacity:0;
+                @include media($desktop-large) {
+                    font-size:3em;
+                }
+            }
+
+            h3 {
+                @include transform(translateY(1em));
+                font-weight: 400;
+                opacity:0;
+                strong {
+                    font-weight: 600;
+                }
+                @include media($desktop-large) {
+                    font-size:1.5em;
+                }
+            }
+
+
+        }
+    }
+    @include media($tablet) {
+        height: 500px;
+    }
+    @include media($desktop) {
+         @include span-columns(6);
+        height: 400px;
+    }
+    @include media($desktop-large) {
+        height: 500px;
+    }
+    @include media($desktop-largest) {
+        height: 550px;
+    }
+    @include media($desktop-super) {
+        height: 650px;
+    }
+}
+
+.project:hover {
+    .project-info {
+        opacity: 1;
+        @include transition(opacity .5s $ease-out-quint);
+        .text {
+            h2 {
+                opacity:1;
+                @include transform(translateY(0));
+                @include transition(all 1s);
+            }
+            h3{
+              opacity:1;
+              @include transform(translateY(0));
+              @include transition(all 1s .4s);
+            }
+        }
+    }
 }

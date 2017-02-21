@@ -1,38 +1,72 @@
-.services{
-  @include span-columns(4);
-
-  margin-bottom: $mobile-spacing;
-
-  @include media($tablet) {
-      margin-bottom: $tablet-spacing;
-  }
-
-  p{
+.services {
+    @include span-columns(4);
     margin-bottom: $mobile-spacing;
-  }
-
-  .service{
-    @include span-columns(4);
-
-    position: relative;
-
-    h2{
-      margin-bottom:.5em;
-      padding-right:1em;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
     }
 
-    @include media($tablet){
-      @include span-columns(4);
-      @include omega;
-
+    p {
+        margin-bottom: $mobile-spacing;
     }
-  }
-  .service-description{
-    @include span-columns(4);
-    margin-top:3em;
-    p{
 
+    .service {
+        @include span-columns(4);
+        position: relative;
+        text-align: center;
+
+        h1 {
+            margin-bottom: 0.5em;
+            padding-right: 1em;
+            cursor: pointer;
+            display: inline-block;
+            @include transition(color .5s);
+        }
+
+        h1:hover {
+            color: #000;
+            @include transition(color .5s);
+        }
     }
-  }
 
+    .accordion h1::after {
+        content: '+';
+        /* Unicode character for "plus" sign (+) */
+        margin-left: 0.3em;
+        border: none;
+        display: inline-block;
+        position: absolute;
+        font-weight: 400;
+        opacity: 0;
+        @include transition(all .5s);
+    }
+
+    .accordion h1:hover::after {
+        opacity: 1;
+    }
+
+    .accordion.active h1::after {
+        opacity: 1;
+        @include transform(rotate(45deg));
+        @include transition(transform .5s);
+    }
+
+    .service-description {
+        @include span-columns(4);
+        margin-top: 1em;
+        @include transition(all .5s);
+        max-height: 0;
+        overflow: hidden;
+        text-align: center;
+
+        h2 {
+            margin-bottom: 0.2em;
+            @include media($tablet) {
+                 @include span-columns(8);
+            }
+        }
+
+        p {
+            margin-bottom: 2em;
+        }
+    }
 }
