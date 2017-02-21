@@ -1074,8 +1074,7 @@ p {
       float: left;
       display: block;
       margin-right: 2.12766%;
-      width: 65.95745%;
-      margin-left: 17.02128%; }
+      width: 82.97872%; }
       p:last-child {
         margin-right: 0; } }
   p a, p a:visited {
@@ -1112,7 +1111,7 @@ h5 {
   font-weight: 600;
   color: #3a3a3a;
   line-height: 1em;
-  text-align: center; }
+  text-align: left; }
   h1 a,
   h2 a,
   h3 a,
@@ -1181,14 +1180,6 @@ img {
   background: transparent;
   margin-bottom: 80px;
   width: 100%; }
-
-.social {
-  position: fixed;
-  width: 100px;
-  background-color: red;
-  width: 50px;
-  right: 6%;
-  bottom: 5%; }
 
 .cd-auto-hide-header {
   position: fixed;
@@ -1933,7 +1924,8 @@ img {
         -webkit-transform: translateY(-2em);
         transform: translateY(-2em);
         margin-bottom: .2em;
-        opacity: 0; }
+        opacity: 0;
+        text-align: center; }
         @media screen and (min-width: 1200px) {
           .project .project-info .text h2 {
             font-size: 3em; } }
@@ -1941,7 +1933,8 @@ img {
         -webkit-transform: translateY(1em);
         transform: translateY(1em);
         font-weight: 400;
-        opacity: 0; }
+        opacity: 0;
+        text-align: center; }
         .project .project-info .text h3 strong {
           font-weight: 600; }
         @media screen and (min-width: 1200px) {
@@ -2002,15 +1995,31 @@ img {
     margin-right: 6.66667%;
     width: 100%;
     position: relative;
-    text-align: center; }
+    text-align: left; }
     .services .service:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 900px) {
+      .services .service {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 48.93617%;
+        margin-right: 0; }
+        .services .service:last-child {
+          margin-right: 0; } }
     .services .service h1 {
       margin-bottom: 0.5em;
       padding-right: 1em;
       cursor: pointer;
       display: inline-block;
-      transition: color 0.5s; }
+      transition: color 0.5s;
+      float: left;
+      display: block;
+      margin-right: 6.66667%;
+      width: 100%;
+      margin-right: 0; }
+      .services .service h1:last-child {
+        margin-right: 0; }
     .services .service h1:hover {
       color: #000;
       transition: color 0.5s; }
@@ -2041,7 +2050,7 @@ img {
     transition: all 0.5s;
     max-height: 0;
     overflow: hidden;
-    text-align: center; }
+    text-align: left; }
     .services .service-description:last-child {
       margin-right: 0; }
     .services .service-description h2 {
@@ -2059,13 +2068,15 @@ img {
 
 #video_container {
   max-width: 100%;
-  height: 100px;
+  min-height: 400px;
+  max-height: 100%;
   display: inline-block;
   overflow: hidden;
   position: relative;
   z-index: 1;
   opacity: 1;
-  margin-bottom: 80px; }
+  margin-bottom: 80px;
+  background-image: url("/img/agency/first-frame.jpg"); }
   #video_container .text {
     position: absolute;
     z-index: 2;
@@ -2084,15 +2095,6 @@ img {
 
 .agency {
   margin-bottom: 80px; }
-  @media screen and (min-width: 1200px) {
-    .agency h1 {
-      float: left;
-      display: block;
-      margin-right: 2.12766%;
-      width: 48.93617%;
-      margin-left: 25.53191%; }
-      .agency h1:last-child {
-        margin-right: 0; } }
 
 .clients {
   float: left;
@@ -2921,15 +2923,6 @@ img {
   margin-bottom: 80px; }
   .blogs:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 1200px) {
-    .blogs {
-      float: left;
-      display: block;
-      margin-right: 2.12766%;
-      width: 82.97872%;
-      margin-left: 8.51064%; }
-      .blogs:last-child {
-        margin-right: 0; } }
   .blogs .featured-blog {
     height: 300px;
     background: #eee;
@@ -2972,14 +2965,23 @@ img {
       @media screen and (min-width: 1200px) {
         .blogs .featured-blog .blog-info {
           padding: 3em;
-          min-height: 200px; } }
+          min-height: 250px; } }
+      @media screen and (min-width: 2400px) {
+        .blogs .featured-blog .blog-info {
+          min-height: 300px; } }
       .blogs .featured-blog .blog-info h2 {
         text-align: left;
         line-height: 1.1em;
         margin-bottom: 0.3em; }
+        @media screen and (min-width: 1800px) {
+          .blogs .featured-blog .blog-info h2 {
+            font-size: 3em; } }
       .blogs .featured-blog .blog-info h3 {
         font-weight: 400;
         text-align: left; }
+        @media screen and (min-width: 1200px) {
+          .blogs .featured-blog .blog-info h3 {
+            font-size: 1.8em; } }
         .blogs .featured-blog .blog-info h3 strong {
           font-weight: 600; }
   .blogs .secondary-blogs {
@@ -3014,15 +3016,27 @@ img {
         .blogs .secondary-blogs .blog-right .blog-info:last-child,
         .blogs .secondary-blogs .blog-left .blog-info:last-child {
           margin-right: 0; }
+        @media screen and (min-width: 900px) {
+          .blogs .secondary-blogs .blog-right .blog-info,
+          .blogs .secondary-blogs .blog-left .blog-info {
+            padding: 2em; } }
         .blogs .secondary-blogs .blog-right .blog-info h2,
         .blogs .secondary-blogs .blog-left .blog-info h2 {
           text-align: left;
           line-height: 1.1em;
           margin-bottom: 0.3em; }
+          @media screen and (min-width: 1200px) {
+            .blogs .secondary-blogs .blog-right .blog-info h2,
+            .blogs .secondary-blogs .blog-left .blog-info h2 {
+              font-size: 3em; } }
         .blogs .secondary-blogs .blog-right .blog-info h3,
         .blogs .secondary-blogs .blog-left .blog-info h3 {
           font-weight: 400;
           text-align: left; }
+          @media screen and (min-width: 1200px) {
+            .blogs .secondary-blogs .blog-right .blog-info h3,
+            .blogs .secondary-blogs .blog-left .blog-info h3 {
+              font-size: 1.8em; } }
           .blogs .secondary-blogs .blog-right .blog-info h3 strong,
           .blogs .secondary-blogs .blog-left .blog-info h3 strong {
             font-weight: 600; }
@@ -3086,20 +3100,12 @@ img {
   display: block;
   margin-right: 6.66667%;
   width: 100%; }
-  @media screen and (min-width: 1200px) {
-    .archives {
-      float: left;
-      display: block;
-      margin-right: 2.12766%;
-      width: 82.97872%;
-      margin-left: 8.51064%; }
-      .archives:last-child {
-        margin-right: 0; } }
   .archives h1 {
     margin-bottom: 0;
     color: #3a3a3a;
     font-weight: 400;
-    transition: color 0.5s; }
+    transition: color 0.5s;
+    text-align: left; }
     .archives h1 strong {
       font-weight: 600; }
   .archives h1:hover {
@@ -3137,12 +3143,16 @@ img {
     .archives ul.post-list h2 {
       color: #c1c1c1;
       margin-top: .5em;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      text-align: left; }
+    .archives ul.post-list li {
+      text-align: left; }
     .archives ul.post-list li a {
       color: #3a3a3a;
       text-decoration: none;
       font-size: 1.2em;
-      line-height: 1.5em; }
+      line-height: 1.5em;
+      text-align: left; }
       @media screen and (min-width: 600px) {
         .archives ul.post-list li a {
           font-size: 1.4em; } }
@@ -3159,15 +3169,6 @@ img {
     margin-right: 0; }
   .blog-post .blog-title {
     margin-bottom: 20px; }
-    @media screen and (min-width: 1800px) {
-      .blog-post .blog-title {
-        float: left;
-        display: block;
-        margin-right: 2.12766%;
-        width: 65.95745%;
-        margin-left: 17.02128%; }
-        .blog-post .blog-title:last-child {
-          margin-right: 0; } }
     .blog-post .blog-title h3 {
       font-weight: 400;
       font-size: 1.2em; }
@@ -3184,15 +3185,6 @@ img {
     width: 100%; }
     .blog-post .blog-body:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 1200px) {
-      .blog-post .blog-body {
-        float: left;
-        display: block;
-        margin-right: 2.12766%;
-        width: 82.97872%;
-        margin-left: 8.51064%; }
-        .blog-post .blog-body:last-child {
-          margin-right: 0; } }
     .blog-post .blog-body p {
       margin-top: 1em; }
     .blog-post .blog-body a, .blog-post .blog-body a:visited {
@@ -3246,28 +3238,479 @@ img {
       min-height: 400px; }
       .blog-post .blog-body iframe:last-child {
         margin-right: 0; }
-      @media screen and (min-width: 1200px) {
-        .blog-post .blog-body iframe {
-          float: left;
-          display: block;
-          margin-right: 2.12766%;
-          width: 65.95745%;
-          margin-left: 17.02128%; }
-          .blog-post .blog-body iframe:last-child {
-            margin-right: 0; } }
     .blog-post .blog-body img {
       width: 100%; }
     .blog-post .blog-body .video {
+      max-width: 100%;
+      float: left;
+      display: block;
+      margin-right: 6.66667%;
       width: 100%; }
-      @media screen and (min-width: 1200px) {
-        .blog-post .blog-body .video {
-          float: left;
-          display: block;
-          margin-right: 2.12766%;
-          width: 65.95745%;
-          margin-left: 17.02128%; }
-          .blog-post .blog-body .video:last-child {
-            margin-right: 0; } }
+      .blog-post .blog-body .video:last-child {
+        margin-right: 0; }
+
+@font-face {
+  font-family: "socicon";
+  src: url("fonts/socicon.eot");
+  src: url("fonts/socicon.eot?#iefix") format("embedded-opentype"), url("fonts/socicon.woff") format("woff"), url("fonts/socicon.ttf") format("truetype"), url("fonts/socicon.svg#socicon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.social {
+  display: none; }
+  @media screen and (min-width: 600px) {
+    .social {
+      position: fixed;
+      right: .8em;
+      bottom: 1em;
+      display: inline-block; }
+      .social a {
+        color: #c1c1c1;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: .4em;
+        font-size: 1.2em;
+        transition: color 0.7s; }
+      .social a:hover {
+        color: #3a3a3a;
+        transition: color 0.7s; } }
+  @media screen and (min-width: 900px) {
+    .social {
+      right: 1.5em; }
+      .social a {
+        font-size: 1.3em; } }
+  @media screen and (min-width: 1200px) {
+    .social {
+      right: 2.5em; }
+      .social a {
+        font-size: 1.4em; } }
+  @media screen and (min-width: 1800px) {
+    .social {
+      right: 9em; }
+      .social a {
+        font-size: 1.4em; } }
+  @media screen and (min-width: 2400px) {
+    .social {
+      right: 15em; }
+      .social a {
+        font-size: 1.4em; } }
+
+[data-icon]:before {
+  font-family: "socicon" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+[class^="socicon-"]:before,
+[class*=" socicon-"]:before {
+  font-family: "socicon" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.socicon-modelmayhem:before {
+  content: "\e000"; }
+
+.socicon-mixcloud:before {
+  content: "\e001"; }
+
+.socicon-drupal:before {
+  content: "\e002"; }
+
+.socicon-swarm:before {
+  content: "\e003"; }
+
+.socicon-istock:before {
+  content: "\e004"; }
+
+.socicon-yammer:before {
+  content: "\e005"; }
+
+.socicon-ello:before {
+  content: "\e006"; }
+
+.socicon-stackoverflow:before {
+  content: "\e007"; }
+
+.socicon-persona:before {
+  content: "\e008"; }
+
+.socicon-triplej:before {
+  content: "\e009"; }
+
+.socicon-houzz:before {
+  content: "\e00a"; }
+
+.socicon-rss:before {
+  content: "\e00b"; }
+
+.socicon-paypal:before {
+  content: "\e00c"; }
+
+.socicon-odnoklassniki:before {
+  content: "\e00d"; }
+
+.socicon-airbnb:before {
+  content: "\e00e"; }
+
+.socicon-periscope:before {
+  content: "\e00f"; }
+
+.socicon-outlook:before {
+  content: "\e010"; }
+
+.socicon-coderwall:before {
+  content: "\e011"; }
+
+.socicon-tripadvisor:before {
+  content: "\e012"; }
+
+.socicon-appnet:before {
+  content: "\e013"; }
+
+.socicon-goodreads:before {
+  content: "\e014"; }
+
+.socicon-tripit:before {
+  content: "\e015"; }
+
+.socicon-lanyrd:before {
+  content: "\e016"; }
+
+.socicon-slideshare:before {
+  content: "\e017"; }
+
+.socicon-buffer:before {
+  content: "\e018"; }
+
+.socicon-disqus:before {
+  content: "\e019"; }
+
+.socicon-vkontakte:before {
+  content: "\e01a"; }
+
+.socicon-whatsapp:before {
+  content: "\e01b"; }
+
+.socicon-patreon:before {
+  content: "\e01c"; }
+
+.socicon-storehouse:before {
+  content: "\e01d"; }
+
+.socicon-pocket:before {
+  content: "\e01e"; }
+
+.socicon-mail:before {
+  content: "\e01f"; }
+
+.socicon-blogger:before {
+  content: "\e020"; }
+
+.socicon-technorati:before {
+  content: "\e021"; }
+
+.socicon-reddit:before {
+  content: "\e022"; }
+
+.socicon-dribbble:before {
+  content: "\e023"; }
+
+.socicon-stumbleupon:before {
+  content: "\e024"; }
+
+.socicon-digg:before {
+  content: "\e025"; }
+
+.socicon-envato:before {
+  content: "\e026"; }
+
+.socicon-behance:before {
+  content: "\e027"; }
+
+.socicon-delicious:before {
+  content: "\e028"; }
+
+.socicon-deviantart:before {
+  content: "\e029"; }
+
+.socicon-forrst:before {
+  content: "\e02a"; }
+
+.socicon-play:before {
+  content: "\e02b"; }
+
+.socicon-zerply:before {
+  content: "\e02c"; }
+
+.socicon-wikipedia:before {
+  content: "\e02d"; }
+
+.socicon-apple:before {
+  content: "\e02e"; }
+
+.socicon-flattr:before {
+  content: "\e02f"; }
+
+.socicon-github:before {
+  content: "\e030"; }
+
+.socicon-renren:before {
+  content: "\e031"; }
+
+.socicon-friendfeed:before {
+  content: "\e032"; }
+
+.socicon-newsvine:before {
+  content: "\e033"; }
+
+.socicon-identica:before {
+  content: "\e034"; }
+
+.socicon-bebo:before {
+  content: "\e035"; }
+
+.socicon-zynga:before {
+  content: "\e036"; }
+
+.socicon-steam:before {
+  content: "\e037"; }
+
+.socicon-xbox:before {
+  content: "\e038"; }
+
+.socicon-windows:before {
+  content: "\e039"; }
+
+.socicon-qq:before {
+  content: "\e03a"; }
+
+.socicon-douban:before {
+  content: "\e03b"; }
+
+.socicon-meetup:before {
+  content: "\e03c"; }
+
+.socicon-playstation:before {
+  content: "\e03d"; }
+
+.socicon-android:before {
+  content: "\e03e"; }
+
+.socicon-snapchat:before {
+  content: "\e03f"; }
+
+.socicon-twitter:before {
+  content: "\e040"; }
+
+.socicon-facebook:before {
+  content: "\e041"; }
+
+.socicon-googleplus:before {
+  content: "\e042"; }
+
+.socicon-pinterest:before {
+  content: "\e043"; }
+
+.socicon-foursquare:before {
+  content: "\e044"; }
+
+.socicon-yahoo:before {
+  content: "\e045"; }
+
+.socicon-skype:before {
+  content: "\e046"; }
+
+.socicon-yelp:before {
+  content: "\e047"; }
+
+.socicon-feedburner:before {
+  content: "\e048"; }
+
+.socicon-linkedin:before {
+  content: "\e049"; }
+
+.socicon-viadeo:before {
+  content: "\e04a"; }
+
+.socicon-xing:before {
+  content: "\e04b"; }
+
+.socicon-myspace:before {
+  content: "\e04c"; }
+
+.socicon-soundcloud:before {
+  content: "\e04d"; }
+
+.socicon-spotify:before {
+  content: "\e04e"; }
+
+.socicon-grooveshark:before {
+  content: "\e04f"; }
+
+.socicon-lastfm:before {
+  content: "\e050"; }
+
+.socicon-youtube:before {
+  content: "\e051"; }
+
+.socicon-vimeo:before {
+  content: "\e052"; }
+
+.socicon-dailymotion:before {
+  content: "\e053"; }
+
+.socicon-vine:before {
+  content: "\e054"; }
+
+.socicon-flickr:before {
+  content: "\e055"; }
+
+.socicon-500px:before {
+  content: "\e056"; }
+
+.socicon-wordpress:before {
+  content: "\e058"; }
+
+.socicon-tumblr:before {
+  content: "\e059"; }
+
+.socicon-twitch:before {
+  content: "\e05a"; }
+
+.socicon-8tracks:before {
+  content: "\e05b"; }
+
+.socicon-amazon:before {
+  content: "\e05c"; }
+
+.socicon-icq:before {
+  content: "\e05d"; }
+
+.socicon-smugmug:before {
+  content: "\e05e"; }
+
+.socicon-ravelry:before {
+  content: "\e05f"; }
+
+.socicon-weibo:before {
+  content: "\e060"; }
+
+.socicon-baidu:before {
+  content: "\e061"; }
+
+.socicon-angellist:before {
+  content: "\e062"; }
+
+.socicon-ebay:before {
+  content: "\e063"; }
+
+.socicon-imdb:before {
+  content: "\e064"; }
+
+.socicon-stayfriends:before {
+  content: "\e065"; }
+
+.socicon-residentadvisor:before {
+  content: "\e066"; }
+
+.socicon-google:before {
+  content: "\e067"; }
+
+.socicon-yandex:before {
+  content: "\e068"; }
+
+.socicon-sharethis:before {
+  content: "\e069"; }
+
+.socicon-bandcamp:before {
+  content: "\e06a"; }
+
+.socicon-itunes:before {
+  content: "\e06b"; }
+
+.socicon-deezer:before {
+  content: "\e06c"; }
+
+.socicon-telegram:before {
+  content: "\e06e"; }
+
+.socicon-openid:before {
+  content: "\e06f"; }
+
+.socicon-amplement:before {
+  content: "\e070"; }
+
+.socicon-viber:before {
+  content: "\e071"; }
+
+.socicon-zomato:before {
+  content: "\e072"; }
+
+.socicon-quora:before {
+  content: "\e073"; }
+
+.socicon-draugiem:before {
+  content: "\e074"; }
+
+.socicon-endomodo:before {
+  content: "\e075"; }
+
+.socicon-filmweb:before {
+  content: "\e076"; }
+
+.socicon-stackexchange:before {
+  content: "\e077"; }
+
+.socicon-wykop:before {
+  content: "\e078"; }
+
+.socicon-teamspeak:before {
+  content: "\e079"; }
+
+.socicon-teamviewer:before {
+  content: "\e07a"; }
+
+.socicon-ventrilo:before {
+  content: "\e07b"; }
+
+.socicon-younow:before {
+  content: "\e07c"; }
+
+.socicon-raidcall:before {
+  content: "\e07d"; }
+
+.socicon-mumble:before {
+  content: "\e07e"; }
+
+.socicon-medium:before {
+  content: "\e06d"; }
+
+.socicon-bebee:before {
+  content: "\e07f"; }
+
+.socicon-hitbox:before {
+  content: "\e080"; }
+
+.socicon-reverbnation:before {
+  content: "\e081"; }
+
+.socicon-formulr:before {
+  content: "\e082"; }
+
+.socicon-instagram:before {
+  content: "\e057"; }
 
 .contact-us {
   text-align: center;
@@ -3309,6 +3752,8 @@ img {
   .footer:last-child {
     margin-right: 0; }
   .footer h3 {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    text-align: center; }
   .footer p {
-    font-size: .8em; }
+    font-size: .8em;
+    text-align: center; }

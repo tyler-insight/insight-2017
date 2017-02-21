@@ -2,10 +2,7 @@
     @include span-columns(4);
     position: relative;
     margin-bottom:$mobile-spacing;
-    @include media($desktop-large){
-      @include span-columns(10);
-      @include shift(1);
-    }
+
 
     .featured-blog {
         height: 300px;
@@ -41,18 +38,27 @@
             }
             @include media($desktop-large){
               padding:3em;
-              min-height:200px;
+              min-height:250px;
+            }
+            @include media($desktop-super){
+              min-height:300px;
             }
 
             h2 {
                 text-align: left;
                 line-height: 1.1em;
                 margin-bottom: 0.3em;
+                @include media($desktop-largest){
+                  font-size:3em;
+                }
             }
 
             h3 {
                 font-weight: 400;
                 text-align: left;
+                @include media($desktop-large){
+                  font-size:1.8em;
+                }
 
                 strong {
                     font-weight: 600;
@@ -76,18 +82,28 @@
             .blog-info{
               height:auto;
               @include span-columns(4);
+
               padding:1em;
+
+              @include media($desktop){
+                padding:2em;
+              }
 
               h2 {
                   text-align: left;
                   line-height: 1.1em;
                   margin-bottom: 0.3em;
-
+                  @include media($desktop-large){
+                    font-size:3em;
+                  }
               }
 
               h3 {
                   font-weight: 400;
                   text-align: left;
+                  @include media($desktop-large){
+                    font-size:1.8em;
+                  }
 
                   strong {
                       font-weight: 600;
@@ -158,15 +174,13 @@
 }
 .archives{
   margin-bottom:$mobile-spacing;
-  @include media($desktop-large){
-    @include span-columns(10);
-    @include shift(1);
-  }
+
   h1{
     margin-bottom: 0;
     color: $dark-gray;
     font-weight: 400;
     @include transition(color .5s);
+    text-align: left;
 
     strong{
       font-weight:600;
@@ -206,13 +220,17 @@
       color: $light-gray;
       margin-top:.5em;
       margin-bottom:0;
+      text-align: left;
+    }
+    li{
+      text-align: left;
     }
     li a{
       color:$dark-gray;
       text-decoration: none;
       font-size:1.2em;
       line-height: 1.5em;
-
+      text-align: left;
 
       @include media($tablet){
         font-size:1.4em;
@@ -229,14 +247,6 @@
 
   .blog-title{
     margin-bottom:20px;
-    @include media($desktop-largest){
-      @include span-columns(8);
-      @include shift(2 of 12);
-    }
-
-    h1{
-
-    }
     h3{
       font-weight:400;
       font-size:1.2em;
@@ -252,10 +262,6 @@
     margin-bottom:$mobile-spacing;
     @include span-columns(4);
 
-    @include media($desktop-large){
-      @include span-columns(10);
-      @include shift(1 of 12);
-    }
     p{
       margin-top:1em;
     }
@@ -306,20 +312,14 @@
       margin:30px 0;
       @include span-columns(4);
       min-height:400px;
-      @include media($desktop-large){
-        @include span-columns(8);
-        @include shift(2 of 12);
-      }
+
     }
     img{
       width:100%;
     }
     .video{
-      width:100%;
-      @include media($desktop-large){
-        @include span-columns(8);
-        @include shift(2 of 12);
-      }
+      max-width:100%;
+@include span-columns(4);
     }
   }
 }

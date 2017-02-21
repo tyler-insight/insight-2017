@@ -22,8 +22,8 @@ p {
     }
     @include media($desktop-large){
       font-size: 1.5em;
-      @include span-columns(8);
-      @include shift(2 of 12);
+      @include span-columns(10);
+
     }
 
     a, a:visited {
@@ -68,7 +68,8 @@ h5 {
   font-weight: 600;
   color: $dark-gray;
   line-height: 1em;
-  text-align:center;
+  text-align:left;
+  
 
   a{
     color:#fff;
@@ -140,13 +141,4 @@ img {
   background: transparent;
   margin-bottom:$mobile-spacing;
   width:100%;
-}
-
-.social{
-  position: fixed;
-  width:100px;
-  background-color:red;
-  width:50px;
-  right:6%;
-  bottom:5%;
 }
