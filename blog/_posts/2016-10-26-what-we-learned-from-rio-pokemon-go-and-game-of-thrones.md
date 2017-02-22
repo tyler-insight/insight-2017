@@ -7,7 +7,7 @@ card: summary
 description: "What We Learned from Rio, Pokémon Go and Game of Thrones"
 text-color: 'fff'
 back-color: 'a4877b'
-cover-image: cover-image.jpg
+cover-image: hdr-what-we-learned.jpg
 ---
 ![What We've Learned](/img/blog/hdr-what-we-learned.jpg)
 

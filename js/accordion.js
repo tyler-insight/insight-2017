@@ -14,7 +14,7 @@ jQuery(document).ready(function(){
 			var self = this;
 			setTimeout(function() {
                 theOffset = $(self).offset();
-                $('body,html').animate({ scrollTop: theOffset.top - 10}, 800);
+                $('body,html').animate({ scrollTop: theOffset.top - 10}, 800, 'swing');
             }, 100); // ensure the collapse animation is done
 	  }
 	}

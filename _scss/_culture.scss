@@ -6,7 +6,6 @@
     overflow: hidden;
     width: 100%;
     height: 400px;
-    margin-bottom: 50px;
     text-align: center;
     background: #eee;
     @include media($tablet) {
@@ -46,6 +45,12 @@
     @include media($desktop-large) {
         text-shadow: 0 0 25px rgba(0,0,0,.7);
         font-size: modular-scale(7);
+        width:100%;
+        float:none;
+        position: relative;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
     }
     @include media($desktop-largest) {
         font-size: modular-scale(8);
@@ -270,7 +275,7 @@
 .employees {
     @include span-columns(4);
     position: relative;
-    margin-top: $spacing;
+    margin-bottom: $mobile-spacing;
 
     .employee {
         padding: 1em;
@@ -294,6 +299,14 @@
             line-height: 1em;
             margin-bottom: 5px;
             text-align:left;
+            @include media($desktop-large){
+              @include span-columns(12);
+              @include shift(0);
+            }
+            @include media($desktop-largest){
+              @include span-columns(12);
+              @include shift(0);
+            }
         }
 
         h2 {
@@ -302,12 +315,28 @@
             margin-bottom: 0.5em;
             line-height:1em;
             text-align:left;
+            @include media($desktop-large){
+              @include span-columns(12);
+              @include shift(0);
+            }
+            @include media($desktop-largest){
+              @include span-columns(12);
+              @include shift(0);
+            }
         }
 
         p {
             font-size: 1.2em;
             display: none;
             line-height:1.2em;
+            @include media($desktop-large){
+              @include span-columns(12);
+              @include shift(0);
+            }
+            @include media($desktop-largest){
+              @include span-columns(12);
+              @include shift(0);
+            }
         }
     }
     @include media($large-phone) {
@@ -383,8 +412,7 @@
           font-size:1.2em;
           line-height: 1.5em;
           display:inline-block;
-          @include span-columns(12);
-          @include shift(0);
+
         }
       }
 

@@ -16,12 +16,12 @@ The internet is an ever-changing place of information and discovery and has evol
 One of the biggest changes is the interactions users have with a website or web application. Technology has advanced to  let us create an experience for the user, rather than just display information. When a user visits a web page now, instead of having static information we can have images that slide and fade onto the screen. We can have content move as the user scrolls or enlarges itself when the user clicks it. Animations add to the user experience by helping immerse them in the content and giving them guidance on where to look. When the user clicks a back arrow, the page might slide off the screen in a direction opposite where the arrow is pointing. When they scroll down a large page the main navigation bar might shrink so that it becomes less distracting to the user.
 
 *Example of page transition animations*
-<iframe src="https://player.vimeo.com/video/173269145" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/173269145" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 Another way web interactions have evolved is voice recognition. Phones and computers with microphones can now accurately convert a user’s voice request into text, allowing them to search and type without lifting a finger. This opens up a whole new world of possibilities for how technology can be designed for a user. In the video below, notice how animation impacts the user experience as they interact with Google's voice search.
 
 *Example of Google voice search*
-<video width="640" height="480" controls>
+<video controls>
   <source src="https://g-design.storage.googleapis.com/production/v6/assets/g-voice-flow.mp4" type="video/mp4">
   <source src="https://g-design.storage.googleapis.com/production/v6/assets/g-voice-flow.ogg" type="video/ogg">
 Your browser does not support the video tag.

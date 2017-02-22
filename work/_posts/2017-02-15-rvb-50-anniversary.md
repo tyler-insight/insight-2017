@@ -1,9 +1,9 @@
 ---
 layout: project
-title: Test Project
-description: A billboard design created for Bank of Luxemburg to promote their lorem ipsum.
-client: Insight Creative, Inc.
-cover-image: test-project/cover-image.jpg
+title: 50th Anniversary Branding
+client: River Valley Bank
+description: Branding and art direction for River Valley Bank's 50th year.
+cover-image: rvb-50-anniversary/rvb-50-anniversary-cover.jpg
 cover-text-color: fff
 back-color1: 59bc6b
 back-color2: 97cc7b

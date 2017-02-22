@@ -1,11 +1,12 @@
 ---
 layout: project
-title: Test Project
-client: Insight Creative, Inc.
-cover-image: test-project/cover-image.jpg
+title: Be Smart. Plan Ahead. Billboard
+client: Bank of Luxemburg
+description: A billboard design created for Bank of Luxemburg.
+cover-image: be-smart-plan-ahead/cover-image.jpg
 cover-text-color: fff
-back-color1: e27670
-back-color2: 6f4c7c
+back-color1: 6e897e
+back-color2: 407ca5
 tags:
 - Print & Packaging
 

@@ -7,7 +7,7 @@ card: summary
 description: "Are Cars the Next Must-Have Mobile Device?"
 text-color: 'fff'
 back-color: '6f4c7c'
-cover-image: cover-image.jpg
+cover-image: netflix-car.jpg
 ---
 ![Watch Netflix in Car](/img/blog/netflix-car.jpg)
 

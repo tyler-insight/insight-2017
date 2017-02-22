@@ -7,11 +7,14 @@ card: summary
 description: "Molly Setzer, Senior Media Buyer at Insight Creative, explains the role of a media buyer, how they can support your company's marketing efforts and how they help you get the most out of your marketing budget."
 text-color: 'fff'
 back-color: 'b31139'
-cover-image: cover-image.jpg
+cover-image: th-molly-vlog-media-buying.jpg
 
 ---
 <!-- ![Media Buying 101](/img/th-molly-vlog-media-buying.jpg)  -->
 
-<script src="//fast.wistia.com/embed/medias/e6g4936gr8.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_e6g4936gr8 seo=false videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+
+<script src="//fast.wistia.com/embed/medias/pukozq6xf0.jsonp" async></script>
+<script src="//fast.wistia.com/assets/external/E-v1.js" async></script>
+<span class="wistia_embed wistia_async_e6g4936gr8 popover=true popoverAnimateThumbnail=true" style="display:inline-block;height:500px;width:100%">&nbsp;</span>
 
 Molly Setzer, Senior Media Buyer at Insight Creative, explains the role of a media buyer, how they can support your company's marketing efforts and how they help you get the most out of your marketing budget.

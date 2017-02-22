@@ -12,18 +12,11 @@
     .service {
         @include span-columns(4);
         position: relative;
-        text-align: left;
-        @include media($desktop) {
-            @include span-columns(6);
-            @include omega;
-        }
 
         h1 {
-
+          text-align: left;
             margin-bottom: 0.5em;
-            padding-right: 1em;
             cursor: pointer;
-            display: inline-block;
             @include transition(color .5s);
             @include span-columns(4);
             @include omega;
@@ -35,44 +28,16 @@
         }
     }
 
-    .accordion h1::after {
-        content: '+';
-        /* Unicode character for "plus" sign (+) */
-        margin-left: 0.3em;
-        border: none;
-        display: inline-block;
-        position: absolute;
-        font-weight: 400;
-        opacity: 0;
-        @include transition(all .5s);
-    }
-
-    .accordion h1:hover::after {
-        opacity: 1;
-    }
-
-    .accordion.active h1::after {
-        opacity: 1;
-        @include transform(rotate(45deg));
-        @include transition(transform .5s);
-    }
-
     .service-description {
         @include span-columns(4);
         margin-top: 1em;
         @include transition(all .5s);
         max-height: 0;
         overflow: hidden;
-        text-align: left;
-        
 
         h2 {
             margin-bottom: 0.2em;
-            @include media($tablet) {
-                 @include span-columns(8);
-            }
         }
-
         p {
             margin-bottom: 2em;
         }

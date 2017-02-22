@@ -21,9 +21,9 @@ title: Blog
             {% assign loopindex = forloop.index | modulo: 2 %}
             {% if loopindex == 1 %}
             <a href="{{ post.url }}">
-                <div class="blog-right">
+                <div class="blog-right" style="background-color:#{{ post.back-color }}">
                     <div class="blog-thumbnail" style="background-image:url('/img/blog/{{ post.cover-image }}')"></div>
-                    <div class="blog-info" style="background-color:#{{ post.back-color }}">
+                    <div class="blog-info" >
                         <h2 style="color:#{{ post.text-color }}">{{ post.title }}</h2>
                         <h3 style="color:#{{ post.text-color }}">by <strong>{{ post.author }}</strong></h3>
                     </div>
@@ -31,9 +31,9 @@ title: Blog
             </a>
             {% else %}
             <a href="{{ post.url }}">
-                <div class="blog-left">
+                <div class="blog-left" style="background-color:#{{ post.back-color }}">
                   <div class="blog-thumbnail" style="background-image:url('/img/blog/{{ post.cover-image }}')"></div>
-                    <div class="blog-info" style="background-color:#{{ post.back-color }}">
+                    <div class="blog-info">
                         <h2 style="color:#{{ post.text-color }}">{{ post.title }}</h2>
                         <h3 style="color:#{{ post.text-color }}">by <strong>{{ post.author }}</strong></h3>
                     </div>

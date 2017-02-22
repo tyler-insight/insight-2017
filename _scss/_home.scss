@@ -303,6 +303,13 @@
             text-align: center;
 
             font-style: italic;
+            @include media($desktop-large){
+              @include span-columns(12);
+            }
+            @include media($desktop-largest){
+              @include span-columns(10);
+              @include shift(1);
+            }
         }
 
         p::before {
