@@ -3597,6 +3597,118 @@ img {
       .blog-post .nextprevious .previous-project, .blog-post .nextprevious .next-project {
         height: 400px; } }
 
+.contact-body {
+  float: left;
+  display: block;
+  margin-right: 6.66667%;
+  width: 100%;
+  margin-bottom: 80px; }
+  .contact-body:last-child {
+    margin-right: 0; }
+  .contact-body .banner {
+    float: left;
+    display: block;
+    margin-right: 6.66667%;
+    width: 100%;
+    margin-bottom: 80px; }
+    .contact-body .banner:last-child {
+      margin-right: 0; }
+    .contact-body .banner h1 {
+      font-size: 1.7em;
+      font-weight: 400;
+      margin-bottom: .2em; }
+    @media screen and (min-width: 1200px) {
+      .contact-body .banner h1, .contact-body .banner h2 {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 100%;
+        margin-left: 0%; }
+        .contact-body .banner h1:last-child, .contact-body .banner h2:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 1800px) {
+      .contact-body .banner h1, .contact-body .banner h2 {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 100%;
+        margin-left: 0%; }
+        .contact-body .banner h1:last-child, .contact-body .banner h2:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 600px) {
+      .contact-body .banner h1 {
+        font-size: 2.8em; } }
+    @media screen and (min-width: 900px) {
+      .contact-body .banner h1 {
+        font-size: 4em; } }
+    @media screen and (min-width: 1200px) {
+      .contact-body .banner h1 {
+        font-size: 5em; }
+      .contact-body .banner h2 {
+        font-size: 3em; } }
+  .contact-body .email, .contact-body .visit {
+    float: left;
+    display: block;
+    margin-right: 6.66667%;
+    width: 100%;
+    margin-bottom: 2em; }
+    .contact-body .email:last-child, .contact-body .visit:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 1200px) {
+      .contact-body .email h1, .contact-body .email h2, .contact-body .email h3, .contact-body .visit h1, .contact-body .visit h2, .contact-body .visit h3 {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 100%;
+        margin-left: 0%; }
+        .contact-body .email h1:last-child, .contact-body .email h2:last-child, .contact-body .email h3:last-child, .contact-body .visit h1:last-child, .contact-body .visit h2:last-child, .contact-body .visit h3:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 1800px) {
+      .contact-body .email h1, .contact-body .email h2, .contact-body .email h3, .contact-body .visit h1, .contact-body .visit h2, .contact-body .visit h3 {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 100%;
+        margin-left: 0%; }
+        .contact-body .email h1:last-child, .contact-body .email h2:last-child, .contact-body .email h3:last-child, .contact-body .visit h1:last-child, .contact-body .visit h2:last-child, .contact-body .visit h3:last-child {
+          margin-right: 0; } }
+    .contact-body .email h1, .contact-body .visit h1 {
+      font-weight: 600;
+      font-size: 1.5em;
+      margin-bottom: .2em; }
+      .contact-body .email h1 a, .contact-body .visit h1 a {
+        color: #3a3a3a; }
+    .contact-body .email h2, .contact-body .visit h2 {
+      font-weight: 400; }
+    .contact-body .email h3, .contact-body .visit h3 {
+      color: #838383;
+      margin-bottom: .2em; }
+    @media screen and (min-width: 600px) {
+      .contact-body .email h1, .contact-body .visit h1 {
+        font-size: 2em; } }
+    @media screen and (min-width: 900px) {
+      .contact-body .email, .contact-body .visit {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 48.93617%; }
+        .contact-body .email:last-child, .contact-body .visit:last-child {
+          margin-right: 0; }
+        .contact-body .email h2, .contact-body .visit h2 {
+          font-size: 1.5em; } }
+    @media screen and (min-width: 1200px) {
+      .contact-body .email h1, .contact-body .visit h1 {
+        font-size: 2.5em; }
+      .contact-body .email h2, .contact-body .visit h2 {
+        font-size: 2em; } }
+    @media screen and (min-width: 1800px) {
+      .contact-body .email h1, .contact-body .visit h1 {
+        font-size: 3em; }
+      .contact-body .email h2, .contact-body .visit h2 {
+        font-size: 2.5em; }
+      .contact-body .email h3, .contact-body .visit h3 {
+        font-size: 1.8em; } }
+
 @font-face {
   font-family: "socicon";
   src: url("fonts/socicon.eot");

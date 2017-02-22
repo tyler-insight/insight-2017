@@ -1,0 +1,108 @@
+.contact-body{
+  @include span-columns(4);
+  margin-bottom:$mobile-spacing;
+
+  .banner{
+    @include span-columns(4);
+    margin-bottom:$mobile-spacing;
+    h1{
+      font-size:1.7em;
+      font-weight: 400;
+      margin-bottom: .2em;
+    }
+    h1, h2{
+      @include media($desktop-large){
+        @include span-columns(12);
+        @include shift(0);
+      }
+      @include media($desktop-largest){
+        @include span-columns(12);
+        @include shift(0);
+      }
+    }
+
+    @include media($tablet){
+      h1{
+        font-size:2.8em;
+      }
+    }
+    @include media($desktop){
+      h1{
+        font-size:4em;
+      }
+    }
+    @include media($desktop-large){
+      h1{
+        font-size:5em;
+      }
+      h2{
+        font-size:3em;
+      }
+    }
+  }
+
+
+  .email, .visit{
+    @include span-columns(4);
+    margin-bottom:2em;
+
+    h1, h2, h3{
+      @include media($desktop-large){
+        @include span-columns(12);
+        @include shift(0);
+      }
+      @include media($desktop-largest){
+        @include span-columns(12);
+        @include shift(0);
+      }
+    }
+
+    h1{
+      font-weight: 600;
+      font-size:1.5em;
+      margin-bottom:.2em;
+
+      a{
+        color:$dark-gray;
+      }
+    }
+    h2{
+      font-weight: 400;
+    }
+    h3{
+      color:$medium-gray;
+      margin-bottom:.2em;
+    }
+    @include media($tablet){
+      h1{
+        font-size:2em;
+      }
+    }
+    @include media($desktop){
+      @include span-columns(6);
+      h2{
+        font-size:1.5em;
+      }
+    }
+    @include media($desktop-large){
+      h1{
+        font-size:2.5em;
+      }
+      h2{
+        font-size:2em;
+      }
+    }
+    @include media($desktop-largest){
+      h1{
+        font-size:3em;
+      }
+      h2{
+        font-size:2.5em;
+      }
+      h3{
+        font-size:1.8em;
+      }
+    }
+  }
+
+}
