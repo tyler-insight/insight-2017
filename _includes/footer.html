@@ -1,36 +1,27 @@
-<!--
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/history.js/1.8/bundled/html4+html5/jquery.history.js"></script>
-<script src="js/ajax.js"></script>
--->
 
-
-
-<!-- pushState ajax script
-<script src="js/push.js"></script>-->
-<script src="/js/ajax.js"></script>
-
-<!-- Navigation mobile and scroll animations -->
-<script src="/js/hide-navigation.js"></script>
-
-<!-- Animate employee bio images start -->
-<script src="/js/employees.js"></script>
-<!-- Rotates through images on hover -->
+<!-- pushState ajax script-->
+<script src="/js/pjax.js"></script>
 <script>
-  $('.images-rotation').imagesRotation();
+  //Set links to dynamically load pages using pjax
+    document.addEventListener("DOMContentLoaded", function() {
+        new Pjax({
+            elements: "a", // default is "a[href], form[action]"
+            selectors: ["#wrap"]
+        });
+        //load other scripts so they work on page load
+        $.getScript("/js/app.js");
+        $.getScript("/js/video.js");
+    });
+    $(document).on('pjax:complete', function() {
+      //Re-run other scripts so they work after new page content loads in
+      $.getScript("/js/video.js");
+      runScripts();
+
+    });
 </script>
-<!-- End animate employee bio imags -->
-
-<!-- Navigation mobile and scroll animations -->
-<script src="/js/culture-header.js"></script>
-
-<!-- Wistia Jumbotron Video -->
 <script charset='ISO-8859-1' src='https://fast.wistia.com/assets/external/E-v1.js'></script>
 <script charset='ISO-8859-1' src='https://fast.wistia.com/labs/crop-fill/plugin.js'></script>
-<script src="/js/video.js"></script>
-
-<!-- Animate accordion -->
-<script src="/js/accordion.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6fA5MeR0s80KDiiUgSTAGBTS23Jgv-As"></script>
 
 <!-- Animated type on Contact page -->
 <script src="/js/typed.js"></script>
@@ -46,7 +37,3 @@
         });
     });
 </script>
-
-<!-- Google map on Contact page -->
-<script src="/js/map.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6fA5MeR0s80KDiiUgSTAGBTS23Jgv-As"></script>

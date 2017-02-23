@@ -1,4 +1,4 @@
-jQuery(document).ready(function(){
+
 	var acc = document.getElementsByClassName("accordion");
 	var i;
 
@@ -18,4 +18,3 @@ jQuery(document).ready(function(){
             }, 100); // ensure the collapse animation is done
 	  }
 	}
-});
