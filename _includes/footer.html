@@ -1,21 +1,46 @@
-
 <!-- pushState ajax script-->
 <script src="/js/pjax.js"></script>
 <script>
-  //Set links to dynamically load pages using pjax
+    //Set links to dynamically load pages using pjax
     document.addEventListener("DOMContentLoaded", function() {
         new Pjax({
             elements: "a", // default is "a[href], form[action]"
-            selectors: ["#wrap"]
+            selectors: [".js-Pjax"],
+            switches: {
+                ".js-Pjax": require("/js/lib/switches.js").sideBySide
+            },
+            switchesOptions: {
+                ".js-Pjax": {
+                    classNames: {
+                        // class added on the element that will be removed
+                        remove: "Animated Animated--reverse Animate--fast Animate--noDelay",
+                        // class added on the element that will be added
+                        add: "Animated",
+                        // class added on the element when it go backward
+                        backward: "Animate--slideInRight",
+                        // class added on the element when it go forward (used for new page too)
+                        forward: "Animate--slideInLeft"
+                    },
+                    callbacks: {
+                        // to make a nice transition with 2 pages as the same time
+                        // we are playing with absolute positioning for element we are removing
+                        // & we need live metrics to have something great
+                        // see associated CSS below
+                        removeElement: function(el) {
+                            el.style.marginLeft = "-" + (el.getBoundingClientRect().width / 2) + "px"
+                        }
+                    }
+                }
+            }
         });
         //load other scripts so they work on page load
         $.getScript("/js/app.js");
         $.getScript("/js/video.js");
     });
     $(document).on('pjax:complete', function() {
-      //Re-run other scripts so they work after new page content loads in
-      $.getScript("/js/video.js");
-      runScripts();
+        //Re-run other scripts so they work after new page content loads in
+        $.getScript("/js/video.js");
+        runScripts();
 
     });
 </script>
@@ -26,7 +51,7 @@
 <!-- Animated type on Contact page -->
 <script src="/js/typed.js"></script>
 <script>
-    $(function(){
+    $(function() {
         $(".typed").typed({
             stringsElement: $('.typed-strings'),
             typeSpeed: 10,
