@@ -329,6 +329,7 @@
             font-size: 1.2em;
             display: none;
             line-height:1.2em;
+            font-family: "futura-pt", sans-serif;
             @include media($desktop-large){
               @include span-columns(12);
               @include shift(0);
@@ -441,7 +442,7 @@
 
     .employee-left {
         img {
-            @include span-columns(2);
+
             position: absolute;
             bottom: 0;
             right: 3%;
@@ -449,10 +450,11 @@
             width: auto;
 
             @include media($large-phone) {
-                right:5%;
+              right: 3%;
                 height: calc(100% + 50px);
             }
             @include media($tablet) {
+              right:3%;
                 height: calc(100% + 50px);
             }
             @include media($desktop-large) {
@@ -469,7 +471,7 @@
 
     .employee-right {
         img {
-            @include span-columns(2);
+
             position: absolute;
             bottom: 0;
             left: 3%;

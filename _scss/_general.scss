@@ -3,7 +3,7 @@
 }
 
 body {
-    font-family: "futura-pt";
+    font-family: "proxima-nova", sans-serif;
     background: #fff;
     overflow-x:hidden;
     @include transition(all .5s);
@@ -12,22 +12,20 @@ body {
 p {
     color: $dark-gray;
     font-size: 1em;
-    line-height: 1.5em;
+    line-height: 1.6em;
     margin-bottom:1em;
-
-
 
     @include media($tablet){
       font-size: modular-scale(1);
 
     }
     @include media($desktop-large){
-      font-size: 1.5em;
+      font-size: 1.3em;
       @include span-columns(10);
       @include shift(1);
     }
     @include media($desktop-largest){
-      font-size: 1.5em;
+
       @include span-columns(8);
       @include shift(2);
     }
@@ -68,6 +66,7 @@ h2,
 h3,
 h4,
 h5 {
+  font-family: "futura-pt", sans-serif;
   font-weight: 600;
   color: $dark-gray;
   line-height: 1em;
@@ -84,6 +83,18 @@ h5 {
   a{
     color:#fff;
     text-decoration: none;
+  }
+}
+
+form{
+  @include span-columns(4);
+  @include media($desktop-large){
+    @include span-columns(10);
+    @include shift(1);
+  }
+  @include media($desktop-largest){
+    @include span-columns(8);
+    @include shift(2);
   }
 }
 

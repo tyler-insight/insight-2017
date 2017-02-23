@@ -4,11 +4,11 @@
 <script src="js/ajax.js"></script>
 -->
 
-<script src="/js/jquery-3.1.1.min.js"></script>
+
 
 <!-- pushState ajax script
 <script src="js/push.js"></script>-->
-
+<script src="/js/ajax.js"></script>
 
 <!-- Navigation mobile and scroll animations -->
 <script src="/js/hide-navigation.js"></script>
@@ -29,7 +29,24 @@
 <script charset='ISO-8859-1' src='https://fast.wistia.com/labs/crop-fill/plugin.js'></script>
 <script src="/js/video.js"></script>
 
+<!-- Animate accordion -->
 <script src="/js/accordion.js"></script>
 
+<!-- Animated type on Contact page -->
+<script src="/js/typed.js"></script>
+<script>
+    $(function(){
+        $(".typed").typed({
+            stringsElement: $('.typed-strings'),
+            typeSpeed: 10,
+            // time before backspacing
+            backDelay: 2000,
+            // loop
+            loop: true
+        });
+    });
+</script>
+
+<!-- Google map on Contact page -->
 <script src="/js/map.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6fA5MeR0s80KDiiUgSTAGBTS23Jgv-As"></script>

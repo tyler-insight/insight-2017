@@ -1,181 +1,319 @@
-.contact-info{
-  @include span-columns(4);
-  margin-bottom:$mobile-spacing;
+.contact-info {
+    margin-bottom: $mobile-spacing;
 
-  .banner{
     @include span-columns(4);
-    margin-bottom:$mobile-spacing;
-    h1{
-      font-size:1.7em;
-      font-weight: 400;
-      margin-bottom: .2em;
-    }
-    h1, h2{
-      @include media($desktop-large){
-        @include span-columns(12);
-        @include shift(0);
-      }
-      @include media($desktop-largest){
-        @include span-columns(12);
-        @include shift(0);
-      }
+
+    .banner {
+        margin-bottom: $mobile-spacing*2;
+
+        @include span-columns(4);
+
+        h1 {
+            margin-bottom: 0.1em;
+
+            font-weight: 400;
+        }
+
+        h1,
+        h2 {
+            @include media($desktop-large) {
+                 @include span-columns(12);
+                @include shift(0);
+            }
+            @include media($desktop-largest) {
+                 @include span-columns(12);
+                @include shift(0);
+            }
+        }
+
+        .typed-cursor {
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+
+            opacity: 1;
+        }
     }
 
-    @include media($tablet){
-      h1{
-        font-size:2.8em;
-      }
-    }
-    @include media($desktop){
-      h1{
-        font-size:4em;
-      }
-    }
-    @include media($desktop-large){
-      h1{
-        font-size:6em;
-      }
-      h2{
-        font-size:3em;
-      }
-    }
-  }
+    .email,
+    .visit {
+        margin-bottom: 2em;
 
+        @include span-columns(4);
+        @include media($tablet) {
+            h1 {
+                font-size: 2em;
+            }
+        }
+        @include media($desktop) {
+             @include span-columns(6);
 
-  .email, .visit{
-    @include span-columns(4);
-    margin-bottom:2em;
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+        @include media($desktop-large) {
+            h1 {
+                font-size: 2.5em;
+            }
 
-    h1, h2, h3{
-      @include media($desktop-large){
-        @include span-columns(12);
-        @include shift(0);
-      }
-      @include media($desktop-largest){
-        @include span-columns(12);
-        @include shift(0);
-      }
-    }
+            h2 {
+                font-size: 2em;
+            }
+        }
+        @include media($desktop-largest) {
+            h1 {
+                font-size: 3em;
+            }
 
-    h1{
-      font-weight: 600;
-      font-size:1.5em;
-      margin-bottom:.2em;
+            h2 {
+                font-size: 2.5em;
+            }
 
-      a{
-        color:$dark-gray;
-      }
-    }
-    h2{
-      font-weight: 400;
-    }
-    h3{
-      color:$medium-gray;
-      margin-bottom:.2em;
-    }
-    @include media($tablet){
-      h1{
-        font-size:2em;
-      }
-    }
-    @include media($desktop){
-      @include span-columns(6);
-      h2{
-        font-size:1.5em;
-      }
-    }
-    @include media($desktop-large){
-      h1{
-        font-size:2.5em;
-      }
-      h2{
-        font-size:2em;
-      }
-    }
-    @include media($desktop-largest){
-      h1{
-        font-size:3em;
-      }
-      h2{
-        font-size:2.5em;
-      }
-      h3{
-        font-size:1.8em;
-      }
-    }
-  }
+            h3 {
+                font-size: 1.8em;
+            }
+        }
 
+        h1,
+        h2,
+        h3 {
+            @include media($desktop-large) {
+                 @include span-columns(12);
+                @include shift(0);
+            }
+            @include media($desktop-largest) {
+                 @include span-columns(12);
+                @include shift(0);
+            }
+        }
 
+        h1 {
+            margin-bottom: 0.2em;
 
+            font-size: 1.5em;
+            font-weight: 600;
+
+            a {
+                color: $dark-gray;
+            }
+        }
+
+        h2 {
+            font-weight: 400;
+        }
+
+        h3 {
+            margin-bottom: 0.2em;
+
+            color: $medium-gray;
+        }
+    }
 }
-.building{
+
+.building {
     @include span-columns(4);
-    img{
-      @include span-columns(4);
+
+    img {
+        @include span-columns(4);
+    }
+}
+
+#cd-google-map {
+    position: relative;
+
+    margin-bottom: $mobile-spacing;
+
+    @include span-columns(4);
+
+    address {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        padding: 1em;
+
+        text-align: center;
+
+        color: #fff;
+        background-color: rgba($brand-color, .9);
     }
 }
 
 #google-container {
     position: relative;
+
     width: 100%;
     height: 200px;
+
     background-color: black;
-    margin-bottom:$mobile-spacing;
 
-    @include media($tablet){
-      height:300px;
+    @include span-columns(4);
+    @include media($tablet) {
+        height: 300px;
     }
-    @include media($desktop){
-      height:400px;
+    @include media($desktop) {
+        height: 400px;
     }
-    @include media($desktop-large){
-      height:500px;
+    @include media($desktop-large) {
+        height: 500px;
     }
-    @include media($desktop-largest){
-      height:600px;
+    @include media($desktop-largest) {
+        height: 600px;
     }
-    @include media($desktop-super){
-      height:700px;
+    @include media($desktop-super) {
+        height: 700px;
     }
 }
 
-#cd-google-map {
-	position: relative;
+#cd-zoom-in,
+#cd-zoom-out {
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
 
-	address {
-		position: absolute;
-		width: 100%;
-		bottom: 0;
-		left: 0;
-		padding: 1em 1em;
-		background-color: rgba($brand-color, .9);
-    color:#fff;
-    text-align: center;
-	}
-}
+    cursor: pointer;
 
-#cd-zoom-in, #cd-zoom-out {
-	height: 32px;
-	width: 32px;
-	cursor: pointer;
-	margin-left: 10px;
-	background-color: rgba($brand-color, .8);
-	background-repeat: no-repeat;
-	background-size: 32px 64px;
-	background-image: url('/img/contact/cd-icon-controller.svg');
-	&:hover {
-		background-color: rgba($brand-color, 1);
-	}
+    background-color: rgba($brand-color, .8);
+    background-image: url('/img/contact/cd-icon-controller.svg');
+    background-repeat: no-repeat;
+    background-size: 32px 64px;
 
-
+    &:hover {
+        background-color: rgba($brand-color, 1);
+    }
 }
 
 #cd-zoom-in {
-	background-position: 50% 0;
-	margin-top: 10px;
-	margin-bottom: 1px;
+    margin-top: 10px;
+    margin-bottom: 1px;
+
+    background-position: 50% 0;
 }
 
 #cd-zoom-out {
-	background-position: 50% -32px;
+    background-position: 50% -32px;
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.contact-form {
+    margin-bottom: $mobile-spacing;
+
+    @include span-columns(4);
+
+    input {
+        width: 100%;
+        margin-top: 1em;
+        padding: 0.5em;
+
+        border: none;
+        border-bottom: 2px solid $dark-gray;
+
+        font-family: "futura-pt", sans-serif;
+        font-size: 1.5em;
+
+        @include transition(all .5s)
+    }
+
+    ::-webkit-input-placeholder {
+        color: $light-gray;
+    }
+
+    :-moz-placeholder {
+        /* Firefox 18- */
+        color: $light-gray;
+    }
+
+    ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: $light-gray;
+    }
+
+    :-ms-input-placeholder {
+        color: $light-gray;
+    }
+
+    button:focus,
+    input:focus,
+    select:focus,
+    textarea:focus {
+        border-bottom: 2px solid $brand-color;
+        outline: none;
+
+        @include transition(all .5s);
+    }
+
+    textarea {
+        width: 100%;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        padding: 0.5em;
+
+        border: none;
+        border-bottom: 2px solid $dark-gray;
+
+        font-family: "futura-pt", sans-serif;
+        font-size: 1.5em;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 1em 3em;
+
+        color: #fff;
+        border: none;
+        background: $dark-gray;
+
+        font-family: "futura-pt", sans-serif;
+        font-size: 1.3em;
+        @include transition(all .5s);
+
+        @include media($desktop){
+          width:250px;
+          font-size: 1.4em;
+        }
+    }
+    .btn:hover{
+      background:$brand-color;
+      @include transition(all .5s);
+    }
 }
