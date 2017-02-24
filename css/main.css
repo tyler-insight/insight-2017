@@ -1728,142 +1728,88 @@ img {
 
 .projects-services {
   margin-bottom: 80px;
+  float: left;
   display: block;
-  box-align: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
-  display: box;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  box-orient: horizontal;
-  box-direction: normal;
-  -moz-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-direction: row;
-  box-pack: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  box-lines: multiple;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
-  .projects-services::after {
-    clear: both;
-    content: "";
-    display: block; }
+  margin-right: 6.66667%;
+  width: 100%; }
+  .projects-services:last-child {
+    margin-right: 0; }
   @media screen and (min-width: 600px) {
     .projects-services {
       margin-bottom: 200px; } }
 
 .projects-block,
 .services-block {
-  box-flex: 1;
-  -moz-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  flex-basis: 350px;
-  -ms-flex-preferred-size: 350px; }
-  .projects-block a,
-  .services-block a {
-    box-align: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -o-align-items: center;
-    align-items: center;
-    -ms-flex-align: center;
-    display: box;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    box-orient: horizontal;
-    box-direction: normal;
-    -moz-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-direction: row;
-    box-pack: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    -o-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center; }
-    .projects-block a h1,
-    .services-block a h1 {
-      position: absolute;
-      text-transform: uppercase;
-      color: #fff;
-      font-weight: bold; }
-      @media screen and (min-width: 900px) {
-        .projects-block a h1,
-        .services-block a h1 {
-          font-size: 4em; } }
-      @media screen and (min-width: 1200px) {
-        .projects-block a h1,
-        .services-block a h1 {
-          font-size: 5em; } }
-    .projects-block a img,
-    .services-block a img {
-      width: 100%; }
+  float: left;
+  display: block;
+  margin-right: 6.66667%;
+  width: 46.66667%;
+  margin-right: 0;
+  width: 50%; }
+  .projects-block:last-child,
+  .services-block:last-child {
+    margin-right: 0; }
+  .projects-block a h1,
+  .services-block a h1 {
+    position: absolute;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-weight: bold; }
+    @media screen and (min-width: 900px) {
+      .projects-block a h1,
+      .services-block a h1 {
+        font-size: 4em;
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 100%; }
+        .projects-block a h1:last-child,
+        .services-block a h1:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 1200px) {
+      .projects-block a h1,
+      .services-block a h1 {
+        font-size: 5em;
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 100%; }
+        .projects-block a h1:last-child,
+        .services-block a h1:last-child {
+          margin-right: 0; } }
+  .projects-block a img,
+  .services-block a img {
+    width: 100%; }
 
 .description-statement {
+  margin-top: 80px;
   margin-bottom: 80px;
-  display: block; }
+  float: left;
+  display: block;
+  margin-right: 6.66667%;
+  width: 100%; }
+  .description-statement:last-child {
+    margin-right: 0; }
   @media screen and (min-width: 600px) {
     .description-statement {
       margin-bottom: 200px; } }
-  .description-statement::after {
-    clear: both;
-    content: "";
-    display: block; }
   .description-statement h2 {
     text-align: center;
     color: #838383;
-    line-height: 1.5em;
-    float: left;
-    display: block;
-    margin-right: 6.66667%;
-    width: 100%; }
-    .description-statement h2:last-child {
-      margin-right: 0; }
+    line-height: 1.5em; }
     .description-statement h2 a {
       text-decoration: none;
       color: #3a3a3a; }
 
 .recent-blog {
   margin-bottom: 80px;
-  display: block;
   float: left;
   display: block;
   margin-right: 6.66667%;
   width: 100%; }
-  .recent-blog::after {
-    clear: both;
-    content: "";
-    display: block; }
   .recent-blog:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 600px) {
-    .recent-blog {
-      margin-bottom: 200px; } }
-  @media screen and (min-width: 900px) {
-    .recent-blog {
-      margin-bottom: 300px; } }
-  @media screen and (min-width: 1800px) {
-    .recent-blog {
-      float: left;
-      display: block;
-      margin-right: 2.12766%;
-      width: 82.97872%;
-      margin-left: 8.51064%; }
-      .recent-blog:last-child {
-        margin-right: 0; } }
   .recent-blog h1 {
     margin-bottom: 60px;
     text-align: center; }
@@ -1928,27 +1874,76 @@ img {
       margin-bottom: 10px;
       text-align: left;
       color: #fff; }
+      @media screen and (min-width: 1200px) {
+        .recent-blog .recent-blog-block h1 {
+          float: left;
+          display: block;
+          margin-right: 2.12766%;
+          width: 100%;
+          margin-left: 0%; }
+          .recent-blog .recent-blog-block h1:last-child {
+            margin-right: 0; } }
+      @media screen and (min-width: 1800px) {
+        .recent-blog .recent-blog-block h1 {
+          float: left;
+          display: block;
+          margin-right: 2.12766%;
+          width: 100%;
+          margin-left: 0%; }
+          .recent-blog .recent-blog-block h1:last-child {
+            margin-right: 0; } }
     .recent-blog .recent-blog-block h2 {
       margin-bottom: 3px;
       color: #fff;
       font-weight: 400; }
+      @media screen and (min-width: 1200px) {
+        .recent-blog .recent-blog-block h2 {
+          float: left;
+          display: block;
+          margin-right: 2.12766%;
+          width: 100%;
+          margin-left: 0%; }
+          .recent-blog .recent-blog-block h2:last-child {
+            margin-right: 0; } }
+      @media screen and (min-width: 1800px) {
+        .recent-blog .recent-blog-block h2 {
+          float: left;
+          display: block;
+          margin-right: 2.12766%;
+          width: 100%;
+          margin-left: 0%; }
+          .recent-blog .recent-blog-block h2:last-child {
+            margin-right: 0; } }
     .recent-blog .recent-blog-block b {
       font-weight: 600; }
     .recent-blog .recent-blog-block h3 {
       color: #fff;
       font-weight: 400; }
+      @media screen and (min-width: 1200px) {
+        .recent-blog .recent-blog-block h3 {
+          float: left;
+          display: block;
+          margin-right: 2.12766%;
+          width: 100%;
+          margin-left: 0%; }
+          .recent-blog .recent-blog-block h3:last-child {
+            margin-right: 0; } }
+      @media screen and (min-width: 1800px) {
+        .recent-blog .recent-blog-block h3 {
+          float: left;
+          display: block;
+          margin-right: 2.12766%;
+          width: 100%;
+          margin-left: 0%; }
+          .recent-blog .recent-blog-block h3:last-child {
+            margin-right: 0; } }
 
 .testimonial {
   margin-bottom: 80px;
-  display: block;
   float: left;
   display: block;
   margin-right: 6.66667%;
   width: 100%; }
-  .testimonial::after {
-    clear: both;
-    content: "";
-    display: block; }
   .testimonial:last-child {
     margin-right: 0; }
   .testimonial h1 {
@@ -1961,7 +1956,8 @@ img {
         float: left;
         display: block;
         margin-right: 2.12766%;
-        width: 100%; }
+        width: 100%;
+        margin-left: 0%; }
         .testimonial h2:last-child {
           margin-right: 0; } }
   .testimonial h3 {
@@ -1971,30 +1967,14 @@ img {
         float: left;
         display: block;
         margin-right: 2.12766%;
-        width: 100%; }
+        width: 100%;
+        margin-left: 0%; }
         .testimonial h3:last-child {
           margin-right: 0; } }
   .testimonial .quote p {
     margin-bottom: 20px;
     text-align: center;
     font-style: italic; }
-    @media screen and (min-width: 1200px) {
-      .testimonial .quote p {
-        float: left;
-        display: block;
-        margin-right: 2.12766%;
-        width: 100%; }
-        .testimonial .quote p:last-child {
-          margin-right: 0; } }
-    @media screen and (min-width: 1800px) {
-      .testimonial .quote p {
-        float: left;
-        display: block;
-        margin-right: 2.12766%;
-        width: 82.97872%;
-        margin-left: 8.51064%; }
-        .testimonial .quote p:last-child {
-          margin-right: 0; } }
   .testimonial .quote p::before {
     position: relative;
     display: inline-block;
@@ -2225,6 +2205,33 @@ img {
 
 .agency {
   margin-bottom: 80px; }
+  @media screen and (min-width: 1200px) {
+    .agency h1 {
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 82.97872%;
+      margin-left: 8.51064%; }
+      .agency h1:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 1800px) {
+    .agency h1 {
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 57.44681%;
+      margin-left: 17.02128%; }
+      .agency h1:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 2400px) {
+    .agency h1 {
+      float: left;
+      display: block;
+      margin-right: 2.12766%;
+      width: 48.93617%;
+      margin-left: 17.02128%; }
+      .agency h1:last-child {
+        margin-right: 0; } }
 
 .clients {
   float: left;

@@ -35,6 +35,20 @@
 
 .agency {
     margin-bottom: $mobile-spacing;
+    h1{
+      @include media($desktop-large) {
+           @include span-columns(10);
+          @include shift(1);
+      }
+      @include media($desktop-largest) {
+           @include span-columns(7);
+          @include shift(2);
+      }
+      @include media($desktop-super) {
+           @include span-columns(6);
+          @include shift(2);
+      }
+    }
 }
 
 .clients {

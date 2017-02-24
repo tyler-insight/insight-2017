@@ -26,23 +26,24 @@
 
 <body>
 
-<div class="js-Pjax">
+    <div class="js-Pjax">
 
 
-    {% include header.html %}
-    <div class="js-Pjax-child" id="content">
+        {% include header.html %}
+        <div class="js-Pjax-child" id="content">
 
-        {{ content }}
+            {{ content }}
 
+        </div>
+
+        {% include social.html %}
+
+        <!-- content end -->
+        <div class="cd-transition-layer">
+            <div class="bg-layer"></div>
+        </div>
+        <!-- .cd-transition-layer -->
     </div>
-
-    {% include social.html %}
-
-    <!-- content end -->
-    <div class="cd-transition-layer">
-	<div class="bg-layer"></div>
-</div> <!-- .cd-transition-layer -->
-</div>
     {% include footer.html %}
 
 </body>
