@@ -5,27 +5,16 @@
     document.addEventListener("DOMContentLoaded", function() {
         new Pjax({
             elements: "a", // default is "a[href], form[action]"
-            selectors: [".js-Pjax"],
-            switches: {
-                // "title": Pjax.switches.outerHTML // default behavior
-                ".js-Pjax-child": function(oldEl, newEl, options) {
-                    // here it's a stupid example since it's the default behavior too
-                    oldEl.outerHTML = newEl.outerHTML
-                    this.onSwitch()
-                },
-
-                ".js-Pjax": Pjax.switches.sideBySide
-            }
+            selectors: [".js-Pjax"]
         });
         //load other scripts so they work on page load
         $.getScript("/js/app.js");
         $.getScript("/js/video.js");
     });
-    $(document).on('pjax:send', function() {
-        $('.js-Pjax-child').addClass('animated slideInLeft');
-    });
+
     $(document).on('pjax:complete', function() {
-        $('.js-Pjax-child').addClass('animated slideInRight');
+      $('.js-Pjax-child').addClass('animated fadeInUp');
+
         //Re-run other scripts so they work after new page content loads in
         $.getScript("/js/video.js");
         runScripts();

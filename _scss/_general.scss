@@ -1,11 +1,13 @@
-*, *::after, *::before {
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
 body {
     font-family: "proxima-nova", sans-serif;
     background: #fff;
-    overflow-x:hidden;
+    overflow-x: hidden;
     @include transition(all .5s);
 }
 
@@ -13,51 +15,52 @@ p {
     color: $dark-gray;
     font-size: 1em;
     line-height: 1.6em;
-    margin-bottom:1em;
-
-    @include media($tablet){
-      font-size: modular-scale(1);
-
+    margin-bottom: 1em;
+    @include media($tablet) {
+        font-size: modular-scale(1);
     }
-    @include media($desktop-large){
-      font-size: 1.3em;
-      @include span-columns(10);
-      @include shift(1);
+    @include media($desktop-large) {
+        font-size: 1.3em;
+        @include span-columns(10);
+        @include shift(1);
     }
-    @include media($desktop-largest){
-
-      @include span-columns(8);
-      @include shift(2);
+    @include media($desktop-largest) {
+         @include span-columns(8);
+        @include shift(2);
     }
 
-    a, a:visited {
-      position: relative;
-      color:$brand-color;
-      text-decoration: none;
-      padding: 1px 0;
-      @include transition(color .5s);
+    a,
+    a:visited {
+        position: relative;
+        color: $brand-color;
+        text-decoration: none;
+        padding: 1px 0;
+        @include transition(color .5s);
     }
-    a:hover{
-      color:$brand-color;
-      @include transition(color .5s);
+
+    a:hover {
+        color: $brand-color;
+        @include transition(color .5s);
     }
+
     a::after {
-    	position: absolute;
-    	top: 100%;
-    	left: 0;
-    	width: 100%;
-    	height: 2px;
-    	background: $dark-gray;
-    	content: '';
-    	opacity: 0;
-      z-index:2;
-    	@include transition(all .5s);
-    	@include transform(translateY(5px));
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $dark-gray;
+        content: '';
+        opacity: 0;
+        z-index: 2;
+        @include transition(all .5s);
+        @include transform(translateY(5px));
     }
-    a:hover::after,
-    a:focus::after {
-    	opacity: 1;
-    	@include transform(translateY(0px));
+
+    a:focus::after,
+    a:hover::after {
+        opacity: 1;
+        @include transform(translateY(0px));
     }
 }
 
@@ -66,108 +69,152 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "futura-pt", sans-serif;
-  font-weight: 600;
-  color: $dark-gray;
-  line-height: 1em;
-  text-align:left;
-  @include media($desktop-large){
-    @include span-columns(10);
-    @include shift(1);
-  }
-  @include media($desktop-largest){
-    @include span-columns(8);
-    @include shift(2);
-  }
+    font-family: "futura-pt", sans-serif;
+    font-weight: 600;
+    color: $dark-gray;
+    line-height: 1em;
+    text-align: left;
+    @include media($desktop-large) {
+         @include span-columns(10);
+        @include shift(1);
+    }
+    @include media($desktop-largest) {
+         @include span-columns(8);
+        @include shift(2);
+    }
 
-  a{
-    color:#fff;
-    text-decoration: none;
-  }
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
 }
 
-form{
-  @include span-columns(4);
-  @include media($desktop-large){
-    @include span-columns(10);
-    @include shift(1);
-  }
-  @include media($desktop-largest){
-    @include span-columns(8);
-    @include shift(2);
-  }
+form {
+    @include span-columns(4);
+    @include media($desktop-large) {
+         @include span-columns(10);
+        @include shift(1);
+    }
+    @include media($desktop-largest) {
+         @include span-columns(8);
+        @include shift(2);
+    }
 }
 
 h1 {
     font-size: 2em;
-    margin-bottom:.5em;
-    @include media($tablet){
-      font-size: modular-scale(4);
+    margin-bottom: 0.5em;
+    @include media($tablet) {
+        font-size: modular-scale(4);
     }
-    @include media($desktop){
-      font-size: modular-scale(5);
+    @include media($desktop) {
+        font-size: modular-scale(5);
     }
 }
+
 h2 {
     font-size: 1.3em;
-    @include media($tablet){
-      font-size: modular-scale(2);
+    @include media($tablet) {
+        font-size: modular-scale(2);
     }
-    @include media($desktop){
-      font-size: modular-scale(3);
+    @include media($desktop) {
+        font-size: modular-scale(3);
     }
 }
+
 h3 {
     font-size: 1em;
-    @include media($tablet){
-      font-size: modular-scale(1);
+    @include media($tablet) {
+        font-size: modular-scale(1);
     }
-
 }
+
 img {
     max-width: 100%;
 }
 
-.clearfix{
-  @include clearfix;
+.clearfix {
+    @include clearfix;
 }
 
 .wrapper {
     @include span-columns(4);
-    margin: 0 auto;
-    margin-top: $nav-height*1.2;
-    padding:0 20px;
-
-    @include media($tablet){
-      padding:0 50px;
+    margin: $nav-height*1.2 auto 0;
+    padding: 0 20px;
+    @include media($tablet) {
+        padding: 0 50px;
     }
-    @include media($desktop){
-      padding:0 75px;
+    @include media($desktop) {
+        padding: 0 75px;
     }
-    @include media($desktop-large){
-      padding:0 100px;
+    @include media($desktop-large) {
+        padding: 0 100px;
     }
-    @include media($desktop-largest){
-      padding:0 200px;
+    @include media($desktop-largest) {
+        padding: 0 200px;
     }
-    @include media($desktop-super){
-      padding:0 300px;
+    @include media($desktop-super) {
+        padding: 0 300px;
     }
 
-    img{
-      max-width:100%;
+    img {
+        max-width: 100%;
     }
 }
-.spacer{
-  display:inline-block;
-  background: transparent;
-  margin-bottom:$mobile-spacing;
-  width:100%;
+
+.spacer {
+    display: inline-block;
+    background: transparent;
+    margin-bottom: $mobile-spacing;
+    width: 100%;
 }
 
-.js-Pjax-child{
-  display:block;
-  position: relative;
-  @include span-columns(4);
-  -vendor-animation-duration: 10s;
+.js-Pjax {
+    display: block;
+    position: relative;
+    @include span-columns(4);
+    opacity: 1;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 10%, 0);
+        transform: translate3d(0, 10%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100px, 0);
+        transform: translate3d(0, 100px, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
 }

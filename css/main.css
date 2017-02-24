@@ -1051,7 +1051,9 @@ html {
           transform: perspective(2500px) rotateX(0); }
 
 /*# sourceMappingURL=aos.css.map*/
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box; }
 
 body {
@@ -1087,7 +1089,8 @@ p {
       margin-left: 17.02128%; }
       p:last-child {
         margin-right: 0; } }
-  p a, p a:visited {
+  p a,
+  p a:visited {
     position: relative;
     color: #d31145;
     text-decoration: none;
@@ -1109,8 +1112,8 @@ p {
     transition: all 0.5s;
     -webkit-transform: translateY(5px);
     transform: translateY(5px); }
-  p a:hover::after,
-  p a:focus::after {
+  p a:focus::after,
+  p a:hover::after {
     opacity: 1;
     -webkit-transform: translateY(0px);
     transform: translateY(0px); }
@@ -1195,7 +1198,7 @@ form {
 
 h1 {
   font-size: 2em;
-  margin-bottom: .5em; }
+  margin-bottom: 0.5em; }
   @media screen and (min-width: 600px) {
     h1 {
       font-size: 3.15733em; } }
@@ -1231,8 +1234,7 @@ img {
   display: block;
   margin-right: 6.66667%;
   width: 100%;
-  margin: 0 auto;
-  margin-top: 156px;
+  margin: 156px auto 0;
   padding: 0 20px; }
   .wrapper:last-child {
     margin-right: 0; }
@@ -1260,16 +1262,50 @@ img {
   margin-bottom: 80px;
   width: 100%; }
 
-.js-Pjax-child {
+.js-Pjax {
   display: block;
   position: relative;
   float: left;
   display: block;
   margin-right: 6.66667%;
   width: 100%;
-  -vendor-animation-duration: 10s; }
-  .js-Pjax-child:last-child {
+  opacity: 1; }
+  .js-Pjax:last-child {
     margin-right: 0; }
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+    transform: translate3d(0, 10%, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0); }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp; }
 
 .cd-auto-hide-header {
   position: fixed;
