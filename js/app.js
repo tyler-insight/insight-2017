@@ -1,13 +1,19 @@
 runScripts();
 
 function runScripts() {
+    var page = $(location).attr('href');
+
+    if (page.indexOf("contact") >= 0){
+      map();
+    };
     accordion();
     navigation();
-    cultureHeader();
+    if (page.indexOf("culture") >= 0){
+      cultureHeader();
+    };
+
     employees();
     $('.images-rotation').imagesRotation();
-    map();
-    video();
 
     function accordion() {
 

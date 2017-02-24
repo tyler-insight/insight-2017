@@ -1,4 +1,4 @@
-var forEachEls = require("../foreach-els")
+var forEachEls = $.getScript("../foreach-els")
 
 module.exports = function(els, events, listener, useCapture) {
   events = (typeof events === "string" ? events.split(" ") : events)

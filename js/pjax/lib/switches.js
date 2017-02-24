@@ -1,4 +1,4 @@
-var on = require("./events/on.js")
+var on = $.getScript("./events/on.js")
 // var off = require("./lib/events/on.js")
 // var trigger = require("./lib/events/trigger.js")
 

@@ -1,5 +1,5 @@
 <!-- pushState ajax script-->
-<script src="/js/pjax.js"></script>
+<script src="/js/pjax/pjax.js"></script>
 <script>
     //Set links to dynamically load pages using pjax
     document.addEventListener("DOMContentLoaded", function() {
@@ -7,41 +7,28 @@
             elements: "a", // default is "a[href], form[action]"
             selectors: [".js-Pjax"],
             switches: {
-                ".js-Pjax": require("/js/lib/switches.js").sideBySide
-            },
-            switchesOptions: {
-                ".js-Pjax": {
-                    classNames: {
-                        // class added on the element that will be removed
-                        remove: "Animated Animated--reverse Animate--fast Animate--noDelay",
-                        // class added on the element that will be added
-                        add: "Animated",
-                        // class added on the element when it go backward
-                        backward: "Animate--slideInRight",
-                        // class added on the element when it go forward (used for new page too)
-                        forward: "Animate--slideInLeft"
-                    },
-                    callbacks: {
-                        // to make a nice transition with 2 pages as the same time
-                        // we are playing with absolute positioning for element we are removing
-                        // & we need live metrics to have something great
-                        // see associated CSS below
-                        removeElement: function(el) {
-                            el.style.marginLeft = "-" + (el.getBoundingClientRect().width / 2) + "px"
-                        }
-                    }
-                }
+                // "title": Pjax.switches.outerHTML // default behavior
+                ".js-Pjax-child": function(oldEl, newEl, options) {
+                    // here it's a stupid example since it's the default behavior too
+                    oldEl.outerHTML = newEl.outerHTML
+                    this.onSwitch()
+                },
+
+                ".js-Pjax": Pjax.switches.sideBySide
             }
         });
         //load other scripts so they work on page load
         $.getScript("/js/app.js");
         $.getScript("/js/video.js");
     });
+    $(document).on('pjax:send', function() {
+        $('.js-Pjax-child').addClass('animated slideInLeft');
+    });
     $(document).on('pjax:complete', function() {
+        $('.js-Pjax-child').addClass('animated slideInRight');
         //Re-run other scripts so they work after new page content loads in
         $.getScript("/js/video.js");
         runScripts();
-
     });
 </script>
 <script charset='ISO-8859-1' src='https://fast.wistia.com/assets/external/E-v1.js'></script>

@@ -1227,9 +1227,15 @@ img {
   display: block; }
 
 .wrapper {
+  float: left;
+  display: block;
+  margin-right: 6.66667%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 156px;
   padding: 0 20px; }
+  .wrapper:last-child {
+    margin-right: 0; }
   @media screen and (min-width: 600px) {
     .wrapper {
       padding: 0 50px; } }
@@ -1254,84 +1260,16 @@ img {
   margin-bottom: 80px;
   width: 100%; }
 
-.js-Pjax {
-  position: relative; }
-
-/* parent element where switch will be made */
 .js-Pjax-child {
-  width: 100%; }
-
-/* position for the elements that will be removed */
-.js-Pjax-remove {
-  position: absolute;
-  left: 50%;
-  /* transform: translateX(-50%) */
-  /* transform can't be used since we already use generic translate for the remove effect (eg animate.css) */
-  /* margin-left: -width/2; // made with js */
-  /* you can totally drop the margin-left thing from switchesOptions if you use custom animations */ }
-
-/* CSS animations */
-.Animated {
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s; }
-
-.Animated--reverse {
-  -webkit-animation-direction: reverse;
-          animation-direction: reverse; }
-
-.Animate--fast {
-  -webkit-animation-duration: .5s;
-          animation-duration: .5s; }
-
-.Animate--noDelay {
-  -webkit-animation-delay: 0s !important;
-          animation-delay: 0s !important; }
-
-.Animate--slideInRight {
-  -webkit-animation-name: Animation-slideInRight;
-          animation-name: Animation-slideInRight; }
-
-@-webkit-keyframes Animation-slideInRight {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(100rem);
-            transform: translateX(100rem); }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0); } }
-
-@keyframes Animation-slideInRight {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(100rem);
-            transform: translateX(100rem); }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0); } }
-
-.Animate--slideInLeft {
-  -webkit-animation-name: Animation-slideInLeft;
-          animation-name: Animation-slideInLeft; }
-
-@-webkit-keyframes Animation-slideInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-100rem);
-            transform: translateX(-100rem); }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0); } }
-
-@keyframes Animation-slideInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-100rem);
-            transform: translateX(-100rem); }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0); } }
+  display: block;
+  position: relative;
+  float: left;
+  display: block;
+  margin-right: 6.66667%;
+  width: 100%;
+  -vendor-animation-duration: 10s; }
+  .js-Pjax-child:last-child {
+    margin-right: 0; }
 
 .cd-auto-hide-header {
   position: fixed;
