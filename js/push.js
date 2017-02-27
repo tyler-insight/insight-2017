@@ -19,7 +19,7 @@ $(function () {
 
         document.title = title;
 
-        load(url);
+        load(url + '/');
     });
 
     $(window).on('popstate', function (e) {
@@ -28,7 +28,7 @@ $(function () {
             document.title = state.title;
             load(state.url);
         } else {
-            document.title = 'World Regions';
+            document.title = title;
             $("#content").empty();
         }
     });
