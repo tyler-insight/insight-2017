@@ -1,35 +1,12 @@
-$(function () {
-    var load = function (url) {
-        $.get(url).done(function (data) {
-            $("#content").html(data);
-        })
-    };
+$(function(){
+  var $main = $('.content');
 
-    $(document).on('click', 'a', function (e) {
-        e.preventDefault();
+  $(document).on('click', 'a', function() {
 
-        var $this = $(this),
-            url = $this.attr("href"),
-            title = $this.text();
+      var href = $(this).attr("href");
 
-        history.pushState({
-            url: url,
-            title: title
-        }, title, url);
-
-        document.title = title;
-
-        load(url + '/');
-    });
-
-    $(window).on('popstate', function (e) {
-        var state = e.originalEvent.state;
-        if (state !== null) {
-            document.title = state.title;
-            load(state.url);
-        } else {
-            document.title = title;
-            $("#content").empty();
-        }
-    });
+      history.pushState({}, '', href);
+      $main.load(href);
+      return false;
+  });
 });
