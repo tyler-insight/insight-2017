@@ -70,8 +70,11 @@ function runScripts() {
             }
         });
         mainHeader.on('click', 'a', function(event) {
-          mainHeader.toggleClass('nav-open');
-          isLateralNavAnimating = false;
+          if (mainHeader.hasClass("nav-open")){
+            mainHeader.toggleClass('nav-open');
+            isLateralNavAnimating = false;
+          }
+          
         });
 
         $(window).on('scroll', function() {
