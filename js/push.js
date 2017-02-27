@@ -1,36 +1,27 @@
-$(function () {
-    var load = function (url) {
-        $.get(url).done(function (data) {
-            $("#content").html(data);
-        })
-    };
+function openURL(href){
 
-    $(document).on('click', 'a', function (e) {
-        e.preventDefault();
+        var link = href;  //$(this).attr('href');
+        $.ajax({
+            url: link,
+            type: 'POST',
+            cache: false,
+            success: function (result) {
+                $('#content').html(result);
+            }
+        });
+        window.history.pushState({href: href}, '', href);
+}
 
-        var $this = $(this),
-            url = $this.attr("href"),
-            title = $this.text();
+$(document).ready(function() {
 
-        history.pushState({
-            url: url,
-            title: title
-        }, title, url);
+   $(document).on('click', 'a', function () {
+     openURL($(this).attr("href"));
+     return false; //intercept the link
+   });
 
-        document.title = title;
+   window.addEventListener('popstate', function(e){
+      if(e.state)
+        openURL(e.state.href);
+   });
 
-        load(url);
-
-    });
-
-    $(window).on('popstate', function (e) {
-        var state = e.originalEvent.state;
-        if (state !== null) {
-            document.title = state.title;
-            load(state.url);
-        } else {
-            document.title = title;
-            $("#content").empty();
-        }
-    });
 });
