@@ -1,27 +1,41 @@
-function openURL(href){
+$(function () {
 
-        var link = href;  //$(this).attr('href');
-        $.ajax({
-            url: link,
-            type: 'POST',
-            cache: false,
-            success: function (result) {
-                $('#content').html(result);
-            }
-        });
-        window.history.pushState({href: href}, '', href);
-}
+    //Function that loads in the new content
+    var load = function (url) {
+      $("#content").load(url + " #content");
+    };
 
-$(document).ready(function() {
+    $(document).on('click', 'a', function (e) {
+        e.preventDefault();
 
-   $(document).on('click', 'a', function () {
-     openURL($(this).attr("href"));
-     return false; //intercept the link
-   });
+        //Sets variables to be used for url and page name
+        var $this = $(this),
+            url = $this.attr("href"),
+            title = $this.text();
 
-   window.addEventListener('popstate', function(e){
-      if(e.state)
-        openURL(e.state.href);
-   });
+        //Makes entries into browser history
+        history.pushState({
+            url: url,
+            title: title
+        }, title, url);
 
+        document.title = title;
+
+        load(url);
+
+    });
+    //Enables use of back and forward buttons in browser
+    $(window).on('popstate', function (e) {
+        var state = e.originalEvent.state;
+        if (state !== null) {
+            document.title = state.title;
+            load(state.url);
+        } else {
+            document.title = title;
+            $("#content").empty();
+        }
+    });
 });
+
+
+// Need to reinitialize scripts so they run when page is loaded
