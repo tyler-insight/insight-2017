@@ -1,24 +1,43 @@
 $(function() {
 
+    //Initialize all scripts for page
     init = function() {
             runScripts();
+            var page = $(location).attr('href');
+            if (page.indexOf("contact") >= 0) {
+                $(".typed").typed({
+                    stringsElement: $('.typed-strings'),
+                    typeSpeed: 10,
+                    // time before backspacing
+                    backDelay: 2000,
+                    // loop
+                    loop: true
+                });
+            };
+
         },
 
         ajaxLoad = function(html) {
             init();
-        },
 
-        loadPage = function(href) {
-          $main.load(href + 'main>*', ajaxLoad);
+            $("body").scrollTop(0);
+            $('#content').velocity('fadeIn', {
+              visibility: 'visible',
+              complete: function() {
+              }
+            });
         };
 
-        init();
-
+    init();
+    //Run Script that performs navigation hid/show and mobile function
+    navigation();
     //Function that loads in the new content
+
     var load = function(url) {
         $("#content").load(url + " #content");
     };
 
+    //Action to perform on link click
     $(document).on('click', 'a', function(e) {
         e.preventDefault();
 
@@ -35,15 +54,37 @@ $(function() {
 
         document.title = title;
 
-        load(url);
+        $('#content').velocity('fadeOut', {
+          visibility: 'visible',
+          complete: function() {
+
+            load(url);
+          }
+        });
+        //Run script to load new content
+
 
     });
 
-    $( document ).ajaxComplete(function() {
-      console.log("Ajax Loaded");
-      ajaxLoad();
+    // Need to reinitialize scripts so they run when page is loaded
+    $(document).ajaxComplete(function() {
+        console.log("Ajax Loaded");
+        ajaxLoad();
+
+        var page = $(location).attr('href');
+        if (page.indexOf("contact") >= 0) {
+            $(".typed").typed({
+                stringsElement: $('.typed-strings'),
+                typeSpeed: 10,
+                // time before backspacing
+                backDelay: 2000,
+                // loop
+                loop: true
+            });
+        };
     });
-        //Enables use of back and forward buttons in browser
+
+    //Enables use of back and forward buttons in browser
     $(window).on('popstate', function(e) {
         var state = e.originalEvent.state;
         if (state !== null) {
@@ -55,438 +96,568 @@ $(function() {
         }
     });
 
-    // Need to reinitialize scripts so they run when page is loaded
+    //Start of navigation script
+    function navigation() {
+        console.log("Navigation script running");
+        var mainHeader = $('.cd-auto-hide-header'),
+            secondaryNavigation = $('.cd-secondary-nav'),
+            //this applies only if secondary nav is below intro section
+            belowNavHeroContent = $('.sub-nav-hero'),
+            headerHeight = mainHeader.height();
+        var isLateralNavAnimating = false;
+
+        //set scrolling variables
+        var scrolling = false,
+            previousTop = 0,
+            currentTop = 0,
+            scrollDelta = 10,
+            scrollOffset = 0;
+
+        mainHeader.on('click', '.nav-trigger', function(event) {
+            // open primary navigation on mobile
+            event.preventDefault();
+            if (!isLateralNavAnimating) {
+                if ($(this).parents('.csstransitions').length >= 0) isLateralNavAnimating = true;
+
+
+                mainHeader.toggleClass('nav-open');
+                $('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
+                    //animation is over
+                    isLateralNavAnimating = false;
+                });
+            }
+        });
+        mainHeader.on('click', 'a', function(event) {
+            if (mainHeader.hasClass("nav-open")) {
+                mainHeader.toggleClass('nav-open');
+                isLateralNavAnimating = false;
+            }
+
+        });
+
+        $(window).on('scroll', function() {
+            if (!scrolling && !mainHeader.hasClass("nav-open")) {
+                scrolling = true;
+                (!window.requestAnimationFrame) ?
+                setTimeout(autoHideHeader, 250): requestAnimationFrame(autoHideHeader);
+            }
+        });
+
+        $(window).on('resize', function() {
+            headerHeight = mainHeader.height();
+        });
+
+        function autoHideHeader() {
+            var currentTop = $(window).scrollTop();
+
+            (belowNavHeroContent.length > 0) ?
+            checkStickyNavigation(currentTop) // secondary navigation below intro
+                : checkSimpleNavigation(currentTop);
+
+            previousTop = currentTop;
+            scrolling = false;
+        };
+
+        function checkSimpleNavigation(currentTop) {
+            //there's no secondary nav or secondary nav is below primary nav
+            if (previousTop - currentTop > scrollDelta) {
+                //if scrolling up...
+                mainHeader.removeClass('is-hidden');
+            } else if (currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
+                //if scrolling down...
+                mainHeader.addClass('is-hidden');
+            }
+        };
+
+        function checkStickyNavigation(currentTop) {
+            //secondary nav below intro section - sticky secondary nav
+            var secondaryNavOffsetTop = belowNavHeroContent.offset().top - secondaryNavigation.height() - mainHeader.height();
+
+            if (previousTop >= currentTop) {
+                //if scrolling up...
+                if (currentTop < secondaryNavOffsetTop) {
+                    //secondary nav is not fixed
+                    mainHeader.removeClass('is-hidden');
+                    secondaryNavigation.removeClass('fixed slide-up');
+                    belowNavHeroContent.removeClass('secondary-nav-fixed');
+                } else if (previousTop - currentTop > scrollDelta) {
+                    //secondary nav is fixed
+                    mainHeader.removeClass('is-hidden');
+                    secondaryNavigation.removeClass('slide-up').addClass('fixed');
+                    belowNavHeroContent.addClass('secondary-nav-fixed');
+                }
+
+            } else {
+                //if scrolling down...
+                if (currentTop > secondaryNavOffsetTop + scrollOffset) {
+                    //hide primary nav
+                    mainHeader.addClass('is-hidden');
+                    secondaryNavigation.addClass('fixed slide-up');
+                    belowNavHeroContent.addClass('secondary-nav-fixed');
+                } else if (currentTop > secondaryNavOffsetTop) {
+                    //once the secondary nav is fixed, do not hide primary nav if you haven't scrolled more than scrollOffset
+                    mainHeader.removeClass('is-hidden');
+                    secondaryNavigation.addClass('fixed').removeClass('slide-up');
+                    belowNavHeroContent.addClass('secondary-nav-fixed');
+                }
+
+            }
+        };
+    };
+    //End of navigation script
 
     function runScripts() {
+        // Find what current page is
         var page = $(location).attr('href');
 
         console.log("Main scripts running");
+
+        //Run script that cycles employee images on hover
         employees();
         $('.images-rotation').imagesRotation();
+
+        //Run script that allows for accordion drop downs
         accordion();
-        navigation();
 
 
+        //If agency page, run video script
+        if (page.indexOf("agency") >= 0) {
+            video();
+        };
 
+        //If culture page, run script for cycling cover image and text
         if (page.indexOf("culture") >= 0) {
             cultureHeader();
         };
 
+        //If contact page, run script for text typing and load google map
+        if (page.indexOf("contact") >= 0) {
+            typing();
+            map();
+        };
 
 
-        function typing(){
-          console.log("Typing script running");
-          var Typed = function(el, options) {
+        //Start of typing script
+        function typing() {
+            console.log("Typing script running");
+            var Typed = function(el, options) {
 
-        		// chosen element to manipulate text
-        		this.el = $(el);
-
-        		// options
-        		this.options = $.extend({}, $.fn.typed.defaults, options);
-
-        		// attribute to type into
-        		this.isInput = this.el.is('input');
-        		this.attr = this.options.attr;
-
-        		// show cursor
-        		this.showCursor = this.isInput ? false : this.options.showCursor;
-
-        		// text content of element
-        		this.elContent = this.attr ? this.el.attr(this.attr) : this.el.text();
-
-        		// html or plain text
-        		this.contentType = this.options.contentType;
-
-        		// typing speed
-        		this.typeSpeed = this.options.typeSpeed;
-
-        		// add a delay before typing starts
-        		this.startDelay = this.options.startDelay;
-
-        		// backspacing speed
-        		this.backSpeed = this.options.backSpeed;
-
-        		// amount of time to wait before backspacing
-        		this.backDelay = this.options.backDelay;
-
-        		// div containing strings
-        		this.stringsElement = this.options.stringsElement;
-
-        		// input strings of text
-        		this.strings = this.options.strings;
-
-        		// character number position of current string
-        		this.strPos = 0;
-
-        		// current array position
-        		this.arrayPos = 0;
-
-        		// number to stop backspacing on.
-        		// default 0, can change depending on how many chars
-        		// you want to remove at the time
-        		this.stopNum = 0;
-
-        		// Looping logic
-        		this.loop = this.options.loop;
-        		this.loopCount = this.options.loopCount;
-        		this.curLoop = 0;
-
-        		// for stopping
-        		this.stop = false;
-
-        		// custom cursor
-        		this.cursorChar = this.options.cursorChar;
-
-        		// shuffle the strings
-        		this.shuffle = this.options.shuffle;
-        		// the order of strings
-        		this.sequence = [];
-
-        		// All systems go!
-        		this.build();
-        	};
-
-        	Typed.prototype = {
-
-        		constructor: Typed,
-
-        		init: function() {
-        			// begin the loop w/ first current string (global self.strings)
-        			// current string will be passed as an argument each time after this
-        			var self = this;
-        			self.timeout = setTimeout(function() {
-        				for (var i=0;i<self.strings.length;++i) self.sequence[i]=i;
-
-        				// shuffle the array if true
-        				if(self.shuffle) self.sequence = self.shuffleArray(self.sequence);
-
-        				// Start typing
-        				self.typewrite(self.strings[self.sequence[self.arrayPos]], self.strPos);
-        			}, self.startDelay);
-        		},
-
-        		build: function() {
-        			var self = this;
-        			// Insert cursor
-        			if (this.showCursor === true) {
-        				this.cursor = $("<span class=\"typed-cursor\">" + this.cursorChar + "</span>");
-        				this.el.after(this.cursor);
-        			}
-        			if (this.stringsElement) {
-        				this.strings = [];
-        				this.stringsElement.hide();
-        				console.log(this.stringsElement.children());
-        				var strings = this.stringsElement.children();
-        				$.each(strings, function(key, value){
-        					self.strings.push($(value).html());
-        				});
-        			}
-        			this.init();
-        		},
-
-        		// pass current string state to each function, types 1 char per call
-        		typewrite: function(curString, curStrPos) {
-        			// exit when stopped
-        			if (this.stop === true) {
-        				return;
-        			}
-
-        			// varying values for setTimeout during typing
-        			// can't be global since number changes each time loop is executed
-        			var humanize = Math.round(Math.random() * (100 - 30)) + this.typeSpeed;
-        			var self = this;
-
-        			// ------------- optional ------------- //
-        			// backpaces a certain string faster
-        			// ------------------------------------ //
-        			// if (self.arrayPos == 1){
-        			//  self.backDelay = 50;
-        			// }
-        			// else{ self.backDelay = 500; }
-
-        			// contain typing function in a timeout humanize'd delay
-        			self.timeout = setTimeout(function() {
-        				// check for an escape character before a pause value
-        				// format: \^\d+ .. eg: ^1000 .. should be able to print the ^ too using ^^
-        				// single ^ are removed from string
-        				var charPause = 0;
-        				var substr = curString.substr(curStrPos);
-        				if (substr.charAt(0) === '^') {
-        					var skip = 1; // skip atleast 1
-        					if (/^\^\d+/.test(substr)) {
-        						substr = /\d+/.exec(substr)[0];
-        						skip += substr.length;
-        						charPause = parseInt(substr);
-        					}
-
-        					// strip out the escape character and pause value so they're not printed
-        					curString = curString.substring(0, curStrPos) + curString.substring(curStrPos + skip);
-        				}
-
-        				if (self.contentType === 'html') {
-        					// skip over html tags while typing
-        					var curChar = curString.substr(curStrPos).charAt(0)
-        					if (curChar === '<' || curChar === '&') {
-        						var tag = '';
-        						var endTag = '';
-        						if (curChar === '<') {
-        							endTag = '>'
-        						}
-        						else {
-        							endTag = ';'
-        						}
-        						while (curString.substr(curStrPos + 1).charAt(0) !== endTag) {
-        							tag += curString.substr(curStrPos).charAt(0);
-        							curStrPos++;
-        							if (curStrPos + 1 > curString.length) { break; }
-        						}
-        						curStrPos++;
-        						tag += endTag;
-        					}
-        				}
-
-        				// timeout for any pause after a character
-        				self.timeout = setTimeout(function() {
-        					if (curStrPos === curString.length) {
-        						// fires callback function
-        						self.options.onStringTyped(self.arrayPos);
-
-        						// is this the final string
-        						if (self.arrayPos === self.strings.length - 1) {
-        							// animation that occurs on the last typed string
-        							self.options.callback();
-
-        							self.curLoop++;
-
-        							// quit if we wont loop back
-        							if (self.loop === false || self.curLoop === self.loopCount)
-        								return;
-        						}
-
-        						self.timeout = setTimeout(function() {
-        							self.backspace(curString, curStrPos);
-        						}, self.backDelay);
-
-        					} else {
-
-        						/* call before functions if applicable */
-        						if (curStrPos === 0) {
-        							self.options.preStringTyped(self.arrayPos);
-        						}
-
-        						// start typing each new char into existing string
-        						// curString: arg, self.el.html: original text inside element
-        						var nextString = curString.substr(0, curStrPos + 1);
-        						if (self.attr) {
-        							self.el.attr(self.attr, nextString);
-        						} else {
-        							if (self.isInput) {
-        								self.el.val(nextString);
-        							} else if (self.contentType === 'html') {
-        								self.el.html(nextString);
-        							} else {
-        								self.el.text(nextString);
-        							}
-        						}
-
-        						// add characters one by one
-        						curStrPos++;
-        						// loop the function
-        						self.typewrite(curString, curStrPos);
-        					}
-        					// end of character pause
-        				}, charPause);
-
-        				// humanized value for typing
-        			}, humanize);
-
-        		},
-
-        		backspace: function(curString, curStrPos) {
-        			// exit when stopped
-        			if (this.stop === true) {
-        				return;
-        			}
-
-        			// varying values for setTimeout during typing
-        			// can't be global since number changes each time loop is executed
-        			var humanize = Math.round(Math.random() * (100 - 30)) + this.backSpeed;
-        			var self = this;
-
-        			self.timeout = setTimeout(function() {
-
-        				// ----- this part is optional ----- //
-        				// check string array position
-        				// on the first string, only delete one word
-        				// the stopNum actually represents the amount of chars to
-        				// keep in the current string. In my case it's 14.
-        				// if (self.arrayPos == 1){
-        				//  self.stopNum = 14;
-        				// }
-        				//every other time, delete the whole typed string
-        				// else{
-        				//  self.stopNum = 0;
-        				// }
-
-        				if (self.contentType === 'html') {
-        					// skip over html tags while backspacing
-        					if (curString.substr(curStrPos).charAt(0) === '>') {
-        						var tag = '';
-        						while (curString.substr(curStrPos - 1).charAt(0) !== '<') {
-        							tag -= curString.substr(curStrPos).charAt(0);
-        							curStrPos--;
-        							if (curStrPos < 0) { break; }
-        						}
-        						curStrPos--;
-        						tag += '<';
-        					}
-        				}
-
-        				// ----- continue important stuff ----- //
-        				// replace text with base text + typed characters
-        				var nextString = curString.substr(0, curStrPos);
-        				if (self.attr) {
-        					self.el.attr(self.attr, nextString);
-        				} else {
-        					if (self.isInput) {
-        						self.el.val(nextString);
-        					} else if (self.contentType === 'html') {
-        						self.el.html(nextString);
-        					} else {
-        						self.el.text(nextString);
-        					}
-        				}
-
-        				// if the number (id of character in current string) is
-        				// less than the stop number, keep going
-        				if (curStrPos > self.stopNum) {
-        					// subtract characters one by one
-        					curStrPos--;
-        					// loop the function
-        					self.backspace(curString, curStrPos);
-        				}
-        				// if the stop number has been reached, increase
-        				// array position to next string
-        				else if (curStrPos <= self.stopNum) {
-        					self.arrayPos++;
-
-        					if (self.arrayPos === self.strings.length) {
-        						self.arrayPos = 0;
-
-        						// Shuffle sequence again
-        						if(self.shuffle) self.sequence = self.shuffleArray(self.sequence);
-
-        						self.init();
-        					} else
-        						self.typewrite(self.strings[self.sequence[self.arrayPos]], curStrPos);
-        				}
-
-        				// humanized value for typing
-        			}, humanize);
-
-        		},
-        		/**
-        		 * Shuffles the numbers in the given array.
-        		 * @param {Array} array
-        		 * @returns {Array}
-        		 */
-        		shuffleArray: function(array) {
-        			var tmp, current, top = array.length;
-        			if(top) while(--top) {
-        				current = Math.floor(Math.random() * (top + 1));
-        				tmp = array[current];
-        				array[current] = array[top];
-        				array[top] = tmp;
-        			}
-        			return array;
-        		},
-
-        		// Start & Stop currently not working
-
-        		// , stop: function() {
-        		//     var self = this;
-
-        		//     self.stop = true;
-        		//     clearInterval(self.timeout);
-        		// }
-
-        		// , start: function() {
-        		//     var self = this;
-        		//     if(self.stop === false)
-        		//        return;
-
-        		//     this.stop = false;
-        		//     this.init();
-        		// }
-
-        		// Reset and rebuild the element
-        		reset: function() {
-        			var self = this;
-        			clearInterval(self.timeout);
-        			var id = this.el.attr('id');
-        			this.el.empty();
-        			if (typeof this.cursor !== 'undefined') {
-                this.cursor.remove();
-              }
-        			this.strPos = 0;
-        			this.arrayPos = 0;
-        			this.curLoop = 0;
-        			// Send the callback
-        			this.options.resetCallback();
-        		}
-
-        	};
-
-        	$.fn.typed = function(option) {
-        		return this.each(function() {
-        			var $this = $(this),
-        				data = $this.data('typed'),
-        				options = typeof option == 'object' && option;
-        			if (data) { data.reset(); }
-        			$this.data('typed', (data = new Typed(this, options)));
-        			if (typeof option == 'string') data[option]();
-        		});
-        	};
-
-        	$.fn.typed.defaults = {
-        		strings: ["These are the default values...", "You know what you should do?", "Use your own!", "Have a great day!"],
-        		stringsElement: null,
-        		// typing speed
-        		typeSpeed: 0,
-        		// time before typing starts
-        		startDelay: 0,
-        		// backspacing speed
-        		backSpeed: 0,
-        		// shuffle the strings
-        		shuffle: false,
-        		// time before backspacing
-        		backDelay: 500,
-        		// loop
-        		loop: false,
-        		// false = infinite
-        		loopCount: false,
-        		// show cursor
-        		showCursor: true,
-        		// character for cursor
-        		cursorChar: "|",
-        		// attribute to type (null == text)
-        		attr: null,
-        		// either html or text
-        		contentType: 'html',
-        		// call when done callback function
-        		callback: function() {},
-        		// starting callback function before each string
-        		preStringTyped: function() {},
-        		//callback for every typed string
-        		onStringTyped: function() {},
-        		// callback for reset
-        		resetCallback: function() {}
-        	};
+                // chosen element to manipulate text
+                this.el = $(el);
+
+                // options
+                this.options = $.extend({}, $.fn.typed.defaults, options);
+
+                // attribute to type into
+                this.isInput = this.el.is('input');
+                this.attr = this.options.attr;
+
+                // show cursor
+                this.showCursor = this.isInput ? false : this.options.showCursor;
+
+                // text content of element
+                this.elContent = this.attr ? this.el.attr(this.attr) : this.el.text();
+
+                // html or plain text
+                this.contentType = this.options.contentType;
+
+                // typing speed
+                this.typeSpeed = this.options.typeSpeed;
+
+                // add a delay before typing starts
+                this.startDelay = this.options.startDelay;
+
+                // backspacing speed
+                this.backSpeed = this.options.backSpeed;
+
+                // amount of time to wait before backspacing
+                this.backDelay = this.options.backDelay;
+
+                // div containing strings
+                this.stringsElement = this.options.stringsElement;
+
+                // input strings of text
+                this.strings = this.options.strings;
+
+                // character number position of current string
+                this.strPos = 0;
+
+                // current array position
+                this.arrayPos = 0;
+
+                // number to stop backspacing on.
+                // default 0, can change depending on how many chars
+                // you want to remove at the time
+                this.stopNum = 0;
+
+                // Looping logic
+                this.loop = this.options.loop;
+                this.loopCount = this.options.loopCount;
+                this.curLoop = 0;
+
+                // for stopping
+                this.stop = false;
+
+                // custom cursor
+                this.cursorChar = this.options.cursorChar;
+
+                // shuffle the strings
+                this.shuffle = this.options.shuffle;
+                // the order of strings
+                this.sequence = [];
+
+                // All systems go!
+                this.build();
+            };
+
+            Typed.prototype = {
+
+                constructor: Typed,
+
+                init: function() {
+                    // begin the loop w/ first current string (global self.strings)
+                    // current string will be passed as an argument each time after this
+                    var self = this;
+                    self.timeout = setTimeout(function() {
+                        for (var i = 0; i < self.strings.length; ++i) self.sequence[i] = i;
+
+                        // shuffle the array if true
+                        if (self.shuffle) self.sequence = self.shuffleArray(self.sequence);
+
+                        // Start typing
+                        self.typewrite(self.strings[self.sequence[self.arrayPos]], self.strPos);
+                    }, self.startDelay);
+                },
+
+                build: function() {
+                    var self = this;
+                    // Insert cursor
+                    if (this.showCursor === true) {
+                        this.cursor = $("<span class=\"typed-cursor\">" + this.cursorChar + "</span>");
+                        this.el.after(this.cursor);
+                    }
+                    if (this.stringsElement) {
+                        this.strings = [];
+                        this.stringsElement.hide();
+                        console.log(this.stringsElement.children());
+                        var strings = this.stringsElement.children();
+                        $.each(strings, function(key, value) {
+                            self.strings.push($(value).html());
+                        });
+                    }
+                    this.init();
+                },
+
+                // pass current string state to each function, types 1 char per call
+                typewrite: function(curString, curStrPos) {
+                    // exit when stopped
+                    if (this.stop === true) {
+                        return;
+                    }
+
+                    // varying values for setTimeout during typing
+                    // can't be global since number changes each time loop is executed
+                    var humanize = Math.round(Math.random() * (100 - 30)) + this.typeSpeed;
+                    var self = this;
+
+                    // ------------- optional ------------- //
+                    // backpaces a certain string faster
+                    // ------------------------------------ //
+                    // if (self.arrayPos == 1){
+                    //  self.backDelay = 50;
+                    // }
+                    // else{ self.backDelay = 500; }
+
+                    // contain typing function in a timeout humanize'd delay
+                    self.timeout = setTimeout(function() {
+                        // check for an escape character before a pause value
+                        // format: \^\d+ .. eg: ^1000 .. should be able to print the ^ too using ^^
+                        // single ^ are removed from string
+                        var charPause = 0;
+                        var substr = curString.substr(curStrPos);
+                        if (substr.charAt(0) === '^') {
+                            var skip = 1; // skip atleast 1
+                            if (/^\^\d+/.test(substr)) {
+                                substr = /\d+/.exec(substr)[0];
+                                skip += substr.length;
+                                charPause = parseInt(substr);
+                            }
+
+                            // strip out the escape character and pause value so they're not printed
+                            curString = curString.substring(0, curStrPos) + curString.substring(curStrPos + skip);
+                        }
+
+                        if (self.contentType === 'html') {
+                            // skip over html tags while typing
+                            var curChar = curString.substr(curStrPos).charAt(0)
+                            if (curChar === '<' || curChar === '&') {
+                                var tag = '';
+                                var endTag = '';
+                                if (curChar === '<') {
+                                    endTag = '>'
+                                } else {
+                                    endTag = ';'
+                                }
+                                while (curString.substr(curStrPos + 1).charAt(0) !== endTag) {
+                                    tag += curString.substr(curStrPos).charAt(0);
+                                    curStrPos++;
+                                    if (curStrPos + 1 > curString.length) {
+                                        break;
+                                    }
+                                }
+                                curStrPos++;
+                                tag += endTag;
+                            }
+                        }
+
+                        // timeout for any pause after a character
+                        self.timeout = setTimeout(function() {
+                            if (curStrPos === curString.length) {
+                                // fires callback function
+                                self.options.onStringTyped(self.arrayPos);
+
+                                // is this the final string
+                                if (self.arrayPos === self.strings.length - 1) {
+                                    // animation that occurs on the last typed string
+                                    self.options.callback();
+
+                                    self.curLoop++;
+
+                                    // quit if we wont loop back
+                                    if (self.loop === false || self.curLoop === self.loopCount)
+                                        return;
+                                }
+
+                                self.timeout = setTimeout(function() {
+                                    self.backspace(curString, curStrPos);
+                                }, self.backDelay);
+
+                            } else {
+
+                                /* call before functions if applicable */
+                                if (curStrPos === 0) {
+                                    self.options.preStringTyped(self.arrayPos);
+                                }
+
+                                // start typing each new char into existing string
+                                // curString: arg, self.el.html: original text inside element
+                                var nextString = curString.substr(0, curStrPos + 1);
+                                if (self.attr) {
+                                    self.el.attr(self.attr, nextString);
+                                } else {
+                                    if (self.isInput) {
+                                        self.el.val(nextString);
+                                    } else if (self.contentType === 'html') {
+                                        self.el.html(nextString);
+                                    } else {
+                                        self.el.text(nextString);
+                                    }
+                                }
+
+                                // add characters one by one
+                                curStrPos++;
+                                // loop the function
+                                self.typewrite(curString, curStrPos);
+                            }
+                            // end of character pause
+                        }, charPause);
+
+                        // humanized value for typing
+                    }, humanize);
+
+                },
+
+                backspace: function(curString, curStrPos) {
+                    // exit when stopped
+                    if (this.stop === true) {
+                        return;
+                    }
+
+                    // varying values for setTimeout during typing
+                    // can't be global since number changes each time loop is executed
+                    var humanize = Math.round(Math.random() * (100 - 30)) + this.backSpeed;
+                    var self = this;
+
+                    self.timeout = setTimeout(function() {
+
+                        // ----- this part is optional ----- //
+                        // check string array position
+                        // on the first string, only delete one word
+                        // the stopNum actually represents the amount of chars to
+                        // keep in the current string. In my case it's 14.
+                        // if (self.arrayPos == 1){
+                        //  self.stopNum = 14;
+                        // }
+                        //every other time, delete the whole typed string
+                        // else{
+                        //  self.stopNum = 0;
+                        // }
+
+                        if (self.contentType === 'html') {
+                            // skip over html tags while backspacing
+                            if (curString.substr(curStrPos).charAt(0) === '>') {
+                                var tag = '';
+                                while (curString.substr(curStrPos - 1).charAt(0) !== '<') {
+                                    tag -= curString.substr(curStrPos).charAt(0);
+                                    curStrPos--;
+                                    if (curStrPos < 0) {
+                                        break;
+                                    }
+                                }
+                                curStrPos--;
+                                tag += '<';
+                            }
+                        }
+
+                        // ----- continue important stuff ----- //
+                        // replace text with base text + typed characters
+                        var nextString = curString.substr(0, curStrPos);
+                        if (self.attr) {
+                            self.el.attr(self.attr, nextString);
+                        } else {
+                            if (self.isInput) {
+                                self.el.val(nextString);
+                            } else if (self.contentType === 'html') {
+                                self.el.html(nextString);
+                            } else {
+                                self.el.text(nextString);
+                            }
+                        }
+
+                        // if the number (id of character in current string) is
+                        // less than the stop number, keep going
+                        if (curStrPos > self.stopNum) {
+                            // subtract characters one by one
+                            curStrPos--;
+                            // loop the function
+                            self.backspace(curString, curStrPos);
+                        }
+                        // if the stop number has been reached, increase
+                        // array position to next string
+                        else if (curStrPos <= self.stopNum) {
+                            self.arrayPos++;
+
+                            if (self.arrayPos === self.strings.length) {
+                                self.arrayPos = 0;
+
+                                // Shuffle sequence again
+                                if (self.shuffle) self.sequence = self.shuffleArray(self.sequence);
+
+                                self.init();
+                            } else
+                                self.typewrite(self.strings[self.sequence[self.arrayPos]], curStrPos);
+                        }
+
+                        // humanized value for typing
+                    }, humanize);
+
+                },
+                /**
+                 * Shuffles the numbers in the given array.
+                 * @param {Array} array
+                 * @returns {Array}
+                 */
+                shuffleArray: function(array) {
+                    var tmp, current, top = array.length;
+                    if (top)
+                        while (--top) {
+                            current = Math.floor(Math.random() * (top + 1));
+                            tmp = array[current];
+                            array[current] = array[top];
+                            array[top] = tmp;
+                        }
+                    return array;
+                },
+
+                // Start & Stop currently not working
+
+                // , stop: function() {
+                //     var self = this;
+
+                //     self.stop = true;
+                //     clearInterval(self.timeout);
+                // }
+
+                // , start: function() {
+                //     var self = this;
+                //     if(self.stop === false)
+                //        return;
+
+                //     this.stop = false;
+                //     this.init();
+                // }
+
+                // Reset and rebuild the element
+                reset: function() {
+                    var self = this;
+                    clearInterval(self.timeout);
+                    var id = this.el.attr('id');
+                    this.el.empty();
+                    if (typeof this.cursor !== 'undefined') {
+                        this.cursor.remove();
+                    }
+                    this.strPos = 0;
+                    this.arrayPos = 0;
+                    this.curLoop = 0;
+                    // Send the callback
+                    this.options.resetCallback();
+                }
+
+            };
+
+            $.fn.typed = function(option) {
+                return this.each(function() {
+                    var $this = $(this),
+                        data = $this.data('typed'),
+                        options = typeof option == 'object' && option;
+                    if (data) {
+                        data.reset();
+                    }
+                    $this.data('typed', (data = new Typed(this, options)));
+                    if (typeof option == 'string') data[option]();
+                });
+            };
+
+            $.fn.typed.defaults = {
+                strings: ["These are the default values...", "You know what you should do?", "Use your own!", "Have a great day!"],
+                stringsElement: null,
+                // typing speed
+                typeSpeed: 0,
+                // time before typing starts
+                startDelay: 0,
+                // backspacing speed
+                backSpeed: 0,
+                // shuffle the strings
+                shuffle: false,
+                // time before backspacing
+                backDelay: 500,
+                // loop
+                loop: false,
+                // false = infinite
+                loopCount: false,
+                // show cursor
+                showCursor: true,
+                // character for cursor
+                cursorChar: "|",
+                // attribute to type (null == text)
+                attr: null,
+                // either html or text
+                contentType: 'html',
+                // call when done callback function
+                callback: function() {},
+                // starting callback function before each string
+                preStringTyped: function() {},
+                //callback for every typed string
+                onStringTyped: function() {},
+                // callback for reset
+                resetCallback: function() {}
+            };
         }
+        //End of typing script
 
-
+        //Start of accordion script
         function accordion() {
-          console.log("Accordion script running");
+            console.log("Accordion script running");
             var acc = document.getElementsByClassName("accordion");
             var i;
 
@@ -509,117 +680,13 @@ $(function() {
                 }
             }
         };
-
-        function navigation() {
-          console.log("Navigation script running");
-            var mainHeader = $('.cd-auto-hide-header'),
-                secondaryNavigation = $('.cd-secondary-nav'),
-                //this applies only if secondary nav is below intro section
-                belowNavHeroContent = $('.sub-nav-hero'),
-                headerHeight = mainHeader.height();
-            var isLateralNavAnimating = false;
-
-            //set scrolling variables
-            var scrolling = false,
-                previousTop = 0,
-                currentTop = 0,
-                scrollDelta = 10,
-                scrollOffset = 0;
-
-            mainHeader.on('click', '.nav-trigger', function(event) {
-                // open primary navigation on mobile
-                event.preventDefault();
-                if (!isLateralNavAnimating) {
-                    if ($(this).parents('.csstransitions').length >= 0) isLateralNavAnimating = true;
+        //End of accordion script
 
 
-                    mainHeader.toggleClass('nav-open');
-                    $('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
-                        //animation is over
-                        isLateralNavAnimating = false;
-                    });
-                }
-            });
-            mainHeader.on('click', 'a', function(event) {
-                if (mainHeader.hasClass("nav-open")) {
-                    mainHeader.toggleClass('nav-open');
-                    isLateralNavAnimating = false;
-                }
 
-            });
-
-            $(window).on('scroll', function() {
-                if (!scrolling && !mainHeader.hasClass("nav-open")) {
-                    scrolling = true;
-                    (!window.requestAnimationFrame) ?
-                    setTimeout(autoHideHeader, 250): requestAnimationFrame(autoHideHeader);
-                }
-            });
-
-            $(window).on('resize', function() {
-                headerHeight = mainHeader.height();
-            });
-
-            function autoHideHeader() {
-                var currentTop = $(window).scrollTop();
-
-                (belowNavHeroContent.length > 0) ?
-                checkStickyNavigation(currentTop) // secondary navigation below intro
-                    : checkSimpleNavigation(currentTop);
-
-                previousTop = currentTop;
-                scrolling = false;
-            };
-
-            function checkSimpleNavigation(currentTop) {
-                //there's no secondary nav or secondary nav is below primary nav
-                if (previousTop - currentTop > scrollDelta) {
-                    //if scrolling up...
-                    mainHeader.removeClass('is-hidden');
-                } else if (currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
-                    //if scrolling down...
-                    mainHeader.addClass('is-hidden');
-                }
-            };
-
-            function checkStickyNavigation(currentTop) {
-                //secondary nav below intro section - sticky secondary nav
-                var secondaryNavOffsetTop = belowNavHeroContent.offset().top - secondaryNavigation.height() - mainHeader.height();
-
-                if (previousTop >= currentTop) {
-                    //if scrolling up...
-                    if (currentTop < secondaryNavOffsetTop) {
-                        //secondary nav is not fixed
-                        mainHeader.removeClass('is-hidden');
-                        secondaryNavigation.removeClass('fixed slide-up');
-                        belowNavHeroContent.removeClass('secondary-nav-fixed');
-                    } else if (previousTop - currentTop > scrollDelta) {
-                        //secondary nav is fixed
-                        mainHeader.removeClass('is-hidden');
-                        secondaryNavigation.removeClass('slide-up').addClass('fixed');
-                        belowNavHeroContent.addClass('secondary-nav-fixed');
-                    }
-
-                } else {
-                    //if scrolling down...
-                    if (currentTop > secondaryNavOffsetTop + scrollOffset) {
-                        //hide primary nav
-                        mainHeader.addClass('is-hidden');
-                        secondaryNavigation.addClass('fixed slide-up');
-                        belowNavHeroContent.addClass('secondary-nav-fixed');
-                    } else if (currentTop > secondaryNavOffsetTop) {
-                        //once the secondary nav is fixed, do not hide primary nav if you haven't scrolled more than scrollOffset
-                        mainHeader.removeClass('is-hidden');
-                        secondaryNavigation.addClass('fixed').removeClass('slide-up');
-                        belowNavHeroContent.addClass('secondary-nav-fixed');
-                    }
-
-                }
-            };
-        };
-
+        //Start of culture script
         function cultureHeader() {
-          console.log("Culture script running");
+            console.log("Culture script running");
             //set animation timing
             var animationDelay = 4000,
                 //loading bar effect
@@ -807,9 +874,11 @@ $(function() {
 
 
         };
+        //End of culture script
 
+        //Start of employees script
         function employees() {
-          console.log("Employees script running");
+            console.log("Employees script running");
             /*
              * Images rotation jQuery plugin | 2014-08-12
              * Copyright (c) 2013-2014 sladex | MIT License
@@ -899,9 +968,72 @@ $(function() {
                 this.trigger('imagesRotationRemove');
             };
         };
+        //End of employees script
 
+        //Start of video script
+        function video() {
+            console.log("Video script running");
+            var fullScreenVideo = fullScreenVideo || {};
+            var containerHeight = 0;
+
+            fullScreenVideo = {
+                name: 'fullScreenVideo',
+                backgroundVideo: 'kr5kajxq3j',
+                backgroundVideoDiv: '#wistia_kr5kajxq3j',
+
+                embedVideo: function() {
+                    var videoOptions = {};
+
+                    Wistia.obj.merge(videoOptions, {
+                        plugin: {
+                            cropFill: {
+                                src: "//fast.wistia.com/labs/crop-fill/plugin.js"
+                            }
+                        }
+                    });
+
+                    wistiaEmbed = Wistia.embed(fullScreenVideo.backgroundVideo, videoOptions);
+
+                    wistiaEmbed.bind("play", function() {
+                        wistiaEmbed.pause();
+                        wistiaEmbed.time(0);
+                        $(fullScreenVideo.backgroundVideoDiv).css('visibility', 'visible');
+                        wistiaEmbed.play();
+                        return this.unbind;
+                    });
+
+                },
+
+                fixTextPosition: function() {
+                    var width = $(window).width();
+                    var height = $(window).height();
+                    textWidth = $("#text").width();
+                    textHeight = $("#text").height();
+                    $("#video_container").css("width", width).css("height", (height * .65));
+                    var containerHeight = $("#video_container").height();
+                    $("#text").css("left", (width / 2) - (textWidth / 2)).css("top", (containerHeight / 2) - (textHeight / 2));
+                },
+
+                fixVideoPosition: function() {}
+            }
+
+            $(document).ready(function() {
+                fullScreenVideo.fixTextPosition();
+                fullScreenVideo.fixVideoPosition();
+                $("#text").delay(200).animate({
+                    opacity: 1
+                }, 650);
+            });
+
+            $(window).resize(fullScreenVideo.fixTextPosition);
+
+            fullScreenVideo.embedVideo();
+        }
+        //End of video script
+
+        //Start of map script
         function map() {
-          console.log("Map script running");
+            console.log("Map script running");
             //set your google maps parameters
             var latitude = 44.485759,
                 longitude = -87.992912,
@@ -1215,6 +1347,8 @@ $(function() {
             //insert the zoom div on the top left of the map
             map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
         };
+        //End of map script
 
     };
+    //End of runScripts
 });
