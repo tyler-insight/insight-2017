@@ -21,51 +21,52 @@ $(function() {
             init();
 
             $("body").scrollTop(0);
-            $('#content').velocity("reverse");
+
+
         };
 
     init();
     //Run Script that performs navigation hid/show and mobile function
     navigation();
-    //Function that loads in the new content
 
+    //Function that loads in the new content
     var load = function(url) {
-      $('#content').velocity("fadeOut", {
-        visibility: 'visible',
-        display: 'inline-block',
-        complete: function() {
-          $("#content").load(url + " #content");
-      }
-    });
+
+        //Fadeout leaving page transition
+        $('#content').velocity("fadeOut", {
+            visibility: 'visible',
+            display: 'inline-block',
+            complete: function() {
+
+                //Load new content
+                $("#content").load(url + " #content");
+
+            }
+        });
+        //Fadein enter page transition
+        $('#content').velocity("reverse");
     };
 
     //Action to perform on link click
     $(document).on('click', 'a', function(e) {
 
-
         //Sets variables to be used for url and page name
         var $this = $(this),
             url = $this.attr("href"),
             title = $this.text();
+            loading = true;
 
         //Makes entries into browser history
         if (url.indexOf(document.domain) > -1 || url.indexOf(':') === -1) {
-          history.pushState({
-              url: url,
-              title: title
-          }, title, url);
-          load(url);
-          return false;
+            history.pushState({
+                url: url,
+                title: title
+            }, title, url);
+            load(url);
+            return false;
         }
 
         document.title = title;
-
-
-
-
-        //Run script to load new content
-
-
     });
 
     // Need to reinitialize scripts so they run when page is loaded
