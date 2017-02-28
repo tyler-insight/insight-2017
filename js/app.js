@@ -21,11 +21,7 @@ $(function() {
             init();
 
             $("body").scrollTop(0);
-            $('#content').velocity('fadeIn', {
-              visibility: 'visible',
-              complete: function() {
-              }
-            });
+            $('#content').velocity("reverse");
         };
 
     init();
@@ -34,12 +30,18 @@ $(function() {
     //Function that loads in the new content
 
     var load = function(url) {
-        $("#content").load(url + " #content");
+      $('#content').velocity("fadeOut", {
+        visibility: 'visible',
+        display: 'inline-block',
+        complete: function() {
+          $("#content").load(url + " #content");
+      }
+    });
     };
 
     //Action to perform on link click
     $(document).on('click', 'a', function(e) {
-        e.preventDefault();
+
 
         //Sets variables to be used for url and page name
         var $this = $(this),
@@ -47,20 +49,20 @@ $(function() {
             title = $this.text();
 
         //Makes entries into browser history
-        history.pushState({
-            url: url,
-            title: title
-        }, title, url);
+        if (url.indexOf(document.domain) > -1 || url.indexOf(':') === -1) {
+          history.pushState({
+              url: url,
+              title: title
+          }, title, url);
+          load(url);
+          return false;
+        }
 
         document.title = title;
 
-        $('#content').velocity('fadeOut', {
-          visibility: 'visible',
-          complete: function() {
 
-            load(url);
-          }
-        });
+
+
         //Run script to load new content
 
 
@@ -1009,7 +1011,7 @@ $(function() {
                     var height = $(window).height();
                     textWidth = $("#text").width();
                     textHeight = $("#text").height();
-                    $("#video_container").css("width", width).css("height", (height * .65));
+                    $("#video_container").css("width", "100%").css("height", (height * .65));
                     var containerHeight = $("#video_container").height();
                     $("#text").css("left", (width / 2) - (textWidth / 2)).css("top", (containerHeight / 2) - (textHeight / 2));
                 },

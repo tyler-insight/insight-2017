@@ -121,6 +121,7 @@
 
 #cd-google-map {
     position: relative;
+    visibility: visible;
 
     margin-bottom: $mobile-spacing;
 
@@ -143,6 +144,7 @@
 
 #google-container {
     position: relative;
+    visibility: visible;
 
     width: 100%;
     height: 200px;
