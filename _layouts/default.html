@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
 
-    <script async src="https://use.typekit.net/xps0dil.js"></script>
+    <script src="https://use.typekit.net/xps0dil.js"></script>
     <script>
         try {
             Typekit.load({
@@ -21,28 +21,19 @@
         } catch (e) {}
     </script>
 
-
-
-
 </head>
 
 <body>
 
-    <div class="container">
+  <progress id="progress" value="0"></progress>
 
+    {% include header.html %}
 
-        {% include header.html %}
-        <div id="content">
-
-            {{ content }}
-
-        {% include contact.html %}
-        </div>
-
-        {% include social.html %}
-
+    <div id="content">
+        {{ content }} {% include contact.html %}
     </div>
-    {% include footer.html %}
+
+    {% include social.html %} {% include footer.html %}
 
 </body>
 

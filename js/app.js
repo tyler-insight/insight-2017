@@ -1,9 +1,10 @@
 $(function() {
+  //Run Script that performs navigation hid/show and mobile function
+  navigation();
 
     //Initialize all scripts for page
     init = function() {
             runScripts();
-            AOS.init();
             var page = $(location).attr('href');
 
             if (page.indexOf("contact") >= 0) {
@@ -25,8 +26,7 @@ $(function() {
         };
 
     init();
-    //Run Script that performs navigation hid/show and mobile function
-    navigation();
+
 
     //Function that loads in the new content
     var load = function(url) {
@@ -42,12 +42,11 @@ $(function() {
             }
         });
         //Fadein enter page transition
-        $('#content').velocity("reverse");
+
     };
 
     //Action to perform on link click
     $(document).on('click', 'a', function(e) {
-
 
         //Sets variables to be used for url and page name
         var $this = $(this),
@@ -73,6 +72,8 @@ $(function() {
     // Need to reinitialize scripts so they run when page is loaded
     $(document).ajaxComplete(function() {
         console.log("Ajax Loaded");
+
+        $('#content').velocity("reverse");
         ajaxLoad();
 
         var page = $(location).attr('href');

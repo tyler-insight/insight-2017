@@ -52,20 +52,20 @@ permalink:
       {% for staff in site.data.staff %}
       {% assign loopindex = forloop.index | modulo: 2 %}
       {% if loopindex == 1 %}
-      <div class="employee employee-left images-rotation" data-aos="fade-up" data-color="{{ staff.color }}" data-images='["{{ staff.image1 }}", "{{ staff.image2 }}", "{{ staff.image3 }}"]'>
+      <div class="employee employee-left images-rotation" data-color="{{ staff.color }}" data-images='["{{ staff.image1 }}", "{{ staff.image2 }}", "{{ staff.image3 }}"]'>
           <img src="{{ staff.image1 }}" />
         <div class="bio">
-          <h1 data-aos="fade-left">{{ staff.name }}</h1>
-          <h2 data-aos="fade-left" data-aos-delay="400">{{ staff.job_title }}</h2>
+          <h1 data-aos="fade-up" data-aos-delay="0">{{ staff.name }}</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">{{ staff.job_title }}</h2>
           <p data-aos="fade-up" data-aos-delay="800">{{ staff.bio }}</p>
         </div>
       </div>
       {% else %}
-      <div class="employee employee-right images-rotation" data-aos="fade-up" data-color="{{ staff.color }}" data-images='["{{ staff.image1 }}", "{{ staff.image2 }}", "{{ staff.image3 }}"]'>
+      <div class="employee employee-right images-rotation" data-color="{{ staff.color }}" data-images='["{{ staff.image1 }}", "{{ staff.image2 }}", "{{ staff.image3 }}"]'>
           <img src="{{ staff.image1 }}" />
         <div class="bio">
-          <h1 data-aos="fade-left">{{ staff.name }}</h1>
-          <h2 data-aos="fade-left" data-aos-delay="400">{{ staff.job_title }}</h2>
+          <h1 data-aos="fade-up" data-aos-delay="0">{{ staff.name }}</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">{{ staff.job_title }}</h2>
           <p data-aos="fade-up" data-aos-delay="800">{{ staff.bio }}</p>
         </div>
       </div>

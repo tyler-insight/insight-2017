@@ -11,8 +11,10 @@
     transform: translateZ(0);
     @include transition(transform .5s);
 
+
     &.is-hidden {
         transform: translateY(-100%);
+
     }
     @include media($tablet) {
         height: $nav-height;
@@ -261,6 +263,7 @@
             padding-top:40px;
             position:absolute;
 
+
             a {
                 /* target primary-nav links */
                 display: inline-block;
@@ -353,6 +356,7 @@
 
     }
     .nav-open & {
+
         visibility: visible;
         @include transition(visibility 0s 0s);
 

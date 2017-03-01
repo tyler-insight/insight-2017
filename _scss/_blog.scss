@@ -153,7 +153,10 @@
 
             .blog-info {
               h2, h3 {
-                text-align: right;
+                text-align: left;
+                @include media($tablet) {
+                  text-align: right;
+                }
               }
                 @include media($tablet) {
                     width: 50%;
