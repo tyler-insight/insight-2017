@@ -4,7 +4,12 @@
     @include span-columns(4);
 
     .banner {
-        margin-bottom: $mobile-spacing*2;
+        margin-bottom: $mobile-spacing;
+        min-height:100px;
+
+        @include media($tablet){
+          min-height:200px;
+        }
 
         @include span-columns(4);
 

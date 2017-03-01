@@ -175,3 +175,8 @@ img {
     @include span-columns(4);
     opacity: 1;
 }
+
+.reveal-box{
+  @include span-columns(4);
+  padding:0 0 2em;
+}

@@ -4,14 +4,14 @@ title: Blog
 ---
 <div class="wrapper">
     <div class="blogs">
-        <h1>A Collection of Thoughts</h1>
-        <div class="featured-blog">
+
+        <div class="featured-blog" data-aos="fade-up">
             {% for post in site.categories.blog limit:1 %}
             <a href="{{ post.url }}">
                 <div class="blog-thumbnail" style="background-image:url('/img/blog/{{ post.cover-image }}')"></div>
                 <div class="blog-info" style="background-color:#{{ post.back-color }}">
-                    <h2 style="color:#{{ post.text-color }}">{{ post.title }}</h2>
-                    <h3 style="color:#{{ post.text-color }}">by <strong>{{ post.author }}</strong></h3>
+                    <h2 data-aos="fade-left" data-aos-delay="400" data-aos-easing="ease-in-out" data-aos-anchor=".featured-blog" style="color:#{{ post.text-color }}">{{ post.title }}</h2>
+                    <h3 data-aos="fade-left" data-aos-delay="600" data-aos-easing="ease-in-out" data-aos-anchor=".featured-blog" style="color:#{{ post.text-color }}">by <strong>{{ post.author }}</strong></h3>
                 </div>
             </a>
             {% endfor %}
@@ -21,7 +21,7 @@ title: Blog
             {% assign loopindex = forloop.index | modulo: 2 %}
             {% if loopindex == 1 %}
             <a href="{{ post.url }}">
-                <div class="blog-right" style="background-color:#{{ post.back-color }}">
+                <div class="blog-right" data-aos="fade-up" style="background-color:#{{ post.back-color }}">
                     <div class="blog-thumbnail" style="background-image:url('/img/blog/{{ post.cover-image }}')"></div>
                     <div class="blog-info" >
                         <h2 style="color:#{{ post.text-color }}">{{ post.title }}</h2>
@@ -31,7 +31,7 @@ title: Blog
             </a>
             {% else %}
             <a href="{{ post.url }}">
-                <div class="blog-left" style="background-color:#{{ post.back-color }}">
+                <div class="blog-left" data-aos="fade-up" style="background-color:#{{ post.back-color }}">
                   <div class="blog-thumbnail" style="background-image:url('/img/blog/{{ post.cover-image }}')"></div>
                     <div class="blog-info">
                         <h2 style="color:#{{ post.text-color }}">{{ post.title }}</h2>
@@ -61,15 +61,4 @@ title: Blog
       </ul>
     </div>
 
-</div>
-
-<div class="contact-us">
-    <a class="contact-link" href="#" data-letters="Contact Us">Contact Us</a>
-</div>
-
-<div class="footer">
-    <h3>We’re a little bit of crazy with a whole lot of talent.</h3>
-    <p>
-        © Insight Creative, Inc. All rights reserved.
-    </p>
 </div>

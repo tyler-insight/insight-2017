@@ -173,99 +173,43 @@
 }
 
 .snapshots {
-    position: relative;
-    display: inline-block;
-    height: auto;
-    margin-bottom: $spacing;
+    @include span-columns(4);
+    margin-bottom: $mobile-spacing;
 
-    h1 {
-        margin-bottom: 20px;
-        text-align: center;
+    .snap-container{
+      background-size:cover;
+      background-position: center;
+      height:300px;
+      @include media($tablet) {
+          height: 400px;
+
+      }
+      @include media($desktop-large) {
+          height: 500px;
+      }
+      @include media($desktop-super) {
+          height: 600px;
+      }
+    }
+    @include media($desktop) {
+
+      .one-half{
+        @include span-columns(2);
+        @include omega;
+        width:50%;
+      }
+      .one-third{
+        @include span-columns(2);
+        @include omega;
+        width:33.333%;
+      }
+      .two-thirds{
+        @include span-columns(2);
+        @include omega;
+        width:66.667%;
+      }
     }
 
-    img {
-        position: relative;
-        display: inline-block;
-        width: 100%;
-    }
-
-    .image-1 {
-        float: left;
-        width: 60%;
-    }
-
-    .image-2 {
-        float: right;
-        width: 70%;
-        margin-top: -5%;
-    }
-
-    .image-3 {
-        float: left;
-        width: 60%;
-        margin-top: -20%;
-        margin-left: 10%;
-    }
-
-    .image-4 {
-        z-index: 2;
-        float: left;
-        width: 40%;
-        margin-top: -5%;
-        margin-left: 5%;
-    }
-
-    .image-5 {
-        float: right;
-        width: 60%;
-        margin-top: -20%;
-        margin-right: 10%;
-    }
-
-    .image-6 {
-        z-index: 2;
-        float: left;
-        width: 40%;
-        margin-top: -5%;
-        margin-left: 5%;
-    }
-
-    .image-7 {
-        float: right;
-        width: 60%;
-        margin-top: -20%;
-        margin-right: 10%;
-    }
-
-    .image-8 {
-        z-index: 2;
-        float: left;
-        width: 40%;
-        margin-top: -5%;
-        margin-left: 5%;
-    }
-
-    .image-9 {
-        float: right;
-        width: 60%;
-        margin-top: -20%;
-        margin-right: 10%;
-    }
-
-    .image-10 {
-        z-index: 2;
-        float: left;
-        width: 40%;
-        margin-top: -5%;
-        margin-left: 5%;
-    }
-
-    .image-11 {
-        float: right;
-        width: 60%;
-        margin-top: -20%;
-        margin-right: 10%;
-    }
 }
 
 .clear {
@@ -276,6 +220,11 @@
     @include span-columns(4);
     position: relative;
     margin-bottom: $mobile-spacing;
+
+    h1{
+      text-align: center;
+      margin-bottom:2em;
+    }
 
     .employee {
         padding: 1em;

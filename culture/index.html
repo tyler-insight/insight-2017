@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Culture
-permalink: 
+permalink:
 ---
 
 <div class="wrapper">
@@ -22,79 +22,59 @@ permalink:
       </h1>
     </div>
 
-    <!--
     <div class="snapshots">
-        <h1>Snapshots</h1>
-        <img class="image-1" data-aos="fade-up" src="../culture/culture-1.jpg">
-        <img class="image-2" data-aos="fade-up" src="../culture/culture-3.jpg">
-        <img class="image-3" data-aos="fade-up" src="../culture/culture-5.jpg">
-        <img class="image-4" data-aos="fade-up" src="../culture/culture-7.jpg">
-        <img class="image-5" data-aos="fade-up" src="../culture/culture-9.jpg">
-        <img class="image-6" data-aos="fade-up" src="../culture/culture-11.jpg">
-        <img class="image-7" data-aos="fade-up" src="../culture/culture-2.jpg">
-        <img class="image-8" data-aos="fade-up" src="../culture/culture-4.jpg">
-        <img class="image-9" data-aos="fade-up" src="../culture/culture-6.jpg">
-        <img class="image-10" data-aos="fade-up" src="../culture/culture-8.jpg">
-        <img class="image-11" data-aos="fade-up" src="../culture/culture-10.jpg">
-    </div>
-  -->
-
-    <div class="testimonial">
-        <div class="quote" data-aos="fade-up" data-aos-anchor="#testimonial-quote" data-aos-delay="500">
-            <p>
-                The people make Insight a great place to work. The different personalities of everyone here blend well together. We have a lot of fun and laugh a lot, but we work hard as well.
-            </p>
+        <div class="snap-container one-half" data-aos="fade-up" style="background-image:url('/img/culture/culture-1.jpg')">
         </div>
-        <h2 data-aos="fade-up" data-aos-anchor="#testimonial-quote" data-aos-delay="700">Jenny Brandenburg, Media Buyer</h2>
+        <div class="snap-container one-half" data-aos="fade-up" style="background-image:url('/img/culture/culture-2.jpg')">
+        </div>
+        <div class="snap-container one-third" data-aos="fade-up" style="background-image:url('/img/culture/culture-4.jpg')">
+        </div>
+        <div class="snap-container one-third" data-aos="fade-up" style="background-image:url('/img/culture/culture-3.jpg')">
+        </div>
+        <div class="snap-container one-third" data-aos="fade-up" style="background-image:url('/img/culture/culture-5.jpg')">
+        </div>
+        <div class="snap-container one-half" data-aos="fade-up" style="background-image:url('/img/culture/culture-7.jpg')">
+        </div>
+        <div class="snap-container one-half" data-aos="fade-up" style="background-image:url('/img/culture/culture-8.jpg')">
+        </div>
+        <div class="snap-container one-third" data-aos="fade-up" style="background-image:url('/img/culture/culture-9.jpg')">
+        </div>
+        <div class="snap-container two-thirds" data-aos="fade-up" style="background-image:url('/img/culture/culture-11.jpg')">
+        </div>
+        <div class="snap-container one-half" data-aos="fade-up" style="background-image:url('/img/culture/culture-10.jpg')">
+        </div>
+        <div class="snap-container one-half" data-aos="fade-up" style="background-image:url('/img/culture/culture-6.jpg')">
+        </div>
     </div>
 
     <div class="employees" id="employees">
+      <h1>Meet the Team</h1>
       {% for staff in site.data.staff %}
       {% assign loopindex = forloop.index | modulo: 2 %}
       {% if loopindex == 1 %}
-      <div class="employee employee-left images-rotation" data-color="{{ staff.color }}" data-images='["{{ staff.image1 }}", "{{ staff.image2 }}", "{{ staff.image3 }}"]'>
+      <div class="employee employee-left images-rotation" data-aos="fade-up" data-color="{{ staff.color }}" data-images='["{{ staff.image1 }}", "{{ staff.image2 }}", "{{ staff.image3 }}"]'>
           <img src="{{ staff.image1 }}" />
         <div class="bio">
-          <h1>{{ staff.name }}</h1>
-          <h2>{{ staff.job_title }}</h2>
-          <p>{{ staff.bio }}</p>
+          <h1 data-aos="fade-left">{{ staff.name }}</h1>
+          <h2 data-aos="fade-left" data-aos-delay="400">{{ staff.job_title }}</h2>
+          <p data-aos="fade-up" data-aos-delay="800">{{ staff.bio }}</p>
         </div>
       </div>
       {% else %}
-      <div class="employee employee-right images-rotation" data-color="{{ staff.color }}" data-images='["{{ staff.image1 }}", "{{ staff.image2 }}", "{{ staff.image3 }}"]'>
+      <div class="employee employee-right images-rotation" data-aos="fade-up" data-color="{{ staff.color }}" data-images='["{{ staff.image1 }}", "{{ staff.image2 }}", "{{ staff.image3 }}"]'>
           <img src="{{ staff.image1 }}" />
         <div class="bio">
-          <h1>{{ staff.name }}</h1>
-          <h2>{{ staff.job_title }}</h2>
-          <p>{{ staff.bio }}</p>
+          <h1 data-aos="fade-left">{{ staff.name }}</h1>
+          <h2 data-aos="fade-left" data-aos-delay="400">{{ staff.job_title }}</h2>
+          <p data-aos="fade-up" data-aos-delay="800">{{ staff.bio }}</p>
         </div>
       </div>
       {% endif %}
       {% endfor %}
     </div>
 
-    <div class="contact-us">
-        <a class="contact-link" href="#">Contact Us</a>
-    </div>
-
-    <div class="footer">
-        <h3>We’re a little bit of crazy with a whole lot of talent.</h3>
-        <p>
-            © Insight Creative, Inc. All rights reserved.
-        </p>
-    </div>
-
 </div>
 <!-- wrapper end -->
-
-<!--
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/history.js/1.8/bundled/html4+html5/jquery.history.js"></script>
-    <script src="js/ajax.js"></script>
-    -->
-
-<!-- Animate on Scroll start -->
-
 
 
 <!-- Animate on Scroll end -->
