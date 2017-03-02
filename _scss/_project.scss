@@ -214,8 +214,8 @@
         .project {
             height: 100%;
             width: 100%;
-
-            background-color: red;
+            @include transform(translateX(-101%));
+            @include transition(all .5s $ease-in-cubic);
 
             .project-info {
                 display: table;
