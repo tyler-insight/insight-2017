@@ -7,8 +7,13 @@ title: {{ page.title }}
     <div class="project-cover" style="background-image:url('/img/projects/{{ page.cover-image }}');">
 
         <div class="text">
-            <h1>{{ page.title }}</h1>
-            <h2>for <strong>{{ page.client }}</strong></h2>
+          <div class="text-box" data-aos="fade-up" style="background: -webkit-linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});
+      background: -o-linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});
+      background: -moz-linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});
+      background: linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});">
+            <h1 data-aos="fade-up" data-aos-delay="400">{{ page.title }}</h1>
+            <h2 data-aos="fade-up" data-aos-delay="800">for <strong>{{ page.client }}</strong></h2>
+          </div>
         </div>
 
     </div>

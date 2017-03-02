@@ -72,7 +72,7 @@ gulp.task('compress', function(){
  */
 gulp.task('watch', function () {
     gulp.watch('_scss/*.scss', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_posts/*', 'blog/*.html', 'services/*.html', 'culture/*.html', 'contact/*.html', 'work/*.html', 'agency/*.html'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
 /**

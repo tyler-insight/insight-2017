@@ -1,7 +1,6 @@
 $(function() {
-  //Run Script that performs navigation hid/show and mobile function
-  navigation();
-
+    //Run Script that performs navigation hid/show and mobile function
+    navigation();
     //Initialize all scripts for page
     init = function() {
             runScripts();
@@ -17,12 +16,24 @@ $(function() {
                     loop: true
                 });
             };
+            if (page.indexOf("work") >= 0) {
+                // Instantiate MixItUp:
+                $('#container').mixItUp({
+                    animation: {
+                        duration: 500,
+                        effects: 'fade stagger(200ms) translateY(10%)',
+                        easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
+                        nudge: false
+
+                    }
+                });
+                filter();
+            }
         },
 
         ajaxLoad = function(html) {
-          $("body").scrollTop(0);
+            $("body").scrollTop(0);
             init();
-
         };
 
     init();
@@ -39,6 +50,7 @@ $(function() {
 
                 //Load new content
                 $("#content").load(url + " #content");
+
             }
         });
         //Fadein enter page transition
@@ -60,13 +72,11 @@ $(function() {
                 url: url,
                 title: title
             }, title, url);
+            $('#container').mixItUp('destroy');
             load(url);
             document.title = title;
             return false;
         }
-
-
-
     });
 
     // Need to reinitialize scripts so they run when page is loaded
@@ -87,6 +97,19 @@ $(function() {
                 loop: true
             });
         };
+
+        if (page.indexOf("work") >= 0) {
+            // Instantiate MixItUp:
+            $('#container').mixItUp({
+                animation: {
+                    duration: 500,
+                    effects: 'fade stagger(200ms) translateY(10%)',
+                    easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
+                    nudge: false
+
+                }
+            });
+        }
     });
 
     //Enables use of back and forward buttons in browser
@@ -101,6 +124,32 @@ $(function() {
         }
     });
 
+    //Set filter control on Work page for projects
+    function filter(){
+      $('.project-filter span').click(function(){
+        var list = $('.filter-list');
+
+        $('.project-filter span i').toggleClass('rotate');
+
+        if (list.is(":hidden")){
+          list.slideDown();
+
+        } else {
+          list.slideUp();
+        };
+        $('.filter-list a').click(function(){
+          var filter = $(this).text();
+
+          $('.project-filter span i').removeClass('rotate');
+          $('.filter-active').text(filter);
+          if (list.is(":hidden")){
+            list.slideDown();
+          } else {
+            list.slideUp();
+          };
+        })
+      });
+    }
 
     //Start of navigation script
     function navigation() {

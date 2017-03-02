@@ -57,6 +57,10 @@
     @include span-columns(4);
     margin-bottom: $mobile-spacing;
 
+    h1{
+      text-align: center;
+    }
+
     .client {
         @include span-columns(2);
         @include omega;
