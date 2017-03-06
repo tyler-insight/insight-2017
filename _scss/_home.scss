@@ -1,93 +1,250 @@
 .home-slider {
     position: relative;
     z-index: 2;
-
-    overflow: hidden;
-
     width: 100%;
-    height: 400px;
-
-    text-align: center;
-
     background: url('../img/logo-slider/slider-background.jpg');
     background-color: #eeedf2;
     background-position: bottom;
     background-size: cover;
 
-    @include media($tablet){
-      height:600px;
-    }
-    @include media($desktop){
-      height:700px;
-    }
-    @include media($desktop-large){
-      height:800px;
-    }
-    @include media($desktop-largest){
-      height:900px;
-    }
-    @include media($desktop-super){
-      height:1000px;
-    }
-
-    .info {
-        position: absolute;
-        top: 70%;
-        left: 70%;
-
-        width: 250px;
-    }
-
-    h2 {
+    .cd-hero-slider {
         position: relative;
+        overflow: hidden;
+        height: 70vh;
 
-        margin-bottom: 8px;
+        li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            @include transition(opacity 1s);
 
-        text-align: left;
+            &.selected {
+                position: relative;
+                opacity: 1;
+                @include transition(opacity 1s);
+            }
 
-        font-size: 1.5em;
-        font-weight: 600;
+            &.is-moving,
+            &.selected {
+                @include transition(opacity 1s);
+            }
+        }
     }
 
-    h3 {
-        text-align: left;
+    .cd-hero-slider {
+        li {
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
-        font-size: 1.2em;
-        font-weight: 400;
+        .cd-full-width,
+        .cd-half-width {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            text-align: left;
+            @include backface-visibility(hidden);
+            @include transform(translateZ(0));
+
+            .text {
+                position: absolute;
+                width: 100%;
+                left: 50%;
+                bottom: 0;
+                padding: 1em;
+                background: rgba(255,255,255,.5);
+                @include transform(translateX(-50%));
+                @include media($desktop-large) {
+                    right: 0;
+                    left: auto;
+                    bottom: 15%;
+                    width: 30%;
+                    @include transform(translateX(0));
+                    background: none;
+                }
+                @include media($desktop-largest) {
+                    width: 35%;
+                }
+            }
+        }
+
+        .cd-img-container {
+            z-index: 1;
+
+            img {
+                height: auto;
+                width: auto;
+                max-width: 100%;
+                max-height: 90%;
+                position: absolute;
+                @include center;
+            }
+        }
+
+        h2,
+        h3 {
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            @include media($desktop-large) {
+                 @include span-columns(12);
+                @include shift(0);
+            }
+            @include media($desktop-largest) {
+                 @include span-columns(12);
+                @include shift(0);
+            }
+        }
+
+        h3 {
+            font-weight: 400;
+
+            strong {
+                font-weight: 600;
+            }
+        }
+        @include media($desktop) {
+            h2 {
+                font-size: 1.4em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+        }
+        @include media($desktop-largest) {
+            h2 {
+                font-size: 1.8em;
+            }
+
+            h3 {
+                font-size: 1.4em;
+            }
+        }
+        @include media($desktop-super) {
+            h2 {
+                font-size: 2em;
+            }
+
+            h3 {
+                font-size: 1.6em;
+            }
+        }
     }
-
-    b {
-        font-weight: 600;
+    .progress-bar{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height:4px;
+      width:0;
+      z-index:5;
+      background:$brand-color;
+      opacity:.5;
+      display: inline-block;
     }
+    .cd-hero-slider {
 
-    img {
-        width: auto;
-        height: 100%;
+        .cd-half-width {
+            opacity: 0;
+            @include transform(translateX(-40px));
+        }
+
+        .move-left .cd-half-width {
+            @include transform(translateX(-40px));
+        }
+
+        .selected .cd-half-width {
+            /* this is the visible slide */
+            opacity: 1;
+            @include transform(translateX(0));
+        }
+
+        .is-moving .cd-half-width {
+            /* this is the slide moving outside the viewport
+			wait for the end of the transition on the <li> parent before set opacity to 0 and translate to 40px/-40px */
+            @include transition(opacity 0s .5s, transform 0s .5s);
+        }
+
+        li.selected.from-left .cd-half-width:nth-of-type(2),
+        li.selected.from-right .cd-half-width:first-of-type {
+            /* this is the selected slide - different animation if it's entering from left or right */
+            @include transition(opacity .4s .2s, transform .5s .2s);
+        }
+
+        li.selected.from-left .cd-half-width:first-of-type,
+        li.selected.from-right .cd-half-width:nth-of-type(2) {
+            /* this is the selected slide - different animation if it's entering from left or right */
+            @include transition(opacity .4s .4s, transform .5s .4s);
+        }
+
+        .cd-full-width .cd-btn,
+        .cd-full-width h2,
+        .cd-full-width h3 {
+            opacity: 0;
+            @include transform(translateX(100px));
+        }
+
+        .move-left .cd-full-width .cd-btn,
+        .move-left .cd-full-width h2,
+        .move-left .cd-full-width h3 {
+            opacity: 0;
+            @include transform(translateX(100px));
+        }
+
+        .selected .cd-full-width .cd-btn,
+        .selected .cd-full-width h2,
+        .selected .cd-full-width h3 {
+            /* this is the visible slide */
+            opacity: 1;
+            @include transform(translateX(0));
+        }
+
+        li.is-moving .cd-full-width .cd-btn,
+        li.is-moving .cd-full-width h2,
+        li.is-moving .cd-full-width h3 {
+            /* this is the slide moving outside the viewport
+			wait for the end of the transition on the li parent before set opacity to 0 and translate to 100px/-100px */
+            @include transition(opacity 0s 1s, transform 0s 1s);
+        }
+
+        li.selected h2 {
+            @include transition(opacity .4s .2s, transform .5s .2s);
+        }
+
+        li.selected h3 {
+            @include transition(opacity .4s .3s, transform .5s .3s);
+        }
+
+        li.selected .cd-btn {
+            @include transition(opacity .4s .4s, transform .5s .4s, background-color .2s 0s);
+        }
     }
 }
 
 .mission-statement {
     margin: $spacing 0;
-
     @include row();
 }
 
 .mission-statement h1 {
     text-align: center;
-
     color: #d31145;
-
     font-size: 2.2em;
     font-weight: bold;
     line-height: 1.5em;
-
     @include span-columns(8);
     @include shift(1 of 10);
 }
 
 .projects-services {
     margin-bottom: $mobile-spacing;
-
     @include span-columns(4);
     @include media($tablet) {
         margin-bottom: $tablet-spacing;
@@ -98,17 +255,14 @@
 .services-block {
     @include span-columns(2);
     @include omega;
-    width:50%;
+    width: 50%;
 
     a {
-
         h1 {
             position: absolute;
             text-transform: uppercase;
             text-align: center;
-
             color: #fff;
-
             font-weight: bold;
             @include media($desktop) {
                 font-size: 4em;
@@ -130,22 +284,17 @@
     margin-top: $mobile-spacing;
     margin-bottom: $mobile-spacing;
     @include span-columns(4);
-
     @include media($tablet) {
         margin-bottom: $tablet-spacing;
     }
 
-
     h2 {
         text-align: center;
-
         color: $medium-gray;
-
         line-height: 1.5em;
 
         a {
             text-decoration: none;
-
             color: $dark-gray;
         }
     }
@@ -156,22 +305,16 @@
     margin-bottom: $mobile-spacing;
     @include span-columns(4);
 
-
     h1 {
         margin-bottom: 60px;
-
         text-align: center;
     }
 
     .recent-blog-photo {
         position: relative;
-
         height: 200px;
-
         text-align: center;
-
         background: #e6e5e6;
-
         @include span-columns(4);
         @include omega;
         @include media($tablet) {
@@ -187,10 +330,8 @@
             position: absolute;
             bottom: 0;
             @include transform(translate(-50%));
-
             width: auto;
             max-height: 250px;
-
             @include media($tablet) {
                 max-height: 450px;
             }
@@ -203,10 +344,8 @@
     .recent-blog-block {
         min-height: 200px;
         padding: 15px;
-
         color: #fff;
         background: #4da7e3;
-
         @include span-columns(4);
         @include omega;
         @include media($tablet) {
@@ -216,20 +355,17 @@
         }
         @include media($desktop-largest) {
             width: 60%;
-            height:500px;
+            height: 500px;
         }
 
         a {
             text-decoration: none;
-
             color: #fff;
         }
 
         h1 {
             margin-bottom: 10px;
-
             text-align: left;
-
             color: #fff;
             @include media($desktop-large) {
                  @include span-columns(12);
@@ -243,9 +379,7 @@
 
         h2 {
             margin-bottom: 3px;
-
             color: #fff;
-
             font-weight: 400;
             @include media($desktop-large) {
                  @include span-columns(12);
@@ -263,7 +397,6 @@
 
         h3 {
             color: #fff;
-
             font-weight: 400;
             @include media($desktop-large) {
                  @include span-columns(12);
@@ -283,67 +416,56 @@
 
     h1 {
         margin-bottom: 30px;
-
         text-align: center;
     }
 
     h2 {
         text-align: center;
-        @include media($desktop-large){
-          @include span-columns(12);
-          @include shift(0);
+        @include media($desktop-large) {
+             @include span-columns(12);
+            @include shift(0);
         }
     }
 
     h3 {
         text-align: center;
-        @include media($desktop-large){
-          @include span-columns(12);
-          @include shift(0);
+        @include media($desktop-large) {
+             @include span-columns(12);
+            @include shift(0);
         }
     }
 
     .quote {
         p {
             margin-bottom: 20px;
-
             text-align: center;
-
             font-style: italic;
-
         }
 
         p::before {
             position: relative;
-            display:inline-block;
-
+            display: inline-block;
             content: open-quote;
             quotes: "“" "”" "‘" "’";
             transform: translate(15%, 60%);
-
             color: $brand-color;
-
             font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
             font-size: 3em;
             font-weight: bold;
             font-style: normal;
         }
+
         p::after {
             position: absolute;
-            display:inline-block;
-
+            display: inline-block;
             content: close-quote;
             quotes: "“" "”" "‘" "’";
             transform: translate(0px, 5px);
-
             color: $brand-color;
-
             font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
             font-size: 3em;
             font-weight: bold;
             font-style: normal;
         }
-
-
     }
 }

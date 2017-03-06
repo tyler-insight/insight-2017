@@ -8,24 +8,47 @@ permalink:
     <div class="services">
         <h1 data-aos="fade-rotate" data-aos-delay="400">Services</h1>
         <p data-aos="fade-up" data-aos-delay="600">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error
+            sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+            sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+            magnam aliquam quaerat voluptatem.
         </p>
         <div data-aos="fade" data-aos-delay="1200" data-aos-anchor=".services">
-        {% for services in site.data.services %}
-        <div class="service accordion" data-aos="fade-up">
-          <h1>{{ services.name }}</h1>
-        </div>
-        <div class="service-description">
-          <h2>{{ services.keywords }}</h2>
-          <p>
-            {{ services.description }}
-          </p>
-          <h2>Examples</h2>
-
+            {% for services in site.data.services %}
+            <div class="service accordion" data-aos="fade-up">
+                <h1>{{ services.name }} <i class="fa fa-plus" aria-hidden="true"></i></h1>
+            </div>
+            <div class="service-description">
+                <h2>{{ services.keywords }}</h2>
+                <p>
+                    {{ services.description }}
+                </p>
+                <h2>Examples</h2>
+                <div class="service-project-container">
+                  {% assign counter = '0' %}
+                    {% for post in site.categories.work %}
+                    {% for tag in post.tags %}
+                    {% if tag == services.name and counter < '2' %}
+                      {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                    <a href="{{ post.url }}">
+                        <div class="service-project" style="background-image:url('/img/projects/{{ post.cover-image }}')">
+                            <div class="project-info" style="background: -webkit-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -o-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -moz-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});">
+                                <div class="text">
+                                    <h2 style="color:#{{ post.cover-text-color }}">{{ post.title }}</h2>
+                                    <h3 style="color:#{{ post.cover-text-color }}">for <strong>{{ post.client }}</strong></h3>
+                                </div>
+                        </div>
+                </div>
+                </a>
+                {% endif %} {% endfor %} {% endfor %}
+            </div>
         </div>
         {% endfor %}
-        </div>
+    </div>
 
-  </div>
+</div>
 </div>

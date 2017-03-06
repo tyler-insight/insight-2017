@@ -1,3 +1,300 @@
+.culture-slider {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background: url('../img/logo-slider/slider-background.jpg');
+    background-color: #eeedf2;
+    background-position: bottom;
+    background-size: cover;
+
+    h1{
+      position: relative;
+      z-index: 1;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,.7);
+      font-family: sans-serif;
+      font-weight: 800;
+      @include center;
+
+      @include media($tablet) {
+          text-shadow: 0 0 15px rgba(0,0,0,.7);
+          font-size: modular-scale(4);
+      }
+      @include media($desktop) {
+          font-size: modular-scale(6);
+      }
+      @include media($desktop-large) {
+          text-shadow: 0 0 25px rgba(0,0,0,.7);
+          font-size: modular-scale(7);
+          width:100%;
+          float:none;
+          position: relative;
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
+          @include span-columns(12);
+          @include shift(0);
+      }
+      @include media($desktop-largest) {
+          font-size: modular-scale(8);
+          @include span-columns(12);
+          @include shift(0);
+      }
+      @include media($desktop-super) {}
+    }
+    .headline.slide {
+      position: absolute;
+      z-index:5;
+        span {
+            display: inline;
+            padding: 0.2em 0;
+        }
+
+        .words-wrapper {
+            overflow: hidden;
+            vertical-align: top;
+        }
+
+        b {
+            top: 0.2em;
+            opacity: 0;
+
+            &.is-visible {
+                top: 0;
+                opacity: 1;
+                @include animation(slide-in .6s);
+            }
+
+            &.is-hidden {
+                @include animation(slide-out .6s);
+            }
+        }
+    }
+
+    .cd-hero-slider {
+        position: relative;
+        overflow: hidden;
+        height: 70vh;
+
+        li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            @include transition(opacity 1s);
+
+            &.selected {
+                position: relative;
+                opacity: 1;
+                @include transition(opacity 1s);
+            }
+
+            &.is-moving,
+            &.selected {
+                @include transition(opacity 1s);
+            }
+        }
+    }
+
+    .cd-hero-slider {
+        li {
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .cd-full-width,
+        .cd-half-width {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            text-align: left;
+            @include backface-visibility(hidden);
+            @include transform(translateZ(0));
+
+            .text {
+                position: absolute;
+                width: 100%;
+                left: 50%;
+                bottom: 0;
+                padding: 1em;
+                background: rgba(255,255,255,.5);
+                @include transform(translateX(-50%));
+                @include media($desktop-large) {
+                    right: 0;
+                    left: auto;
+                    bottom: 15%;
+                    width: 30%;
+                    @include transform(translateX(0));
+                    background: none;
+                }
+                @include media($desktop-largest) {
+                    width: 35%;
+                }
+            }
+        }
+
+        .cd-img-container {
+            z-index: 1;
+            position: relative;
+            img {
+              width:100%;
+              height:100%;
+              min-width: 100%;
+              min-height: 100%;
+              object-fit: cover;
+              object-position: center 20%;
+            }
+        }
+
+        h2,
+        h3 {
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            @include media($desktop-large) {
+                 @include span-columns(12);
+                @include shift(0);
+            }
+            @include media($desktop-largest) {
+                 @include span-columns(12);
+                @include shift(0);
+            }
+        }
+
+        h3 {
+            font-weight: 400;
+
+            strong {
+                font-weight: 600;
+            }
+        }
+        @include media($desktop) {
+            h2 {
+                font-size: 1.4em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+        }
+        @include media($desktop-largest) {
+            h2 {
+                font-size: 1.8em;
+            }
+
+            h3 {
+                font-size: 1.4em;
+            }
+        }
+        @include media($desktop-super) {
+            h2 {
+                font-size: 2em;
+            }
+
+            h3 {
+                font-size: 1.6em;
+            }
+        }
+    }
+    .progress-bar{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height:4px;
+      width:0;
+      z-index:5;
+      background:#fff;
+      opacity:.5;
+      display: inline-block;
+    }
+    .cd-hero-slider {
+
+        .cd-half-width {
+            opacity: 0;
+            @include transform(translateX(-40px));
+        }
+
+        .move-left .cd-half-width {
+            @include transform(translateX(-40px));
+        }
+
+        .selected .cd-half-width {
+            /* this is the visible slide */
+            opacity: 1;
+            @include transform(translateX(0));
+        }
+
+        .is-moving .cd-half-width {
+            /* this is the slide moving outside the viewport
+			wait for the end of the transition on the <li> parent before set opacity to 0 and translate to 40px/-40px */
+            @include transition(opacity 0s .5s, transform 0s .5s);
+        }
+
+        li.selected.from-left .cd-half-width:nth-of-type(2),
+        li.selected.from-right .cd-half-width:first-of-type {
+            /* this is the selected slide - different animation if it's entering from left or right */
+            @include transition(opacity .4s .2s, transform .5s .2s);
+        }
+
+        li.selected.from-left .cd-half-width:first-of-type,
+        li.selected.from-right .cd-half-width:nth-of-type(2) {
+            /* this is the selected slide - different animation if it's entering from left or right */
+            @include transition(opacity .4s .4s, transform .5s .4s);
+        }
+
+        .cd-full-width .cd-btn,
+        .cd-full-width h2,
+        .cd-full-width h3 {
+            opacity: 0;
+            @include transform(translateX(100px));
+        }
+
+        .move-left .cd-full-width .cd-btn,
+        .move-left .cd-full-width h2,
+        .move-left .cd-full-width h3 {
+            opacity: 0;
+            @include transform(translateX(100px));
+        }
+
+        .selected .cd-full-width .cd-btn,
+        .selected .cd-full-width h2,
+        .selected .cd-full-width h3 {
+            /* this is the visible slide */
+            opacity: 1;
+            @include transform(translateX(0));
+        }
+
+        li.is-moving .cd-full-width .cd-btn,
+        li.is-moving .cd-full-width h2,
+        li.is-moving .cd-full-width h3 {
+            /* this is the slide moving outside the viewport
+			wait for the end of the transition on the li parent before set opacity to 0 and translate to 100px/-100px */
+            @include transition(opacity 0s 1s, transform 0s 1s);
+        }
+
+        li.selected h2 {
+            @include transition(opacity .4s .2s, transform .5s .2s);
+        }
+
+        li.selected h3 {
+            @include transition(opacity .4s .3s, transform .5s .3s);
+        }
+
+        li.selected .cd-btn {
+            @include transition(opacity .4s .4s, transform .5s .4s, background-color .2s 0s);
+        }
+    }
+}
+
 // Animated Header image --------------------------------------------
 
 .intro {
@@ -113,32 +410,7 @@
     }
 }
 
-.headline.slide {
-    span {
-        display: inline;
-        padding: 0.2em 0;
-    }
 
-    .words-wrapper {
-        overflow: hidden;
-        vertical-align: top;
-    }
-
-    b {
-        top: 0.2em;
-        opacity: 0;
-
-        &.is-visible {
-            top: 0;
-            opacity: 1;
-            @include animation(slide-in .6s);
-        }
-
-        &.is-hidden {
-            @include animation(slide-out .6s);
-        }
-    }
-}
 @include keyframes(slide-in) {
     0% {
         opacity: 0;

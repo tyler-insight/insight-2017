@@ -139,7 +139,7 @@ img {
 
 .wrapper {
     @include span-columns(4);
-    margin: $nav-height*1.2 auto 0;
+    margin: $nav-height auto 0;
     padding: 0 20px;
     @include media($tablet) {
         padding: 0 50px;

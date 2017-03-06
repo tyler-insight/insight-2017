@@ -111,12 +111,20 @@
         font-weight: 400;
     }
 
-    h2::after {
-        display: block;
-        width: 30%;
-        padding-top: 1em;
-        content: ' ';
-        border-bottom: 2px solid #ccc;
+}
+.description-after {
+    display: inline-block;
+    height:2px;
+    @include span-columns(1);
+    margin-bottom: 1.5em;
+
+    @include media($desktop-large) {
+         @include span-columns(4);
+        @include shift(1);
+    }
+    @include media($desktop-largest) {
+         @include span-columns(3);
+        @include shift(2);
     }
 }
 
@@ -140,6 +148,9 @@
                 @include span-columns(8);
                 @include transform(translateX(0%));
                 @include transition(transform .5s $ease-in-cubic);
+                h2 {
+                    font-size: 2em;
+                }
             }
         }
 
@@ -153,11 +164,44 @@
                 @include span-columns(8);
                 @include transform(translateX(0%));
                 @include transition(transform .5s $ease-in-cubic);
+                h2 {
+                    font-size: 2em;
+                }
+            }
+        }
+    }
+    @include media($desktop) {
+        .previous-project:hover,
+         .next-project:hover{
+            .project {
+                h2 {
+                    font-size: 3em;
+                }
+            }
+        }
+    }
+    @include media($desktop-large) {
+        .previous-project:hover,
+         .next-project:hover{
+            .project {
+                h2 {
+                    font-size: 3.5em;
+                }
+            }
+        }
+    }
+    @include media($desktop-largest) {
+        .previous-project:hover,
+         .next-project:hover{
+            .project {
+                h2 {
+                    font-size: 4em;
+                }
             }
         }
     }
 
-    .previous-project {
+    .previous-project, .next-project {
         position: relative;
         overflow: hidden;
         height: 100px;
@@ -204,63 +248,9 @@
                 float: none;
             }
         }
-
         .project {
             height: 100%;
             width: 100%;
-            @include transform(translateX(-101%));
-            @include transition(all .5s $ease-in-cubic);
-
         }
-    }
-
-    .next-project {
-        position: relative;
-        overflow: hidden;
-        height: 100px;
-        @include span-columns(2);
-        @include media($tablet) {
-            background: #fbfbfb;
-            height: 300px;
-            @include span-columns(4);
-            @include omega;
-            width: 50%;
-        }
-        @include media($desktop) {
-            height: 400px;
-        }
-        @include media($desktop-large) {
-            .center-text {
-                h2 {
-                    font-size: 3em;
-                }
-            }
-        }
-        @include media($desktop-largest) {
-            height: 500px;
-        }
-        @include media($desktop-super) {
-            height: 600px;
-        }
-
-        .center-text {
-            position: absolute;
-            display: table;
-            width: 100%;
-            height: 100%;
-
-
-            h2 {
-                position: relative;
-                display: table-cell;
-                width: 100%;
-                height: 100%;
-                text-align: center;
-                vertical-align: middle;
-                float: none;
-            }
-        }
-
-
     }
 }

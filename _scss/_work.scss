@@ -28,61 +28,65 @@
     margin-bottom: 2em;
     font-size: 1em;
     color: $dark-gray;
-
-    @include media($desktop){
-      font-size:1.3em;
+    @include media($desktop) {
+        font-size: 1.3em;
     }
-    @include media($desktop-largest){
-      font-size:1.5em;
+    @include media($desktop-largest) {
+        font-size: 1.5em;
     }
 
     span {
-      @include span-columns(4);
+        @include span-columns(4);
         cursor: pointer;
+
         .fa {
             position: absolute;
-            margin-left:.3em;
-            margin-top:-.2em;
-            font-size:1.5em;
-            color:$dark-gray;
+            margin-left: 0.3em;
+            margin-top: -.2em;
+            font-size: 1.5em;
+            color: $dark-gray;
             @include transition(transform .5s);
         }
-        .rotate{
-          @include transform(rotateX(180deg));
-          @include transition(transform .5s);
-        }
 
+        .rotate {
+            @include transform(rotateX(180deg));
+            @include transition(transform .5s);
+        }
     }
 
     ul.filter-list {
-      @include span-columns(4);
+        @include span-columns(4);
         margin-top: 1em;
         overflow: hidden;
         display: none;
 
         li {
             line-height: 1.6em;
-            @include media($tablet){
-              @include span-columns(4);
-              @include omega;
+            @include media($tablet) {
+                 @include span-columns(4);
+                @include omega;
             }
-            @include media($desktop){
-              @include span-columns(4);
-              @include omega;
+            @include media($desktop) {
+                 @include span-columns(4);
+                @include omega;
             }
-            @include media($desktop-largest){
-              @include span-columns(3);
-              @include omega;
-              line-height: 1.8em;
+            @include media($desktop-largest) {
+                 @include span-columns(3);
+                @include omega;
+                line-height: 1.8em;
             }
+
             a {
                 font-family: "proxima-nova", sans-serif;
                 margin-right: 1.5em;
                 color: $light-gray;
                 cursor: pointer;
-                &.active{
-                  display:none;
+                @include transition(color .5s ease-in-out);
+
+                &.active {
+                    display: none;
                 }
+
                 &:hover {
                     color: $dark-gray;
                 }
@@ -91,7 +95,7 @@
     }
 
     a.filter-active {
-        margin-left:.3em;
+        margin-left: 0.3em;
         color: $brand-color;
         border-bottom: 2px solid $brand-color;
         cursor: pointer;
@@ -107,6 +111,7 @@
     background-size: cover;
     background-position: center;
     display: none;
+
 
     .project-info {
         position: absolute;
