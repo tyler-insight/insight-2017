@@ -13,7 +13,7 @@ tags:
 ---
 Van’s Lumber is a custom home contractor with roots in Northeast Wisconsin. Insight Creative took these interior and exterior shots to showcase their architectural design, interior design and craftsmanship.
 
-[![Van's Lumber Home](/img/projects/vans-lumber-photography/vans-photography5.jpg){: .full data-featherlight="/img/projects/vans-lumber-photography/vans-photography5.jpg"}
+![Van's Lumber Home](/img/projects/vans-lumber-photography/vans-photography5.jpg){: .full data-featherlight="/img/projects/vans-lumber-photography/vans-photography5.jpg"}
 ![Van's Lumber Home](/img/projects/vans-lumber-photography/vans-photography6.jpg){: .half data-featherlight="/img/projects/vans-lumber-photography/vans-photography6.jpg"}
 ![Van's Lumber Home](/img/projects/vans-lumber-photography/vans-photography7.jpg){: .half data-featherlight="/img/projects/vans-lumber-photography/vans-photography7.jpg"}
 ![Van's Lumber Home](/img/projects/vans-lumber-photography/vans-photography8.jpg){: .full data-featherlight="/img/projects/vans-lumber-photography/vans-photography8.jpg"}
