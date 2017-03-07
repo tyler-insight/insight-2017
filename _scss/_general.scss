@@ -139,13 +139,14 @@ img {
 
 .wrapper {
     @include span-columns(4);
-    margin: $nav-height auto 0;
+    margin: $mobile-nav-height auto 0;
     padding: 0 20px;
     @include media($tablet) {
         padding: 0 50px;
     }
     @include media($desktop) {
         padding: 0 75px;
+        margin: $nav-height auto 0;
     }
     @include media($desktop-large) {
         padding: 0 100px;

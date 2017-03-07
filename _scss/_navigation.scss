@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: $nav-height;
+    height: $mobile-nav-height;
     background-color: #fff;
     @include clearfix;
     /* Force Hardware Acceleration */
@@ -17,7 +17,6 @@
 
     }
     @include media($tablet) {
-        height: $nav-height;
         padding: 0;
     }
     @include media($desktop) {
@@ -50,7 +49,12 @@
     z-index: 0;
 
     img {
-        width: 80px;
+        width: 50px;
+        margin-top:10px;
+        @include media($desktop){
+          margin-top:0px;
+          width:80px;
+        }
     }
 }
 
@@ -127,10 +131,10 @@
 .nav-trigger {
     position: fixed;
     z-index:1000;
-    right: 5%;
-    top: 40px;
-    height: 54px;
-    width: 54px;
+    right: 6%;
+    top: 15px;
+    height: 50px;
+    width: 50px;
     background-color: #000;
     border-radius: 50%;
     /* image replacement */

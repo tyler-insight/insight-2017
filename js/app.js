@@ -2,6 +2,8 @@ $(function() {
     //Run Script that performs navigation hid/show and mobile function
     navigation();
 
+    
+
     //Initialize all scripts for page
     init = function() {
             runScripts();
@@ -48,6 +50,7 @@ $(function() {
 
         ajaxLoad = function(html) {
             window.scrollTo(0, 0);
+            $('a').off('click.myDisable');
             init();
         };
 
@@ -86,6 +89,7 @@ $(function() {
                 title: title
             }, title, url);
             $('#container').mixItUp('destroy');
+            $('a').on('click.myDisable', function() { return false; });
             load(url);
             document.title = title;
             return false;

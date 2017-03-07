@@ -11,6 +11,9 @@
         position: relative;
         overflow: hidden;
         height: 70vh;
+        @include media($desktop-largest){
+          height:80vh;
+        }
 
         li {
             position: absolute;
