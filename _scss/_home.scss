@@ -151,8 +151,8 @@
       height:4px;
       width:0;
       z-index:5;
-      background:$brand-color;
-      opacity:.5;
+      background:$dark-gray;
+      opacity:.3;
       display: inline-block;
     }
     .cd-hero-slider {
@@ -290,9 +290,6 @@
     margin-top: $mobile-spacing;
     margin-bottom: $mobile-spacing;
     @include span-columns(4);
-    @include media($tablet) {
-        margin-bottom: $tablet-spacing;
-    }
 
     h2 {
         text-align: center;
@@ -442,7 +439,9 @@
     }
 
     .quote {
+      @include span-columns(4);
         p {
+
             margin-bottom: 20px;
             text-align: center;
             font-style: italic;

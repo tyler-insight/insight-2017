@@ -9,18 +9,6 @@
         margin-bottom: $mobile-spacing;
     }
 
-    img {
-        margin-bottom: 1em;
-        @include media($desktop-large) {
-             @include span-columns(10);
-            @include shift(1);
-        }
-        @include media($desktop-largest) {
-             @include span-columns(8);
-            @include shift(2);
-        }
-    }
-
     ul {
         li {
           @include transition(border-color .5s);
@@ -43,8 +31,8 @@
         li:hover,
         li:focus,
         li:hover + li{
-
           border-color:$dark-gray;
+          @include transition(border-color .5s);
         }
     }
 
@@ -67,12 +55,17 @@
                  @include span-columns(12);
                 @include shift(0);
             }
+            span{
+              position: absolute;
+              height: 100%;
+              right:.2em;
+              top:60%;
+              @include transform(translateY(-50%));
+            }
 
             i {
-                position: absolute;
-                margin-top: 0.5em;
+                position: relative;
                 font-size: 0.5em;
-                margin-left: 1em;
                 @include transition(transform .5s);
             }
         }
@@ -103,7 +96,7 @@
         overflow: hidden;
 
         h2 {
-            margin-bottom: 0.2em;
+            margin-bottom: 0.4em;
             @include transition(color .5s);
             @include media($desktop-large) {
                  @include span-columns(12);
@@ -130,14 +123,16 @@
 
         .service-project-container {
             @include span-columns(4);
+            margin-bottom:2em;
+
             @include media($desktop-large) {
                 font-size: 1.3em;
-                @include span-columns(10);
-                @include shift(1);
+                @include span-columns(12);
+                @include shift(0);
             }
             @include media($desktop-largest) {
-                 @include span-columns(8);
-                @include shift(2);
+                 @include span-columns(12);
+                @include shift(0);
             }
 
             .service-project {
@@ -201,15 +196,15 @@
                     height: 400px;
                 }
                 @include media($desktop-large) {
-                    height: 500px;
+                    height: 400px;
                     @include span-columns(6);
                     width: 50%;
                 }
                 @include media($desktop-largest) {
-                    height: 550px;
+                    height: 400px;
                 }
                 @include media($desktop-super) {
-                    height: 650px;
+                    height: 500px;
                 }
             }
 

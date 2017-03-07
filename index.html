@@ -66,29 +66,34 @@ slug: index
     <div class="description-statement" data-aos="fade-up">
         <h2>Insight Creative is a <a href="/services">full service agency</a>. We offer a complete range of services to help you reach your goals from big picture strategy to fine details of copywriting, design, photography, web development, social media and media buying.</h2>
     </div>
-
-    <div class="recent-blog">
-        <h1>From the Blog</h1>
-        <div class="recent-blog-photo">
-            <img src="../img/zane.png" />
-        </div>
-        <div class="recent-blog-block">
-            <h1><a href="#">From Concept to Completion</a></h1>
-            <h2>by <b><a href="#">Zane Statz</a></b></h2>
-            <h3>Graphic Designer/Web Developer</h3>
-        </div>
+    <div class="blogs">
+      <h1 data-aos="fade-up" style="text-align:center;">From the Blog</h1>
+      <div class="secondary-blogs">
+          {% for post in site.categories.blog offset:1 limit:1 %}
+          {% assign loopindex = forloop.index | modulo: 2 %}
+          <a href="{{ post.url }}">
+              <div class="blog-right" data-aos="fade-up" style="background-color:#{{ post.back-color }}">
+                  <div class="blog-thumbnail" style="background-image:url('/img/blog/{{ post.cover-image }}')"></div>
+                  <div class="blog-info" >
+                      <h2 data-aos="fade-up" data-aos-delay="200" style="color:#{{ post.text-color }}">{{ post.title }}</h2>
+                      <h3 data-aos="fade-up" data-aos-delay="400" style="color:#{{ post.text-color }}">by <strong>{{ post.author }}</strong></h3>
+                  </div>
+              </div>
+          </a>
+          {% endfor %}
+      </div>
     </div>
 
     <div class="testimonial">
-        <h1 id="testimonial-quote">Words from a Client</h1>
-        <div class="quote">
+        <h1 id="testimonial-quote" data-aos="fade-up">Words from a Client</h1>
+        <div class="quote" data-aos="fade-up">
             <p>
                 Insight Creative and its team have distinguished themselves by spotting technology trends and thoughtfully assessing whether new channels are a strategic fit for our health care organization. They do a ton of homework. I’ve been consistently pleased by
                 their level of preparedness, which has included an impressive ability to impart knowledge as well as anticipate questions.
             </p>
         </div>
-        <h2>Tim Huffcut</h2>
-        <h3>Ministry Health System</h3>
+        <h2 id="name" data-aos="fade-up" data-aos-delay="200">Tim Huffcut</h2>
+        <h3 data-aos="fade-up" data-aos-anchor="#name" data-aos-delay="400">Ministry Health System</h3>
     </div>
 </div>
 <!-- wrapper end -->

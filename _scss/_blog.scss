@@ -238,18 +238,30 @@
     @include span-columns(4);
 
     h1 {
+        border-top: 5px solid $light-gray;
+        border-bottom: 5px solid $light-gray;
         margin-bottom: 0;
+        padding:.3em 0;
         color: $light-gray;
         font-weight: 400;
-        text-align: center;
-        @include transition(color .5s);
+        @include transition(color .5s, border-color .5s);
+        @include media($desktop-large){
+          @include span-columns(12);
+          @include shift(0);
+        }
+        @include media($desktop-largest){
+          @include span-columns(12);
+          @include shift(0);
+        }
 
         strong {
             font-weight: 600;
         }
 
         i{
-          position: absolute;
+          position: relative;
+          float:right;
+          margin-right:.2em;
           margin-top:.5em;
           font-size:.5em;
           margin-left:1em;
@@ -258,8 +270,9 @@
     }
 
     h1:hover {
-        color: #000;
-        @include transition(color .5s);
+        color: $dark-gray;
+        border-color:$dark-gray;
+        @include transition(color .5s, border-color .5s);
     }
 
     h1.accordion {
@@ -268,6 +281,8 @@
 
     h1.active{
         color:$brand-color;
+        border-color:$dark-gray;
+        @include transition(color .5s, border-color .5s);
       i {
         transform-origin: center center;
         @include transform(rotate(45deg));
@@ -283,10 +298,7 @@
         overflow: hidden;
         text-align: center;
 
-        @include media($desktop-large) {
-          @include span-columns(10);
-          @include shift(1);
-        }
+
 
         h2 {
             color: $light-gray;
@@ -294,12 +306,12 @@
             margin-bottom: 0;
             text-align: left;
             @include media($desktop-large){
-              @include span-columns(10);
-              @include shift(1);
+              @include span-columns(12);
+              @include shift(0);
             }
             @include media($desktop-largest){
               @include span-columns(12);
-              @include shift(1);
+              @include shift(0);
             }
         }
 
@@ -317,12 +329,14 @@
             @include media($tablet) {
                 font-size: 1.4em;
             }
-            @include media($desktop-large) {
-              @include span-columns(10);
-              @include shift(1);
+            @include media($desktop-large){
+              @include span-columns(12);
+              @include shift(0);
             }
-            @include media($desktop-largest) {
-                font-size: 1.6em;
+            @include media($desktop-largest){
+              @include span-columns(12);
+              @include shift(0);
+              font-size:1.6em;
             }
         }
     }
@@ -472,6 +486,7 @@
     }
 
     .employees{
+      margin-top:1em;
       margin-bottom:0;
       h3{
         text-align: left;
@@ -501,15 +516,15 @@
 
     .nextprevious {
       .previous-project, .next-project {
-          height: 100px;
+          height: 200px;
           @include media($tablet) {
-              height: 200px;
-          }
-          @include media($desktop) {
               height: 300px;
           }
-          @include media($desktop-largest) {
+          @include media($desktop) {
               height: 400px;
+          }
+          @include media($desktop-largest) {
+              height: 500px;
           }
       }
     }
