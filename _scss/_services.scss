@@ -9,43 +9,91 @@
         margin-bottom: $mobile-spacing;
     }
 
+    img {
+        margin-bottom: 1em;
+        @include media($desktop-large) {
+             @include span-columns(10);
+            @include shift(1);
+        }
+        @include media($desktop-largest) {
+             @include span-columns(8);
+            @include shift(2);
+        }
+    }
+
+    ul {
+        li {
+          @include transition(border-color .5s);
+            @include span-columns(4);
+            @include omega;
+            @include media($desktop-large) {
+                 @include span-columns(10);
+                @include shift(1);
+            }
+            @include media($desktop-largest) {
+                 @include span-columns(8);
+                @include shift(2);
+            }
+            border-top: 5px solid $light-gray;
+
+            &:last-child{
+              border-bottom: 5px solid $light-gray;
+            }
+        }
+        li:hover,
+        li:focus,
+        li:hover + li{
+
+          border-color:$dark-gray;
+        }
+    }
+
     .service {
         @include span-columns(4);
         position: relative;
 
         h1 {
-          text-align: left;
-            margin-bottom: 0.5em;
+            text-align: left;
+            margin-bottom: 0;
+            padding: 0.3em 0;
             cursor: pointer;
-            color:$light-gray;
+            color: $light-gray;
             @include transition(color .5s);
-            @include span-columns(4);
-            @include omega;
+            @include media($desktop-large) {
+                 @include span-columns(12);
+                @include shift(0);
+            }
+            @include media($desktop-largest) {
+                 @include span-columns(12);
+                @include shift(0);
+            }
 
-            i{
-              position: absolute;
-              margin-top:.5em;
-              font-size:.5em;
-              margin-left:1em;
-              @include transition(transform .5s);
+            i {
+                position: absolute;
+                margin-top: 0.5em;
+                font-size: 0.5em;
+                margin-left: 1em;
+                @include transition(transform .5s);
             }
         }
 
         h1:hover {
-            color: #000;
+            color: $dark-gray;
             @include transition(color .5s);
         }
     }
 
-    .active{
-      h1{
-        color:$dark-gray;
-      }
-      i {
-        transform-origin: center center;
-        @include transform(rotate(45deg));
-        @include transition(transform .5s);
-      }
+    .active {
+        h1,
+        h1:hover {
+            color: $brand-color;
+        }
+
+        i {
+            transform-origin: center center;
+            @include transform(rotate(45deg));
+            @include transition(transform .5s);
+        }
     }
 
     .service-description {
@@ -54,122 +102,137 @@
         max-height: 0;
         overflow: hidden;
 
-
         h2 {
             margin-bottom: 0.2em;
-        }
-        p {
-            margin-bottom: 2em;
-        }
-        .service-project-container{
-        @include span-columns(4);
-
-        @include media($desktop-large) {
-            font-size: 1.3em;
-            @include span-columns(10);
-            @include shift(1);
-        }
-        @include media($desktop-largest) {
-            @include span-columns(8);
-            @include shift(2);
-        }
-
-
-
-        .service-project {
-            @include span-columns(4);
-            position: relative;
-            height: 300px;
-            overflow: hidden;
-            object-fit: cover;
-            background-size: cover;
-            background-position: center;
-            margin-bottom:2em;
-
-            .project-info {
-                position: absolute;
-                opacity: 0;
-                height: 100%;
-                width: 100%;
-                display: table;
-
-                .text {
-                    position: relative;
-                    display: table-cell;
-                    height: 100%;
-                    width: 100%;
-                    text-align: center;
-                    vertical-align: middle;
-                    padding: 1em;
-
-                    h2 {
-                        @include transform(translateY(-2em));
-                        margin-bottom: 0.2em;
-                        opacity: 0;
-                        text-align: center;
-                        font-size: 1.8em;
-                        @include media($tablet) {
-                            font-size: 3em;
-                        }
-                        @include media($desktop-large) {
-                            font-size: 3em;
-                        }
-                    }
-
-                    h3 {
-                        @include transform(translateY(1em));
-                        font-weight: 400;
-                        opacity: 0;
-                        text-align: center;
-
-                        strong {
-                            font-weight: 600;
-                        }
-                        @include media($desktop-large) {
-                            font-size: 1.5em;
-                        }
-                    }
-                }
-            }
-            @include media($tablet) {
-                height: 500px;
-            }
-            @include media($desktop) {
-                height: 400px;
-            }
+            @include transition(color .5s);
             @include media($desktop-large) {
-                height: 500px;
-                @include span-columns(6);
-                width:50%;
+                 @include span-columns(12);
+                @include shift(0);
             }
             @include media($desktop-largest) {
-                height: 550px;
-            }
-            @include media($desktop-super) {
-                height: 650px;
+                 @include span-columns(12);
+                @include shift(0);
             }
         }
 
-        .service-project:hover {
-            .project-info {
-                opacity: 1;
-                @include transition(opacity .5s $ease-out-quint);
+        p {
+            margin-bottom: 2em;
+            @include transition(color .5s);
+            @include media($desktop-large) {
+                 @include span-columns(12);
+                @include shift(0);
+            }
+            @include media($desktop-largest) {
+                 @include span-columns(12);
+                @include shift(0);
+            }
+        }
 
-                .text {
-                    h2 {
-                        opacity: 1;
-                        @include transform(translateY(0));
-                        @include transition(all 1s);
+        .service-project-container {
+            @include span-columns(4);
+            @include media($desktop-large) {
+                font-size: 1.3em;
+                @include span-columns(10);
+                @include shift(1);
+            }
+            @include media($desktop-largest) {
+                 @include span-columns(8);
+                @include shift(2);
+            }
+
+            .service-project {
+                @include span-columns(4);
+                position: relative;
+                height: 300px;
+                overflow: hidden;
+                object-fit: cover;
+                background-size: cover;
+                background-position: center;
+
+                .project-info {
+                    position: absolute;
+                    opacity: 0;
+                    height: 100%;
+                    width: 100%;
+                    display: table;
+
+                    .text {
+                        position: relative;
+                        display: table-cell;
+                        height: 100%;
+                        width: 100%;
+                        text-align: center;
+                        vertical-align: middle;
+                        padding: 1em;
+
+                        h2 {
+                            @include transform(translateY(-2em));
+                            margin-bottom: 0.2em;
+                            opacity: 0;
+                            text-align: center;
+                            font-size: 1.8em;
+                            @include media($tablet) {
+                                font-size: 3em;
+                            }
+                            @include media($desktop-large) {
+                                font-size: 3em;
+                            }
+                        }
+
+                        h3 {
+                            @include transform(translateY(1em));
+                            font-weight: 400;
+                            opacity: 0;
+                            text-align: center;
+
+                            strong {
+                                font-weight: 600;
+                            }
+                            @include media($desktop-large) {
+                                font-size: 1.5em;
+                            }
+                        }
                     }
+                }
+                @include media($tablet) {
+                    height: 500px;
+                }
+                @include media($desktop) {
+                    height: 400px;
+                }
+                @include media($desktop-large) {
+                    height: 500px;
+                    @include span-columns(6);
+                    width: 50%;
+                }
+                @include media($desktop-largest) {
+                    height: 550px;
+                }
+                @include media($desktop-super) {
+                    height: 650px;
+                }
+            }
 
-                    h3 {
-                        opacity: 1;
-                        @include transform(translateY(0));
-                        @include transition(all 1s .4s);
+            .service-project:hover {
+                .project-info {
+                    opacity: 1;
+                    @include transition(opacity .5s $ease-out-quint);
+
+                    .text {
+                        h2 {
+                            opacity: 1;
+                            @include transform(translateY(0));
+                            @include transition(all 1s);
+                        }
+
+                        h3 {
+                            opacity: 1;
+                            @include transform(translateY(0));
+                            @include transition(all 1s .4s);
+                        }
                     }
                 }
             }
         }
-      }
     }
 }

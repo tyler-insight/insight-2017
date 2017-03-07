@@ -2,8 +2,6 @@ $(function() {
     //Run Script that performs navigation hid/show and mobile function
     navigation();
 
-
-
     //Initialize all scripts for page
     init = function() {
             runScripts();
@@ -11,13 +9,13 @@ $(function() {
             var page = $(location).attr('href');
 
             //Run home page slider if on homepage
-            if($("#homepage-flag").length > 0) {
-              homeSlider();
+            if ($("#homepage-flag").length > 0) {
+                homeSlider();
             };
 
             //Run home page slider if on culture
             if (page.indexOf("culture") >= 0) {
-              homeSlider();
+                homeSlider();
             };
 
             //Run typing script if on contact page
@@ -80,7 +78,7 @@ $(function() {
         var $this = $(this),
             url = $this.attr("href"),
             title = $this.text();
-        loading = true;
+            loading = true;
 
         //Makes entries into browser history
         if (url.indexOf(document.domain) > -1 || url.indexOf(':') === -1) {
@@ -89,9 +87,16 @@ $(function() {
                 title: title
             }, title, url);
             $('#container').mixItUp('destroy');
-            $('a').on('click.myDisable', function() { return false; });
+            $('a').on('click.myDisable', function() {
+                return false;
+            });
             load(url);
-            document.title = title;
+            if (url == '/'){
+              document.title = "Insight Creative, Inc.";
+            } else {
+              document.title = title +  " - Insight Creative, Inc.";
+            }
+
             return false;
         }
     });
@@ -100,13 +105,10 @@ $(function() {
     $(document).ajaxComplete(function() {
         console.log("Ajax Loaded");
 
-
         $('#content').velocity("reverse");
         ajaxLoad();
 
         var page = $(location).attr('href');
-
-
 
         //Run text typing script if on contact page
         if (page.indexOf("contact") >= 0) {
@@ -149,30 +151,30 @@ $(function() {
     });
 
     //Set filter control on Work page for projects
-    function filter(){
-      $('.project-filter span').click(function(){
-        var list = $('.filter-list');
+    function filter() {
+        $('.project-filter span').click(function() {
+            var list = $('.filter-list');
 
-        $('.project-filter span i').toggleClass('rotate');
+            $('.project-filter span i').toggleClass('rotate');
 
-        if (list.is(":hidden")){
-          list.slideDown();
+            if (list.is(":hidden")) {
+                list.slideDown();
 
-        } else {
-          list.slideUp();
-        };
-        $('.filter-list a').click(function(){
-          var filter = $(this).text();
+            } else {
+                list.slideUp();
+            };
+            $('.filter-list a').click(function() {
+                var filter = $(this).text();
 
-          $('.project-filter span i').removeClass('rotate');
-          $('.filter-active').text(filter);
-          if (list.is(":hidden")){
-            list.slideDown();
-          } else {
-            list.slideUp();
-          };
-        })
-      });
+                $('.project-filter span i').removeClass('rotate');
+                $('.filter-active').text(filter);
+                if (list.is(":hidden")) {
+                    list.slideDown();
+                } else {
+                    list.slideUp();
+                };
+            })
+        });
     }
 
     //Start of navigation script
@@ -285,146 +287,150 @@ $(function() {
     };
     //End of navigation script
 
-    function homeSlider(){
-      var slidesWrapper = $('.cd-hero-slider');
+    function homeSlider() {
+        var slidesWrapper = $('.cd-hero-slider');
 
-      	//check if a .cd-hero-slider exists in the DOM
-      	if ( slidesWrapper.length > 0 ) {
-      		var primaryNav = $('.cd-primary-nav'),
-      			sliderNav = $('.cd-slider-nav'),
-      			navigationMarker = $('.cd-marker'),
-            bar = $('.progress-bar'),
-      			slidesNumber = slidesWrapper.children('li').length,
-      			visibleSlidePosition = 0,
-      			autoPlayId,
-      			autoPlayDelay = 5000;
+        //check if a .cd-hero-slider exists in the DOM
+        if (slidesWrapper.length > 0) {
+            var primaryNav = $('.cd-primary-nav'),
+                sliderNav = $('.cd-slider-nav'),
+                navigationMarker = $('.cd-marker'),
+                bar = $('.progress-bar'),
+                slidesNumber = slidesWrapper.children('li').length,
+                visibleSlidePosition = 0,
+                autoPlayId,
+                autoPlayDelay = 5000;
 
-      		//upload videos (if not on mobile devices)
-      		uploadVideo(slidesWrapper);
+            //upload videos (if not on mobile devices)
+            uploadVideo(slidesWrapper);
 
-      		//autoplay slider
-      		setAutoplay(slidesWrapper, slidesNumber, autoPlayDelay);
+            //autoplay slider
+            setAutoplay(slidesWrapper, slidesNumber, autoPlayDelay);
 
-          loadingBar();
+            loadingBar();
 
-          function loadingBar(){
-            bar.width(0);
-            bar.velocity({'width':'100%'}, autoPlayDelay, loadingBar);
-          }
+            function loadingBar() {
+                bar.width(0);
+                bar.velocity({
+                    'width': '100%'
+                }, autoPlayDelay, loadingBar);
+            }
 
-      		//on mobile - open/close primary navigation clicking/tapping the menu icon
-      		primaryNav.on('click', function(event){
-      			if($(event.target).is('.cd-primary-nav')) $(this).children('ul').toggleClass('is-visible');
-      		});
+            //on mobile - open/close primary navigation clicking/tapping the menu icon
+            primaryNav.on('click', function(event) {
+                if ($(event.target).is('.cd-primary-nav')) $(this).children('ul').toggleClass('is-visible');
+            });
 
-      		//change visible slide
-      		sliderNav.on('click', 'li', function(event){
-      			event.preventDefault();
-      			var selectedItem = $(this);
-      			if(!selectedItem.hasClass('selected')) {
-      				// if it's not already selected
-      				var selectedPosition = selectedItem.index(),
-      					activePosition = slidesWrapper.find('li.selected').index();
+            //change visible slide
+            sliderNav.on('click', 'li', function(event) {
+                event.preventDefault();
+                var selectedItem = $(this);
+                if (!selectedItem.hasClass('selected')) {
+                    // if it's not already selected
+                    var selectedPosition = selectedItem.index(),
+                        activePosition = slidesWrapper.find('li.selected').index();
 
-      				if( activePosition < selectedPosition) {
-      					nextSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, selectedPosition);
-      				} else {
-      					prevSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, selectedPosition);
-      				}
+                    if (activePosition < selectedPosition) {
+                        nextSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, selectedPosition);
+                    } else {
+                        prevSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, selectedPosition);
+                    }
 
-      				//this is used for the autoplay
-      				visibleSlidePosition = selectedPosition;
+                    //this is used for the autoplay
+                    visibleSlidePosition = selectedPosition;
 
-      				updateSliderNavigation(sliderNav, selectedPosition);
-      				updateNavigationMarker(navigationMarker, selectedPosition+1);
-      				//reset autoplay
-      				setAutoplay(slidesWrapper, slidesNumber, autoPlayDelay);
-      			}
-      		});
+                    updateSliderNavigation(sliderNav, selectedPosition);
+                    updateNavigationMarker(navigationMarker, selectedPosition + 1);
+                    //reset autoplay
+                    setAutoplay(slidesWrapper, slidesNumber, autoPlayDelay);
+                }
+            });
 
-      	}
+        }
 
-      	function nextSlide(visibleSlide, container, pagination, n){
-      		visibleSlide.removeClass('selected from-left from-right').addClass('is-moving').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-      			visibleSlide.removeClass('is-moving');
-      		});
+        function nextSlide(visibleSlide, container, pagination, n) {
+            visibleSlide.removeClass('selected from-left from-right').addClass('is-moving').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
+                visibleSlide.removeClass('is-moving');
+            });
 
-      		container.children('li').eq(n).addClass('selected from-right').prevAll().addClass('move-left');
-      		checkVideo(visibleSlide, container, n);
-      	}
+            container.children('li').eq(n).addClass('selected from-right').prevAll().addClass('move-left');
+            checkVideo(visibleSlide, container, n);
+        }
 
-      	function prevSlide(visibleSlide, container, pagination, n){
-      		visibleSlide.removeClass('selected from-left from-right').addClass('is-moving').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-      			visibleSlide.removeClass('is-moving');
-      		});
+        function prevSlide(visibleSlide, container, pagination, n) {
+            visibleSlide.removeClass('selected from-left from-right').addClass('is-moving').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
+                visibleSlide.removeClass('is-moving');
+            });
 
-      		container.children('li').eq(n).addClass('selected from-left').removeClass('move-left').nextAll().removeClass('move-left');
-      		checkVideo(visibleSlide, container, n);
-      	}
+            container.children('li').eq(n).addClass('selected from-left').removeClass('move-left').nextAll().removeClass('move-left');
+            checkVideo(visibleSlide, container, n);
+        }
 
-      	function updateSliderNavigation(pagination, n) {
-      		var navigationDot = pagination.find('.selected');
-      		navigationDot.removeClass('selected');
-      		pagination.find('li').eq(n).addClass('selected');
-      	}
+        function updateSliderNavigation(pagination, n) {
+            var navigationDot = pagination.find('.selected');
+            navigationDot.removeClass('selected');
+            pagination.find('li').eq(n).addClass('selected');
+        }
 
-      	function setAutoplay(wrapper, length, delay) {
-      		if(wrapper.hasClass('autoplay')) {
-      			clearInterval(autoPlayId);
-      			autoPlayId = window.setInterval(function(){autoplaySlider(length)}, delay);
-      		}
-      	}
+        function setAutoplay(wrapper, length, delay) {
+            if (wrapper.hasClass('autoplay')) {
+                clearInterval(autoPlayId);
+                autoPlayId = window.setInterval(function() {
+                    autoplaySlider(length)
+                }, delay);
+            }
+        }
 
-      	function autoplaySlider(length) {
-      		if( visibleSlidePosition < length - 1) {
-      			nextSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, visibleSlidePosition + 1);
-      			visibleSlidePosition +=1;
-      		} else {
-      			prevSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, 0);
-      			visibleSlidePosition = 0;
-      		}
-      		updateNavigationMarker(navigationMarker, visibleSlidePosition+1);
-      		updateSliderNavigation(sliderNav, visibleSlidePosition);
-      	}
+        function autoplaySlider(length) {
+            if (visibleSlidePosition < length - 1) {
+                nextSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, visibleSlidePosition + 1);
+                visibleSlidePosition += 1;
+            } else {
+                prevSlide(slidesWrapper.find('.selected'), slidesWrapper, sliderNav, 0);
+                visibleSlidePosition = 0;
+            }
+            updateNavigationMarker(navigationMarker, visibleSlidePosition + 1);
+            updateSliderNavigation(sliderNav, visibleSlidePosition);
+        }
 
-      	function uploadVideo(container) {
-      		container.find('.cd-bg-video-wrapper').each(function(){
-      			var videoWrapper = $(this);
-      			if( videoWrapper.is(':visible') ) {
-      				// if visible - we are not on a mobile device
-      				var	videoUrl = videoWrapper.data('video'),
-      					video = $('<video loop><source src="'+videoUrl+'.mp4" type="video/mp4" /><source src="'+videoUrl+'.webm" type="video/webm" /></video>');
-      				video.appendTo(videoWrapper);
-      				// play video if first slide
-      				if(videoWrapper.parent('.cd-bg-video.selected').length > 0) video.get(0).play();
-      			}
-      		});
-      	}
+        function uploadVideo(container) {
+            container.find('.cd-bg-video-wrapper').each(function() {
+                var videoWrapper = $(this);
+                if (videoWrapper.is(':visible')) {
+                    // if visible - we are not on a mobile device
+                    var videoUrl = videoWrapper.data('video'),
+                        video = $('<video loop><source src="' + videoUrl + '.mp4" type="video/mp4" /><source src="' + videoUrl + '.webm" type="video/webm" /></video>');
+                    video.appendTo(videoWrapper);
+                    // play video if first slide
+                    if (videoWrapper.parent('.cd-bg-video.selected').length > 0) video.get(0).play();
+                }
+            });
+        }
 
-      	function checkVideo(hiddenSlide, container, n) {
-      		//check if a video outside the viewport is playing - if yes, pause it
-      		var hiddenVideo = hiddenSlide.find('video');
-      		if( hiddenVideo.length > 0 ) hiddenVideo.get(0).pause();
+        function checkVideo(hiddenSlide, container, n) {
+            //check if a video outside the viewport is playing - if yes, pause it
+            var hiddenVideo = hiddenSlide.find('video');
+            if (hiddenVideo.length > 0) hiddenVideo.get(0).pause();
 
-      		//check if the select slide contains a video element - if yes, play the video
-      		var visibleVideo = container.children('li').eq(n).find('video');
-      		if( visibleVideo.length > 0 ) visibleVideo.get(0).play();
-      	}
+            //check if the select slide contains a video element - if yes, play the video
+            var visibleVideo = container.children('li').eq(n).find('video');
+            if (visibleVideo.length > 0) visibleVideo.get(0).play();
+        }
 
-      	function updateNavigationMarker(marker, n) {
-      		marker.removeClassPrefix('item').addClass('item-'+n);
-      	}
+        function updateNavigationMarker(marker, n) {
+            marker.removeClassPrefix('item').addClass('item-' + n);
+        }
 
-      	$.fn.removeClassPrefix = function(prefix) {
-      		//remove all classes starting with 'prefix'
-      	    this.each(function(i, el) {
-      	        var classes = el.className.split(" ").filter(function(c) {
-      	            return c.lastIndexOf(prefix, 0) !== 0;
-      	        });
-      	        el.className = $.trim(classes.join(" "));
-      	    });
-      	    return this;
-      	};
+        $.fn.removeClassPrefix = function(prefix) {
+            //remove all classes starting with 'prefix'
+            this.each(function(i, el) {
+                var classes = el.className.split(" ").filter(function(c) {
+                    return c.lastIndexOf(prefix, 0) !== 0;
+                });
+                el.className = $.trim(classes.join(" "));
+            });
+            return this;
+        };
     }
 
 
@@ -461,14 +467,335 @@ $(function() {
         };
 
         function lightbox() {
-          /**
- * Featherlight - ultra slim jQuery lightbox
- * Version 1.7.1 - http://noelboss.github.io/featherlight/
- *
- * Copyright 2017, Noël Raoul Bossart (http://www.noelboss.com)
- * MIT Licensed.
-**/
-!function(a){"use strict";function b(a,c){if(!(this instanceof b)){var d=new b(a,c);return d.open(),d}this.id=b.id++,this.setup(a,c),this.chainCallbacks(b._callbackChain)}function c(a,b){var c={};for(var d in a)d in b&&(c[d]=a[d],delete a[d]);return c}function d(a,b){var c={},d=new RegExp("^"+b+"([A-Z])(.*)");for(var e in a){var f=e.match(d);if(f){var g=(f[1]+f[2].replace(/([A-Z])/g,"-$1")).toLowerCase();c[g]=a[e]}}return c}if("undefined"==typeof a)return void("console"in window&&window.console.info("Too much lightness, Featherlight needs jQuery."));var e=[],f=function(b){return e=a.grep(e,function(a){return a!==b&&a.$instance.closest("body").length>0})},g={allowfullscreen:1,frameborder:1,height:1,longdesc:1,marginheight:1,marginwidth:1,name:1,referrerpolicy:1,scrolling:1,sandbox:1,src:1,srcdoc:1,width:1},h={keyup:"onKeyUp",resize:"onResize"},i=function(c){a.each(b.opened().reverse(),function(){return c.isDefaultPrevented()||!1!==this[h[c.type]](c)?void 0:(c.preventDefault(),c.stopPropagation(),!1)})},j=function(c){if(c!==b._globalHandlerInstalled){b._globalHandlerInstalled=c;var d=a.map(h,function(a,c){return c+"."+b.prototype.namespace}).join(" ");a(window)[c?"on":"off"](d,i)}};b.prototype={constructor:b,namespace:"featherlight",targetAttr:"data-featherlight",variant:null,resetCss:!1,background:null,openTrigger:"click",closeTrigger:"click",filter:null,root:"body",openSpeed:250,closeSpeed:250,closeOnClick:"background",closeOnEsc:!0,closeIcon:"&#10005;",loading:"",persist:!1,otherClose:null,beforeOpen:a.noop,beforeContent:a.noop,beforeClose:a.noop,afterOpen:a.noop,afterContent:a.noop,afterClose:a.noop,onKeyUp:a.noop,onResize:a.noop,type:null,contentFilters:["jquery","image","html","ajax","iframe","text"],setup:function(b,c){"object"!=typeof b||b instanceof a!=!1||c||(c=b,b=void 0);var d=a.extend(this,c,{target:b}),e=d.resetCss?d.namespace+"-reset":d.namespace,f=a(d.background||['<div class="'+e+"-loading "+e+'">','<div class="'+e+'-content">','<button class="'+e+"-close-icon "+d.namespace+'-close" aria-label="Close">',d.closeIcon,"</button>",'<div class="'+d.namespace+'-inner">'+d.loading+"</div>","</div>","</div>"].join("")),g="."+d.namespace+"-close"+(d.otherClose?","+d.otherClose:"");return d.$instance=f.clone().addClass(d.variant),d.$instance.on(d.closeTrigger+"."+d.namespace,function(b){var c=a(b.target);("background"===d.closeOnClick&&c.is("."+d.namespace)||"anywhere"===d.closeOnClick||c.closest(g).length)&&(d.close(b),b.preventDefault())}),this},getContent:function(){if(this.persist!==!1&&this.$content)return this.$content;var b=this,c=this.constructor.contentFilters,d=function(a){return b.$currentTarget&&b.$currentTarget.attr(a)},e=d(b.targetAttr),f=b.target||e||"",g=c[b.type];if(!g&&f in c&&(g=c[f],f=b.target&&e),f=f||d("href")||"",!g)for(var h in c)b[h]&&(g=c[h],f=b[h]);if(!g){var i=f;if(f=null,a.each(b.contentFilters,function(){return g=c[this],g.test&&(f=g.test(i)),!f&&g.regex&&i.match&&i.match(g.regex)&&(f=i),!f}),!f)return"console"in window&&window.console.error("Featherlight: no content filter found "+(i?' for "'+i+'"':" (no target specified)")),!1}return g.process.call(b,f)},setContent:function(b){var c=this;return b.is("iframe")&&c.$instance.addClass(c.namespace+"-iframe"),c.$instance.removeClass(c.namespace+"-loading"),c.$instance.find("."+c.namespace+"-inner").not(b).slice(1).remove().end().replaceWith(a.contains(c.$instance[0],b[0])?"":b),c.$content=b.addClass(c.namespace+"-inner"),c},open:function(b){var c=this;if(c.$instance.hide().appendTo(c.root),!(b&&b.isDefaultPrevented()||c.beforeOpen(b)===!1)){b&&b.preventDefault();var d=c.getContent();if(d)return e.push(c),j(!0),c.$instance.fadeIn(c.openSpeed),c.beforeContent(b),a.when(d).always(function(a){c.setContent(a),c.afterContent(b)}).then(c.$instance.promise()).done(function(){c.afterOpen(b)})}return c.$instance.detach(),a.Deferred().reject().promise()},close:function(b){var c=this,d=a.Deferred();return c.beforeClose(b)===!1?d.reject():(0===f(c).length&&j(!1),c.$instance.fadeOut(c.closeSpeed,function(){c.$instance.detach(),c.afterClose(b),d.resolve()})),d.promise()},resize:function(a,b){if(a&&b){this.$content.css("width","").css("height","");var c=Math.max(a/(parseInt(this.$content.parent().css("width"),10)-1),b/(parseInt(this.$content.parent().css("height"),10)-1));c>1&&(c=b/Math.floor(b/c),this.$content.css("width",""+a/c+"px").css("height",""+b/c+"px"))}},chainCallbacks:function(b){for(var c in b)this[c]=a.proxy(b[c],this,a.proxy(this[c],this))}},a.extend(b,{id:0,autoBind:"[data-featherlight]",defaults:b.prototype,contentFilters:{jquery:{regex:/^[#.]\w/,test:function(b){return b instanceof a&&b},process:function(b){return this.persist!==!1?a(b):a(b).clone(!0)}},image:{regex:/\.(png|jpg|jpeg|gif|tiff|bmp|svg)(\?\S*)?$/i,process:function(b){var c=this,d=a.Deferred(),e=new Image,f=a('<img src="'+b+'" alt="" class="'+c.namespace+'-image" />');return e.onload=function(){f.naturalWidth=e.width,f.naturalHeight=e.height,d.resolve(f)},e.onerror=function(){d.reject(f)},e.src=b,d.promise()}},html:{regex:/^\s*<[\w!][^<]*>/,process:function(b){return a(b)}},ajax:{regex:/./,process:function(b){var c=a.Deferred(),d=a("<div></div>").load(b,function(a,b){"error"!==b&&c.resolve(d.contents()),c.fail()});return c.promise()}},iframe:{process:function(b){var e=new a.Deferred,f=a("<iframe/>"),h=d(this,"iframe"),i=c(h,g);return f.hide().attr("src",b).attr(i).css(h).on("load",function(){e.resolve(f.show())}).appendTo(this.$instance.find("."+this.namespace+"-content")),e.promise()}},text:{process:function(b){return a("<div>",{text:b})}}},functionAttributes:["beforeOpen","afterOpen","beforeContent","afterContent","beforeClose","afterClose"],readElementConfig:function(b,c){var d=this,e=new RegExp("^data-"+c+"-(.*)"),f={};return b&&b.attributes&&a.each(b.attributes,function(){var b=this.name.match(e);if(b){var c=this.value,g=a.camelCase(b[1]);if(a.inArray(g,d.functionAttributes)>=0)c=new Function(c);else try{c=JSON.parse(c)}catch(h){}f[g]=c}}),f},extend:function(b,c){var d=function(){this.constructor=b};return d.prototype=this.prototype,b.prototype=new d,b.__super__=this.prototype,a.extend(b,this,c),b.defaults=b.prototype,b},attach:function(b,c,d){var e=this;"object"!=typeof c||c instanceof a!=!1||d||(d=c,c=void 0),d=a.extend({},d);var f,g=d.namespace||e.defaults.namespace,h=a.extend({},e.defaults,e.readElementConfig(b[0],g),d),i=function(g){var i=a.extend({$source:b,$currentTarget:a(this)},e.readElementConfig(b[0],h.namespace),e.readElementConfig(this,h.namespace),d),j=f||a(this).data("featherlight-persisted")||new e(c,i);"shared"===j.persist?f=j:j.persist!==!1&&a(this).data("featherlight-persisted",j),i.$currentTarget.blur(),j.open(g)};return b.on(h.openTrigger+"."+h.namespace,h.filter,i),i},current:function(){var a=this.opened();return a[a.length-1]||null},opened:function(){var b=this;return f(),a.grep(e,function(a){return a instanceof b})},close:function(a){var b=this.current();return b?b.close(a):void 0},_onReady:function(){var b=this;b.autoBind&&(a(b.autoBind).each(function(){b.attach(a(this))}),a(document).on("click",b.autoBind,function(c){if(!c.isDefaultPrevented()){var d=b.attach(a(c.currentTarget));d(c)}}))},_callbackChain:{onKeyUp:function(b,c){return 27===c.keyCode?(this.closeOnEsc&&a.featherlight.close(c),!1):b(c)},beforeOpen:function(b,c){return this._previouslyActive=document.activeElement,this._$previouslyTabbable=a("a, input, select, textarea, iframe, button, iframe, [contentEditable=true]").not("[tabindex]").not(this.$instance.find("button")),this._$previouslyWithTabIndex=a("[tabindex]").not('[tabindex="-1"]'),this._previousWithTabIndices=this._$previouslyWithTabIndex.map(function(b,c){return a(c).attr("tabindex")}),this._$previouslyWithTabIndex.add(this._$previouslyTabbable).attr("tabindex",-1),document.activeElement.blur(),b(c)},afterClose:function(b,c){var d=b(c),e=this;return this._$previouslyTabbable.removeAttr("tabindex"),this._$previouslyWithTabIndex.each(function(b,c){a(c).attr("tabindex",e._previousWithTabIndices[b])}),this._previouslyActive.focus(),d},onResize:function(a,b){return this.resize(this.$content.naturalWidth,this.$content.naturalHeight),a(b)},afterContent:function(a,b){var c=a(b);return this.$instance.find("[autofocus]:not([disabled])").focus(),this.onResize(b),c}}}),a.featherlight=b,a.fn.featherlight=function(a,c){return b.attach(this,a,c),this},a(document).ready(function(){b._onReady()})}(jQuery);
+            /**
+             * Featherlight - ultra slim jQuery lightbox
+             * Version 1.7.1 - http://noelboss.github.io/featherlight/
+             *
+             * Copyright 2017, Noël Raoul Bossart (http://www.noelboss.com)
+             * MIT Licensed.
+             **/
+            ! function(a) {
+                "use strict";
+
+                function b(a, c) {
+                    if (!(this instanceof b)) {
+                        var d = new b(a, c);
+                        return d.open(), d
+                    }
+                    this.id = b.id++, this.setup(a, c), this.chainCallbacks(b._callbackChain)
+                }
+
+                function c(a, b) {
+                    var c = {};
+                    for (var d in a) d in b && (c[d] = a[d], delete a[d]);
+                    return c
+                }
+
+                function d(a, b) {
+                    var c = {},
+                        d = new RegExp("^" + b + "([A-Z])(.*)");
+                    for (var e in a) {
+                        var f = e.match(d);
+                        if (f) {
+                            var g = (f[1] + f[2].replace(/([A-Z])/g, "-$1")).toLowerCase();
+                            c[g] = a[e]
+                        }
+                    }
+                    return c
+                }
+                if ("undefined" == typeof a) return void("console" in window && window.console.info("Too much lightness, Featherlight needs jQuery."));
+                var e = [],
+                    f = function(b) {
+                        return e = a.grep(e, function(a) {
+                            return a !== b && a.$instance.closest("body").length > 0
+                        })
+                    },
+                    g = {
+                        allowfullscreen: 1,
+                        frameborder: 1,
+                        height: 1,
+                        longdesc: 1,
+                        marginheight: 1,
+                        marginwidth: 1,
+                        name: 1,
+                        referrerpolicy: 1,
+                        scrolling: 1,
+                        sandbox: 1,
+                        src: 1,
+                        srcdoc: 1,
+                        width: 1
+                    },
+                    h = {
+                        keyup: "onKeyUp",
+                        resize: "onResize"
+                    },
+                    i = function(c) {
+                        a.each(b.opened().reverse(), function() {
+                            return c.isDefaultPrevented() || !1 !== this[h[c.type]](c) ? void 0 : (c.preventDefault(), c.stopPropagation(), !1)
+                        })
+                    },
+                    j = function(c) {
+                        if (c !== b._globalHandlerInstalled) {
+                            b._globalHandlerInstalled = c;
+                            var d = a.map(h, function(a, c) {
+                                return c + "." + b.prototype.namespace
+                            }).join(" ");
+                            a(window)[c ? "on" : "off"](d, i)
+                        }
+                    };
+                b.prototype = {
+                    constructor: b,
+                    namespace: "featherlight",
+                    targetAttr: "data-featherlight",
+                    variant: null,
+                    resetCss: !1,
+                    background: null,
+                    openTrigger: "click",
+                    closeTrigger: "click",
+                    filter: null,
+                    root: "body",
+                    openSpeed: 250,
+                    closeSpeed: 250,
+                    closeOnClick: "anywhere",
+                    closeOnEsc: !0,
+                    closeIcon: "&#10005;",
+                    loading: "",
+                    persist: !1,
+                    otherClose: null,
+                    beforeOpen: a.noop,
+                    beforeContent: a.noop,
+                    beforeClose: a.noop,
+                    afterOpen: a.noop,
+                    afterContent: a.noop,
+                    afterClose: a.noop,
+                    onKeyUp: a.noop,
+                    onResize: a.noop,
+                    type: null,
+                    contentFilters: ["jquery", "image", "html", "ajax", "iframe", "text"],
+                    setup: function(b, c) {
+                        "object" != typeof b || b instanceof a != !1 || c || (c = b, b = void 0);
+                        var d = a.extend(this, c, {
+                                target: b
+                            }),
+                            e = d.resetCss ? d.namespace + "-reset" : d.namespace,
+                            f = a(d.background || ['<div class="' + e + "-loading " + e + '">', '<div class="' + e + '-content">', '<button class="' + e + "-close-icon " + d.namespace + '-close" aria-label="Close">', d.closeIcon, "</button>", '<div class="' + d.namespace + '-inner">' + d.loading + "</div>", "</div>", "</div>"].join("")),
+                            g = "." + d.namespace + "-close" + (d.otherClose ? "," + d.otherClose : "");
+                        return d.$instance = f.clone().addClass(d.variant), d.$instance.on(d.closeTrigger + "." + d.namespace, function(b) {
+                            var c = a(b.target);
+                            ("background" === d.closeOnClick && c.is("." + d.namespace) || "anywhere" === d.closeOnClick || c.closest(g).length) && (d.close(b), b.preventDefault())
+                        }), this
+                    },
+                    getContent: function() {
+                        if (this.persist !== !1 && this.$content) return this.$content;
+                        var b = this,
+                            c = this.constructor.contentFilters,
+                            d = function(a) {
+                                return b.$currentTarget && b.$currentTarget.attr(a)
+                            },
+                            e = d(b.targetAttr),
+                            f = b.target || e || "",
+                            g = c[b.type];
+                        if (!g && f in c && (g = c[f], f = b.target && e), f = f || d("href") || "", !g)
+                            for (var h in c) b[h] && (g = c[h], f = b[h]);
+                        if (!g) {
+                            var i = f;
+                            if (f = null, a.each(b.contentFilters, function() {
+                                    return g = c[this], g.test && (f = g.test(i)), !f && g.regex && i.match && i.match(g.regex) && (f = i), !f
+                                }), !f) return "console" in window && window.console.error("Featherlight: no content filter found " + (i ? ' for "' + i + '"' : " (no target specified)")), !1
+                        }
+                        return g.process.call(b, f)
+                    },
+                    setContent: function(b) {
+                        var c = this;
+                        return b.is("iframe") && c.$instance.addClass(c.namespace + "-iframe"), c.$instance.removeClass(c.namespace + "-loading"), c.$instance.find("." + c.namespace + "-inner").not(b).slice(1).remove().end().replaceWith(a.contains(c.$instance[0], b[0]) ? "" : b), c.$content = b.addClass(c.namespace + "-inner"), c
+                    },
+                    open: function(b) {
+                        var c = this;
+                        if (c.$instance.hide().appendTo(c.root), !(b && b.isDefaultPrevented() || c.beforeOpen(b) === !1)) {
+                            b && b.preventDefault();
+                            var d = c.getContent();
+                            if (d) return e.push(c), j(!0), c.$instance.fadeIn(c.openSpeed), c.beforeContent(b), a.when(d).always(function(a) {
+                                c.setContent(a), c.afterContent(b)
+                            }).then(c.$instance.promise()).done(function() {
+                                c.afterOpen(b)
+                            })
+                        }
+                        return c.$instance.detach(), a.Deferred().reject().promise()
+                    },
+                    close: function(b) {
+                        var c = this,
+                            d = a.Deferred();
+                        return c.beforeClose(b) === !1 ? d.reject() : (0 === f(c).length && j(!1), c.$instance.fadeOut(c.closeSpeed, function() {
+                            c.$instance.detach(), c.afterClose(b), d.resolve()
+                        })), d.promise()
+                    },
+                    resize: function(a, b) {
+                        if (a && b) {
+                            this.$content.css("width", "").css("height", "");
+                            var c = Math.max(a / (parseInt(this.$content.parent().css("width"), 10) - 1), b / (parseInt(this.$content.parent().css("height"), 10) - 1));
+                            c > 1 && (c = b / Math.floor(b / c), this.$content.css("width", "" + a / c + "px").css("height", "" + b / c + "px"))
+                        }
+                    },
+                    chainCallbacks: function(b) {
+                        for (var c in b) this[c] = a.proxy(b[c], this, a.proxy(this[c], this))
+                    }
+                }, a.extend(b, {
+                    id: 0,
+                    autoBind: "[data-featherlight]",
+                    defaults: b.prototype,
+                    contentFilters: {
+                        jquery: {
+                            regex: /^[#.]\w/,
+                            test: function(b) {
+                                return b instanceof a && b
+                            },
+                            process: function(b) {
+                                return this.persist !== !1 ? a(b) : a(b).clone(!0)
+                            }
+                        },
+                        image: {
+                            regex: /\.(png|jpg|jpeg|gif|tiff|bmp|svg)(\?\S*)?$/i,
+                            process: function(b) {
+                                var c = this,
+                                    d = a.Deferred(),
+                                    e = new Image,
+                                    f = a('<img src="' + b + '" alt="" class="' + c.namespace + '-image" />');
+                                return e.onload = function() {
+                                    f.naturalWidth = e.width, f.naturalHeight = e.height, d.resolve(f)
+                                }, e.onerror = function() {
+                                    d.reject(f)
+                                }, e.src = b, d.promise()
+                            }
+                        },
+                        html: {
+                            regex: /^\s*<[\w!][^<]*>/,
+                            process: function(b) {
+                                return a(b)
+                            }
+                        },
+                        ajax: {
+                            regex: /./,
+                            process: function(b) {
+                                var c = a.Deferred(),
+                                    d = a("<div></div>").load(b, function(a, b) {
+                                        "error" !== b && c.resolve(d.contents()), c.fail()
+                                    });
+                                return c.promise()
+                            }
+                        },
+                        iframe: {
+                            process: function(b) {
+                                var e = new a.Deferred,
+                                    f = a("<iframe/>"),
+                                    h = d(this, "iframe"),
+                                    i = c(h, g);
+                                return f.hide().attr("src", b).attr(i).css(h).on("load", function() {
+                                    e.resolve(f.show())
+                                }).appendTo(this.$instance.find("." + this.namespace + "-content")), e.promise()
+                            }
+                        },
+                        text: {
+                            process: function(b) {
+                                return a("<div>", {
+                                    text: b
+                                })
+                            }
+                        }
+                    },
+                    functionAttributes: ["beforeOpen", "afterOpen", "beforeContent", "afterContent", "beforeClose", "afterClose"],
+                    readElementConfig: function(b, c) {
+                        var d = this,
+                            e = new RegExp("^data-" + c + "-(.*)"),
+                            f = {};
+                        return b && b.attributes && a.each(b.attributes, function() {
+                            var b = this.name.match(e);
+                            if (b) {
+                                var c = this.value,
+                                    g = a.camelCase(b[1]);
+                                if (a.inArray(g, d.functionAttributes) >= 0) c = new Function(c);
+                                else try {
+                                    c = JSON.parse(c)
+                                } catch (h) {}
+                                f[g] = c
+                            }
+                        }), f
+                    },
+                    extend: function(b, c) {
+                        var d = function() {
+                            this.constructor = b
+                        };
+                        return d.prototype = this.prototype, b.prototype = new d, b.__super__ = this.prototype, a.extend(b, this, c), b.defaults = b.prototype, b
+                    },
+                    attach: function(b, c, d) {
+                        var e = this;
+                        "object" != typeof c || c instanceof a != !1 || d || (d = c, c = void 0), d = a.extend({}, d);
+                        var f, g = d.namespace || e.defaults.namespace,
+                            h = a.extend({}, e.defaults, e.readElementConfig(b[0], g), d),
+                            i = function(g) {
+                                var i = a.extend({
+                                        $source: b,
+                                        $currentTarget: a(this)
+                                    }, e.readElementConfig(b[0], h.namespace), e.readElementConfig(this, h.namespace), d),
+                                    j = f || a(this).data("featherlight-persisted") || new e(c, i);
+                                "shared" === j.persist ? f = j : j.persist !== !1 && a(this).data("featherlight-persisted", j), i.$currentTarget.blur(), j.open(g)
+                            };
+                        return b.on(h.openTrigger + "." + h.namespace, h.filter, i), i
+                    },
+                    current: function() {
+                        var a = this.opened();
+                        return a[a.length - 1] || null
+                    },
+                    opened: function() {
+                        var b = this;
+                        return f(), a.grep(e, function(a) {
+                            return a instanceof b
+                        })
+                    },
+                    close: function(a) {
+                        var b = this.current();
+                        return b ? b.close(a) : void 0
+                    },
+                    _onReady: function() {
+                        var b = this;
+                        b.autoBind && (a(b.autoBind).each(function() {
+                            b.attach(a(this))
+                        }), a(document).on("click", b.autoBind, function(c) {
+                            if (!c.isDefaultPrevented()) {
+                                var d = b.attach(a(c.currentTarget));
+                                d(c)
+                            }
+                        }))
+                    },
+                    _callbackChain: {
+                        onKeyUp: function(b, c) {
+                            return 27 === c.keyCode ? (this.closeOnEsc && a.featherlight.close(c), !1) : b(c)
+                        },
+                        beforeOpen: function(b, c) {
+                            return this._previouslyActive = document.activeElement, this._$previouslyTabbable = a("a, input, select, textarea, iframe, button, iframe, [contentEditable=true]").not("[tabindex]").not(this.$instance.find("button")), this._$previouslyWithTabIndex = a("[tabindex]").not('[tabindex="-1"]'), this._previousWithTabIndices = this._$previouslyWithTabIndex.map(function(b, c) {
+                                return a(c).attr("tabindex")
+                            }), this._$previouslyWithTabIndex.add(this._$previouslyTabbable).attr("tabindex", -1), document.activeElement.blur(), b(c)
+                        },
+                        afterClose: function(b, c) {
+                            var d = b(c),
+                                e = this;
+                            return this._$previouslyTabbable.removeAttr("tabindex"), this._$previouslyWithTabIndex.each(function(b, c) {
+                                a(c).attr("tabindex", e._previousWithTabIndices[b])
+                            }), this._previouslyActive.focus(), d
+                        },
+                        onResize: function(a, b) {
+                            return this.resize(this.$content.naturalWidth, this.$content.naturalHeight), a(b)
+                        },
+                        afterContent: function(a, b) {
+                            var c = a(b);
+                            return this.$instance.find("[autofocus]:not([disabled])").focus(), this.onResize(b), c
+                        }
+                    }
+                }), a.featherlight = b, a.fn.featherlight = function(a, c) {
+                    return b.attach(this, a, c), this
+                }, a(document).ready(function() {
+                    b._onReady()
+                })
+            }(jQuery);
         }
 
         //Start of typing script
@@ -898,6 +1225,7 @@ $(function() {
             for (i = 0; i < acc.length; i++) {
                 acc[i].onclick = function() {
                     this.classList.toggle("active");
+
                     var panel = this.nextElementSibling;
                     if (panel.style.maxHeight) {
                         panel.style.maxHeight = null;
@@ -905,7 +1233,12 @@ $(function() {
                         panel.style.maxHeight = panel.scrollHeight + "px";
                     }
                     var self = this;
-
+                    theOffset = $(self).offset(),
+                    theHeight = $(self).height() + 10;
+                    setTimeout(function() {
+                              theOffset = $(self).offset();
+                              $('body,html').animate({ scrollTop: theOffset.top - theHeight}, 800, 'swing');
+                          }, 100); // ensure the collapse animation is done
                 }
             }
         };

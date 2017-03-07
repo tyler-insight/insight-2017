@@ -14,10 +14,11 @@ permalink:
             sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
             magnam aliquam quaerat voluptatem.
         </p>
-        <div data-aos="fade" data-aos-delay="1200" data-aos-anchor=".services">
+        <ul data-aos="fade" data-aos-delay="1200" data-aos-anchor=".services">
             {% for services in site.data.services %}
-            <div class="service accordion" data-aos="fade-up">
-                <h1>{{ services.name }} <i class="fa fa-plus" aria-hidden="true"></i></h1>
+            <li data-aos="fade-up">
+            <div class="service accordion" >
+                <h1 class="service-name">{{ services.name }} <i class="fa fa-plus" aria-hidden="true"></i></h1>
             </div>
             <div class="service-description">
                 <h2>{{ services.keywords }}</h2>
@@ -47,8 +48,9 @@ permalink:
                 {% endif %} {% endfor %} {% endfor %}
             </div>
         </div>
+                    </li>
         {% endfor %}
-    </div>
+    </ul>
 
 </div>
 </div>

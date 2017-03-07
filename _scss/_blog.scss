@@ -239,13 +239,21 @@
 
     h1 {
         margin-bottom: 0;
-        color: $dark-gray;
+        color: $light-gray;
         font-weight: 400;
         text-align: center;
         @include transition(color .5s);
 
         strong {
             font-weight: 600;
+        }
+
+        i{
+          position: absolute;
+          margin-top:.5em;
+          font-size:.5em;
+          margin-left:1em;
+          @include transition(transform .5s);
         }
     }
 
@@ -258,19 +266,13 @@
         cursor: pointer;
     }
 
-    h1.accordion::after {
-        content: '+';
-        /* Unicode character for "plus" sign (+) */
-        margin-left: 0.3em;
-        border: none;
-        display: inline-block;
-        font-weight: 400;
-        @include transition(transform .5s);
-    }
-
-    h1.accordion.active::after {
+    h1.active{
+        color:$brand-color;
+      i {
+        transform-origin: center center;
         @include transform(rotate(45deg));
         @include transition(transform .5s);
+      }
     }
 
 
