@@ -152,10 +152,10 @@ $(function() {
 
     //Set filter control on Work page for projects
     function filter() {
-        $('.project-filter span').click(function() {
+        $('.filter-drop').click(function() {
             var list = $('.filter-list');
 
-            $('.project-filter span i').toggleClass('rotate');
+            $('.project-filter i').toggleClass('rotate');
 
             if (list.is(":hidden")) {
                 list.slideDown();
@@ -163,10 +163,10 @@ $(function() {
             } else {
                 list.slideUp();
             };
-            $('.filter-list a').click(function() {
+            $('.filter-list span').click(function() {
                 var filter = $(this).text();
 
-                $('.project-filter span i').removeClass('rotate');
+                $('.project-filter i').removeClass('rotate');
                 $('.filter-active').text(filter);
                 if (list.is(":hidden")) {
                     list.slideDown();

@@ -296,142 +296,84 @@
         color: $medium-gray;
         line-height: 1.5em;
 
-        a {
-            text-decoration: none;
+        a,
+        a:visited {
+            position: relative;
             color: $dark-gray;
+            text-decoration: none;
+            padding: 1px 0;
+            @include transition(color .5s);
+        }
+
+        a:hover {
+            color: $brand-color;
+            @include transition(color .5s);
+        }
+
+        a::after {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: $dark-gray;
+            content: '';
+            opacity: 0;
+            z-index: 2;
+            @include transition(all .5s);
+            @include transform(translateY(5px));
+        }
+
+        a:focus::after,
+        a:hover::after {
+            opacity: 1;
+            @include transform(translateY(0px));
         }
     }
 }
 //From the Blog section ------------------------
-
-.recent-blog {
-    margin-bottom: $mobile-spacing;
-    @include span-columns(4);
-
-    h1 {
-        margin-bottom: 60px;
-        text-align: center;
-    }
-
-    .recent-blog-photo {
-        position: relative;
-        height: 200px;
-        text-align: center;
-        background: #e6e5e6;
-        @include span-columns(4);
-        @include omega;
-        @include media($tablet) {
-            width: 50%;
-            min-height: 400px;
-        }
-        @include media($desktop-largest) {
-            width: 40%;
-            min-height: 500px;
-        }
-
-        img {
-            position: absolute;
-            bottom: 0;
-            @include transform(translate(-50%));
-            width: auto;
-            max-height: 250px;
-            @include media($tablet) {
-                max-height: 450px;
-            }
-            @include media($desktop-largest) {
-                max-height: 550px;
-            }
-        }
-    }
-
-    .recent-blog-block {
-        min-height: 200px;
-        padding: 15px;
-        color: #fff;
-        background: #4da7e3;
-        @include span-columns(4);
-        @include omega;
-        @include media($tablet) {
-            width: 50%;
-            height: 400px;
-            padding: 30px;
-        }
-        @include media($desktop-largest) {
-            width: 60%;
-            height: 500px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #fff;
-        }
-
-        h1 {
-            margin-bottom: 10px;
-            text-align: left;
-            color: #fff;
-            @include media($desktop-large) {
-                 @include span-columns(12);
-                @include shift(0);
-            }
-            @include media($desktop-largest) {
-                 @include span-columns(12);
-                @include shift(0);
-            }
-        }
-
-        h2 {
-            margin-bottom: 3px;
-            color: #fff;
-            font-weight: 400;
-            @include media($desktop-large) {
-                 @include span-columns(12);
-                @include shift(0);
-            }
-            @include media($desktop-largest) {
-                 @include span-columns(12);
-                @include shift(0);
-            }
-        }
-
-        b {
-            font-weight: 600;
-        }
-
-        h3 {
-            color: #fff;
-            font-weight: 400;
-            @include media($desktop-large) {
-                 @include span-columns(12);
-                @include shift(0);
-            }
-            @include media($desktop-largest) {
-                 @include span-columns(12);
-                @include shift(0);
-            }
-        }
-    }
+.home{
+  .blogs{
+    margin-bottom:0;
+  }
 }
 
 .testimonial {
     margin-bottom: $mobile-spacing;
+    background:$dark-gray;
+    padding:4em 1em;
     @include span-columns(4);
 
+    &:hover{
+
+    }
+
     h1 {
-        margin-bottom: 30px;
+        margin-bottom: 1em;
         text-align: center;
+        color:#fff;
     }
 
     h2 {
         text-align: center;
+        color:#fff;
+        margin-bottom:.2em;
         @include media($desktop-large) {
              @include span-columns(12);
             @include shift(0);
+        }
+
+        i{
+          color:$brand-color;
+          margin-bottom:.5em;
+          animation: bounce 1s ease-out infinite alternate;
         }
     }
 
     h3 {
         text-align: center;
+        color:$medium-gray;
+        font-weight: 400;
         @include media($desktop-large) {
              @include span-columns(12);
             @include shift(0);
@@ -440,37 +382,20 @@
 
     .quote {
       @include span-columns(4);
-        p {
 
+        p {
+            color:#fff;
             margin-bottom: 20px;
             text-align: center;
             font-style: italic;
-        }
-
-        p::before {
-            position: relative;
-            display: inline-block;
-            content: open-quote;
-            quotes: "“" "”" "‘" "’";
-            transform: translate(15%, 60%);
-            color: $brand-color;
-            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-            font-size: 3em;
-            font-weight: bold;
-            font-style: normal;
-        }
-
-        p::after {
-            position: absolute;
-            display: inline-block;
-            content: close-quote;
-            quotes: "“" "”" "‘" "’";
-            transform: translate(0px, 5px);
-            color: $brand-color;
-            font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-            font-size: 3em;
-            font-weight: bold;
-            font-style: normal;
+            margin-bottom:2em;
+            padding:0 .5em;
         }
     }
+}
+
+
+@keyframes bounce {
+  0%{@include transform(translateY(0px));}
+  100% {@include transform(translateY(-.5em));}
 }

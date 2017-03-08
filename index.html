@@ -5,6 +5,8 @@ slug: index
 ---
 <span id="homepage-flag" style="display: none" /></span>
 <div class="wrapper">
+  <div class="home">
+
 
     <div class="home-slider" data-aos="fade-up">
       <div class="progress-bar">
@@ -75,8 +77,8 @@ slug: index
               <div class="blog-right" data-aos="fade-up" style="background-color:#{{ post.back-color }}">
                   <div class="blog-thumbnail" style="background-image:url('/img/blog/{{ post.cover-image }}')"></div>
                   <div class="blog-info" >
-                      <h2 data-aos="fade-up" data-aos-delay="200" style="color:#{{ post.text-color }}">{{ post.title }}</h2>
-                      <h3 data-aos="fade-up" data-aos-delay="400" style="color:#{{ post.text-color }}">by <strong>{{ post.author }}</strong></h3>
+                      <h2 data-aos="fade-up" data-aos-anchor=".blog-right" data-aos-delay="400" style="color:#{{ post.text-color }}">{{ post.title }}</h2>
+                      <h3 data-aos="fade-up" data-aos-anchor=".blog-right" data-aos-delay="800" style="color:#{{ post.text-color }}">by <strong>{{ post.author }}</strong></h3>
                   </div>
               </div>
           </a>
@@ -84,16 +86,20 @@ slug: index
       </div>
     </div>
 
-    <div class="testimonial">
-        <h1 id="testimonial-quote" data-aos="fade-up">Words from a Client</h1>
-        <div class="quote" data-aos="fade-up">
+    <div class="testimonial" data-aos="fade-up">
+        <h1 data-aos="fade-up" data-aos-anchor=".testimonial" data-aos-delay="400">Words from a Client</h1>
+        <h2 data-aos="fade-up" data-aos-anchor=".testimonial" data-aos-delay="600">
+          <i class="fa fa-quote-left" aria-hidden="true"></i>
+        </h2>
+        <div class="quote" data-aos-anchor=".testimonial" data-aos="fade-up" data-aos-delay="800">
             <p>
                 Insight Creative and its team have distinguished themselves by spotting technology trends and thoughtfully assessing whether new channels are a strategic fit for our health care organization. They do a ton of homework. I’ve been consistently pleased by
                 their level of preparedness, which has included an impressive ability to impart knowledge as well as anticipate questions.
             </p>
         </div>
-        <h2 id="name" data-aos="fade-up" data-aos-delay="200">Tim Huffcut</h2>
-        <h3 data-aos="fade-up" data-aos-anchor="#name" data-aos-delay="400">Ministry Health System</h3>
+        <h2 id="name" data-aos="fade-up" data-aos-anchor=".testimonial" data-aos-delay="1200">Tim Huffcut</h2>
+        <h3 data-aos="fade-up" data-aos-anchor=".testimonial" data-aos-delay="1600">Ministry Health System</h3>
     </div>
 </div>
+  </div>
 <!-- wrapper end -->

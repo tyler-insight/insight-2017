@@ -7,7 +7,7 @@
     background-position: bottom;
     background-size: cover;
 
-    h1{
+    h1 {
       position: relative;
       z-index: 1;
       display: table-cell;
@@ -446,7 +446,6 @@
 
 .snapshots {
     @include span-columns(4);
-    margin-bottom: $mobile-spacing;
 
     .snap-container{
       background-size:cover;
@@ -483,7 +482,12 @@
     }
 
 }
-
+.culture {
+  .testimonial {
+      margin-bottom: 0;
+      padding-bottom:6em;
+    }
+}
 .clear {
     @include clearfix;
 }

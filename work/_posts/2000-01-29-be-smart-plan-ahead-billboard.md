@@ -1,13 +1,14 @@
 ---
 layout: project
-title: 50th Anniversary Branding
-client: River Valley Bank
-description: Branding and art direction for River Valley Bank's 50th year.
-cover-image: rvb-50-anniversary/rvb-50-anniversary-cover.jpg
-cover-text-color: 59bc6b
-back-color1: fff
-back-color2: ddd
+title: Be Smart. Plan Ahead. Billboard
+client: Bank of Luxemburg
+description: A billboard design created for Bank of Luxemburg.
+cover-image: be-smart-plan-ahead/cover-image.jpg
+cover-text-color: fff
+back-color1: 6e897e
+back-color2: 407ca5
 tags:
+- Graphic Design
 - Print and Packaging
 
 ---

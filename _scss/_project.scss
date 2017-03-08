@@ -130,8 +130,9 @@
 
 .project-body {
     @include span-columns(4);
-    margin-bottom: $mobile-spacing;
-
+    p{
+      margin-bottom:2em;
+    }
     .lightbox{
       background:black;
       width:100%;
@@ -149,13 +150,27 @@
         @include transition(opacity .3s);
       }
     }
-
+    .images{
+      margin-bottom:0;
     img{
       padding:.2em;
       cursor:pointer;
+      object-fit: cover;
 
       &.full{
         @include span-columns(4);
+        @include media($desktop){
+          height:400px;
+        }
+        @include media($desktop-large){
+          height:600px;
+        }
+        @include media($desktop-largest){
+          height:800px;
+        }
+        @include media($desktop-super){
+          height:1000px;
+        }
       }
       &.half{
         @include span-columns(4);
@@ -163,6 +178,16 @@
           @include span-columns(4);
           @include omega;
           width:50%;
+          height:300px;
+        }
+        @include media($desktop-large){
+          height:500px;
+        }
+        @include media($desktop-largest){
+          height:600px;
+        }
+        @include media($desktop-super){
+          height:800px;
         }
       }
       &.third{
@@ -171,6 +196,52 @@
           @include span-columns(3);
           @include omega;
           width:33.33%;
+          height:200px;
+        }
+        @include media($desktop-large){
+          height:400px;
+        }
+        @include media($desktop-largest){
+          height:500px;
+        }
+        @include media($desktop-super){
+          height:700px;
+        }
+      }
+      &.one-third{
+        @include span-columns(4);
+        @include media($desktop){
+          @include span-columns(3);
+          @include omega;
+          width:33.33%;
+          height:300px;
+        }
+        @include media($desktop-large){
+          height:500px;
+        }
+        @include media($desktop-largest){
+          height:700px;
+        }
+        @include media($desktop-super){
+          height:900px;
+        }
+      }
+      &.two-thirds{
+        @include span-columns(4);
+        @include media($desktop){
+          @include span-columns(6);
+          @include omega;
+          width:66.66%;
+          height:300px;
+        }
+        @include media($desktop-large){
+          height:500px;
+        }
+        @include media($desktop-largest){
+          height:700px;
+        }
+        @include media($desktop-super){
+          height:900px;
         }
       }
 
@@ -183,6 +254,7 @@
         @include transition(all 1s);
       }
     }
+        }
 }
 
 .nextprevious {
