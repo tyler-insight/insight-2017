@@ -2,7 +2,7 @@
 .contact-us {
     text-align: center;
     margin-bottom: $mobile-spacing;
-
+    overflow: hidden;
     @include span-columns(4);
 
     @include media($tablet){
@@ -11,19 +11,37 @@
 
     a {
         position: relative;
-
-        display: inline-block;
+        display:inline-block;
 
         text-decoration: none;
 
-        color: $dark-gray;
+        color: $light-gray;
         outline: none;
 
-        font-size: 3em;
+        font-size: 3.5em;
         font-weight: 600;
+
+        @include transform(translateY(30%));
+        @include transition(all .5s);
         @include media($tablet){
-          font-size:6em;
+          font-size:4.5em;
         }
+        @include media($desktop){
+          font-size:7.5em;
+        }
+        @include media($desktop-large){
+          font-size:10em;
+        }
+        @include media($desktop-super){
+          font-size:13em;
+        }
+    }
+
+    &:hover{
+      a:hover{
+        color: $dark-gray;
+        @include transform(translateY(0));
+      }
     }
 
 }

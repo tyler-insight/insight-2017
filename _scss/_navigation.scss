@@ -44,10 +44,11 @@
 }
 
 .logo {
-    z-index: 0;
+    z-index: 9999;
     width: auto;
 
     a {
+
         img {
             width: 60px;
             margin-top: 10px;
@@ -58,55 +59,68 @@
                 width: 80px;
             }
         }
+
         .brand-name {
             position: absolute;
             top: 50%;
             width: 160px;
-            height:80px;
+            height: 80px;
             @include transform(translateY(-50%) translateX(80px));
             overflow: hidden;
-            @include media($desktop){
-              width:120px;
+            @include media($desktop) {
+                width: 120px;
             }
-            @include media($desktop-large){
-              width:200px;
+            @include media($desktop-large) {
+                width: 200px;
             }
-            span{
-              position: absolute;
-              top: 50%;
-              display: inline-block;
-              font-size: 1em;
-              font-weight: $nav-font-weight;
-              font-family: "futura-pt", "proxima-nova", sans-serif;
-              color:#000;
-              @include media($tablet){
-                font-size: 1.2em;
-              }
-              @include media($desktop){
-                @include transition(transform .5s);
-                @include transform(translateY(-50%) translateX(-100%));
-              }
-              @include media($desktop-largest) {
-                  font-size: 1.4em;
-              }
-              @include media($desktop-super) {
-                  font-size: 1.5em;
-              }
 
+            span {
+                position: absolute;
+                top: 50%;
+                display: inline-block;
+                font-size: 1em;
+                font-weight: $nav-font-weight;
+                font-family: "futura-pt", "proxima-nova", sans-serif;
+                color: $dark-gray;
+                @include transition(all .5s);
+                @include media($tablet) {
+                    font-size: 1.2em;
+                }
+                @include media($desktop) {
 
+                    @include transform(translateY(-50%) translateX(-100%));
+                }
+                @include media($desktop-largest) {
+                    font-size: 1.4em;
+                }
+                @include media($desktop-super) {
+                    font-size: 1.5em;
+                }
             }
         }
-        &:hover{
+
+        &:hover {
             img {
-              @include transform(rotate(360deg));
+                @include transform(rotate(360deg));
             }
-          span{
-            @include media($desktop){
-              @include transform(translateY(-50%) translateX(10px));
-          }
-          }
+
+            span {
+                @include media($desktop) {
+                     @include transform(translateY(-50%) translateX(10px));
+                }
+            }
         }
     }
+}
+
+.nav-open{
+  .logo {
+    a{
+      span {
+        color:#fff;
+      }
+    }
+  }
 }
 
 .cd-auto-hide-header .logo {
@@ -254,7 +268,7 @@
     .nav-open & {
         /* rotate trigger when navigation becomes visible */
         @include transform(rotate(360deg));
-        background: #92062b;
+        background: $brand-color;
         @include transition(background .7s);
 
         .cd-nav-icon::after,
@@ -314,9 +328,9 @@
             left: 0;
             width: 100%;
             margin-right: 0;
-            background: $brand-color;
+            background: $dark-gray;
             height: 100vh;
-            padding-top: 40px;
+            padding-top: 6em;
             position: absolute;
 
             a {
@@ -324,15 +338,16 @@
                 display: inline-block;
                 height: 10vh;
                 line-height: 2em;
-                padding-left: 1em;
+                padding-left: .8em;
                 font-size: 2em;
                 text-decoration: none;
                 color: #fff;
                 font-family: "futura-pt", "proxima-nova", sans-serif;
+                @include transition(color .5s);
 
                 &.active,
                 &:hover {
-                    color: #101010;
+                    color: $brand-color;
                 }
             }
         }
@@ -391,9 +406,9 @@
 
                 a::after {
                     position: relative;
-                    bottom: 0;
+                    bottom: -40%;
                     left: 50%;
-                    display: inline-block;
+                    display: block;
                     width: 0;
                     height: 2px;
                     content: "";
