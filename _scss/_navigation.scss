@@ -11,10 +11,8 @@
     transform: translateZ(0);
     @include transition(transform .5s);
 
-
     &.is-hidden {
         transform: translateY(-100%);
-
     }
     @include media($tablet) {
         padding: 0;
@@ -47,13 +45,66 @@
 
 .logo {
     z-index: 0;
+    width: auto;
 
-    img {
-        width: 50px;
-        margin-top:10px;
-        @include media($desktop){
-          margin-top:0px;
-          width:80px;
+    a {
+        img {
+            width: 60px;
+            margin-top: 10px;
+            transform-origin: 50% 51%;
+            @include transition(transform .5s);
+            @include media($desktop) {
+                margin-top: 0;
+                width: 80px;
+            }
+        }
+        .brand-name {
+            position: absolute;
+            top: 50%;
+            width: 160px;
+            height:80px;
+            @include transform(translateY(-50%) translateX(80px));
+            overflow: hidden;
+            @include media($desktop){
+              width:120px;
+            }
+            @include media($desktop-large){
+              width:200px;
+            }
+            span{
+              position: absolute;
+              top: 50%;
+              display: inline-block;
+              font-size: 1em;
+              font-weight: $nav-font-weight;
+              font-family: "futura-pt", "proxima-nova", sans-serif;
+              color:#000;
+              @include media($tablet){
+                font-size: 1.2em;
+              }
+              @include media($desktop){
+                @include transition(transform .5s);
+                @include transform(translateY(-50%) translateX(-100%));
+              }
+              @include media($desktop-largest) {
+                  font-size: 1.4em;
+              }
+              @include media($desktop-super) {
+                  font-size: 1.5em;
+              }
+
+
+            }
+        }
+        &:hover{
+            img {
+              @include transform(rotate(360deg));
+            }
+          span{
+            @include media($desktop){
+              @include transform(translateY(-50%) translateX(10px));
+          }
+          }
         }
     }
 }
@@ -128,13 +179,14 @@
         transform: rotate(45deg);
     }
 }
+
 .nav-trigger {
     position: fixed;
-    z-index:1000;
+    z-index: 1000;
     right: 6%;
     top: 15px;
-    height: 50px;
-    width: 50px;
+    height: 55px;
+    width: 55px;
     background-color: #000;
     border-radius: 50%;
     /* image replacement */
@@ -142,7 +194,7 @@
     text-indent: 100%;
     white-space: nowrap;
     @include transition(transform .7s - 0.2s);
-    cursor:pointer;
+    cursor: pointer;
 
     .cd-nav-icon {
         /* icon created in CSS */
@@ -202,7 +254,7 @@
     .nav-open & {
         /* rotate trigger when navigation becomes visible */
         @include transform(rotate(360deg));
-        background:#92062b;
+        background: #92062b;
         @include transition(background .7s);
 
         .cd-nav-icon::after,
@@ -231,6 +283,7 @@
         }
     }
 }
+
 .cd-primary-nav {
     display: block;
     float: right;
@@ -242,7 +295,7 @@
         width: 100vw;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        z-index:100;
+        z-index: 100;
         /* Force Hardware Acceleration in WebKit */
         @include transform(translateZ(0));
         -webkit-backface-visibility: hidden;
@@ -250,7 +303,6 @@
         @include transform(translateX(100%));
         @include transition(transform .7s - 0.2s);
         @include transition-timing-function(cubic-bezier(.82,.01,.77,.78));
-
         @include media($desktop) {
             height: $nav-height;
             width: 100%;
@@ -258,15 +310,14 @@
         }
 
         > ul {
-            z-index:1000;
+            z-index: 1000;
             left: 0;
             width: 100%;
             margin-right: 0;
             background: $brand-color;
             height: 100vh;
-            padding-top:40px;
-            position:absolute;
-
+            padding-top: 40px;
+            position: absolute;
 
             a {
                 /* target primary-nav links */
@@ -320,7 +371,7 @@
                     display: block;
                     border: 0;
                     height: 50px;
-                    line-height: .75em;
+                    line-height: 0.75em;
                     padding: 20px 20px 0;
                     text-decoration: none;
                     color: #000;
@@ -356,12 +407,10 @@
                     width: 100%;
                 }
             }
-
         }
-
     }
-    .nav-open & {
 
+    .nav-open & {
         visibility: visible;
         @include transition(visibility 0s 0s);
 
@@ -385,21 +434,19 @@
     }
 }
 
-
-
 .no-js main {
-	height: auto;
-	overflow: visible;
+    height: auto;
+    overflow: visible;
 }
 
 .no-js .cd-nav {
-	position: static;
-	visibility: visible;
+    position: static;
+    visibility: visible;
 
-	.cd-navigation-wrapper {
-		height: auto;
-		overflow: visible;
-		padding: 100px 5%;
-		@include transform(translateX(0));
-	}
+    .cd-navigation-wrapper {
+        height: auto;
+        overflow: visible;
+        padding: 100px 5%;
+        @include transform(translateX(0));
+    }
 }
