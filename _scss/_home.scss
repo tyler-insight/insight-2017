@@ -364,9 +364,10 @@
         }
 
         i{
+          display:inline-block;
           color:$brand-color;
           margin-bottom:.5em;
-          animation: bounce 1s ease-out infinite alternate;
+          @include animation(bounce 1s ease-out infinite alternate);
         }
     }
 
@@ -395,7 +396,7 @@
 }
 
 
-@keyframes bounce {
+@include keyframes (bounce) {
   0%{@include transform(translateY(0px));}
-  100% {@include transform(translateY(-.5em));}
+  100% {@include transform(translateY(-50%));}
 }

@@ -38,30 +38,28 @@
         height: 100%;
         text-align: center;
         vertical-align: middle;
-
     }
 
     .text-box {
-        position: relative;
+        position: absolute;
         display: inline-block;
-        padding: 1em;
         text-align: center;
-        max-width: 80%;
-
+        width: 100%;
+        height: 100%;
         @include media($tablet) {
-            padding: 2em;
+            padding: 1em 2em;
         }
         @include media($desktop) {
-            padding: 2em;
+            padding: 1em 2em;
         }
         @include media($desktop-large) {
-            padding: 3em;
+            padding: 1em 2em;
         }
         @include media($desktop-largest) {
-            padding: 4em;
+            padding: 2em 4em;
         }
         @include media($desktop-super) {
-            padding: 5em;
+            padding: 3em 5em;
         }
     }
 
@@ -112,14 +110,13 @@
         margin-bottom: 1em;
         font-weight: 400;
     }
-
 }
+
 .description-after {
     display: inline-block;
-    height:2px;
+    height: 2px;
     @include span-columns(1);
     margin-bottom: 1.5em;
-
     @include media($desktop-large) {
          @include span-columns(4);
         @include shift(1);
@@ -132,131 +129,159 @@
 
 .project-body {
     @include span-columns(4);
-    p{
-      margin-bottom:2em;
+
+    p {
+        margin-bottom: 2em;
     }
-    .lightbox{
-      background:black;
-      width:100%;
-      height:100%;
-      position: fixed;
-      top:0;
-      left:0;
-      z-index:2000;
-      opacity:0;
-      @include transform(translateX(100%));
 
-      &.open{
-        @include transform(translateX(0));
-        opacity:1;
-        @include transition(opacity .3s);
-      }
+    .lightbox {
+        background: black;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2000;
+        opacity: 0;
+        @include transform(translateX(100%));
+
+        &.open {
+            @include transform(translateX(0));
+            opacity: 1;
+            @include transition(opacity .3s);
+        }
     }
-    .images{
-      margin-bottom:0;
-    img{
-      padding:.2em;
-      cursor:pointer;
-      object-fit: cover;
 
-      &.full{
-        @include span-columns(4);
-        @include media($desktop){
-          height:400px;
-        }
-        @include media($desktop-large){
-          height:600px;
-        }
-        @include media($desktop-largest){
-          height:800px;
-        }
-        @include media($desktop-super){
-          height:1000px;
-        }
-      }
-      &.half{
-        @include span-columns(4);
-        @include media($desktop){
-          @include span-columns(4);
-          @include omega;
-          width:50%;
-          height:300px;
-        }
-        @include media($desktop-large){
-          height:500px;
-        }
-        @include media($desktop-largest){
-          height:600px;
-        }
-        @include media($desktop-super){
-          height:800px;
-        }
-      }
-      &.third{
-        @include span-columns(4);
-        @include media($desktop){
-          @include span-columns(3);
-          @include omega;
-          width:33.33%;
-          height:200px;
-        }
-        @include media($desktop-large){
-          height:400px;
-        }
-        @include media($desktop-largest){
-          height:500px;
-        }
-        @include media($desktop-super){
-          height:700px;
-        }
-      }
-      &.one-third{
-        @include span-columns(4);
-        @include media($desktop){
-          @include span-columns(3);
-          @include omega;
-          width:33.33%;
-          height:300px;
-        }
-        @include media($desktop-large){
-          height:500px;
-        }
-        @include media($desktop-largest){
-          height:700px;
-        }
-        @include media($desktop-super){
-          height:900px;
-        }
-      }
-      &.two-thirds{
-        @include span-columns(4);
-        @include media($desktop){
-          @include span-columns(6);
-          @include omega;
-          width:66.66%;
-          height:300px;
-        }
-        @include media($desktop-large){
-          height:500px;
-        }
-        @include media($desktop-largest){
-          height:700px;
-        }
-        @include media($desktop-super){
-          height:900px;
-        }
-      }
+    .images {
+        margin-bottom: 0;
 
-      &.over{
-        position:fixed;
-        height: auto;
-        width: auto;
-        z-index:2001;
+        img {
+            padding: 0.2em;
+            cursor: pointer;
+            object-fit: cover;
 
-        @include transition(all 1s);
-      }
+            &.full {
+                @include span-columns(4);
+                @include media($desktop) {
+                    height: 400px;
+                }
+                @include media($desktop-large) {
+                    height: 600px;
+                }
+                @include media($desktop-largest) {
+                    height: 800px;
+                }
+                @include media($desktop-super) {
+                    height: 1000px;
+                }
+            }
+
+            &.half {
+                @include span-columns(4);
+                @include media($desktop) {
+                     @include span-columns(4);
+                    @include omega;
+                    width: 50%;
+                    height: 300px;
+                }
+                @include media($desktop-large) {
+                    height: 500px;
+                }
+                @include media($desktop-largest) {
+                    height: 600px;
+                }
+                @include media($desktop-super) {
+                    height: 800px;
+                }
+            }
+
+            &.third {
+                @include span-columns(4);
+                @include media($desktop) {
+                     @include span-columns(3);
+                    @include omega;
+                    width: 33.33%;
+                    height: 200px;
+                }
+                @include media($desktop-large) {
+                    height: 400px;
+                }
+                @include media($desktop-largest) {
+                    height: 500px;
+                }
+                @include media($desktop-super) {
+                    height: 700px;
+                }
+            }
+
+            &.one-third {
+                @include span-columns(4);
+                @include media($desktop) {
+                     @include span-columns(3);
+                    @include omega;
+                    width: 33.33%;
+                    height: 300px;
+                }
+                @include media($desktop-large) {
+                    height: 500px;
+                }
+                @include media($desktop-largest) {
+                    height: 700px;
+                }
+                @include media($desktop-super) {
+                    height: 900px;
+                }
+            }
+
+            &.two-thirds {
+                @include span-columns(4);
+                @include media($desktop) {
+                     @include span-columns(6);
+                    @include omega;
+                    width: 66.66%;
+                    height: 300px;
+                }
+                @include media($desktop-large) {
+                    height: 500px;
+                }
+                @include media($desktop-largest) {
+                    height: 700px;
+                }
+                @include media($desktop-super) {
+                    height: 900px;
+                }
+            }
+
+            &.over {
+                position: fixed;
+                height: auto;
+                width: auto;
+                z-index: 2001;
+                @include transition(all 1s);
+            }
+        }
     }
+
+    iframe {
+        margin: 0;
+        @include span-columns(4);
+        min-height: 400px;
+        @include media($tablet){
+          min-height: 500px;
         }
+        @include media($desktop){
+          min-height: 600px;
+        }
+        @include media($desktop-large){
+          min-height: 700px;
+        }
+        @include media($desktop-largest){
+          min-height: 800px;
+        }
+        @include media($desktop-super){
+          min-height: 1000px;
+        }
+    }
 }
 
 .nextprevious {
@@ -274,6 +299,7 @@
                 @include span-columns(8);
                 @include transform(translateX(0%));
                 @include transition(transform .5s $ease-in-cubic);
+
                 h2 {
                     font-size: 2em;
                 }
@@ -290,6 +316,7 @@
                 @include span-columns(8);
                 @include transform(translateX(0%));
                 @include transition(transform .5s $ease-in-cubic);
+
                 h2 {
                     font-size: 2em;
                 }
@@ -297,8 +324,8 @@
         }
     }
     @include media($desktop) {
-        .previous-project:hover,
-         .next-project:hover{
+        .next-project:hover,
+        .previous-project:hover {
             .project {
                 h2 {
                     font-size: 3em;
@@ -307,8 +334,8 @@
         }
     }
     @include media($desktop-large) {
-        .previous-project:hover,
-         .next-project:hover{
+        .next-project:hover,
+        .previous-project:hover {
             .project {
                 h2 {
                     font-size: 3.5em;
@@ -317,8 +344,8 @@
         }
     }
     @include media($desktop-largest) {
-        .previous-project:hover,
-         .next-project:hover{
+        .next-project:hover,
+        .previous-project:hover {
             .project {
                 h2 {
                     font-size: 4em;
@@ -327,7 +354,8 @@
         }
     }
 
-    .previous-project, .next-project {
+    .next-project,
+    .previous-project {
         position: relative;
         overflow: hidden;
         height: 100px;
@@ -374,6 +402,7 @@
                 float: none;
             }
         }
+
         .project {
             height: 100%;
             width: 100%;

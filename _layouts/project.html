@@ -6,14 +6,15 @@ title: {{ page.title }}
 <div class="wrapper">
     <div class="project-cover" style="background-image:url('/img/projects/{{ page.cover-image }}');">
 
-        <div class="text">
-          <div class="text-box" data-aos="fade-up" style="background: -webkit-linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});
+
+          <div class="text-box" style="opacity:.7; background: -webkit-linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});
       background: -o-linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});
       background: -moz-linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});
       background: linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});">
-            <h1 data-aos="fade-up" data-aos-delay="400" style="color:#{{ page.cover-text-color }}">{{ page.title }}</h1>
-            <h2 data-aos="fade-up" data-aos-delay="800" style="color:#{{ page.cover-text-color }}">for <strong>{{ page.client }}</strong></h2>
           </div>
+          <div class="text">
+          <h1 data-aos="fade-up" data-aos-delay="400" style="color:#{{ page.cover-text-color }}">{{ page.title }}</h1>
+          <h2 data-aos="fade-up" data-aos-delay="800" style="color:#{{ page.cover-text-color }}">for <strong>{{ page.client }}</strong></h2>
         </div>
 
     </div>
