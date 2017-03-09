@@ -2,12 +2,11 @@
 layout: blog
 title: Media Buying 101&mdash;What On Earth Does a Media Buyer Do?
 author: Molly Setzer
-tag: blog
-card: summary
 description: "Molly Setzer, Senior Media Buyer at Insight Creative, explains the role of a media buyer, how they can support your company's marketing efforts and how they help you get the most out of your marketing budget."
 text-color: 'fff'
 back-color: 'b31139'
 cover-image: th-molly-vlog-media-buying.jpg
+tag: blog
 
 ---
 <!-- ![Media Buying 101](/img/th-molly-vlog-media-buying.jpg)  -->
