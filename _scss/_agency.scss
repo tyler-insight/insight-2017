@@ -54,7 +54,10 @@
       }
     }
 }
-
+.agency-lobby{
+  @include span-columns(4);
+  margin-bottom:$mobile-spacing;
+}
 .clients {
     @include span-columns(4);
     margin-bottom: $mobile-spacing;

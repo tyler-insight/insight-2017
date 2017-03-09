@@ -5,7 +5,9 @@ var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var cleanCSS    = require('gulp-clean-css');
 var uglify      = require('gulp-uglify');
-var minify      = require('gulp-minify');
+var uglify      = require('gulp-uglify');
+var pump        = require('pump');
+var imagemin    = require('gulp-imagemin');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -31,7 +33,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'compress', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -55,16 +57,27 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('compress', function(){
-  gulp.src('js/*.js')
-  .pipe(minify({
-    ext:{
-      src:'-debug.js',
-      min:'.js'
-    }
-  }))
-  .pipe(gulp.dest('_site/js'))
+/**
+ * Minify javascript files (must be run separatly after gulp)
+ */
+gulp.task('compress', function(cb){
+  pump([
+        gulp.src('js/*.js'),
+        uglify(),
+        gulp.dest('_site/js')
+    ],
+    cb
+  );
 });
+
+/**
+ * Compress image files
+ */
+gulp.task('images', () =>
+    gulp.src('img/**/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('_site/img'))
+);
 
 /**
  * Watch scss files for changes & recompile
@@ -80,3 +93,8 @@ gulp.task('watch', function () {
  * compile the jekyll site, launch BrowserSync & watch files.
  */
 gulp.task('default', ['browser-sync', 'watch']);
+
+/**
+ * Runs minification and image compression
+ */
+gulp.task('min', ['compress', 'images']);
