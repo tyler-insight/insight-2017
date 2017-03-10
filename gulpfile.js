@@ -8,6 +8,7 @@ var uglify      = require('gulp-uglify');
 var uglify      = require('gulp-uglify');
 var pump        = require('pump');
 var imagemin    = require('gulp-imagemin');
+var ghPages     = require('gulp-gh-pages');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -88,6 +89,10 @@ gulp.task('watch', function () {
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
+gulp.task('deploy', function() {
+  return gulp.src('./_site/**/*')
+    .pipe(ghPages());
+});
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
