@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Parallel 44 Wine Labels
+title: Wine Labels
 client: Parallel 44 Vineyard & Winery
 description: Food focused, colorful packaging.
 cover-image: parallel-44-wine-labels/parallel-44-labels-1.jpg

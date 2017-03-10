@@ -26,7 +26,7 @@ title: Work
         <div id="container" data-aos="fade-up">
             {% for post in site.categories.work %} {% assign loopindex = forloop.index | modulo: 2 %} {% if loopindex == 1 %}
             <a href="{{ post.url }}">
-                <div class="mix project {% for tag in post.tags %}{{ tag | downcase | replace: " ", "- " }} {% endfor %}" style="background-image:url('/img/projects/{{ post.cover-image }}')">
+                <div class="mix project {% for tag in post.tags %}{{ tag | downcase | replace: " ", "-" }} {% endfor %}" style="background-image:url('/img/projects/{{ post.cover-image }}')">
                     <div class="project-info" style="background: -webkit-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
             background: -o-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
             background: -moz-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
@@ -41,7 +41,7 @@ title: Work
             </a>
             {% else %}
             <a href="{{ post.url }}">
-                <div class="mix project {% for tag in post.tags %}{{ tag | downcase | replace: " ", "- " }} {% endfor %}" style="background-image:url('/img/projects/{{ post.cover-image }}')">
+                <div class="mix project {% for tag in post.tags %}{{ tag | downcase | replace: " ", "-" }} {% endfor %}" style="background-image:url('/img/projects/{{ post.cover-image }}')">
                     <div class="project-info" style="background: -webkit-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
             background: -o-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
             background: -moz-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});

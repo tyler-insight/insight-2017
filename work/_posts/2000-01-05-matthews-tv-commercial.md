@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Matthews Tire TV Commercial
+title: TV Commercial
 client: Matthews Tire
 description: A tasty commercial produced for Matthews Tire.
 cover-image: matthews-tire-tv-commercial/matthews-tire-tv-commercial-cover.jpg
