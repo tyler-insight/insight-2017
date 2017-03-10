@@ -15,10 +15,10 @@ We took on the juicy challenge of introducing and educating the public about a n
 
 <div class="images">
 
-<img class="third" data-aos="fade-up" data-featherlight="/img/projects/naked-foods-ads/NakedFoodsAds-1.jpg" src="/img/projects/naked-foods-ads/NakedFoodsAds-1.jpg" />
+<img class="third no-crop" data-aos="fade-up" data-featherlight="/img/projects/naked-foods-ads/NakedFoodsAds-1.jpg" src="/img/projects/naked-foods-ads/NakedFoodsAds-1.jpg" />
 
-<img class="third" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/naked-foods-ads/NakedFoodsAds-2.jpg" src="/img/projects/naked-foods-ads/NakedFoodsAds-2.jpg" />
+<img class="third no-crop" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/naked-foods-ads/NakedFoodsAds-2.jpg" src="/img/projects/naked-foods-ads/NakedFoodsAds-2.jpg" />
 
-<img class="third" data-aos="fade-up" data-aos-delay="400" data-featherlight="/img/projects/naked-foods-ads/NakedFoodsAds-3.jpg" src="/img/projects/naked-foods-ads/NakedFoodsAds-3.jpg" />
+<img class="third no-crop" data-aos="fade-up" data-aos-delay="400" data-featherlight="/img/projects/naked-foods-ads/NakedFoodsAds-3.jpg" src="/img/projects/naked-foods-ads/NakedFoodsAds-3.jpg" />
 
 </div>

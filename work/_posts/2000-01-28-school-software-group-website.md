@@ -13,12 +13,14 @@ tags:
 
 School Software Group is the creator of BuildYourOwnCurriculum, an online application that helps teachers collaborate on curriculum across an entire school district from kindergarten to graduation while making sure it's aligned with state and federal standards. Insight Creative designed and developed a new mobile-friendly website to support the launch of the newest version of BuildYourOwnCurriculum.
 
-![ILS Logo](/img/projects/school-software-group-website/school-software-group-website-2.jpg)
-
 <div class="images">
 
-<img class="half" data-aos="fade-up" data-featherlight="/img/projects/school-software-group-website/school-software-group-website-1.jpg" src="/img/projects/school-software-group-website/school-software-group-website-1.jpg" />
+<div class="fill-back">
+<img data-aos="fade-up" data-featherlight="/img/projects/school-software-group-website/school-software-group-website-1.jpg" src="/img/projects/school-software-group-website/school-software-group-website-2.jpg" />
+</div>
 
-<img class="half" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/school-software-group-website/school-software-group-website-3.jpg" src="/img/projects/school-software-group-website/school-software-group-website-3.jpg" />
+<img class="half first" data-aos="fade-up" data-featherlight="/img/projects/school-software-group-website/school-software-group-website-1.jpg" src="/img/projects/school-software-group-website/school-software-group-website-1.jpg" />
+
+<img class="half last" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/school-software-group-website/school-software-group-website-3.jpg" src="/img/projects/school-software-group-website/school-software-group-website-3.jpg" />
 
 </div>

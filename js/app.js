@@ -35,11 +35,11 @@ $(function() {
                 // Instantiate MixItUp:
                 $('#container').mixItUp({
                     animation: {
-                        duration: 500,
-                        effects: 'fade stagger(200ms) translateY(10%)',
+                        duration: 1000,
+                        effects: 'fade translateY(10%)',
                         easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
-                        nudge: false
-
+                        nudge: false,
+                        animateResizeContainer: false
                     }
                 });
                 filter();
@@ -126,11 +126,11 @@ $(function() {
             // Instantiate MixItUp:
             $('#container').mixItUp({
                 animation: {
-                    duration: 500,
-                    effects: 'fade stagger(200ms) translateY(10%)',
+                    duration: 1000,
+                    effects: 'fade translateY(10%)',
                     easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
-                    nudge: false
-
+                    nudge: false,
+                    animateResizeContainer: false
                 }
             });
         };
