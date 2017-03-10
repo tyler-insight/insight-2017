@@ -6,10 +6,10 @@ tag: blog
 card: summary
 description: "Are Cars the Next Must-Have Mobile Device?"
 text-color: 'fff'
-back-color: '6f4c7c'
-cover-image: netflix-car.jpg
+back-color: 'c41b22'
+cover-image: Are-Cars-the-Next-Must-Have-Mobile-Device.jpg
 ---
-![Watch Netflix in Car](/img/blog/netflix-car.jpg)
+![Watch Netflix in Car](/img/blog/Are-Cars-the-Next-Must-Have-Mobile-Device.jpg)
 
 These days it seems like we can’t consume enough information. We’re always connected. However, we may be the least connected during our morning and afternoon commute. Sure, you have radio ads and billboards giving you information, but for many people, it’s a time to clear their minds before starting the work day or taking care of families at night.  
 

@@ -6,10 +6,10 @@ tag: blog
 card: summary
 description: "Back to Basics with Content"
 text-color: 'fff'
-back-color: 'b31139'
+back-color: '544e5a'
 cover-image: cover-image.jpg
 ---
-![Get your team involved](/img/back-to-basics.jpg)
+![Get your team involved](/img/blog/Back-to-Basics-with-Content.jpg)
 
 Do these headlines look familiar?
 

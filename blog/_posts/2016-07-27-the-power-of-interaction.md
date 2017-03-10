@@ -6,10 +6,9 @@ tag: blog
 card: summary
 description: "Creating better digital user experiences"
 text-color: 'fff'
-back-color: 'b31139'
-cover-image: cover-image.jpg
+back-color: '31aa52'
 ---
-![Add Interaction to the Web](/img/google-logo.gif)
+![Add Interaction to the Web](/img/blog/The-Power-of-Interaction-1.gif)
 
 The internet is an ever-changing place of information and discovery and has evolved in so many different ways over the past decade. With each step in its evolution the way information is displayed and given to the user has changed and evolved as well.
 

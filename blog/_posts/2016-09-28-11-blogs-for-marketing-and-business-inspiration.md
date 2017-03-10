@@ -7,9 +7,9 @@ card: summary
 description: "11 Blogs for Marketing and Business Inspiration"
 text-color: 'fff'
 back-color: '94949e'
-cover-image: cover-image.jpg
+cover-image: 11-Blogs-for-Marketing-and-Business-Inspiration-1.jpg
 ---
-![11 Blogs](/img/11-blogs-post-image.jpg)
+![11 Blogs](/img/blog/11-Blogs-for-Marketing-and-Business-Inspiration-1.jpg)
 
 As a marketing agency, we are expected to be the experts in the latest trends, tools and processes in order to deliver results. But where do we go to learn more about our industry? Who do we listen to for ‘insight’ on what’s happening in the world of web, social, seo and more?
 
@@ -67,4 +67,4 @@ We’ve all heard the acronym ‘K.I.S.S’ (Keep It Simple Stupid). Following K
 
 I hope you find these resources helpful. As an added bonus, below is one of the most inspiring videos that has really affected how I approach a project. An incredibly powerful TEDx Talk by Simon Sinek, his “Start with Why” approach will be incredibly motivating for you to approach your work from a new perspective.
 
-<a target="_blank" href="https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action"><img src="/img/simon-sinek-ted-talk.jpg"></a>
+<a target="_blank" href="https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action"><img src="/img/blog/11-Blogs-for-Marketing-and-Business-Inspiration-2.jpg"></a>

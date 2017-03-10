@@ -6,10 +6,9 @@ tag: blog
 card: summary
 description: "Get your team involved"
 text-color: 'fff'
-back-color: 'b31139'
-cover-image: cover-image.jpg
+back-color: '673b5e'
 ---
-![Get your team involved](/img/social-media-phone.jpg)
+![Get your team involved](/img/blog/Putting-the-Social-in-Social-Media-1.jpg)
 
 Many times when working with companies looking for social media support, the conversation tends to lean toward how to cast the widest net or how to get new followers, impressions, reach, etc. However, in today’s social media world it is harder than ever for businesses to make a splash in the never-ending content shared every minute. That’s why it is important to narrow your focus and target a small, yet important, audience–your employees.
 
@@ -19,7 +18,7 @@ Here at Insight, we shifted from curating industry topics to really sitting down
 
 One of our clients, River Valley Bank, takes this approach very seriously. A large part of their brand identity is emphasizing personal relationships between employees and customers and going above and beyond to provide incredible customer service. To showcase this genuine customer appreciation, we created a <a href="https://www.rivervalleybank.com/river-valley-experience.html" target="_blank">“River Valley Experience”</a> feature page on their website to bring all of the daily interactions at all 15 locations to life. The page is populated by content shared on Facebook, Twitter and Instagram with the hashtag #RiverValleyExperience.
 This “digital scrapbook” page highlights the real-life stories River Valley Bank employees, customers and community members experience every day.
-![River Valley Bank Experience](/img/rvbexperience.jpg)
+![River Valley Bank Experience](/img/blog/Putting-the-Social-in-Social-Media-2.jpg)
 
 Matthews Tire is another one of our clients committed to connecting their employees to their social media platforms. Utilizing an internal incentive program, Matthews Tire rewards employees when they capture behind-the-scenes content for social media. Sharing things like <a href="https://www.facebook.com/matthewstire/photos/a.303771737248.147307.164950832248/10153460959947249/?type=3&theater" target="_blank">customer appreciation stories</a>, photos of <a href="https://www.facebook.com/matthewstire/photos/a.10150732005447249.433441.164950832248/10154317334237249/?type=3&theater" target="_blank">vintage cars</a>, <a href="https://www.facebook.com/matthewstire/photos/a.303771737248.147307.164950832248/10154297598472249/?type=3&theater" target="_blank">employee birthdays</a>, wedding anniversaries, <a href="https://www.facebook.com/matthewstire/photos/a.303771737248.147307.164950832248/10154036477972249/?type=3&theater" target="_blank">birth announcements</a> and even <a href="https://www.facebook.com/matthewstire/posts/10154125118052249" target="_blank">international trips</a> have all been successful in strengthening the employee/customer relationship. Many of Matthews Tire’s customers have been bringing their cars in for decades and they truly enjoy sharing in the daily celebrations of the employees they have come to know and love.
 
