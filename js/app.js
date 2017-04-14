@@ -11,12 +11,12 @@ $(function() {
             //Run home page slider if on homepage
             if ($("#homepage-flag").length > 0) {
                 homeSlider();
-            };
+            }
 
             //Run home page slider if on culture
             if (page.indexOf("culture") >= 0) {
                 homeSlider();
-            };
+            }
 
             //Run typing script if on contact page
             if (page.indexOf("contact") >= 0) {
@@ -28,7 +28,7 @@ $(function() {
                     // loop
                     loop: true
                 });
-            };
+            }
 
             //Run mixitup and filters if on work page
             if (page.indexOf("work") >= 0) {
@@ -78,7 +78,7 @@ $(function() {
         var $this = $(this),
             url = $this.attr("href"),
             title = $this.text();
-            loading = true;
+        loading = true;
 
         //Makes entries into browser history
         if (url.indexOf(document.domain) > -1 || url.indexOf(':') === -1) {
@@ -91,10 +91,10 @@ $(function() {
                 return false;
             });
             load(url);
-            if (url == '/'){
-              document.title = "Insight Creative, Inc.";
+            if (url == '/') {
+                document.title = "Insight Creative, Inc.";
             } else {
-              document.title = title +  " - Insight Creative, Inc.";
+                document.title = title + " - Insight Creative, Inc.";
             }
 
             return false;
@@ -120,7 +120,7 @@ $(function() {
                 // loop
                 loop: true
             });
-        };
+        }
 
         if (page.indexOf("work") >= 0) {
             // Instantiate MixItUp:
@@ -133,7 +133,7 @@ $(function() {
                     animateResizeContainer: false
                 }
             });
-        };
+        }
 
 
     });
@@ -162,7 +162,7 @@ $(function() {
 
             } else {
                 list.slideUp();
-            };
+            }
             $('.filter-list span').click(function() {
                 var filter = $(this).text();
 
@@ -172,8 +172,8 @@ $(function() {
                     list.slideDown();
                 } else {
                     list.slideUp();
-                };
-            })
+                }
+            });
         });
     }
 
@@ -237,7 +237,7 @@ $(function() {
 
             previousTop = currentTop;
             scrolling = false;
-        };
+        }
 
         function checkSimpleNavigation(currentTop) {
             //there's no secondary nav or secondary nav is below primary nav
@@ -248,7 +248,7 @@ $(function() {
                 //if scrolling down...
                 mainHeader.addClass('is-hidden');
             }
-        };
+        }
 
         function checkStickyNavigation(currentTop) {
             //secondary nav below intro section - sticky secondary nav
@@ -283,8 +283,8 @@ $(function() {
                 }
 
             }
-        };
-    };
+        }
+    }
     //End of navigation script
 
     function homeSlider() {
@@ -376,7 +376,7 @@ $(function() {
             if (wrapper.hasClass('autoplay')) {
                 clearInterval(autoPlayId);
                 autoPlayId = window.setInterval(function() {
-                    autoplaySlider(length)
+                    autoplaySlider(length);
                 }, delay);
             }
         }
@@ -453,18 +453,18 @@ $(function() {
         //If agency page, run video script
         if (page.indexOf("agency") >= 0) {
             video();
-        };
+        }
 
         //If culture page, run script for cycling cover image and text
         if (page.indexOf("culture") >= 0) {
             cultureHeader();
-        };
+        }
 
         //If contact page, run script for text typing and load google map
         if (page.indexOf("contact") >= 0) {
             typing();
             map();
-        };
+        }
 
         function lightbox() {
             /**
@@ -480,15 +480,15 @@ $(function() {
                 function b(a, c) {
                     if (!(this instanceof b)) {
                         var d = new b(a, c);
-                        return d.open(), d
+                        return d.open(), d;
                     }
-                    this.id = b.id++, this.setup(a, c), this.chainCallbacks(b._callbackChain)
+                    this.id = b.id++, this.setup(a, c), this.chainCallbacks(b._callbackChain);
                 }
 
                 function c(a, b) {
                     var c = {};
                     for (var d in a) d in b && (c[d] = a[d], delete a[d]);
-                    return c
+                    return c;
                 }
 
                 function d(a, b) {
@@ -498,17 +498,17 @@ $(function() {
                         var f = e.match(d);
                         if (f) {
                             var g = (f[1] + f[2].replace(/([A-Z])/g, "-$1")).toLowerCase();
-                            c[g] = a[e]
+                            c[g] = a[e];
                         }
                     }
-                    return c
+                    return c;
                 }
                 if ("undefined" == typeof a) return void("console" in window && window.console.info("Too much lightness, Featherlight needs jQuery."));
                 var e = [],
                     f = function(b) {
                         return e = a.grep(e, function(a) {
-                            return a !== b && a.$instance.closest("body").length > 0
-                        })
+                            return a !== b && a.$instance.closest("body").length > 0;
+                        });
                     },
                     g = {
                         allowfullscreen: 1,
@@ -531,16 +531,16 @@ $(function() {
                     },
                     i = function(c) {
                         a.each(b.opened().reverse(), function() {
-                            return c.isDefaultPrevented() || !1 !== this[h[c.type]](c) ? void 0 : (c.preventDefault(), c.stopPropagation(), !1)
-                        })
+                            return c.isDefaultPrevented() || !1 !== this[h[c.type]](c) ? void 0 : (c.preventDefault(), c.stopPropagation(), !1);
+                        });
                     },
                     j = function(c) {
                         if (c !== b._globalHandlerInstalled) {
                             b._globalHandlerInstalled = c;
                             var d = a.map(h, function(a, c) {
-                                return c + "." + b.prototype.namespace
+                                return c + "." + b.prototype.namespace;
                             }).join(" ");
-                            a(window)[c ? "on" : "off"](d, i)
+                            a(window)[c ? "on" : "off"](d, i);
                         }
                     };
                 b.prototype = {
@@ -582,15 +582,15 @@ $(function() {
                             g = "." + d.namespace + "-close" + (d.otherClose ? "," + d.otherClose : "");
                         return d.$instance = f.clone().addClass(d.variant), d.$instance.on(d.closeTrigger + "." + d.namespace, function(b) {
                             var c = a(b.target);
-                            ("background" === d.closeOnClick && c.is("." + d.namespace) || "anywhere" === d.closeOnClick || c.closest(g).length) && (d.close(b), b.preventDefault())
-                        }), this
+                            ("background" === d.closeOnClick && c.is("." + d.namespace) || "anywhere" === d.closeOnClick || c.closest(g).length) && (d.close(b), b.preventDefault());
+                        }), this;
                     },
                     getContent: function() {
                         if (this.persist !== !1 && this.$content) return this.$content;
                         var b = this,
                             c = this.constructor.contentFilters,
                             d = function(a) {
-                                return b.$currentTarget && b.$currentTarget.attr(a)
+                                return b.$currentTarget && b.$currentTarget.attr(a);
                             },
                             e = d(b.targetAttr),
                             f = b.target || e || "",
@@ -600,14 +600,14 @@ $(function() {
                         if (!g) {
                             var i = f;
                             if (f = null, a.each(b.contentFilters, function() {
-                                    return g = c[this], g.test && (f = g.test(i)), !f && g.regex && i.match && i.match(g.regex) && (f = i), !f
-                                }), !f) return "console" in window && window.console.error("Featherlight: no content filter found " + (i ? ' for "' + i + '"' : " (no target specified)")), !1
+                                    return g = c[this], g.test && (f = g.test(i)), !f && g.regex && i.match && i.match(g.regex) && (f = i), !f;
+                                }), !f) return "console" in window && window.console.error("Featherlight: no content filter found " + (i ? ' for "' + i + '"' : " (no target specified)")), !1;
                         }
-                        return g.process.call(b, f)
+                        return g.process.call(b, f);
                     },
                     setContent: function(b) {
                         var c = this;
-                        return b.is("iframe") && c.$instance.addClass(c.namespace + "-iframe"), c.$instance.removeClass(c.namespace + "-loading"), c.$instance.find("." + c.namespace + "-inner").not(b).slice(1).remove().end().replaceWith(a.contains(c.$instance[0], b[0]) ? "" : b), c.$content = b.addClass(c.namespace + "-inner"), c
+                        return b.is("iframe") && c.$instance.addClass(c.namespace + "-iframe"), c.$instance.removeClass(c.namespace + "-loading"), c.$instance.find("." + c.namespace + "-inner").not(b).slice(1).remove().end().replaceWith(a.contains(c.$instance[0], b[0]) ? "" : b), c.$content = b.addClass(c.namespace + "-inner"), c;
                     },
                     open: function(b) {
                         var c = this;
@@ -615,29 +615,29 @@ $(function() {
                             b && b.preventDefault();
                             var d = c.getContent();
                             if (d) return e.push(c), j(!0), c.$instance.fadeIn(c.openSpeed), c.beforeContent(b), a.when(d).always(function(a) {
-                                c.setContent(a), c.afterContent(b)
+                                c.setContent(a), c.afterContent(b);
                             }).then(c.$instance.promise()).done(function() {
-                                c.afterOpen(b)
-                            })
+                                c.afterOpen(b);
+                            });
                         }
-                        return c.$instance.detach(), a.Deferred().reject().promise()
+                        return c.$instance.detach(), a.Deferred().reject().promise();
                     },
                     close: function(b) {
                         var c = this,
                             d = a.Deferred();
                         return c.beforeClose(b) === !1 ? d.reject() : (0 === f(c).length && j(!1), c.$instance.fadeOut(c.closeSpeed, function() {
-                            c.$instance.detach(), c.afterClose(b), d.resolve()
-                        })), d.promise()
+                            c.$instance.detach(), c.afterClose(b), d.resolve();
+                        })), d.promise();
                     },
                     resize: function(a, b) {
                         if (a && b) {
                             this.$content.css("width", "").css("height", "");
                             var c = Math.max(a / (parseInt(this.$content.parent().css("width"), 10) - 1), b / (parseInt(this.$content.parent().css("height"), 10) - 1));
-                            c > 1 && (c = b / Math.floor(b / c), this.$content.css("width", "" + a / c + "px").css("height", "" + b / c + "px"))
+                            c > 1 && (c = b / Math.floor(b / c), this.$content.css("width", "" + a / c + "px").css("height", "" + b / c + "px"));
                         }
                     },
                     chainCallbacks: function(b) {
-                        for (var c in b) this[c] = a.proxy(b[c], this, a.proxy(this[c], this))
+                        for (var c in b) this[c] = a.proxy(b[c], this, a.proxy(this[c], this));
                     }
                 }, a.extend(b, {
                     id: 0,
@@ -647,10 +647,10 @@ $(function() {
                         jquery: {
                             regex: /^[#.]\w/,
                             test: function(b) {
-                                return b instanceof a && b
+                                return b instanceof a && b;
                             },
                             process: function(b) {
-                                return this.persist !== !1 ? a(b) : a(b).clone(!0)
+                                return this.persist !== !1 ? a(b) : a(b).clone(!0);
                             }
                         },
                         image: {
@@ -658,19 +658,19 @@ $(function() {
                             process: function(b) {
                                 var c = this,
                                     d = a.Deferred(),
-                                    e = new Image,
+                                    e = new Image(),
                                     f = a('<img src="' + b + '" alt="" class="' + c.namespace + '-image" />');
                                 return e.onload = function() {
-                                    f.naturalWidth = e.width, f.naturalHeight = e.height, d.resolve(f)
+                                    f.naturalWidth = e.width, f.naturalHeight = e.height, d.resolve(f);
                                 }, e.onerror = function() {
-                                    d.reject(f)
-                                }, e.src = b, d.promise()
+                                    d.reject(f);
+                                }, e.src = b, d.promise();
                             }
                         },
                         html: {
                             regex: /^\s*<[\w!][^<]*>/,
                             process: function(b) {
-                                return a(b)
+                                return a(b);
                             }
                         },
                         ajax: {
@@ -678,27 +678,27 @@ $(function() {
                             process: function(b) {
                                 var c = a.Deferred(),
                                     d = a("<div></div>").load(b, function(a, b) {
-                                        "error" !== b && c.resolve(d.contents()), c.fail()
+                                        "error" !== b && c.resolve(d.contents()), c.fail();
                                     });
-                                return c.promise()
+                                return c.promise();
                             }
                         },
                         iframe: {
                             process: function(b) {
-                                var e = new a.Deferred,
+                                var e = new a.Deferred(),
                                     f = a("<iframe/>"),
                                     h = d(this, "iframe"),
                                     i = c(h, g);
                                 return f.hide().attr("src", b).attr(i).css(h).on("load", function() {
-                                    e.resolve(f.show())
-                                }).appendTo(this.$instance.find("." + this.namespace + "-content")), e.promise()
+                                    e.resolve(f.show());
+                                }).appendTo(this.$instance.find("." + this.namespace + "-content")), e.promise();
                             }
                         },
                         text: {
                             process: function(b) {
                                 return a("<div>", {
                                     text: b
-                                })
+                                });
                             }
                         }
                     },
@@ -714,17 +714,17 @@ $(function() {
                                     g = a.camelCase(b[1]);
                                 if (a.inArray(g, d.functionAttributes) >= 0) c = new Function(c);
                                 else try {
-                                    c = JSON.parse(c)
+                                    c = JSON.parse(c);
                                 } catch (h) {}
-                                f[g] = c
+                                f[g] = c;
                             }
-                        }), f
+                        }), f;
                     },
                     extend: function(b, c) {
                         var d = function() {
-                            this.constructor = b
+                            this.constructor = b;
                         };
-                        return d.prototype = this.prototype, b.prototype = new d, b.__super__ = this.prototype, a.extend(b, this, c), b.defaults = b.prototype, b
+                        return d.prototype = this.prototype, b.prototype = new d(), b.__super__ = this.prototype, a.extend(b, this, c), b.defaults = b.prototype, b;
                     },
                     attach: function(b, c, d) {
                         var e = this;
@@ -737,64 +737,64 @@ $(function() {
                                         $currentTarget: a(this)
                                     }, e.readElementConfig(b[0], h.namespace), e.readElementConfig(this, h.namespace), d),
                                     j = f || a(this).data("featherlight-persisted") || new e(c, i);
-                                "shared" === j.persist ? f = j : j.persist !== !1 && a(this).data("featherlight-persisted", j), i.$currentTarget.blur(), j.open(g)
+                                "shared" === j.persist ? f = j : j.persist !== !1 && a(this).data("featherlight-persisted", j), i.$currentTarget.blur(), j.open(g);
                             };
-                        return b.on(h.openTrigger + "." + h.namespace, h.filter, i), i
+                        return b.on(h.openTrigger + "." + h.namespace, h.filter, i), i;
                     },
                     current: function() {
                         var a = this.opened();
-                        return a[a.length - 1] || null
+                        return a[a.length - 1] || null;
                     },
                     opened: function() {
                         var b = this;
                         return f(), a.grep(e, function(a) {
-                            return a instanceof b
-                        })
+                            return a instanceof b;
+                        });
                     },
                     close: function(a) {
                         var b = this.current();
-                        return b ? b.close(a) : void 0
+                        return b ? b.close(a) : void 0;
                     },
                     _onReady: function() {
                         var b = this;
                         b.autoBind && (a(b.autoBind).each(function() {
-                            b.attach(a(this))
+                            b.attach(a(this));
                         }), a(document).on("click", b.autoBind, function(c) {
                             if (!c.isDefaultPrevented()) {
                                 var d = b.attach(a(c.currentTarget));
-                                d(c)
+                                d(c);
                             }
-                        }))
+                        }));
                     },
                     _callbackChain: {
                         onKeyUp: function(b, c) {
-                            return 27 === c.keyCode ? (this.closeOnEsc && a.featherlight.close(c), !1) : b(c)
+                            return 27 === c.keyCode ? (this.closeOnEsc && a.featherlight.close(c), !1) : b(c);
                         },
                         beforeOpen: function(b, c) {
                             return this._previouslyActive = document.activeElement, this._$previouslyTabbable = a("a, input, select, textarea, iframe, button, iframe, [contentEditable=true]").not("[tabindex]").not(this.$instance.find("button")), this._$previouslyWithTabIndex = a("[tabindex]").not('[tabindex="-1"]'), this._previousWithTabIndices = this._$previouslyWithTabIndex.map(function(b, c) {
-                                return a(c).attr("tabindex")
-                            }), this._$previouslyWithTabIndex.add(this._$previouslyTabbable).attr("tabindex", -1), document.activeElement.blur(), b(c)
+                                return a(c).attr("tabindex");
+                            }), this._$previouslyWithTabIndex.add(this._$previouslyTabbable).attr("tabindex", -1), document.activeElement.blur(), b(c);
                         },
                         afterClose: function(b, c) {
                             var d = b(c),
                                 e = this;
                             return this._$previouslyTabbable.removeAttr("tabindex"), this._$previouslyWithTabIndex.each(function(b, c) {
-                                a(c).attr("tabindex", e._previousWithTabIndices[b])
-                            }), this._previouslyActive.focus(), d
+                                a(c).attr("tabindex", e._previousWithTabIndices[b]);
+                            }), this._previouslyActive.focus(), d;
                         },
                         onResize: function(a, b) {
-                            return this.resize(this.$content.naturalWidth, this.$content.naturalHeight), a(b)
+                            return this.resize(this.$content.naturalWidth, this.$content.naturalHeight), a(b);
                         },
                         afterContent: function(a, b) {
                             var c = a(b);
-                            return this.$instance.find("[autofocus]:not([disabled])").focus(), this.onResize(b), c
+                            return this.$instance.find("[autofocus]:not([disabled])").focus(), this.onResize(b), c;
                         }
                     }
                 }), a.featherlight = b, a.fn.featherlight = function(a, c) {
-                    return b.attach(this, a, c), this
+                    return b.attach(this, a, c), this;
                 }, a(document).ready(function() {
-                    b._onReady()
-                })
+                    b._onReady();
+                });
             }(jQuery);
         }
 
@@ -950,14 +950,14 @@ $(function() {
 
                         if (self.contentType === 'html') {
                             // skip over html tags while typing
-                            var curChar = curString.substr(curStrPos).charAt(0)
+                            var curChar = curString.substr(curStrPos).charAt(0);
                             if (curChar === '<' || curChar === '&') {
                                 var tag = '';
                                 var endTag = '';
                                 if (curChar === '<') {
-                                    endTag = '>'
+                                    endTag = '>';
                                 } else {
-                                    endTag = ';'
+                                    endTag = ';';
                                 }
                                 while (curString.substr(curStrPos + 1).charAt(0) !== endTag) {
                                     tag += curString.substr(curStrPos).charAt(0);
@@ -1234,14 +1234,16 @@ $(function() {
                     }
                     var self = this;
                     theOffset = $(self).offset(),
-                    theHeight = $(self).height() + 10;
+                        theHeight = $(self).height() + 10;
                     setTimeout(function() {
-                              theOffset = $(self).offset();
-                              $('body,html').animate({ scrollTop: theOffset.top - theHeight}, 800, 'swing');
-                          }, 100); // ensure the collapse animation is done
-                }
+                        theOffset = $(self).offset();
+                        $('body,html').animate({
+                            scrollTop: theOffset.top - theHeight
+                        }, 800, 'swing');
+                    }, 100); // ensure the collapse animation is done
+                };
             }
-        };
+        }
         //End of accordion script
 
 
@@ -1279,7 +1281,7 @@ $(function() {
                     var word = $(this),
                         letters = word.text().split(''),
                         selected = word.hasClass('is-visible');
-                    for (i in letters) {
+                    for (var i in letters) {
                         if (word.parents('.rotate-2').length > 0) letters[i] = '<em>' + letters[i] + '</em>';
                         letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>' : '<i>' + letters[i] + '</i>';
                     }
@@ -1296,11 +1298,11 @@ $(function() {
                     if (headline.hasClass('loading-bar')) {
                         duration = barAnimationDelay;
                         setTimeout(function() {
-                            headline.find('.words-wrapper').addClass('is-loading')
+                            headline.find('.words-wrapper').addClass('is-loading');
                         }, barWaiting);
                     } else if (headline.hasClass('clip')) {
                         var spanWrapper = headline.find('.words-wrapper'),
-                            newWidth = spanWrapper.width() + 10
+                            newWidth = spanWrapper.width() + 10;
                         spanWrapper.css('width', newWidth);
                     } else if (!headline.hasClass('type')) {
                         //assign to .words-wrapper the width of its longest word
@@ -1311,11 +1313,11 @@ $(function() {
                             if (wordWidth > width) width = wordWidth;
                         });
                         headline.find('.words-wrapper').css('width', width);
-                    };
+                    }
 
                     //trigger animation
                     setTimeout(function() {
-                        hideWord(headline.find('.is-visible').eq(0))
+                        hideWord(headline.find('.is-visible').eq(0));
                     }, duration);
                 });
             }
@@ -1331,7 +1333,7 @@ $(function() {
                         $word.removeClass('is-visible').addClass('is-hidden').children('i').removeClass('in').addClass('out');
                     }, selectionDuration);
                     setTimeout(function() {
-                        showWord(nextWord, typeLettersDelay)
+                        showWord(nextWord, typeLettersDelay);
                     }, typeAnimationDelay);
 
                 } else if ($word.parents('.headline').hasClass('letters')) {
@@ -1351,16 +1353,16 @@ $(function() {
                     $word.parents('.words-wrapper').removeClass('is-loading');
                     switchWord($word, nextWord);
                     setTimeout(function() {
-                        hideWord(nextWord)
+                        hideWord(nextWord);
                     }, barAnimationDelay);
                     setTimeout(function() {
-                        $word.parents('.words-wrapper').addClass('is-loading')
+                        $word.parents('.words-wrapper').addClass('is-loading');
                     }, barWaiting);
 
                 } else {
                     switchWord($word, nextWord);
                     setTimeout(function() {
-                        hideWord(nextWord)
+                        hideWord(nextWord);
                     }, animationDelay);
                 }
             }
@@ -1375,7 +1377,7 @@ $(function() {
                         'width': $word.width() + 10
                     }, revealDuration, function() {
                         setTimeout(function() {
-                            hideWord($word)
+                            hideWord($word);
                         }, revealAnimationDelay);
                     });
                 }
@@ -1390,7 +1392,7 @@ $(function() {
                     }, $duration);
                 } else if ($bool) {
                     setTimeout(function() {
-                        hideWord(takeNext($word))
+                        hideWord(takeNext($word));
                     }, animationDelay);
                 }
 
@@ -1415,8 +1417,8 @@ $(function() {
                     }
                     if (!$bool) {
                         setTimeout(function() {
-                            hideWord($word)
-                        }, animationDelay)
+                            hideWord($word);
+                        }, animationDelay);
                     }
                 }
             }
@@ -1435,7 +1437,7 @@ $(function() {
             }
 
 
-        };
+        }
         //End of culture script
 
         //Start of employees script
@@ -1529,7 +1531,7 @@ $(function() {
             $.fn.imagesRotationRemove = function() {
                 this.trigger('imagesRotationRemove');
             };
-        };
+        }
         //End of employees script
 
         //Start of video script
@@ -1571,13 +1573,13 @@ $(function() {
                     var height = $(window).height();
                     textWidth = $("#text").width();
                     textHeight = $("#text").height();
-                    $("#video_container").css("width", "100%").css("height", (height * .65));
+                    $("#video_container").css("width", "100%").css("height", (height * 0.65));
                     var containerHeight = $("#video_container").height();
                     $("#text").css("left", (width / 2) - (textWidth / 2)).css("top", (containerHeight / 2) - (textHeight / 2));
                 },
 
                 fixVideoPosition: function() {}
-            }
+            };
 
             $(document).ready(function() {
                 fullScreenVideo.fixTextPosition();
@@ -1866,17 +1868,17 @@ $(function() {
 
             //set google map options
             var map_options = {
-                    center: new google.maps.LatLng(latitude, longitude),
-                    zoom: map_zoom,
-                    panControl: false,
-                    zoomControl: false,
-                    mapTypeControl: false,
-                    streetViewControl: false,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP,
-                    scrollwheel: false,
-                    styles: style,
-                }
-                //inizialize the map
+                center: new google.maps.LatLng(latitude, longitude),
+                zoom: map_zoom,
+                panControl: false,
+                zoomControl: false,
+                mapTypeControl: false,
+                streetViewControl: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                scrollwheel: false,
+                styles: style,
+            };
+            //inizialize the map
             var map = new google.maps.Map(document.getElementById('google-container'), map_options);
             //add a custom marker to the map
             var marker = new google.maps.Marker({
@@ -1896,10 +1898,10 @@ $(function() {
 
                 // Setup the click event listeners and zoom-in or out according to the clicked element
                 google.maps.event.addDomListener(controlUIzoomIn, 'click', function() {
-                    map.setZoom(map.getZoom() + 1)
+                    map.setZoom(map.getZoom() + 1);
                 });
                 google.maps.event.addDomListener(controlUIzoomOut, 'click', function() {
-                    map.setZoom(map.getZoom() - 1)
+                    map.setZoom(map.getZoom() - 1);
                 });
             }
 
@@ -1908,9 +1910,9 @@ $(function() {
 
             //insert the zoom div on the top left of the map
             map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
-        };
+        }
         //End of map script
 
-    };
+    }
     //End of runScripts
 });

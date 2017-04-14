@@ -605,7 +605,7 @@
     @include media($desktop){
       .employee {
         padding:3em;
-        height: 600px;
+        height: 500px;
         h1 {
             font-size: 3em;
         }
@@ -625,7 +625,7 @@
     @include media($desktop-large){
       .employee {
         padding:3em;
-        height: 700px;
+        height: 600px;
         h1 {
             font-size: 4em;
         }
@@ -646,7 +646,7 @@
     @include media($desktop-largest){
       .employee {
         padding:5em;
-        height:800px;
+        height:700px;
         h1{
           font-size:5em;
         }
@@ -662,6 +662,7 @@
     @include media($desktop-super){
       .employee {
         padding:8em;
+        height:800px;
       }
     }
 

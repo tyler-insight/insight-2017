@@ -7,7 +7,7 @@ card: summary
 description: "Meet Zane Statz, designer at Insight Creative and discover how a project moves through the steps from concept to completion here at Insight Creative."
 text-color: 'fff'
 back-color: '4da7e3'
-cover-image: cover-image.jpg
+cover-image: From-Concept-to-Completion.jpg
 ---
 <!-- ![From Concept to Completion](/img/zane-vlog-1216.jpg)  -->
 

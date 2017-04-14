@@ -34,6 +34,11 @@
           border-color:$dark-gray;
           @include transition(border-color .5s);
         }
+        li:hover + li:last-child{
+          border-top-color:$dark-gray;
+          border-bottom-color:$light-gray;
+          @include transition(border-color .5s);
+        }
     }
 
     .service {

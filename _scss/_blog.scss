@@ -49,10 +49,7 @@
             }
             @include media($desktop-large) {
                 padding: 3em;
-                min-height: 250px;
-            }
-            @include media($desktop-super) {
-                min-height: 300px;
+                min-height: 225px;
             }
 
             h2 {
@@ -325,6 +322,7 @@
             font-size: 1.2em;
             line-height: 1.5em;
             text-align: left;
+            @include transition(color .5s);
 
             @include media($tablet) {
                 font-size: 1.4em;
@@ -337,6 +335,10 @@
               @include span-columns(12);
               @include shift(0);
               font-size:1.6em;
+            }
+
+            &:hover{
+              color: $brand-color;
             }
         }
     }
