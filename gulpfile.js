@@ -7,9 +7,10 @@
     var uglify      = require('gulp-uglify');
     var pump        = require('pump');
     var imagemin    = require('gulp-imagemin');
+    var imageminPngquant = require('imagemin-pngquant');
     var imageresize = require('gulp-image-resize');
     var rename      = require("gulp-rename");
-    var changed         = require('gulp-changed');
+    var changed     = require('gulp-changed');
 
     var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
     var messages = {
@@ -77,7 +78,7 @@
      */
 
     gulp.task('optimize', function() {
-        gulp.src('img/**/*.{jpg,png,gif}')
+        gulp.src('img/**/*.{jpg,gif}')
             .pipe(changed('_site/img'))
             .pipe(imageresize({
               width: 1800,
@@ -87,10 +88,10 @@
               noProfile: true,
               interlace: true,
             }))
-            .pipe(imagemin())
             .pipe(gulp.dest('_site/img'));
           gulp.src('img/**/*.{svg,ico}')
            .pipe(changed('_site/img'))
+           .pipe(imagemin())
            .pipe(gulp.dest('_site/img'));
     });
     /**
@@ -111,4 +112,4 @@
     /**
      * Runs minification and image compression
      */
-    gulp.task('min', ['compress', 'images']);
+    gulp.task('min', ['compress', 'optimize']);
