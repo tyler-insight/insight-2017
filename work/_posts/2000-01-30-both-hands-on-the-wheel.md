@@ -3,7 +3,7 @@ layout: project
 title: Both Hands on the Wheel
 client: Ministry Health Care/Kohl's Cares
 description: Interior and exterior photography of homes that Van's Lumber has built.
-cover-image: both-hands-on-the-wheel/both-hands-on-the-wheel-cover.jpg
+cover-image: both-hands-on-the-wheel/both-hands-on-the-wheel-cover
 cover-text-color: fff
 back-color1: f2db1c
 back-color2: f2a41c

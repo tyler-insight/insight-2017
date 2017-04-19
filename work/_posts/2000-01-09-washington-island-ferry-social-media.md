@@ -3,7 +3,7 @@ layout: project
 title: Washington Island Ferry Social Media
 client: Washington Island Ferry
 description: A tasty commercial produced for Matthews Tire.
-cover-image: washington-island-ferry-social-media/washington-island-ferry-social-media-cover.jpg
+cover-image: washington-island-ferry-social-media/washington-island-ferry-social-media-cover
 cover-text-color: fff
 back-color1: e02323
 back-color2: 8b0909

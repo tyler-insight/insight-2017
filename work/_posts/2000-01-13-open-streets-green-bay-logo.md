@@ -3,7 +3,7 @@ layout: project
 title: Open Streets Green Bay Logo
 client: Open Streets Green Bay
 description: Interior and exterior photography of homes that Van's Lumber has built.
-cover-image: open-streets-green-bay-logo/open-streets-logo-cover.jpg
+cover-image: open-streets-green-bay-logo/open-streets-logo-cover
 cover-text-color: fff
 back-color1: dc7924
 back-color2: 496630

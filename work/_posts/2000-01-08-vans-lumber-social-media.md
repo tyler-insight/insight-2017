@@ -3,7 +3,7 @@ layout: project
 title: Vans Lumber Social Media
 client: Vans Lumber
 description: A tasty commercial produced for Matthews Tire.
-cover-image: vans-lumber-social-media/vans-best-of-houzz-2015.jpg
+cover-image: vans-lumber-social-media/vans-best-of-houzz-2015
 cover-text-color: fff
 back-color1: 5ae477
 back-color2: 27b872

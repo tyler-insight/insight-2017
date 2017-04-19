@@ -3,7 +3,7 @@ layout: project
 title: TV Commercial
 client: Matthews Tire
 description: A tasty commercial produced for Matthews Tire.
-cover-image: matthews-tire-tv-commercial/matthews-tire-tv-commercial-cover.jpg
+cover-image: matthews-tire-tv-commercial/matthews-tire-tv-commercial-cover
 cover-text-color: fff
 back-color1: ffdd00
 back-color2: a38d00

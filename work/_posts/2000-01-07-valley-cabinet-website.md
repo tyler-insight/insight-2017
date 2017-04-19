@@ -3,7 +3,7 @@ layout: project
 title: Valley Cabinet Website
 client: Valley Cabinet
 description: A tasty commercial produced for Matthews Tire.
-cover-image: valley-cabinet-website/valley-cabinet-website-1.jpg
+cover-image: valley-cabinet-website/valley-cabinet-website-1
 cover-text-color: fff
 back-color1: f2e2d1
 back-color2: ae9371

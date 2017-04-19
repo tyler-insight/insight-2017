@@ -3,7 +3,7 @@ layout: project
 title: Media Placement
 client: Brown County Home Builders Association (BCHBA)
 description: A tasty commercial produced for Matthews Tire.
-cover-image: brown-county-home-builders-media-buy/brown-county-home-builders-media-buy-cover.jpg
+cover-image: brown-county-home-builders-media-buy/brown-county-home-builders-media-buy-cover
 cover-text-color: fff
 back-color1: ebaa4c
 back-color2: 9d5d17

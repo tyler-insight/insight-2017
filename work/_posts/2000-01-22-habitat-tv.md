@@ -3,7 +3,7 @@ layout: project
 title: Habitat ReStore TV Commercial
 client: Habitat ReStore
 description: Interior and exterior photography of homes that Van's Lumber has built.
-cover-image: habitat-restore-tv-commercial/habitat-restore-tv-commercial-cover.jpg
+cover-image: habitat-restore-tv-commercial/habitat-restore-tv-commercial-cover
 cover-text-color: fff
 back-color1: 937042
 back-color2: 5d2d18

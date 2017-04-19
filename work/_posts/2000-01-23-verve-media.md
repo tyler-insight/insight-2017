@@ -3,7 +3,7 @@ layout: project
 title:  Verve Media Placement
 client: Verve, a Credit Union
 description: Interior and exterior photography of homes that Van's Lumber has built.
-cover-image: verve-media-placement/verve-media-placement-cover.jpg
+cover-image: verve-media-placement/verve-media-placement-cover
 cover-text-color: fff
 back-color1: 949599
 back-color2: ee7421

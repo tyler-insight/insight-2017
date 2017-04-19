@@ -3,7 +3,7 @@ layout: project
 title: Keller TV Spot
 client: Keller
 description: Interior and exterior photography of homes that Van's Lumber has built.
-cover-image: keller-tv-spot/keller-tv-spot-cover.jpg
+cover-image: keller-tv-spot/keller-tv-spot-cover
 cover-text-color: fff
 back-color1: de252a
 back-color2: c00041

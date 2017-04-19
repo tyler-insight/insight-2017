@@ -3,7 +3,7 @@ layout: project
 title:  CIVICTechnologies Website
 client: CIVICTechnologies
 description: Interior and exterior photography of homes that Van's Lumber has built.
-cover-image: civictechnologies-website/civictechnologies-website.jpg
+cover-image: civictechnologies-website/civictechnologies-website
 cover-text-color: fff
 back-color1: f37135
 back-color2: 002e73
@@ -15,10 +15,31 @@ CIVICTechnologies is a technology company that creates software to help librarie
 
 <div class="images">
 
-<img class="full" data-aos="fade-up" data-featherlight="/img/projects/civictechnologies-website/civictechnologies-website-2.jpg" src="/img/projects/civictechnologies-website/civictechnologies-website-2.jpg" />
+<img class="full" data-aos="fade-up" data-featherlight="/img/projects/civictechnologies-website/civictechnologies-website-2.jpg"
+alt="Civic Technologies Mobile" src="/img/projects/civictechnologies-website/civictechnologies-website-2.jpg"
+srcset="/img/projects/civictechnologies-website/civictechnologies-website-2-400.jpg 400w,
+/img/projects/civictechnologies-website/civictechnologies-website-2-600.jpg 600w,
+/img/projects/civictechnologies-website/civictechnologies-website-2-900.jpg 900w,
+/img/projects/civictechnologies-website/civictechnologies-website-2-1200.jpg 1200w,
+/img/projects/civictechnologies-website/civictechnologies-website-2-1800.jpg 1800w,
+/img/projects/civictechnologies-website/civictechnologies-website-2-2400.jpg 2400w" />
 
-<img class="half" data-aos="fade-up" data-featherlight="/img/projects/civictechnologies-website/civictechnologies-website.jpg" src="/img/projects/civictechnologies-website/civictechnologies-website.jpg" />
+<img class="half" data-aos="fade-up" data-featherlight="/img/projects/civictechnologies-website/civictechnologies-website.jpg"
+alt="Civic Technologies Desktop" src="/img/projects/civictechnologies-website/civictechnologies-website.jpg"
+srcset="/img/projects/civictechnologies-website/civictechnologies-website-400.jpg 400w,
+/img/projects/civictechnologies-website/civictechnologies-website-600.jpg 600w,
+/img/projects/civictechnologies-website/civictechnologies-website-900.jpg 900w,
+/img/projects/civictechnologies-website/civictechnologies-website-1200.jpg 1200w,
+/img/projects/civictechnologies-website/civictechnologies-website-1800.jpg 1800w,
+/img/projects/civictechnologies-website/civictechnologies-website-2400.jpg 2400w" />
 
-<img class="half" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/civictechnologies-website/civictechnologies-website-3.jpg" src="/img/projects/civictechnologies-website/civictechnologies-website-3.jpg" />
+<img class="half" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/civictechnologies-website/civictechnologies-website-3.jpg"
+alt="Civic Technologies Website" src="/img/projects/civictechnologies-website/civictechnologies-website-3.jpg"
+srcset="/img/projects/civictechnologies-website/civictechnologies-website-3-400.jpg 400w,
+/img/projects/civictechnologies-website/civictechnologies-website-3-600.jpg 600w,
+/img/projects/civictechnologies-website/civictechnologies-website-3-900.jpg 900w,
+/img/projects/civictechnologies-website/civictechnologies-website-3-1200.jpg 1200w,
+/img/projects/civictechnologies-website/civictechnologies-website-3-1800.jpg 1800w,
+/img/projects/civictechnologies-website/civictechnologies-website-3-2400.jpg 2400w" />
 
 </div>

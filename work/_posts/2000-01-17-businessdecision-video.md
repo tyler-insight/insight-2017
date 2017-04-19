@@ -3,7 +3,7 @@ layout: project
 title:  BusinessDecision Video
 client: CIVICTechnologies
 description: Interior and exterior photography of homes that Van's Lumber has built.
-cover-image: bussiness-decision-video/bussiness-decision-video-cover.jpg
+cover-image: bussiness-decision-video/bussiness-decision-video-cover
 cover-text-color: fff
 back-color1: f6d77f
 back-color2: f7a80a

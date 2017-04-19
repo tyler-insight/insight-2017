@@ -3,7 +3,7 @@ layout: project
 title:  "Bringing PR to Port for the Washington Island Ferry"
 client: Washington Island Ferry Line
 description: Interior and exterior photography of homes that Van's Lumber has built.
-cover-image: bringing-pr-to-port-washington/wif-case-study-cover.jpg
+cover-image: bringing-pr-to-port-washington/wif-case-study-cover
 cover-text-color: fff
 back-color1: 64d7db
 back-color2: 28c689

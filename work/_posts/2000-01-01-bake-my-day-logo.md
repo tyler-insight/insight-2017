@@ -3,7 +3,7 @@ layout: project
 title: Logo Design
 client: Bake My Day
 description: Logo design created for local Green Bay bakery.
-cover-image: bake-my-day/bake-my-day-logo-1.jpg
+cover-image: bake-my-day/bake-my-day-logo-1
 cover-text-color: fff
 back-color1: c3dc93
 back-color2: f282d4
