@@ -16,13 +16,27 @@ tags:
 
 How to develop and execute a cohesive social media campaign focusing on the Fox Cities Marathon three-day annual event that their community can actively “run with” all year-round?
 
-![FCM-case-study-3](/img/projects/fox-cities-marathon-social-media/FCM-case-study-3.jpg){: .img-lg}
+<img data-aos="fade-up" data-aos-delay="200"  src="/img/projects/fox-cities-marathon-social-media/FCM-case-study-3.jpg"
+alt="Fox Cities Marathon Facebook"
+srcset="/img/projects/fox-cities-marathon-social-media/FCM-case-study-3-400.jpg 400w,
+/img/projects/fox-cities-marathon-social-media/FCM-case-study-3-600.jpg 600w,
+/img/projects/fox-cities-marathon-social-media/FCM-case-study-3-900.jpg 900w,
+/img/projects/fox-cities-marathon-social-media/FCM-case-study-3-1200.jpg 1200w,
+/img/projects/fox-cities-marathon-social-media/FCM-case-study-3-1800.jpg 1800w,
+/img/projects/fox-cities-marathon-social-media/FCM-case-study-3-2400.jpg 2400w" />
 
 ## Goal
 
 The client asked Insight to elevate the Fox Cities Marathon social media presence by posting frequent and creative content to popular social media channels encouraging online activity and sharing, generating interest and ultimately increasing participation.
 
-![FCM-case-study-2](/img/projects/fox-cities-marathon-social-media/FCM-case-study-2.jpg){: .img-lg}
+<img data-aos="fade-up" data-aos-delay="200"  src="/img/projects/fox-cities-marathon-social-media/FCM-case-study-2.jpg"
+alt="Fox Cities Marathon Image 1"
+srcset="/img/projects/fox-cities-marathon-social-media/FCM-case-study-2-400.jpg 400w,
+/img/projects/fox-cities-marathon-social-media/FCM-case-study-2-600.jpg 600w,
+/img/projects/fox-cities-marathon-social-media/FCM-case-study-2-900.jpg 900w,
+/img/projects/fox-cities-marathon-social-media/FCM-case-study-2-1200.jpg 1200w,
+/img/projects/fox-cities-marathon-social-media/FCM-case-study-2-1800.jpg 1800w,
+/img/projects/fox-cities-marathon-social-media/FCM-case-study-2-2400.jpg 2400w" />
 
 ## Result
 
@@ -30,4 +44,11 @@ The Fox Cities Marathon’s social media is officially “Powered By Insight!”
 
 Since the inception of Insight’s social media efforts, registration for the event has grown rapidly. Fox Cities Marathon and Half Marathon registration for 2013 sold out over one month in advance of race day—the earliest registration has reached maximum capacity in the event’s 23-year history!
 
-![FCM-case-study-1](/img/projects/fox-cities-marathon-social-media/FCM-case-study-1.jpg){: .img-lg}
+<img data-aos="fade-up" data-aos-delay="200"  src="/img/projects/fox-cities-marathon-social-media/FCM-case-study-1.jpg"
+alt="Fox Cities Marathon Image 2"
+srcset="/img/projects/fox-cities-marathon-social-media/FCM-case-study-1-400.jpg 400w,
+/img/projects/fox-cities-marathon-social-media/FCM-case-study-1-600.jpg 600w,
+/img/projects/fox-cities-marathon-social-media/FCM-case-study-1-900.jpg 900w,
+/img/projects/fox-cities-marathon-social-media/FCM-case-study-1-1200.jpg 1200w,
+/img/projects/fox-cities-marathon-social-media/FCM-case-study-1-1800.jpg 1800w,
+/img/projects/fox-cities-marathon-social-media/FCM-case-study-1-2400.jpg 2400w" />
