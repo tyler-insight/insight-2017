@@ -75,7 +75,9 @@ title: Culture
 
         <div class="employees" id="employees">
             {% for staff in site.data.staff %} {% assign loopindex = forloop.index | modulo: 2 %} {% if loopindex == 1 %}
+
             <div class="employee employee-left images-rotation" data-aos="fade-up" data-aos-offset="100" data-color="{{ staff.color }}" data-images='["{{ staff.image1 }}", "{{ staff.image2 }}", "{{ staff.image3 }}"]'>
+                <div id="{{ staff.name }}" style="position:absolute;top:0;"></div>
                 <img src="{{ staff.image1 }}" />
                 <div class="bio">
                     <h1 class="{{ staff.color }}" data-aos="fade-up" data-aos-delay="0">{{ staff.name }}</h1>
@@ -84,7 +86,9 @@ title: Culture
                 </div>
             </div>
             {% else %}
+
             <div class="employee employee-right images-rotation" data-aos="fade-up" data-aos-offset="100" data-color="{{ staff.color }}" data-images='["{{ staff.image1 }}", "{{ staff.image2 }}", "{{ staff.image3 }}"]'>
+              <div id="{{ staff.name }}" style="position:absolute;top:0;"></div>
                 <img src="{{ staff.image1 }}" />
                 <div class="bio">
                   <h1 class="{{ staff.color }}" data-aos="fade-up" data-aos-delay="0">{{ staff.name }}</h1>

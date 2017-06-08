@@ -458,3 +458,33 @@
         }
     }
 }
+.back-work {
+  @include span-columns(4);
+  position: relative;
+  height:150px;
+  display:table;
+
+  a{
+    display:table-cell;
+    text-align: center;
+    vertical-align: middle;
+    height:100%;
+    float:none;
+    color:#fff;
+    background:$dark-gray;
+    transition: all .5s;
+
+    h2{
+      color:#fff;
+      text-align: center;
+    }
+
+    &:hover {
+      background:#fbfbfb;
+
+      h2 {
+        color:$dark-gray;
+      }
+    }
+  }
+}

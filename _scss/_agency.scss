@@ -35,7 +35,37 @@
         }
     }
 }
+.agency-header {
+  height:500px;
+  overflow: hidden;
+  margin-bottom: $mobile-spacing;
+  position: relative;
+  background: url('/img/agency/agency-lobby-1800.jpg');
+  background-size:cover;
+  background-position: center center;
 
+  @include media($desktop-large) {
+       height:700px;
+  }
+
+  .text {
+      position: absolute;
+      z-index: 2;
+      text-align: center;
+      display: table;
+      height: 100%;
+      width: 100%;
+      text-shadow: 0 0 10px rgba(0,0,0,.5);
+      h1{
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        color: #fff;
+        float:none;
+      }
+  }
+
+}
 .agency {
   @include span-columns(4);
     margin-bottom: $mobile-spacing;

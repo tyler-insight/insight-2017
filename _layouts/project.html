@@ -31,7 +31,9 @@ background: linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.b
         {{ content }}
     </div>
 
-
+    <div class="back-work">
+      <a href="/work" class="page-link" title="work"><h2>Back to Work</h2></a>
+    </div>
     <div class="nextprevious">
       <div class="previous-project">
         {% if page.previous.url %}
@@ -56,6 +58,7 @@ background: linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.b
         {% endif %}
         {% endif %}
       </div>
+
       <div class="next-project">
         {% if page.next.url  %}
         {% if page.next.categories contains 'work' %}
@@ -82,6 +85,7 @@ background: linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.b
           {% endif %}
         {% endif %}
       </div>
+
     </div>
 </div>
 <!-- wrapper end -->
