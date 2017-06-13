@@ -495,7 +495,6 @@
 .employees {
     @include span-columns(4);
     position: relative;
-    margin-bottom: $mobile-spacing;
 
     h1{
       text-align: center;
@@ -597,8 +596,7 @@
             }
 
             p {
-              font-size:.8em;
-              display:inline-block;
+
             }
         }
     }
@@ -668,7 +666,7 @@
 
     .employee-left {
         img {
-
+            margin-right:0;
             position: absolute;
             bottom: 0;
             right: 3%;
@@ -677,18 +675,18 @@
 
             @include media($large-phone) {
               right: 3%;
-                height: calc(100% + 50px);
+                height: calc(100% + 25px);
             }
             @include media($tablet) {
               right:3%;
                 height: calc(100% + 50px);
             }
             @include media($desktop-large) {
-                right:5%;
-                height: calc(100% + 100px);
+                right:3%;
+                height: calc(100% + 50px);
             }
             @include media($desktop-largest) {
-                right:5%;
+                right:3%;
                 height: calc(100% + 100px);
             }
         }
@@ -697,25 +695,25 @@
 
     .employee-right {
         img {
-
+            margin-left: 0;
             position: absolute;
             bottom: 0;
             left: 3%;
             height: calc(100% + 20px);
             width: auto;
             @include media($large-phone) {
-                left:5%;
-                height: calc(100% + 50px);
+                left:3%;
+                height: calc(100% + 25px);
             }
             @include media($tablet) {
                 height: calc(100% + 50px);
             }
             @include media($desktop-large) {
-                left:5%;
-                height: calc(100% + 100px);
+                left:3%;
+                height: calc(100% + 50px);
             }
             @include media($desktop-largest) {
-                left:8%;
+                left:3%;
                 height: calc(100% + 100px);
             }
         }

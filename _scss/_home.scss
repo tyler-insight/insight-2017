@@ -1,4 +1,4 @@
-.home-slider {
+.home-slider, .testimonial-slider {
     position: relative;
     z-index: 2;
     width: 100%;
@@ -234,6 +234,8 @@
     }
 }
 
+
+
 .mission-statement {
     margin: $spacing 0;
     @include row();
@@ -338,10 +340,56 @@
   }
 }
 
+.testimonials {
+  overflow: hidden;
+  @include span-columns(4);
+}
+
+.testimonials ul {
+  list-style: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0;
+}
+
+.testimonials ul li {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.testimonials ul li p {
+  color:#fff;
+  margin-bottom: 20px;
+  text-align: center;
+  font-style: italic;
+  margin-bottom:2em;
+}
+
+.testimonials-control {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonials-control i {
+  margin-top:1em;
+  cursor: pointer;
+  padding:0 .5em;
+  color:$brand-color;
+
+  @include media($desktop-large) {
+      font-size:3em;
+      padding:0 .75em;
+  }
+}
+
 .testimonial {
+    padding:4em 1em;
     margin-bottom: $mobile-spacing;
     background:$dark-gray;
-    padding:4em 1em;
     @include span-columns(4);
 
     &:hover{
@@ -380,18 +428,12 @@
             @include shift(0);
         }
     }
-
-    .quote {
-      @include span-columns(4);
-
-        p {
-            color:#fff;
-            margin-bottom: 20px;
-            text-align: center;
-            font-style: italic;
-            margin-bottom:2em;
-            padding:0 .5em;
-        }
+    p {
+      color:#fff;
+      margin-bottom: 20px;
+      text-align: center;
+      font-style: italic;
+      margin-bottom:2em;
     }
 }
 
