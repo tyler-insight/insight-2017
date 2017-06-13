@@ -8,7 +8,7 @@ cover-text-color: fff
 back-color1: f58023
 back-color2: f54f23
 tags:
-  - Print and Packaging
+  - Print
 ---
 
 We took on the juicy challenge of introducing and educating the public about a new “healthy” grocery store opening in the greater Green Bay area. Our delicious—and slightly suggestive—logo set the tone for ads that used gentle innuendo to grab attention then communicated details about the tempting offerings at the store. These ads show just how much somewhat bland subject matter can benefit from a slightly spicy concept!

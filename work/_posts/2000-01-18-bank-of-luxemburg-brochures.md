@@ -8,7 +8,7 @@ cover-text-color: fff
 back-color1: a5365b
 back-color2: 601a4c
 tags:
-- Print and Packaging
+- Print
 
 ---
 

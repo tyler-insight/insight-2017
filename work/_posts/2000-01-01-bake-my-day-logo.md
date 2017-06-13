@@ -10,6 +10,7 @@ back-color2: f282d4
 tags:
 - Identity
 - Branding
+- Print
 
 ---
 

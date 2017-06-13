@@ -38,7 +38,9 @@
     .filter-drop {
         @include span-columns(4);
         cursor: pointer;
-
+        @include media($tablet) {
+            display:none;
+        }
         .fa {
             position: absolute;
             margin-left: 0.3em;
@@ -56,9 +58,12 @@
 
     ul.filter-list {
         @include span-columns(4);
-        margin-top: 1em;
+        margin-top: .5em;
         overflow: hidden;
         display: none;
+        @include media($tablet) {
+            display:inline-block;
+        }
 
         li {
             line-height: 1.6em;
@@ -79,16 +84,21 @@
             span {
                 font-family: "proxima-nova", sans-serif;
                 margin-right: 1.5em;
-                color: $light-gray;
+                color: $dark-gray;
                 cursor: pointer;
                 @include transition(color .5s ease-in-out);
 
                 &.active {
-                    display: none;
+                  color: $brand-color;
+                  text-decoration: underline;
+                  display:none;
+                  @include media($tablet) {
+                      display:inline-block;
+                  }
                 }
 
                 &:hover {
-                    color: $dark-gray;
+                    color: $medium-gray;
                 }
             }
         }
