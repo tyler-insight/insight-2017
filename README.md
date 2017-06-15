@@ -29,19 +29,24 @@ All of the original images are located inside *unsized-img*, the reason for this
 
 ## Usage
 
-**Step One**
+###Step One
+
 Make sure any images you need are inside the *unsized-img* folder and then run `gulp resize`. This is resize all the images and place them into the *img* folder. This may take a few minutes, so wait until it completes before doing anything else.
 
-**Step Two**
+###Step Two
+
 Run `gulp min` which will optimize all of the images in the *img* folder. Once again, this will take a while.
 
-**Step Three**
+###Step Three
+
 You can now run `gulp` which will automatically run jekyll, open your site in the browser with auto-refresh, and watch for any file changes. When you are done making all of your changes, hit ctrl+c to cancel running gulp. (If you add any new images, you will need to rerun steps one and two)
 
-**Step Four**
+###Step Four
+
 Once all of your changes are made, run `gulp compress` to minify the javascript files.
 
-**Step Five**
+###Step Five
+
 Push changes to GitHub and upload new files to site.
 
 **jekyll**
