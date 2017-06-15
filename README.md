@@ -95,3 +95,15 @@ tag: blog
 **Cover-image:** Sets the featured image for the blog post.
 
 *The layout and tag will both always remain blog*
+
+### Images
+
+When adding an image, do not use the markdown image treatment, instead, add an image using html srcset like below.
+
+```html
+<img src="/img/logo-slider/vans-photography-feature.jpg" alt="Photography for Vans Lumber"
+srcset="/img/logo-slider/vans-photography-feature-900.jpg 400w,
+              /img/logo-slider/vans-photography-feature-1200.jpg 600w,
+              /img/logo-slider/vans-photography-feature-1800.jpg 900w,
+              /img/logo-slider/vans-photography-feature-2400.jpg 1200w" />
+```
