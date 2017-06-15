@@ -1,3 +1,5 @@
+# Insight Website - 2017 Edition
+
 ## System Preparation
 
 To use this starter project, you'll need the following things installed on your machine.
@@ -13,7 +15,7 @@ To use this starter project, you'll need the following things installed on your 
 
 ## File Structure
 
-Before running any commands, lets understand how the file directories.
+Before running any commands, lets understand the file directories.
 
 ### Pages
 Each individual page will be located inside the folder with its corresponding name.
@@ -26,6 +28,15 @@ All blog posts are located inside the **blog/_posts** directory. For these, use 
 
 ### Images
 All of the original images are located inside *unsized-img*, the reason for this is because there is a command that we run which will automatically resize images for different screen sizes and then place those images inside the *img* directory. So keep all of your original clean images inside the *unsized-img* directory. Typically these images should be around 1800px in width or height. They'll be optimized later so don't worry too much about that!
+
+### Data
+Both the employee list and the services list can both be found under the *_data* directory.
+
+### Site
+The *_site* directory is the compiled directory with all of the final files. The contents of this folder is what will be uploaded to the actual website.
+
+### Styles
+Do not make style changes in the *css* directory. The styles for the website are all in the *_scss* directory. Each individual page has had its own style sheet setup for styles unique to that page, and then there are sheets setup for general styling like the footer or typography. The *_variables.scss* sheet as site wide variables that can be used in your scss sheets.
 
 ## Usage
 
