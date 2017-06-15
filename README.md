@@ -72,7 +72,7 @@ A blog post will have the following information at the top of the development fi
 
 ```html
 layout: blog
-title: Media Buying 101&mdash;What On Earth Does a Media Buyer Do?
+title: Media Buying 101 - What On Earth Does a Media Buyer Do?
 author: Molly Setzer
 description: "Molly Setzer, Senior Media Buyer at Insight Creative, explains the role of a media buyer, how they can support your company's marketing efforts and how they help you get the most out of your marketing budget."
 text-color: 'fff'
@@ -80,3 +80,18 @@ back-color: 'b31139'
 cover-image: th-molly-vlog-media-buying.jpg
 tag: blog
 ```
+
+**Title:** The title of the blog post, duh!
+
+**Author:** The name of the author, make sure this is spelt right so it can pull their information from the staff file.
+
+**Description:** Sets up the meta description tag.
+
+**Text-color:** This will set the color of the text for when the blog appears on the blog page, or at the bottom of another blog post.
+ In most cases, it will be fff which is white. DO NOT use the # in these.
+ 
+**Back-color:** This will be the background color for when the blog appears on the blog page, or at the bottom of another blog post. Typically, you want to use a color that either coincides with the blog post's imagery or theme.
+
+**Cover-image:** Sets the featured image for the blog post.
+
+*The layout and tag will both always remain blog*
