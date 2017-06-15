@@ -15,16 +15,16 @@ To use this starter project, you'll need the following things installed on your 
 
 Before running any commands, lets understand how the file directories.
 
-**Pages**
+### Pages
 Each individual page will be located inside the folder with its corresponding name.
 
-**Work**
+### Work
 Projects can be found inside the **work/_posts** directory. They get sorted by date, so the first project is set to 2000-01-01 with each newer project being a day newer. So the newest projects will have the most recent date. DO NOT use the current date as the date for the project, simply follow the pattern that is already created.
 
-**Blog**
+### Blog
 All blog posts are located inside the **blog/_posts** directory. For these, use the date of the day you would like the blog to get posted.
 
-**Images**
+### Images
 All of the original images are located inside *unsized-img*, the reason for this is because there is a command that we run which will automatically resize images for different screen sizes and then place those images inside the *img* directory. So keep all of your original clean images inside the *unsized-img* directory. Typically these images should be around 1800px in width or height. They'll be optimized later so don't worry too much about that!
 
 ## Usage
@@ -65,6 +65,18 @@ gulp compress
 
 Push changes to GitHub and upload new files to site.
 
-**jekyll**
 
-As this is just a Jekyll project, you can use any of the commands listed in their [docs](http://jekyllrb.com/docs/usage/)
+## Adding a Blog Post
+
+A blog post will have the following information at the top of the development file:
+
+```html
+layout: blog
+title: Media Buying 101&mdash;What On Earth Does a Media Buyer Do?
+author: Molly Setzer
+description: "Molly Setzer, Senior Media Buyer at Insight Creative, explains the role of a media buyer, how they can support your company's marketing efforts and how they help you get the most out of your marketing budget."
+text-color: 'fff'
+back-color: 'b31139'
+cover-image: th-molly-vlog-media-buying.jpg
+tag: blog
+```
