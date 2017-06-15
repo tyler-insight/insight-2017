@@ -26,9 +26,9 @@
   job_title: Creative Director
   bio: "After several years at Milwaukee and Fox Valley ad agencies, Jay made the jump north and brought his award-winning concepts, design skills, technical savvy and creative management experience to Insight. His understanding of current design and marketing trends and comprehensive approach to projects make him a natural creative leader. Jay combines more than 20 years of experience with a degree from UW-Milwaukee."
   color: black
-  image1: /img/employees/tyler/tyler-7.png
-  image2: /img/employees/tyler/tyler-8.png
-  image3: /img/employees/tyler/tyler-9.png
+  image1: /img/employees/jay/jay-1.png
+  image2: /img/employees/jay/jay-2.png
+  image3: /img/employees/jay/jay-3.png
 
 - name: Andy VanRemortel
   job_title: Media Director/Account Executive
@@ -50,33 +50,17 @@
   job_title: Senior Media Buyer
   bio: "Molly brings years of TV station, video production and creative copywriting experience to her media role at Insight. With wide-ranging broadcast knowledge, and an impressive gift for organization, Molly ensures every detail is accounted for in our clients’ media buys. A UW-Green Bay graduate, Molly’s professional talents are well complemented by her outgoing personality and upbeat attitude."
   color: purple
-  image1: /img/employees/bart/bart-1.png
-  image2: /img/employees/bart/bart-2.png
-  image3: /img/employees/bart/bart-3.png
-
-- name: Andrea Lasecki
-  job_title: Senior Social Media Specialist
-  bio: "Andrea leads Insight's social media efforts on behalf of many clients. She has a wealth of experience in national social media strategies in the sports and entertainment industries in addition to a natural curiosity and strong understanding of emerging digital trends. Andrea graduated from the University of Wisconsin with a degree in Life Sciences Communication."
-  color: pink
-  image1: /img/employees/zane/zane-1.png
-  image2: /img/employees/zane/zane-2.png
-  image3: /img/employees/zane/zane-3.png
+  image1: /img/employees/molly/molly-1.png
+  image2: /img/employees/molly/molly-2.png
+  image3: /img/employees/molly/molly-3.png
 
 - name: Jenny Brandenburg
   job_title: Media Buyer
   bio: "Formerly an account relationship specialist at the Oshkosh Northwestern, Jenny brings over five years of experience in news, media, ad sales and customer relations to her role at Insight. Possessing a can-do attitude, keen attention to detail and natural talent for organization, Jenny is a valuable part of the media department at Insight. She holds a journalism degree from UW-Oshkosh, with an emphasis in advertising/public relations."
   color: darkblue
-  image1: /img/employees/bart/bart-1.png
-  image2: /img/employees/bart/bart-2.png
-  image3: /img/employees/bart/bart-3.png
-
-- name: Jen Haas
-  job_title: Account Executive
-  bio: "Jen brings diverse client relations experience, meticulous organization skills and strategic focus to her Account Executive role at Insight. As an Account Manager/Producer in her previous position, Jen managed projects and guided clients through the creative process. She currently serves in a leadership role at PRSA Northeast Wisconsin, Club Red of Northeast Wisconsin and Current-Young Professionals Network. Jen holds a degree from the University of Wisconsin in communications with an emphasis in mass media studies."
-  color: midblue
-  image1: /img/employees/zane/zane-1.png
-  image2: /img/employees/zane/zane-2.png
-  image3: /img/employees/zane/zane-3.png
+  image1: /img/employees/jenny/jenny-1.png
+  image2: /img/employees/jenny/jenny-2.png
+  image3: /img/employees/jenny/jenny-3.png
 
 - name: Bart Raboin
   job_title: Interactive/Web Designer
@@ -86,21 +70,14 @@
   image2: /img/employees/bart/bart-2.png
   image3: /img/employees/bart/bart-3.png
 
-- name: Zane Statz
-  job_title: Graphic Designer/Web Developer
-  bio: "Zane held a design internship position with St. Norbert College creating promotional materials for over 60 student organizations while also doing freelance design work for bands across the country. His detail-oriented and innovative creative skills, plus his passion for both print and web design, make Zane a great fit for Insight’s art department and diverse client base. He is a graduate of St. Norbert College holding a degree in graphic design, with a minor in business administration."
-  color: green
-  image1: /img/employees/zane/zane-1.png
-  image2: /img/employees/zane/zane-2.png
-  image3: /img/employees/zane/zane-3.png
 
 - name: Tyler Bramer
   job_title: Graphic Designer/Web Developer
   bio: "Tyler's passion for creativity pushes his design and development skills to the edge. As a graduate of UW-Green Bay, he has also developed a passion for fine arts and photography. With his wide skill set&mdash;including print, web, 3D and photography&mdash;Tyler is the Swiss Army knife of design. Aside from the dedication to his work, he tries to bring as much fun to the workplace as he can."
   color: malechite
-  image1: /img/employees/bart/bart-1.png
-  image2: /img/employees/bart/bart-2.png
-  image3: /img/employees/bart/bart-3.png
+  image1: /img/employees/tyler/tyler-1.png
+  image2: /img/employees/tyler/tyler-2.png
+  image3: /img/employees/tyler/tyler-3.png
 
 - name: Jennifer Rogers
   job_title: Copywriter/PR Specialist
