@@ -98,12 +98,14 @@ tag: blog
 
 ### Images
 
-When adding an image, do not use the markdown image treatment, instead, add an image using html srcset like below.
+When adding an image, do not use the markdown image treatment, instead, add an image using html srcset like below. Set the src as the original image name, then set up a srcset image with the image size following the name like below. All images get resized for screen sizes of 400px, 600px, 900px, 1200px, 1800px and 2400px wide.
 
 ```html
-<img src="/img/logo-slider/vans-photography-feature.jpg" alt="Photography for Vans Lumber"
-srcset="/img/logo-slider/vans-photography-feature-900.jpg 400w,
-              /img/logo-slider/vans-photography-feature-1200.jpg 600w,
-              /img/logo-slider/vans-photography-feature-1800.jpg 900w,
-              /img/logo-slider/vans-photography-feature-2400.jpg 1200w" />
+<img src="/img/culture/header-1.jpg" alt="We Rock"
+srcset="/img/culture/header-1-400.jpg 400w,
+        /img/culture/header-1-600.jpg 600w,
+        /img/culture/header-1-900.jpg 900w,
+        /img/culture/header-1-1200.jpg 1200w,
+        /img/culture/header-1-1800.jpg 1800w,
+        /img/culture/header-1-2400.jpg 2400w"/>
 ```
