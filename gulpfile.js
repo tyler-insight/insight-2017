@@ -130,7 +130,7 @@
       resizeImageTasks.push(resizeImageTask);
     });
 
-    gulp.task('resize', resizeImageTasks);
+
 
     /**
      * Watch scss files for changes & recompile
@@ -148,6 +148,11 @@
     gulp.task('default', ['browser-sync', 'watch']);
 
     /**
+     * Resizes images and places them in new folder
+     */
+    gulp.task('resize', resizeImageTasks);
+
+    /**
      * Runs minification and image compression
      */
-    gulp.task('min', ['compress', 'optimize']);
+    gulp.task('min', ['optimize']);

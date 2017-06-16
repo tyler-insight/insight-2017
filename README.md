@@ -42,7 +42,7 @@ Do not make style changes in the *css* directory. The styles for the website are
 
 ### Step One
 
-Make sure any images you need are inside the *unsized-img* folder and then run `gulp resize`. This is resize all the images and place them into the *img* folder. This may take a few minutes, so wait until it completes before doing anything else.
+**Make sure any images you need are inside the *unsized-img* folder** and then run `gulp resize`. This is resize all the images and place them into the *img* folder. This may take a few minutes, so wait until it completes before doing anything else.
 
 ```shell
 gulp resize
