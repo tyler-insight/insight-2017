@@ -7,6 +7,7 @@ To use this starter project, you'll need the following things installed on your 
 1. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
 2. [NodeJS](http://nodejs.org) - use the installer.
 3. [GulpJS](https://github.com/gulpjs/gulp) - `$ npm install -g gulp` (mac users may need sudo)
+4. [GraphicsMagick](http://www.graphicsmagick.org/download.html) - this is needed to run gulp-resize
 
 ## Local Installation
 
@@ -40,7 +41,7 @@ Do not make style changes in the *css* directory. The styles for the website are
 
 ## Usage
 
-### Step One
+### 1. Resizing Images
 
 **Make sure any images you need are inside the *unsized-img* folder** and then run `gulp resize`. This is resize all the images and place them into the *img* folder. This may take a few minutes, so wait until it completes before doing anything else.
 
@@ -48,7 +49,7 @@ Do not make style changes in the *css* directory. The styles for the website are
 gulp resize
 ```
 
-### Step Two
+### 2. Optimizing Images
 
 Run `gulp min` which will optimize all of the images in the *img* folder. Once again, this will take a while.
 
@@ -56,7 +57,7 @@ Run `gulp min` which will optimize all of the images in the *img* folder. Once a
 gulp min
 ```
 
-### Step Three
+### 3. Live Editing
 
 You can now run `gulp` which will automatically run jekyll, open your site in the browser with auto-refresh, and watch for any file changes. When you are done making all of your changes, hit ctrl+c to cancel running gulp. (If you add any new images, you will need to rerun steps one and two)
 
@@ -64,7 +65,7 @@ You can now run `gulp` which will automatically run jekyll, open your site in th
 gulp
 ```
 
-### Step Four
+### 4. Compress Script Files
 
 Once all of your changes are made, run `gulp compress` to minify the javascript files.
 
@@ -72,7 +73,7 @@ Once all of your changes are made, run `gulp compress` to minify the javascript 
 gulp compress
 ```
 
-### Step Five
+### 5. Push to GitHub and FTP
 
 Push changes to GitHub and upload new files to site.
 

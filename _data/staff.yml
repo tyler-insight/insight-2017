@@ -33,7 +33,7 @@
 - name: Andy VanRemortel
   job_title: Media Director/Account Executive
   bio: "Andy brings over 20 years of marketing, media buying and client services experience to his management role at insight. His outgoing personality makes him approachable and easy to work with on all projects, from big picture strategy to daily tasks. Andy’s well-rounded experience—including in-house marketing coordination, media buying with a Green Bay ad agency and ad sales at TV stations and newspapers—gives him a unique and knowledgeable perspective to ensure Insight clients get the most from their media budgets. Andy holds a marketing degree from the University of Wisconsin—Whitewater."
-  color: darkgray
+  color: green
   image1: /img/employees/tyler/tyler-10.png
   image2: /img/employees/tyler/tyler-11.png
   image3: /img/employees/tyler/tyler-12.png
@@ -62,6 +62,14 @@
   image2: /img/employees/jenny/jenny-2.png
   image3: /img/employees/jenny/jenny-3.png
 
+- name: Emily Morehart
+  job_title: PR/Content Manager
+  bio: "Formerly an account relationship specialist at the Oshkosh Northwestern, Jenny brings over five years of experience in news, media, ad sales and customer relations to her role at Insight. Possessing a can-do attitude, keen attention to detail and natural talent for organization, Jenny is a valuable part of the media department at Insight. She holds a journalism degree from UW-Oshkosh, with an emphasis in advertising/public relations."
+  color: peach
+  image1: /img/employees/emily/emily-1.png
+  image2: /img/employees/emily/emily-2.png
+  image3: /img/employees/emily/emily-3.png
+
 - name: Bart Raboin
   job_title: Interactive/Web Designer
   bio: "As an interactive designer, Bart’s responsibilities include website design, development and programming along with the implementation of interactive media. A graduate of Northern Michigan University, he previously worked at Bearing Point and as a web developer for Shopko Corporation. Bart has done significant freelance web development, taking many websites from concept to layout to programming and completion."
@@ -69,7 +77,6 @@
   image1: /img/employees/bart/bart-1.png
   image2: /img/employees/bart/bart-2.png
   image3: /img/employees/bart/bart-3.png
-
 
 - name: Tyler Bramer
   job_title: Graphic Designer/Web Developer
