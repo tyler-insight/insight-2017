@@ -193,11 +193,11 @@ srcset="/img/projects/vans-lumber-photography/vans-photography5-400.jpg 400w,
 /img/projects/vans-lumber-photography/vans-photography5-2400.jpg 2400w" />
 ```
 
-#### Image Styling
+### Image Styling
 
 There are a few special ways setup to showcase the images in a project.
 
-##### Grid Setup
+#### Grid Setup
 
 This setup makes the images display in rows cropped to the same height. There are four classes setup for this style that let the image be display either full column, half column, two-thirds column, or one-third column. Also, if the image isn't going to be full column, it needs to have the class first if its the first image in the row or last if its the last image in the row.
 
@@ -262,7 +262,7 @@ This setup makes the images display in rows cropped to the same height. There ar
 </div>
 ```
 
-##### Long Vertical Image (typically website)
+#### Long Vertical Image (typically website)
 
 When you have a very tall image that will need some scrolling and you don't want it to be cropped, place it in a `<div class="fill-back">` element. This will place the image in a padded element with a light gray background. It helps it stick out from the rest of the page and look cleaner rather than just having it on the plain white background.
 
@@ -281,3 +281,27 @@ When you have a very tall image that will need some scrolling and you don't want
 </div>
 
 ```
+
+## Employees
+
+The list of employees and their information and styling can be found under the *_data* directory in the *staff.yml* file.
+
+```
+- name: Jim von Hoff
+  job_title: President
+  bio: "As founder of the agency, Jim has overseen the growth and success of Insight since 1988. His client-centered approach and thorough study of clients and their industries set the stage for Insight’s long relationships with a diverse list of established clients including retail, consumer and business-to-business. A UW-Green Bay graduate, Jim’s desire to offer comprehensive marketing communications capabilities makes him—and Insight—unique in our area."
+  color: red
+  image1: /img/employees/tyler/tyler-1.png
+  image2: /img/employees/tyler/tyler-2.png
+  image3: /img/employees/tyler/tyler-3.png
+```
+
+**Name:** Employee name
+
+**Job_title:** The position of the employee
+
+**Bio:** The employees bio
+
+**Color:** The color theme to use for that employees display. These are defined in the *_culture.scss* style sheet.
+
+**image1:** The default and first image that shows for that employee. This is followed by the second and third when hovering.

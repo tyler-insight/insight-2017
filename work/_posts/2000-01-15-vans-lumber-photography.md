@@ -9,6 +9,7 @@ back-color1: 484948
 back-color2: 77726e
 tags:
 - Photography
+- Featured
 
 ---
 Van’s Lumber is a custom home contractor with roots in Northeast Wisconsin. Insight Creative took these interior and exterior shots to showcase their architectural design, interior design and craftsmanship.

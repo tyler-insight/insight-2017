@@ -19,7 +19,7 @@ title: Services
                     </p>
                     <h2>Examples</h2>
                     <div class="service-project-container">
-                        {% assign counter = '0' %} {% for post in site.categories.work %} {% for tag in post.tags %} {% if tag == services.name and counter
+                        {% assign counter = '0' %} {% for post in site.categories.work %} {% for tag in post.tags %} {% if tag contains services.name and counter
                         < '2' %} {% capture counter %}{{ counter | plus: '1' }}{% endcapture %} <a href="{{ post.url }}">
                             <div class="service-project" style="background-image:url('/img/projects/{{ post.cover-image }}-1200.jpg')">
                                 <div class="project-info" style="background: -webkit-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
