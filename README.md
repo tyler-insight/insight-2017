@@ -110,14 +110,167 @@ tag: blog
 
 ### Images
 
+Each image should be named the same as the blog and then numbered sequentially and placed in the *unsized-img* directory followed by the *blog* directory.
+
 When adding an image, do not use the markdown image treatment, instead, add an image using html srcset like below. Set the src as the original image name, then set up a srcset image with the image size following the name like below. All images get resized for screen sizes of 400px, 600px, 900px, 1200px, 1800px and 2400px wide.
 
+Images should also have this line of code in their tag, which will give them an animation when scrolling: `data-aos="fade-up"`
+
 ```html
-<img src="/img/culture/header-1.jpg" alt="We Rock"
+<img data-aos="fade-up" src="/img/culture/header-1.jpg" alt="We Rock"
 srcset="/img/culture/header-1-400.jpg 400w,
         /img/culture/header-1-600.jpg 600w,
         /img/culture/header-1-900.jpg 900w,
         /img/culture/header-1-1200.jpg 1200w,
         /img/culture/header-1-1800.jpg 1800w,
         /img/culture/header-1-2400.jpg 2400w"/>
+```
+
+## Adding a project
+
+A project will have the following information at the top of the development file:
+
+```html
+layout: project
+title: Logo Design
+client: Bake My Day
+description: Logo design created for local Green Bay bakery.
+cover-image: bake-my-day/bake-my-day-logo-1
+cover-text-color: fff
+back-color1: c3dc93
+back-color2: f282d4
+tags:
+- Identity
+- Branding
+- Print
+```
+
+**Title:** The title of the project, duh!
+**Client:** The client the work was done for.
+**Description:** One ore two short sentences introducing the project. This is the text that is directly under the cover image for the project and above the body text.
+**Cover-image:** Sets the featured image for the blog post.
+**Cover-text-color:** The header text color for the project. This displays over the thumbnails that link to the project and over the cover image. Try to keep this white as often as possible.
+**Back-color1:** The first color in the background gradient for the project. The background gradient is shown over the cover image and when you hover over the thumbnails linking to the project. Try to keep the gradient colors relevant to the project.
+**Back-color2:** Second color in the background gradient.
+**Tags:** The list of categories the project falls under. List any that are relevant to the project, these include:
+- Case Studies
+- Identity
+- Media Buying
+- Packaging
+- Photography
+- Print
+- Social Media
+- Video
+- Web
+
+*The layout will always remain project*
+
+### Images
+
+The images for a project should go in the *unsized-img* directory, followed by the *projects* folder, and then inside a directory with the exact same name as the project. Each image should be named the same as the project and then numbered sequentially.
+
+When adding an image, do not use the markdown image treatment, instead, add an image using html srcset like below. Set the src as the original image name, then set up a srcset image with the image size following the name like below. All images get resized for screen sizes of 400px, 600px, 900px, 1200px, 1800px and 2400px wide.
+
+Images should also have this line of code in their tag, which will give them an animation when scrolling: `data-aos="fade-up"`. If there is more than one image in a single row on the page, add `data-aos-delay="200"` starting at 200 for the second image and if theirs a third image `data-aos-delay="400"`. This will offset their animations so they don't all fade in at the same time.
+
+They should also get `data-featherlight="path/to/image"` which will cause them to display in light box if clicked. These need to be within a `<div class="images">` element in order to work.
+
+```html
+<img data-aos="fade-up" data-featherlight="/img/projects/vans-lumber-photography/vans-photography5.jpg" src="/img/projects/vans-lumber-photography/vans-photography5.jpg"
+alt="Vans Photography"
+srcset="/img/projects/vans-lumber-photography/vans-photography5-400.jpg 400w,
+/img/projects/vans-lumber-photography/vans-photography5-600.jpg 600w,
+/img/projects/vans-lumber-photography/vans-photography5-900.jpg 900w,
+/img/projects/vans-lumber-photography/vans-photography5-1200.jpg 1200w,
+/img/projects/vans-lumber-photography/vans-photography5-1800.jpg 1800w,
+/img/projects/vans-lumber-photography/vans-photography5-2400.jpg 2400w" />
+```
+
+#### Image Styling
+
+There are a few special ways setup to showcase the images in a project.
+
+##### Grid Setup
+
+This setup makes the images display in rows cropped to the same height. There are four classes setup for this style that let the image be display either full column, half column, two-thirds column, or one-third column. Also, if the image isn't going to be full column, it needs to have the class first if its the first image in the row or last if its the last image in the row.
+
+```html
+<div class="images">
+
+  <img class="half first" data-aos="fade-up" data-featherlight="/img/projects/vans-lumber-photography/vans-photography5.jpg" src="/img/projects/vans-lumber-photography/vans-photography5.jpg"
+  alt="Vans Photography"
+  srcset="/img/projects/vans-lumber-photography/vans-photography5-400.jpg 400w,
+  /img/projects/vans-lumber-photography/vans-photography5-600.jpg 600w,
+  /img/projects/vans-lumber-photography/vans-photography5-900.jpg 900w,
+  /img/projects/vans-lumber-photography/vans-photography5-1200.jpg 1200w,
+  /img/projects/vans-lumber-photography/vans-photography5-1800.jpg 1800w,
+  /img/projects/vans-lumber-photography/vans-photography5-2400.jpg 2400w" />
+  
+  <img class="half last" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/vans-lumber-photography/vans-photography6.jpg" src="/img/projects/vans-lumber-photography/vans-photography6.jpg"
+  alt="Vans Photography"
+  srcset="/img/projects/vans-lumber-photography/vans-photography6-400.jpg 400w,
+  /img/projects/vans-lumber-photography/vans-photography6-600.jpg 600w,
+  /img/projects/vans-lumber-photography/vans-photography6-900.jpg 900w,
+  /img/projects/vans-lumber-photography/vans-photography6-1200.jpg 1200w,
+  /img/projects/vans-lumber-photography/vans-photography6-1800.jpg 1800w,
+  /img/projects/vans-lumber-photography/vans-photography6-2400.jpg 2400w" />
+  
+  <img class="third first" data-aos="fade-up" data-featherlight="/img/projects/vans-lumber-photography/vans-photography7.jpg" src="/img/projects/vans-lumber-photography/vans-photography7.jpg"
+  alt="Vans Photography"
+  srcset="/img/projects/vans-lumber-photography/vans-photography7-400.jpg 400w,
+  /img/projects/vans-lumber-photography/vans-photography7-600.jpg 600w,
+  /img/projects/vans-lumber-photography/vans-photography7-900.jpg 900w,
+  /img/projects/vans-lumber-photography/vans-photography7-1200.jpg 1200w,
+  /img/projects/vans-lumber-photography/vans-photography7-1800.jpg 1800w,
+  /img/projects/vans-lumber-photography/vans-photography7-2400.jpg 2400w" />
+  
+  <img class="third" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/vans-lumber-photography/vans-photography8.jpg" src="/img/projects/vans-lumber-photography/vans-photography8.jpg"
+  alt="Vans Photography"
+  srcset="/img/projects/vans-lumber-photography/vans-photography8-400.jpg 400w,
+  /img/projects/vans-lumber-photography/vans-photography8-600.jpg 600w,
+  /img/projects/vans-lumber-photography/vans-photography8-900.jpg 900w,
+  /img/projects/vans-lumber-photography/vans-photography8-1200.jpg 1200w,
+  /img/projects/vans-lumber-photography/vans-photography8-1800.jpg 1800w,
+  /img/projects/vans-lumber-photography/vans-photography8-2400.jpg 2400w" />
+  
+  <img class="third last" data-aos="fade-up" data-aos-delay="400" data-featherlight="/img/projects/vans-lumber-photography/vans-photography9.jpg" src="/img/projects/vans-lumber-photography/vans-photography9.jpg"
+  alt="Vans Photography"
+  srcset="/img/projects/vans-lumber-photography/vans-photography9-400.jpg 400w,
+  /img/projects/vans-lumber-photography/vans-photography9-600.jpg 600w,
+  /img/projects/vans-lumber-photography/vans-photography9-900.jpg 900w,
+  /img/projects/vans-lumber-photography/vans-photography9-1200.jpg 1200w,
+  /img/projects/vans-lumber-photography/vans-photography9-1800.jpg 1800w,
+  /img/projects/vans-lumber-photography/vans-photography9-2400.jpg 2400w" />
+  
+  
+  <img class="full" data-aos="fade-up" data-featherlight="/img/projects/vans-lumber-photography/vans-photography10.jpg" src="/img/projects/vans-lumber-photography/vans-photography10.jpg"
+  alt="Vans Photography"
+  srcset="/img/projects/vans-lumber-photography/vans-photography10-400.jpg 400w,
+  /img/projects/vans-lumber-photography/vans-photography10-600.jpg 600w,
+  /img/projects/vans-lumber-photography/vans-photography10-900.jpg 900w,
+  /img/projects/vans-lumber-photography/vans-photography10-1200.jpg 1200w,
+  /img/projects/vans-lumber-photography/vans-photography10-1800.jpg 1800w,
+  /img/projects/vans-lumber-photography/vans-photography10-2400.jpg 2400w" />
+
+</div>
+```
+
+##### Long Vertical Image (typically website)
+
+When you have a very tall image that will need some scrolling and you don't want it to be cropped, place it in a `<div class="fill-back">` element. This will place the image in a padded element with a light gray background. It helps it stick out from the rest of the page and look cleaner rather than just having it on the plain white background.
+
+```html
+<div class="images">
+  <div class="fill-back">
+    <img data-aos="fade-up" data-featherlight="/img/projects/sas-forks-website/sas-forks-website-2.jpg"
+    alt="SAS Forks Website" src="/img/projects/sas-forks-website/sas-forks-website-2.jpg"
+    srcset="/img/projects/sas-forks-website/sas-forks-website-2-400.jpg 400w,
+    /img/projects/sas-forks-website/sas-forks-website-2-600.jpg 600w,
+    /img/projects/sas-forks-website/sas-forks-website-2-900.jpg 900w,
+    /img/projects/sas-forks-website/sas-forks-website-2-1200.jpg 1200w,
+    /img/projects/sas-forks-website/sas-forks-website-2-1800.jpg 1800w,
+    /img/projects/sas-forks-website/sas-forks-website-2-2400.jpg 2400w" />
+  </div>
+</div>
+
 ```
