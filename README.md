@@ -146,12 +146,19 @@ tags:
 ```
 
 **Title:** The title of the project, duh!
+
 **Client:** The client the work was done for.
+
 **Description:** One ore two short sentences introducing the project. This is the text that is directly under the cover image for the project and above the body text.
+
 **Cover-image:** Sets the featured image for the blog post.
+
 **Cover-text-color:** The header text color for the project. This displays over the thumbnails that link to the project and over the cover image. Try to keep this white as often as possible.
+
 **Back-color1:** The first color in the background gradient for the project. The background gradient is shown over the cover image and when you hover over the thumbnails linking to the project. Try to keep the gradient colors relevant to the project.
+
 **Back-color2:** Second color in the background gradient.
+
 **Tags:** The list of categories the project falls under. List any that are relevant to the project, these include:
 - Case Studies
 - Identity
