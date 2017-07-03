@@ -1,0 +1,351 @@
+.play {
+    margin-top: 30px;
+
+    margin-bottom: $mobile-spacing;
+
+    h1 {
+        color: #fff;
+        text-align: center;
+        letter-spacing: 0.2em;
+        font-weight: 300;
+    }
+
+    h2 {
+        color: #fff;
+        font-weight: 200;
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+
+    .one-third {
+        @include span-columns(4);
+        height: 300px;
+        background: $light-gray;
+        margin-bottom: 2%;
+        overflow: hidden;
+        position: relative;
+        @include media($tablet) {
+            height: 400px;
+        }
+        @include media($desktop) {
+            margin-right: 1%;
+            margin-left: 1%;
+            width: calc(94% / 3 - 1px);
+            height: 300px;
+        }
+        @include media($desktop-large) {
+            height: 400px;
+        }
+        @include media($desktop-largest) {
+            height: 500px;
+        }
+        @include media($desktop-super) {}
+    }
+
+    .two-thirds {
+        @include span-columns(4);
+        height: 300px;
+        background: $light-gray;
+        margin-bottom: 2%;
+        overflow: hidden;
+        position: relative;
+        @include media($tablet) {
+            height: 400px;
+        }
+        @include media($desktop) {
+            margin-right: 1%;
+            margin-left: 1%;
+            width: calc(194% / 3);
+            height: 300px;
+        }
+        @include media($desktop-large) {
+            height: 400px;
+        }
+        @include media($desktop-largest) {
+            height: 500px;
+        }
+        @include media($desktop-super) {}
+    }
+
+    .full {
+        @include span-columns(4);
+        height: 300px;
+        background: $light-gray;
+        margin-bottom: 2%;
+        overflow: hidden;
+        position: relative;
+        @include media($tablet) {
+            height: 400px;
+        }
+        @include media($desktop) {
+            margin-right: 1%;
+            margin-left: 1%;
+            width: 98%;
+            height: 500px;
+        }
+        @include media($desktop-large) {
+            height: 600px;
+        }
+        @include media($desktop-largest) {
+            height: 700px;
+        }
+        @include media($desktop-super) {}
+    }
+
+    .quote {
+        display: table;
+        width: 101%;
+        height: 100%;
+        position: relative;
+        background: $brand-color;
+
+        table,
+        td,
+        th {
+            border: 0;
+        }
+
+        .quote-center {
+            display: table-cell;
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+            padding: 2em;
+            background: $brand-color;
+            transition: all 0.7s;
+
+            span.icon {
+                position: absolute;
+                top: 2em;
+                right: 2em;
+                z-index: 2;
+
+                h2 {
+                    transition: all 0.7s;
+                    color: #fff;
+                    margin: 0;
+                }
+            }
+
+            &:hover {
+                background: #fff;
+
+                span.icon {
+                    h2 {
+                        color: $brand-color;
+                    }
+                }
+                h2, h3 {
+                  color: $dark-gray;
+                }
+            }
+
+            h2,
+            h3 {
+              transition: all 0.7s;
+                text-align: left;
+                margin: 0;
+                width: 100%;
+                color: #fff;
+            }
+
+            h2 {
+                margin-bottom: 1em;
+                @include media($desktop) {
+                    font-size: 1.2em;
+                }
+                @include media($desktop-large) {
+                    font-size: 1.5em;
+                }
+                @include media($desktop-largest) {
+                    font-size: 2em;
+                }
+            }
+
+            h3 {
+                @include media($desktop) {
+                    font-size: 1em;
+                }
+                @include media($desktop-large) {
+                    font-size: 1.2em;
+                }
+                @include media($desktop-largest) {
+                    font-size: 1.5em;
+                }
+            }
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: all 3s;
+    }
+
+    img:hover {
+        transform: scale(1.2);
+    }
+
+    .article {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 2em;
+        background: #fff;
+        border: 2px solid $brand-color;
+        transition: all 0.7s;
+
+        &:hover {
+            border: 10px solid $brand-color;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        span {
+            position: relative;
+            display: block;
+            color: $brand-color;
+
+            &.icon {
+                position: absolute;
+                top: 2em;
+                right: 2em;
+
+                h2 {
+                    color: $brand-color;
+                    margin: 0;
+                }
+            }
+        }
+
+        .article-info {
+            position: absolute;
+            display: block;
+            padding-right: 4em;
+            bottom: 4em;
+            left: 2em;
+            width: 100%;
+
+            h2,
+            h3 {
+              color: $dark-gray;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                position: relative;
+            }
+
+            h2 {
+                margin-bottom: 0.2em;
+            }
+        }
+    }
+
+    .play-image-wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 0;
+
+        img {
+            position: relative;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    svg {
+      @include span-columns(4);
+      fill:#fff;
+      fill-opacity: 0;
+      stroke: #fff;
+      stroke-width:2;
+      stroke-dasharray: 30em;
+      stroke-dashoffset: 30em;
+      stroke-miterlimit: 10;
+      height:100px;
+      margin-bottom:1em;
+
+      @include media($desktop) {
+          height:200px;
+      }
+      @include media($desktop-largest) {
+          height:300px;
+      }
+    }
+    .svg-on {
+      fill-opacity: 0;
+      stroke: #fff;
+      stroke-width:8;
+      stroke-linejoin: round;
+      stroke-dasharray: 1000px;
+      stroke-dashoffset: 1000px;
+      stroke-miterlimit: 5;
+      animation-name: draw;
+      animation-duration: 2s;
+      animation-fill-mode: forwards; // Stay on the last frame
+      animation-iteration-count: 1; // Run only once
+      animation-timing-function: linear;
+    }
+    @keyframes draw {
+      0% {
+
+      }
+      80%{
+        stroke-dashoffset: 0;
+        fill-opacity: 0;
+      }
+      100%{
+        stroke-dashoffset: 0;
+        fill-opacity: 1;
+      }
+    }
+}
+
+.play-design {
+  margin: $mobile-spacing 0;
+  @include span-columns(4);
+
+  h1, h2 {
+    color:#fff;
+  }
+
+  .back-work {
+    @include span-columns(4);
+    position: relative;
+    height:150px;
+    display:table;
+    margin-top: $mobile-spacing;
+
+    a{
+      display:table-cell;
+      text-align: center;
+      vertical-align: middle;
+      height:100%;
+      float:none;
+      color:$dark-gray;
+      background:#fff;
+      transition: all .5s;
+      text-decoration: none;
+
+      h2{
+        color:$dark-gray;
+        text-align: center;
+      }
+
+      &:hover {
+        background:$brand-color;
+
+        h2 {
+          color:#fff;
+        }
+      }
+    }
+  }
+}

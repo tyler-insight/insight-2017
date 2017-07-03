@@ -1,4 +1,5 @@
-.home-slider, .testimonial-slider {
+.home-slider,
+.testimonial-slider {
     position: relative;
     z-index: 2;
     width: 100%;
@@ -11,8 +12,8 @@
         position: relative;
         overflow: hidden;
         height: 70vh;
-        @include media($desktop-largest){
-          height:80vh;
+        @include media($desktop-largest) {
+            height: 80vh;
         }
 
         li {
@@ -66,23 +67,21 @@
                 bottom: 0;
                 padding: 1em;
                 background: rgba(255,255,255,.5);
-                @include transform(translateX(-50%));
-                @include media($desktop-large) {
-                    @include transform(translateX(0));
-                    background: none;
-                }
             }
         }
 
         .cd-img-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
             z-index: 1;
 
             img {
-                height: auto;
-                width: auto;
+                min-width: 100%;
+                min-height: 100%;
                 object-fit: cover;
-                position: absolute;
-                @include center;
+                object-position: center;
             }
         }
 
@@ -91,7 +90,6 @@
             margin: 0;
             padding: 0;
             text-align: left;
-            text-shadow: 0px 0px .3em rgba(0,0,0,.2);
             @include media($desktop-large) {
                  @include span-columns(12);
                 @include shift(0);
@@ -104,6 +102,7 @@
 
         h3 {
             font-weight: 400;
+            margin-top: 0.1em;
 
             strong {
                 font-weight: 600;
@@ -111,46 +110,46 @@
         }
         @include media($desktop) {
             h2 {
-                font-size: 1.4em;
+                font-size: 2.8em;
             }
 
             h3 {
-                font-size: 1.1em;
+                font-size: 1.6em;
             }
         }
         @include media($desktop-largest) {
             h2 {
-                font-size: 1.8em;
+                font-size: 3.5em;
             }
 
             h3 {
-                font-size: 1.4em;
+                font-size: 2em;
             }
         }
         @include media($desktop-super) {
             h2 {
-                font-size: 8em;
-                margin-bottom:.1em;
+                font-size: 5em;
             }
 
             h3 {
-                font-size: 4em;
+                font-size: 2.5em;
             }
         }
     }
-    .progress-bar{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height:4px;
-      width:0;
-      z-index:5;
-      background:$dark-gray;
-      opacity:.3;
-      display: inline-block;
-    }
-    .cd-hero-slider {
 
+    .progress-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        width: 0;
+        z-index: 5;
+        background: $dark-gray;
+        opacity: 0.3;
+        display: inline-block;
+    }
+
+    .cd-hero-slider {
         .cd-half-width {
             opacity: 0;
             @include transform(translateX(-40px));
@@ -227,8 +226,6 @@
         }
     }
 }
-
-
 
 .mission-statement {
     margin: $spacing 0;
@@ -328,111 +325,215 @@
     }
 }
 //From the Blog section ------------------------
-.home{
-  .blogs{
-    margin-bottom:0;
-  }
+
+.home {
+    .blogs {
+        margin-bottom: $mobile-spacing;
+    }
 }
 
 .testimonials {
-  overflow: hidden;
-  @include span-columns(4);
+    overflow: hidden;
+    @include span-columns(4);
 }
 
 .testimonials ul {
-  list-style: none;
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding: 0;
+    list-style: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
 }
 
 .testimonials ul li {
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  width: 100%;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 100%;
 }
 
 .testimonials ul li p {
-  color:#fff;
-  margin-bottom: 20px;
-  text-align: center;
-  font-style: italic;
-  margin-bottom:2em;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 2em;
 }
 
 .testimonials-control {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .testimonials-control i {
-  margin-top:1em;
-  cursor: pointer;
-  padding:0 .5em;
-  color:$brand-color;
-
-  @include media($desktop-large) {
-      font-size:3em;
-      padding:0 .75em;
-  }
+    margin-top: 1em;
+    cursor: pointer;
+    padding: 0 0.5em;
+    color: $brand-color;
+    @include media($desktop-large) {
+        font-size: 3em;
+        padding: 0 0.75em;
+    }
 }
 
 .testimonial {
-    padding:4em 1em;
+    padding: 4em 1em;
     margin-bottom: $mobile-spacing;
-    background:$dark-gray;
+    background: $dark-gray;
     @include span-columns(4);
 
-    &:hover{
-
-    }
+    &:hover {}
 
     h1 {
         margin-bottom: 1em;
         text-align: center;
-        color:#fff;
+        color: #fff;
     }
 
     h2 {
         text-align: center;
-        color:#fff;
-        margin-bottom:.2em;
+        color: #fff;
+        margin-bottom: 0.2em;
         @include media($desktop-large) {
              @include span-columns(12);
             @include shift(0);
         }
 
-        i{
-          display:inline-block;
-          color:$brand-color;
-          margin-bottom:.5em;
-          @include animation(bounce 1s ease-out infinite alternate);
+        i {
+            display: inline-block;
+            color: $brand-color;
+            margin-bottom: 0.5em;
+            @include animation(bounce 1s ease-out infinite alternate);
         }
     }
 
     h3 {
         text-align: center;
-        color:$medium-gray;
+        color: $medium-gray;
         font-weight: 400;
         @include media($desktop-large) {
              @include span-columns(12);
             @include shift(0);
         }
     }
+
     p {
-      color:#fff;
-      margin-bottom: 20px;
-      text-align: center;
-      font-style: italic;
-      margin-bottom:2em;
+        color: #fff;
+        margin-bottom: 20px;
+        text-align: center;
+        font-style: italic;
+        margin-bottom: 2em;
     }
 }
 
+.recent-projects {
+    @include span-columns(4);
+    margin-bottom: $mobile-spacing;
 
+    .back-work {
+        a {
+            background: $brand-color;
+
+            &:hover {
+                background: $dark-gray;
+
+                h2 {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    #container {
+        h1 {
+            text-align: center;
+        }
+
+        .project {
+            display: inline-block;
+        }
+    }
+}
 @include keyframes (bounce) {
-  0%{@include transform(translateY(0px));}
-  100% {@include transform(translateY(-50%));}
+    0% {
+        @include transform(translateY(0px));
+    }
+
+    100% {
+        @include transform(translateY(-50%));
+    }
+}
+/* ----------------------------------------------------
+
+    EXPERIMENTAL STYLING FOR ALTERNATE HOME PAGE
+
+-----------------------------------------------------*/
+.hero {
+  @include span-columns(4);
+  overflow: hidden;
+  height: 70vh;
+  animation: insight-out .1s 10s 1 forwards;
+  z-index: 100;
+  @include media($desktop-largest) {
+      height: 80vh;
+  }
+}
+.hero-video-container {
+    width:100%;
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+    z-index: 100;
+    text-align: center;
+
+    @include media($desktop-largest) {
+        height: 80vh;
+    }
+
+    .hero-video {
+        position: absolute;
+        top:-10%;
+        transform: translatex(-50%);
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    .text-overlay {
+        width: 50%;
+        left: 25%;
+        position: absolute;
+        z-index: 2;
+        background: #fff;
+        padding: 5em;
+        @include center;
+        animation: insight-intro 1s 7s 1 forwards;
+        opacity: 0;
+
+        h1 {
+            text-align: center;
+            margin: 0;
+            width: 100%;
+        }
+    }
+}
+@-webkit-keyframes insight-intro {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes insight-out {
+    from {
+        height: auto;
+        opacity:1;
+    }
+
+    to {
+        height:0;
+        opacity:0;
+    }
 }

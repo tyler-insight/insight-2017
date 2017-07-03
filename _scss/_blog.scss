@@ -82,14 +82,13 @@
     .secondary-blogs {
         @include span-columns(4);
 
-
         .blog-left,
         .blog-right {
             @include span-columns(4);
             position: relative;
             height: auto;
             overflow: hidden;
-
+            margin-top:1em;
 
             .blog-info {
                 height: auto;

@@ -1,19 +1,42 @@
 ---
 layout: default
-title: Insight Creative, Inc
+title: Insight Creative, Inc.
 description: An advertising agency with a vision to bring complete strategic development and creative execution capabilities into one roll-up-your-sleeves, hard-working kind of ad agency.
 ---
-<span id="homepage-flag" style="display: none" /></span>
+
 <div class="wrapper">
+  <span id="homepage-flag" style="display: none" /></span>
   <div class="home">
     <div class="home-slider" data-aos="fade-up">
       <div class="progress-bar">
       </div>
       <ul class="cd-hero-slider autoplay">
         <li class="selected">
+          <a href="/work/river-valley-bank-50th-anniversary.html">
+            <div class="cd-full-width">
+              <div class="text" style="background: rgba(0,161,70,.5);">
+                <h2 style="color:#fff">50th Anniversary Branding</h2>
+                <h3 style="color:#fff">for <strong>River Valley Bank</strong></h3>
+              </div>
+            </div>
+            <div class="cd-full-width cd-img-container">
+              <!--
+              <img src="/img/logo-slider/logo-slider-2.png" alt="Photography for Vans Lumber" srcset="/img/logo-slider/logo-slider-2-900.png 400w,
+                            /img/logo-slider/logo-slider-2-1200.png 600w,
+                            /img/logo-slider/logo-slider-2-1800.png 900w,
+                            /img/logo-slider/logo-slider-2-2400.png 1200w" />
+                          -->
+              <img src="/img/logo-slider/rvb-50th-feature.jpg" alt="River Valley Bank 50th Anniversary Branding" srcset="/img/logo-slider/rvb-50th-feature-900.jpg 400w,
+                            /img/logo-slider/rvb-50th-feature-1200.jpg 600w,
+                            /img/logo-slider/rvb-50th-feature-1800.jpg 900w,
+                            /img/logo-slider/rvb-50th-feature-2400.jpg 1200w" />
+            </div>
+          </a>
+        </li>
+        <li>
           <a href="/work/vans-lumber-photography.html">
             <div class="cd-full-width">
-              <div class="text" style="color:#fff">
+              <div class="text" style="background: rgba(72,72,72,.5);">
                 <h2 style="color:#fff">Photography</h2>
                 <h3 style="color:#fff">for <strong>Vans Lumber</strong></h3>
               </div>
@@ -36,9 +59,9 @@ description: An advertising agency with a vision to bring complete strategic dev
         <li>
           <a href="/work/door-penninsula-wine-labels.html">
             <div class="cd-full-width">
-              <div class="text">
-                <h2>Wine Labels</h2>
-                <h3>for <strong>Door Peninsula Winery</strong></h3>
+              <div class="text" style="background: rgba(226,118,112,.5);">
+                <h2 style="color:#fff">Wine Labels</h2>
+                <h3 style="color:#fff">for <strong>Door Peninsula Winery</strong></h3>
               </div>
             </div>
             <div class="cd-full-width cd-img-container">
@@ -62,23 +85,6 @@ description: An advertising agency with a vision to bring complete strategic dev
     </div>
     <div class="description-statement" data-aos="fade-up">
       <h2>Insight Creative is a <a href="/services">full service agency</a>. We offer a complete range of services to help you reach your goals from big picture strategy to fine details of copywriting, design, photography, web development, social media and media buying.</h2>
-    </div>
-
-    <div class="blogs">
-      <h1 data-aos="fade-up" style="text-align:center;">From the Blog</h1>
-      <div class="secondary-blogs">
-        {% for post in site.categories.blog limit:1 %} {% assign loopindex = forloop.index | modulo: 2 %}
-        <a href="{{ post.url }}">
-          <div class="blog-right" data-aos="fade-up" style="background-color:#{{ post.back-color }}">
-            <div class="blog-thumbnail" style="background-image:url('/img/blog/{{ post.cover-image }}')"></div>
-            <div class="blog-info">
-              <h2 data-aos="fade-up" data-aos-anchor=".blog-right" data-aos-delay="400" style="color:#{{ post.text-color }}">{{ post.title }}</h2>
-              <h3 data-aos="fade-up" data-aos-anchor=".blog-right" data-aos-delay="800" style="color:#{{ post.text-color }}">by <strong>{{ post.author }}</strong></h3>
-            </div>
-          </div>
-        </a>
-        {% endfor %}
-      </div>
     </div>
 
     <div class="testimonial" data-aos="fade-up">
@@ -126,20 +132,22 @@ description: An advertising agency with a vision to bring complete strategic dev
       </div>
     </div>
 
-<!-- OLD TESTIMONIAL
-    <div class="testimonial" data-aos="fade-up">
-      <h1 data-aos="fade-up" data-aos-anchor=".testimonial" data-aos-delay="400">Words from a Client</h1>
-      <h2 data-aos="fade-up" data-aos-anchor=".testimonial" data-aos-delay="600"><i class="fa fa-quote-left" aria-hidden="true"></i></h2>
-      <div class="quote" data-aos-anchor=".testimonial" data-aos="fade-up" data-aos-delay="800">
-        <p>
-          Insight Creative and its team have distinguished themselves by spotting technology trends and thoughtfully assessing whether new channels are a strategic fit for our health care organization. They do a ton of homework. I’ve been consistently pleased by
-          their level of preparedness, which has included an impressive ability to impart knowledge as well as anticipate questions.
-        </p>
+    <div class="blogs">
+      <h1 data-aos="fade-up" style="text-align:center;">From the Blog</h1>
+      <div class="secondary-blogs">
+        {% for post in site.categories.blog limit:1 %} {% assign loopindex = forloop.index | modulo: 2 %}
+        <a href="{{ post.url }}">
+          <div class="blog-right" data-aos="fade-up" style="background-color:#{{ post.back-color }}">
+            <div class="blog-thumbnail" style="background-image:url('/img/blog/{{ post.cover-image }}')"></div>
+            <div class="blog-info">
+              <h2 data-aos="fade-up" data-aos-anchor=".blog-right" data-aos-delay="400" style="color:#{{ post.text-color }}">{{ post.title }}</h2>
+              <h3 data-aos="fade-up" data-aos-anchor=".blog-right" data-aos-delay="800" style="color:#{{ post.text-color }}">by <strong>{{ post.author }}</strong></h3>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
       </div>
-      <h2 id="name" data-aos="fade-up" data-aos-anchor=".testimonial" data-aos-delay="1200">Tim Huffcut</h2>
-      <h3 data-aos="fade-up" data-aos-anchor=".testimonial" data-aos-delay="1600">Ministry Health System</h3>
     </div>
--->
 
   </div>
 </div>

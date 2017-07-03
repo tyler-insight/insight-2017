@@ -92,7 +92,7 @@ $(function() {
         return false;
       });
       load(url);
-      if (url == '/') {
+      if (url === '/') {
         document.title = "Insight Creative, Inc.";
       } else {
         document.title = title + " - Insight Creative, Inc.";
@@ -123,6 +123,7 @@ $(function() {
       });
     }
 
+    //Run mixitup and filters if on work page
     if (page.indexOf("work") >= 0) {
       // Instantiate MixItUp:
       $('#container').mixItUp({
@@ -134,6 +135,7 @@ $(function() {
           animateResizeContainer: false
         }
       });
+
     }
 
 
@@ -143,6 +145,7 @@ $(function() {
   $(window).on('popstate', function(e) {
     var state = e.originalEvent.state;
     if (state !== null) {
+      $('#container').mixItUp('destroy');
       document.title = state.title;
       load(state.url);
     } else {
@@ -1301,15 +1304,6 @@ $(function() {
           } else {
             panel.style.maxHeight = panel.scrollHeight + "px";
           }
-          var self = this;
-          theOffset = $(self).offset(),
-            theHeight = $(self).height() + 10;
-          setTimeout(function() {
-            theOffset = $(self).offset();
-            $('body,html').animate({
-              scrollTop: theOffset.top - theHeight
-            }, 800, 'swing');
-          }, 100); // ensure the collapse animation is done
         };
       }
     }

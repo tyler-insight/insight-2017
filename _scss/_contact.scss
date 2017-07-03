@@ -309,25 +309,167 @@
         font-size: 1.5em;
     }
 
-    .btn {
-        width: 100%;
-        padding: 1em 3em;
 
-        color: #fff;
-        border: none;
-        background: $dark-gray;
+}
+.btn {
+    width: 100%;
+    padding: 1em 3em;
+    display: block;
+    color: #fff;
+    border: none;
+    background: $dark-gray;
+    font-family: "futura-pt", sans-serif;
+    font-size: 1.3em;
+    @include transition(all .5s);
+    cursor: pointer;
 
-        font-family: "futura-pt", sans-serif;
-        font-size: 1.3em;
-        @include transition(all .5s);
+    @include media($desktop){
+      width:250px;
+      font-size: 1.4em;
+    }
+}
+.btn:hover{
+  background:$brand-color;
+  @include transition(all .5s);
+}
 
-        @include media($desktop){
-          width:250px;
-          font-size: 1.4em;
+.careers {
+    @include span-columns(4);
+    margin-bottom: $mobile-spacing;
+
+    h3 {
+      font-weight: normal;
+      margin-bottom:1em;
+    }
+
+    ul.positions {
+        li {
+          padding:1em 0;
+          @include transition(border-color .5s);
+            @include span-columns(4);
+            @include omega;
+            @include media($desktop-large) {
+                 @include span-columns(10);
+                @include shift(1);
+            }
+            @include media($desktop-largest) {
+                 @include span-columns(8);
+                @include shift(2);
+            }
+            border-top: 2px solid $dark-gray;
+
+            &:last-child{
+              border-bottom: 2px solid $dark-gray;
+            }
+        }
+        li:hover,
+        li:focus,
+        li:hover + li{
+          border-color:$dark-gray;
+          @include transition(border-color .5s);
+        }
+        li:hover + li:last-child{
+          border-top-color:$dark-gray;
+          border-bottom-color:$dark-gray;
+          @include transition(border-color .5s);
         }
     }
-    .btn:hover{
-      background:$brand-color;
-      @include transition(all .5s);
+
+    .position {
+        @include span-columns(4);
+        position: relative;
+
+        h2 {
+            text-align: left;
+            margin-bottom: 0;
+            padding: 0;
+            cursor: pointer;
+            color: $dark-gray;
+            font-weight: normal;
+            @include transition(color .5s);
+            @include media($desktop-large) {
+                 @include span-columns(12);
+                @include shift(0);
+            }
+            @include media($desktop-largest) {
+                 @include span-columns(12);
+                @include shift(0);
+            }
+            span{
+              position: absolute;
+              height: 100%;
+              right:.2em;
+              top:40%;
+              @include transform(translateY(-50%));
+            }
+
+            i {
+                position: relative;
+                font-size: 0.5em;
+                @include transition(transform .5s);
+            }
+        }
+
+        h2:hover {
+            color: $brand-color;
+            @include transition(color .5s);
+        }
+    }
+
+    .active {
+        h2,
+        h2:hover {
+            color: $brand-color;
+        }
+
+        i {
+            transform-origin: center center;
+            @include transform(rotate(45deg));
+            @include transition(transform .5s);
+        }
+    }
+
+    .position-description {
+        @include span-columns(4);
+        @include transition(all .5s);
+        max-height: 0;
+        overflow: hidden;
+
+        p {
+            margin-top:1em;
+            margin-bottom: 2em;
+            @include transition(color .5s);
+            @include media($desktop-large) {
+                 @include span-columns(12);
+                @include shift(0);
+            }
+            @include media($desktop-largest) {
+                 @include span-columns(12);
+                @include shift(0);
+            }
+        }
+        ul.position-list {
+          @include span-columns(4);
+          list-style-type: disc !important;
+          margin-bottom: 3em;
+
+          li {
+            border:none;
+            margin:0;
+            padding:0;
+            display: list-item;
+            margin-left: 1em;
+            line-height: 2em;
+
+            &:last-child {
+              border:none;
+            }
+
+            p {
+              margin:0;
+              padding:0;
+            }
+          }
+        }
     }
 }

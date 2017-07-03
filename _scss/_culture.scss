@@ -735,6 +735,7 @@
 
         h1 {
             color: $brand-color;
+            background: none;
         }
 
         h2 {
@@ -766,7 +767,7 @@
         @include radial-gradient(#f4f3b1, #f4b15b);
 
         h1 {
-            color: #ff3d3d;
+            color: #7f51ad;
         }
 
         h2 {

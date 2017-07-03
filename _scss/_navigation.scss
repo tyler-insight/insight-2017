@@ -333,6 +333,10 @@
             padding-top: 6em;
             position: absolute;
 
+            span {
+              display: none;
+            }
+
             a {
                 /* target primary-nav links */
                 display: inline-block;
@@ -379,6 +383,19 @@
                     &:last-of-type {
                         margin-right: 0;
                     }
+                }
+
+                span {
+                  display:block;
+                  line-height: .75em;
+                  padding:23px 0;
+                  font-size:.6em;
+                  color:$brand-color;
+
+                  @include media($desktop-largest) {
+                    padding:22px 0;
+                      font-size: .8em;
+                  }
                 }
 
                 a {
