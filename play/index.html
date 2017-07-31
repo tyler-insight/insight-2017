@@ -44,15 +44,18 @@ title: Play
 
     <h2 data-aos="fade-up" data-aos-delay="1500">A collection of our thoughts, inspiration, and experiments.</h2>
     {% for post in site.categories.play %}
-    <div class="{{ post.size }}" data-aos="fade-up">
+    <div  class="{{ post.size }}" data-aos="fade-up">
       {% if post.type == 'design' %}
+
       <a href="{{ post.url }}">
+
           <img src="/img/play/{{ post.cover-image }}.jpg" alt="{{ post.title }}" srcset="/img/play/{{ post.cover-image }}-400.jpg 400w,
           /img/play/{{ post.cover-image }}-600.jpg 600w,
           /img/play/{{ post.cover-image }}-900.jpg 900w,
           /img/play/{{ post.cover-image }}-1200.jpg 1200w,
           /img/play/{{ post.cover-image }}-1800.jpg 1800w,
           /img/play/{{ post.cover-image }}-2400.jpg 2400w" />
+
       </a>
       {% elsif post.type == 'quote' %}
       <div class="quote">
@@ -80,6 +83,5 @@ title: Play
     </div>
     {% endfor %}
   </div>
-
 
 </div>

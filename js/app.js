@@ -146,7 +146,7 @@ $(function() {
     var state = e.originalEvent.state;
     if (state !== null) {
       $('#container').mixItUp('destroy');
-      document.title = state.title;
+      document.title = state.title + " - Insight Creative, Inc.";
       load(state.url);
     } else {
       document.title = title;

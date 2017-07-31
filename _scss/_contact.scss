@@ -6,21 +6,24 @@
     .banner {
         margin-bottom: $mobile-spacing;
         min-height:100px;
+        background: $brand-color;
+        padding:2em;
+
 
         @include media($tablet){
-          min-height:200px;
+
         }
 
         @include span-columns(4);
 
         h1 {
             margin-bottom: 0.1em;
-
             font-weight: 400;
         }
 
         h1,
         h2 {
+          color: #fff;
             @include media($desktop-large) {
                  @include span-columns(12);
                 @include shift(0);

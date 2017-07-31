@@ -1,17 +1,16 @@
 #video_container {
-  @include span-columns(4);
+    @include span-columns(4);
     max-width: 100%;
-    height:400px;
+    height: 400px;
     min-height: 400px;
     max-height: 100%;
     overflow: hidden;
     position: relative;
     z-index: 1;
     margin-bottom: $mobile-spacing;
-    background-image:url('/img/agency/first-frame.jpg');
-    background-size:cover;
+    background-image: url('/img/agency/first-frame.jpg');
+    background-size: cover;
     background-position: center;
-
 
     .text {
         position: absolute;
@@ -28,84 +27,87 @@
         vertical-align: middle;
         font-weight: 400;
         color: #fff;
-        float:none;
+        float: none;
 
         strong {
             font-weight: 600;
         }
     }
 }
+
 .agency-header {
-  height: 70vh;
-  overflow: hidden;
-  margin-bottom: $mobile-spacing;
-  position: relative;
-  background: url('/img/agency/agency-lobby-1800.jpg');
-  background-size:cover;
-  background-position: center center;
-
-  .text {
-      position: absolute;
-      z-index: 2;
-      text-align: center;
-      display: table;
-      height: 100%;
-      width: 100%;
-      text-shadow: 0 0 10px rgba(0,0,0,.7);
-
-      h1{
-        text-align: center;
-        display: table-cell;
-        vertical-align: middle;
-        color: #fff;
-        float:none;
-
-        @include media($tablet) {
-            text-shadow: 0 0 15px rgba(0,0,0,.7);
-            font-size: modular-scale(4);
-        }
-        @include media($desktop) {
-            font-size: modular-scale(6);
-        }
-        @include media($desktop-large) {
-          text-shadow: 0 0 25px rgba(0,0,0,.7);
-            font-size: modular-scale(7);
-        }
-        @include media($desktop-largest) {
-            font-size: modular-scale(8);
-        }
-      }
-  }
-
-}
-.agency {
-  @include span-columns(4);
+    height: 70vh;
+    overflow: hidden;
     margin-bottom: $mobile-spacing;
-    h1{
-      @include media($desktop-large) {
-           @include span-columns(10);
-          @include shift(1);
-      }
-      @include media($desktop-largest) {
-           @include span-columns(7);
-          @include shift(2);
-      }
-      @include media($desktop-super) {
-           @include span-columns(6);
-          @include shift(2);
-      }
+    position: relative;
+    background: url('/img/agency/agency-lobby-1800.jpg');
+    background-size: cover;
+    background-position: center center;
+
+    .text {
+        position: absolute;
+        z-index: 2;
+        text-align: center;
+        display: table;
+        height: 100%;
+        width: 100%;
+        text-shadow: 0 0 10px rgba(0,0,0,.7);
+
+        h1 {
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            color: #fff;
+            float: none;
+            @include media($tablet) {
+                text-shadow: 0 0 15px rgba(0,0,0,.7);
+                font-size: modular-scale(4);
+            }
+            @include media($desktop) {
+                font-size: modular-scale(6);
+            }
+            @include media($desktop-large) {
+                text-shadow: 0 0 25px rgba(0,0,0,.7);
+                font-size: modular-scale(7);
+            }
+            @include media($desktop-largest) {
+                font-size: modular-scale(8);
+            }
+        }
     }
 }
-.agency-lobby{
-  @include span-columns(4);
-  margin-bottom:$mobile-spacing;
+
+.agency {
+    @include span-columns(4);
+    margin-bottom: $mobile-spacing;
+
+    h1 {
+        @include media($desktop-large) {
+             @include span-columns(10);
+            @include shift(1);
+        }
+        @include media($desktop-largest) {
+             @include span-columns(7);
+            @include shift(2);
+        }
+        @include media($desktop-super) {
+             @include span-columns(6);
+            @include shift(2);
+        }
+    }
 }
+
+.agency-lobby {
+    @include span-columns(4);
+    margin-bottom: $mobile-spacing;
+}
+
 .clients {
     @include span-columns(4);
     margin-bottom: $mobile-spacing;
 
-    h1{
-      text-align: center;
+    h1 {
+        text-align: center;
     }
 
     .client {
@@ -130,5 +132,31 @@
     }
     @include media($desktop-largest) {
          @include span-columns(12);
+    }
+}
+
+.studio-pano {
+    position: relative;
+    transition: opacity 0.5s;
+    margin-bottom: $mobile-spacing;
+    @include span-columns(4);
+    max-height:80vh;
+    overflow: hidden;
+    .light {
+        position: absolute;
+    }
+
+    img.light {
+        z-index: 2;
+
+        &:hover {
+            opacity: 0;
+        }
+    }
+
+    &:hover {
+        .light {
+            opacity: 0;
+        }
     }
 }

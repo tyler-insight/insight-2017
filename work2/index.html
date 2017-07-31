@@ -1,0 +1,307 @@
+---
+layout: default
+title: Work
+---
+<div class="wrapper">
+    <div class="projects">
+
+        <div id="container" data-aos="fade-up" data-aos-delay="800">
+          <h1>Case Studies</h1>
+          {% for post in site.categories.work %}
+          {% for tag in post.tags %}
+          {% if tag contains 'Case Study' %}
+          <a href="{{ post.url }}">
+              <div class="mix project {% for tag in post.tags %}{{ tag | downcase | replace: " ", "-" }} {% endfor %}">
+                  <div class="project-info" style="background: -webkit-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -o-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -moz-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});">
+                      <div class="text">
+                          <h2 style="color:#{{ post.cover-text-color }}">{{ post.title }}</h2>
+                          <h3 style="color:#{{ post.cover-text-color }}">for <strong>{{ post.client }}</strong></h3>
+                      </div>
+                  </div>
+                  <div class="project-image-wrapper no-ie">
+                    <img src="/img/projects/{{ post.cover-image }}.jpg" alt="{{ post.title }}"
+                    srcset="/img/projects/{{ post.cover-image }}-400.jpg 400w,
+                    /img/projects/{{ post.cover-image }}-600.jpg 600w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 900w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1200w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1800w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 2400w" />
+                  </div>
+              </div>
+          </a>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+
+          <h1>Web / Digital</h1>
+          {% for post in site.categories.work %}
+          {% for tag in post.tags %}
+          {% if tag contains 'Web' %}
+          <a href="{{ post.url }}">
+              <div class="mix project {% for tag in post.tags %}{{ tag | downcase | replace: " ", "-" }} {% endfor %}">
+                  <div class="project-info" style="background: -webkit-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -o-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -moz-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});">
+                      <div class="text">
+                          <h2 style="color:#{{ post.cover-text-color }}">{{ post.title }}</h2>
+                          <h3 style="color:#{{ post.cover-text-color }}">for <strong>{{ post.client }}</strong></h3>
+                      </div>
+                  </div>
+                  <div class="project-image-wrapper no-ie">
+                    <img src="/img/projects/{{ post.cover-image }}.jpg" alt="{{ post.title }}"
+                    srcset="/img/projects/{{ post.cover-image }}-400.jpg 400w,
+                    /img/projects/{{ post.cover-image }}-600.jpg 600w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 900w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1200w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1800w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 2400w" />
+                  </div>
+              </div>
+          </a>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+
+          <h1>Media Buying</h1>
+          {% for post in site.categories.work %}
+          {% for tag in post.tags %}
+          {% if tag contains 'Media Buying' %}
+          <a href="{{ post.url }}">
+              <div class="mix project {% for tag in post.tags %}{{ tag | downcase | replace: " ", "-" }} {% endfor %}">
+                  <div class="project-info" style="background: -webkit-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -o-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -moz-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});">
+                      <div class="text">
+                          <h2 style="color:#{{ post.cover-text-color }}">{{ post.title }}</h2>
+                          <h3 style="color:#{{ post.cover-text-color }}">for <strong>{{ post.client }}</strong></h3>
+                      </div>
+                  </div>
+                  <div class="project-image-wrapper no-ie">
+                    <img src="/img/projects/{{ post.cover-image }}.jpg" alt="{{ post.title }}"
+                    srcset="/img/projects/{{ post.cover-image }}-400.jpg 400w,
+                    /img/projects/{{ post.cover-image }}-600.jpg 600w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 900w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1200w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1800w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 2400w" />
+                  </div>
+              </div>
+          </a>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+
+          <h1>Video</h1>
+          {% for post in site.categories.work %}
+          {% for tag in post.tags %}
+          {% if tag contains 'Video' %}
+          <a href="{{ post.url }}">
+              <div class="mix project {% for tag in post.tags %}{{ tag | downcase | replace: " ", "-" }} {% endfor %}">
+                  <div class="project-info" style="background: -webkit-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -o-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -moz-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});">
+                      <div class="text">
+                          <h2 style="color:#{{ post.cover-text-color }}">{{ post.title }}</h2>
+                          <h3 style="color:#{{ post.cover-text-color }}">for <strong>{{ post.client }}</strong></h3>
+                      </div>
+                  </div>
+                  <div class="project-image-wrapper no-ie">
+                    <img src="/img/projects/{{ post.cover-image }}.jpg" alt="{{ post.title }}"
+                    srcset="/img/projects/{{ post.cover-image }}-400.jpg 400w,
+                    /img/projects/{{ post.cover-image }}-600.jpg 600w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 900w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1200w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1800w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 2400w" />
+                  </div>
+              </div>
+          </a>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+
+          <h1>Social Media</h1>
+          {% for post in site.categories.work %}
+          {% for tag in post.tags %}
+          {% if tag contains 'Social Media' %}
+          <a href="{{ post.url }}">
+              <div class="mix project {% for tag in post.tags %}{{ tag | downcase | replace: " ", "-" }} {% endfor %}">
+                  <div class="project-info" style="background: -webkit-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -o-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -moz-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});">
+                      <div class="text">
+                          <h2 style="color:#{{ post.cover-text-color }}">{{ post.title }}</h2>
+                          <h3 style="color:#{{ post.cover-text-color }}">for <strong>{{ post.client }}</strong></h3>
+                      </div>
+                  </div>
+                  <div class="project-image-wrapper no-ie">
+                    <img src="/img/projects/{{ post.cover-image }}.jpg" alt="{{ post.title }}"
+                    srcset="/img/projects/{{ post.cover-image }}-400.jpg 400w,
+                    /img/projects/{{ post.cover-image }}-600.jpg 600w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 900w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1200w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1800w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 2400w" />
+                  </div>
+              </div>
+          </a>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+
+          <h1>Print</h1>
+          {% for post in site.categories.work %}
+          {% for tag in post.tags %}
+          {% if tag contains 'Print' %}
+          <a href="{{ post.url }}">
+              <div class="mix project {% for tag in post.tags %}{{ tag | downcase | replace: " ", "-" }} {% endfor %}">
+                  <div class="project-info" style="background: -webkit-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -o-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -moz-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});">
+                      <div class="text">
+                          <h2 style="color:#{{ post.cover-text-color }}">{{ post.title }}</h2>
+                          <h3 style="color:#{{ post.cover-text-color }}">for <strong>{{ post.client }}</strong></h3>
+                      </div>
+                  </div>
+                  <div class="project-image-wrapper no-ie">
+                    <img src="/img/projects/{{ post.cover-image }}.jpg" alt="{{ post.title }}"
+                    srcset="/img/projects/{{ post.cover-image }}-400.jpg 400w,
+                    /img/projects/{{ post.cover-image }}-600.jpg 600w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 900w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1200w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1800w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 2400w" />
+                  </div>
+              </div>
+          </a>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+
+          <h1>Identity</h1>
+          {% for post in site.categories.work %}
+          {% for tag in post.tags %}
+          {% if tag contains 'Identity' %}
+          <a href="{{ post.url }}">
+              <div class="mix project {% for tag in post.tags %}{{ tag | downcase | replace: " ", "-" }} {% endfor %}">
+                  <div class="project-info" style="background: -webkit-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -o-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -moz-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});">
+                      <div class="text">
+                          <h2 style="color:#{{ post.cover-text-color }}">{{ post.title }}</h2>
+                          <h3 style="color:#{{ post.cover-text-color }}">for <strong>{{ post.client }}</strong></h3>
+                      </div>
+                  </div>
+                  <div class="project-image-wrapper no-ie">
+                    <img src="/img/projects/{{ post.cover-image }}.jpg" alt="{{ post.title }}"
+                    srcset="/img/projects/{{ post.cover-image }}-400.jpg 400w,
+                    /img/projects/{{ post.cover-image }}-600.jpg 600w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 900w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1200w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1800w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 2400w" />
+                  </div>
+              </div>
+          </a>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+
+          <h1>Packaging</h1>
+          {% for post in site.categories.work %}
+          {% for tag in post.tags %}
+          {% if tag contains 'Packaging' %}
+          <a href="{{ post.url }}">
+              <div class="mix project {% for tag in post.tags %}{{ tag | downcase | replace: " ", "-" }} {% endfor %}">
+                  <div class="project-info" style="background: -webkit-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -o-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -moz-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});">
+                      <div class="text">
+                          <h2 style="color:#{{ post.cover-text-color }}">{{ post.title }}</h2>
+                          <h3 style="color:#{{ post.cover-text-color }}">for <strong>{{ post.client }}</strong></h3>
+                      </div>
+                  </div>
+                  <div class="project-image-wrapper no-ie">
+                    <img src="/img/projects/{{ post.cover-image }}.jpg" alt="{{ post.title }}"
+                    srcset="/img/projects/{{ post.cover-image }}-400.jpg 400w,
+                    /img/projects/{{ post.cover-image }}-600.jpg 600w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 900w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1200w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1800w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 2400w" />
+                  </div>
+              </div>
+          </a>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+
+          <h1>Outdoor</h1>
+          {% for post in site.categories.work %}
+          {% for tag in post.tags %}
+          {% if tag contains 'Outdoor' %}
+          <a href="{{ post.url }}">
+              <div class="mix project {% for tag in post.tags %}{{ tag | downcase | replace: " ", "-" }} {% endfor %}">
+                  <div class="project-info" style="background: -webkit-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -o-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: -moz-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+          background: linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});">
+                      <div class="text">
+                          <h2 style="color:#{{ post.cover-text-color }}">{{ post.title }}</h2>
+                          <h3 style="color:#{{ post.cover-text-color }}">for <strong>{{ post.client }}</strong></h3>
+                      </div>
+                  </div>
+                  <div class="project-image-wrapper no-ie">
+                    <img src="/img/projects/{{ post.cover-image }}.jpg" alt="{{ post.title }}"
+                    srcset="/img/projects/{{ post.cover-image }}-400.jpg 400w,
+                    /img/projects/{{ post.cover-image }}-600.jpg 600w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 900w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1200w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1800w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 2400w" />
+                  </div>
+              </div>
+          </a>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </div>
+        <!-- <div id="container" data-aos="fade-up" data-aos-delay="800">
+            {% for post in site.categories.work %} {% assign loopindex = forloop.index | modulo: 3 %}
+            <a href="{{ post.url }}">
+                <div class="mix project {% for tag in post.tags %}{{ tag | downcase | replace: " ", "-" }} {% endfor %}">
+                    <div class="project-info" style="background: -webkit-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+            background: -o-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+            background: -moz-linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});
+            background: linear-gradient(to bottom right, #{{ post.back-color1 }}, #{{ post.back-color2 }});">
+                        <div class="text">
+                            <h2 style="color:#{{ post.cover-text-color }}">{{ post.title }}</h2>
+                            <h3 style="color:#{{ post.cover-text-color }}">for <strong>{{ post.client }}</strong></h3>
+                        </div>
+                    </div>
+                    <div class="project-image-wrapper no-ie">
+                      <img src="/img/projects/{{ post.cover-image }}.jpg" alt="{{ post.title }}"
+                      srcset="/img/projects/{{ post.cover-image }}-400.jpg 400w,
+                      /img/projects/{{ post.cover-image }}-600.jpg 600w,
+                      /img/projects/{{ post.cover-image }}-900.jpg 900w,
+                      /img/projects/{{ post.cover-image }}-900.jpg 1200w,
+                      /img/projects/{{ post.cover-image }}-900.jpg 1800w,
+                      /img/projects/{{ post.cover-image }}-900.jpg 2400w" />
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div> -->
+    </div>
+
+</div>

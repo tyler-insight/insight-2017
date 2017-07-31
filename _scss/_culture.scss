@@ -446,6 +446,7 @@
 
 .snapshots {
     @include span-columns(4);
+    margin-bottom: $mobile-spacing;
 
     .snap-container{
       background-size:cover;

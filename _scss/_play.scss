@@ -1,6 +1,5 @@
 .play {
     margin-top: 30px;
-
     margin-bottom: $mobile-spacing;
 
     h1 {
@@ -135,14 +134,16 @@
                         color: $brand-color;
                     }
                 }
-                h2, h3 {
-                  color: $dark-gray;
+
+                h2,
+                h3 {
+                    color: $dark-gray;
                 }
             }
 
             h2,
             h3 {
-              transition: all 0.7s;
+                transition: all 0.7s;
                 text-align: left;
                 margin: 0;
                 width: 100%;
@@ -232,7 +233,7 @@
 
             h2,
             h3 {
-              color: $dark-gray;
+                color: $dark-gray;
                 text-align: left;
                 width: 100%;
                 margin: 0;
@@ -261,91 +262,104 @@
     }
 
     svg {
-      @include span-columns(4);
-      fill:#fff;
-      fill-opacity: 0;
-      stroke: #fff;
-      stroke-width:2;
-      stroke-dasharray: 30em;
-      stroke-dashoffset: 30em;
-      stroke-miterlimit: 10;
-      height:100px;
-      margin-bottom:1em;
-
-      @include media($desktop) {
-          height:200px;
-      }
-      @include media($desktop-largest) {
-          height:300px;
-      }
+        @include span-columns(4);
+        fill: #fff;
+        fill-opacity: 0;
+        stroke: #fff;
+        stroke-width: 2;
+        stroke-dasharray: 30em;
+        stroke-dashoffset: 30em;
+        stroke-miterlimit: 10;
+        height: 100px;
+        margin-bottom: 1em;
+        @include media($desktop) {
+            height: 200px;
+        }
+        @include media($desktop-largest) {
+            height: 300px;
+        }
     }
+
     .svg-on {
-      fill-opacity: 0;
-      stroke: #fff;
-      stroke-width:8;
-      stroke-linejoin: round;
-      stroke-dasharray: 1000px;
-      stroke-dashoffset: 1000px;
-      stroke-miterlimit: 5;
-      animation-name: draw;
-      animation-duration: 2s;
-      animation-fill-mode: forwards; // Stay on the last frame
-      animation-iteration-count: 1; // Run only once
-      animation-timing-function: linear;
+        fill-opacity: 0;
+        stroke: #fff;
+        stroke-width: 8;
+        stroke-linejoin: round;
+        stroke-dasharray: 1000px;
+        stroke-dashoffset: 1000px;
+        stroke-miterlimit: 5;
+        animation-name: draw;
+        animation-duration: 2s;
+        animation-fill-mode: forwards; // Stay on the last frame
+        animation-iteration-count: 1; // Run only once
+        animation-timing-function: linear;
     }
     @keyframes draw {
-      0% {
+        0% {}
 
-      }
-      80%{
-        stroke-dashoffset: 0;
-        fill-opacity: 0;
-      }
-      100%{
-        stroke-dashoffset: 0;
-        fill-opacity: 1;
-      }
+        80% {
+            stroke-dashoffset: 0;
+            fill-opacity: 0;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+            fill-opacity: 1;
+        }
     }
 }
 
 .play-design {
-  margin: $mobile-spacing 0;
-  @include span-columns(4);
-
-  h1, h2 {
-    color:#fff;
-  }
-
-  .back-work {
+    margin: $mobile-spacing 0;
     @include span-columns(4);
-    position: relative;
-    height:150px;
-    display:table;
-    margin-top: $mobile-spacing;
 
-    a{
-      display:table-cell;
-      text-align: center;
-      vertical-align: middle;
-      height:100%;
-      float:none;
-      color:$dark-gray;
-      background:#fff;
-      transition: all .5s;
-      text-decoration: none;
-
-      h2{
-        color:$dark-gray;
-        text-align: center;
-      }
-
-      &:hover {
-        background:$brand-color;
-
-        h2 {
-          color:#fff;
-        }
-      }
+    h1,
+    h2 {
+        color: #fff;
     }
-  }
+
+    .back-work {
+        @include span-columns(4);
+        position: relative;
+        height: 150px;
+        display: table;
+        margin-top: $mobile-spacing;
+
+        a {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            height: 100%;
+            float: none;
+            color: $dark-gray;
+            background: #fff;
+            transition: all 0.5s;
+            text-decoration: none;
+
+            h2 {
+                color: $dark-gray;
+                text-align: center;
+            }
+
+            &:hover {
+                background: $brand-color;
+
+                h2 {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.tilt {
+    float: none;
+    position: relative;
+
+    img {
+      position: relative;
+      width:500px;
+      height:300px;
+        float: none;
+    }
 }
