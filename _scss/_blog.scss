@@ -2,6 +2,12 @@
     @include span-columns(4);
     position: relative;
     margin-bottom: $mobile-spacing;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
+    }
+    @include media($desktop) {
+        margin-bottom: $desktop-spacing;
+    }
 
     h1 {
         margin-bottom: 1em;
@@ -231,6 +237,12 @@
 
 .archives {
     margin-bottom: $mobile-spacing;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
+    }
+    @include media($desktop) {
+        margin-bottom: $desktop-spacing;
+    }
     @include span-columns(4);
 
     h1 {
@@ -366,6 +378,12 @@
 
     .blog-body {
         margin-bottom: $mobile-spacing;
+        @include media($tablet) {
+            margin-bottom: $tablet-spacing;
+        }
+        @include media($desktop) {
+            margin-bottom: $desktop-spacing;
+        }
         @include span-columns(4);
 
         p {

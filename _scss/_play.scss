@@ -1,6 +1,12 @@
 .play {
     margin-top: 30px;
     margin-bottom: $mobile-spacing;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
+    }
+    @include media($desktop) {
+        margin-bottom: $desktop-spacing;
+    }
 
     h1 {
         color: #fff;
@@ -312,6 +318,12 @@
 .play-design {
     margin: $mobile-spacing 0;
     @include span-columns(4);
+    @include media($tablet) {
+        margin: $tablet-spacing 0;
+    }
+    @include media($desktop) {
+        margin: $desktop-spacing 0;
+    }
 
     h1,
     h2 {
@@ -324,6 +336,12 @@
         height: 150px;
         display: table;
         margin-top: $mobile-spacing;
+        @include media($tablet) {
+            margin-top: $tablet-spacing;
+        }
+        @include media($desktop) {
+            margin-top: $desktop-spacing;
+        }
 
         a {
             display: table-cell;

@@ -1,5 +1,11 @@
 .contact-info {
     margin-bottom: $mobile-spacing;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
+    }
+    @include media($desktop) {
+        margin-bottom: $desktop-spacing;
+    }
 
     @include span-columns(4);
 
@@ -8,7 +14,12 @@
         min-height:100px;
         background: $brand-color;
         padding:2em;
-
+        @include media($tablet) {
+            margin-bottom: $tablet-spacing;
+        }
+        @include media($desktop) {
+            margin-bottom: $desktop-spacing;
+        }
 
         @include media($tablet){
 
@@ -139,6 +150,12 @@
     visibility: visible;
 
     margin-bottom: $mobile-spacing;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
+    }
+    @include media($desktop) {
+        margin-bottom: $desktop-spacing;
+    }
 
     @include span-columns(4);
 
@@ -254,6 +271,12 @@
 
 .contact-form {
     margin-bottom: $mobile-spacing;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
+    }
+    @include media($desktop) {
+        margin-bottom: $desktop-spacing;
+    }
 
     @include span-columns(4);
 
@@ -339,6 +362,12 @@
 .careers {
     @include span-columns(4);
     margin-bottom: $mobile-spacing;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
+    }
+    @include media($desktop) {
+        margin-bottom: $desktop-spacing;
+    }
 
     h3 {
       font-weight: normal;

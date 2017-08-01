@@ -228,7 +228,6 @@
 }
 
 .mission-statement {
-    margin: $spacing 0;
     @include row();
 }
 
@@ -247,6 +246,9 @@
     @include span-columns(4);
     @include media($tablet) {
         margin-bottom: $tablet-spacing;
+    }
+    @include media($desktop) {
+        margin-bottom: $desktop-spacing;
     }
 }
 
@@ -282,6 +284,14 @@
 .description-statement {
     margin-top: $mobile-spacing;
     margin-bottom: $mobile-spacing;
+    @include media($tablet) {
+        margin-top: $tablet-spacing;
+        margin-bottom: $tablet-spacing;
+    }
+    @include media($desktop) {
+        margin-top: $desktop-spacing;
+        margin-bottom: $desktop-spacing;
+    }
     @include span-columns(4);
 
     h2 {
@@ -324,17 +334,26 @@
         }
     }
 }
+
+
 //From the Blog section ------------------------
 
 .home {
     .blogs {
         margin-bottom: $mobile-spacing;
+        @include media($tablet) {
+            margin-bottom: $tablet-spacing;
+        }
+        @include media($desktop) {
+            margin-bottom: $desktop-spacing;
+        }
     }
 }
 
 .testimonials {
     overflow: hidden;
     @include span-columns(4);
+
 }
 
 .testimonials ul {
@@ -380,6 +399,15 @@
 .testimonial {
     padding: 4em 1em;
     margin-bottom: $mobile-spacing;
+    margin-top: 0;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
+        margin-top: 0;
+    }
+    @include media($desktop) {
+        margin-bottom: $desktop-spacing;
+        margin-top: 0;
+    }
     background: $dark-gray;
     @include span-columns(4);
 
@@ -464,42 +492,36 @@
         @include transform(translateY(-50%));
     }
 }
-
-
-
-
-
-
 /* ----------------------------------------------------
 
     EXPERIMENTAL STYLING FOR ALTERNATE HOME PAGE
 
 -----------------------------------------------------*/
 .hero {
-  @include span-columns(4);
-  overflow: hidden;
-  height: 70vh;
-  animation: insight-out .1s 10s 1 forwards;
-  z-index: 100;
-  @include media($desktop-largest) {
-      height: 80vh;
-  }
+    @include span-columns(4);
+    overflow: hidden;
+    height: 70vh;
+    animation: insight-out 0.1s 10s 1 forwards;
+    z-index: 100;
+    @include media($desktop-largest) {
+        height: 80vh;
+    }
 }
+
 .hero-video-container {
-    width:100%;
+    width: 100%;
     position: relative;
     overflow: hidden;
     height: 70vh;
     z-index: 100;
     text-align: center;
-
     @include media($desktop-largest) {
         height: 80vh;
     }
 
     .hero-video {
         position: absolute;
-        top:-10%;
+        top: -10%;
         transform: translatex(-50%);
         min-width: 100%;
         min-height: 100%;
@@ -535,11 +557,11 @@
 @-webkit-keyframes insight-out {
     from {
         height: auto;
-        opacity:1;
+        opacity: 1;
     }
 
     to {
-        height:0;
-        opacity:0;
+        height: 0;
+        opacity: 0;
     }
 }

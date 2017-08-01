@@ -11,6 +11,12 @@
     background-image: url('/img/agency/first-frame.jpg');
     background-size: cover;
     background-position: center;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
+    }
+    @include media($desktop) {
+        margin-bottom: $desktop-spacing;
+    }
 
     .text {
         position: absolute;
@@ -43,6 +49,12 @@
     background: url('/img/agency/agency-lobby-1800.jpg');
     background-size: cover;
     background-position: center center;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
+    }
+    @include media($desktop) {
+        margin-bottom: $desktop-spacing;
+    }
 
     .text {
         position: absolute;
@@ -80,6 +92,12 @@
 .agency {
     @include span-columns(4);
     margin-bottom: $mobile-spacing;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
+    }
+    @include media($desktop) {
+        margin-bottom: $desktop-spacing;
+    }
 
     h1 {
         @include media($desktop-large) {
@@ -100,11 +118,23 @@
 .agency-lobby {
     @include span-columns(4);
     margin-bottom: $mobile-spacing;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
+    }
+    @include media($desktop) {
+        margin-bottom: $desktop-spacing;
+    }
 }
 
 .clients {
     @include span-columns(4);
     margin-bottom: $mobile-spacing;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
+    }
+    @include media($desktop) {
+        margin-bottom: $desktop-spacing;
+    }
 
     h1 {
         text-align: center;
@@ -118,6 +148,12 @@
 
         img {
             max-width: 100%;
+            filter: grayscale(100%);
+            transition: filter .3s;
+
+            &:hover {
+              filter: grayscale(0);
+            }
         }
         @include media($desktop) {
             padding: 1em;
@@ -139,6 +175,12 @@
     position: relative;
     transition: opacity 0.5s;
     margin-bottom: $mobile-spacing;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
+    }
+    @include media($desktop) {
+        margin-bottom: $desktop-spacing;
+    }
     @include span-columns(4);
     max-height:80vh;
     overflow: hidden;
@@ -159,4 +201,52 @@
             opacity: 0;
         }
     }
+}
+
+.about-services {
+  @include span-columns(4);
+  margin-bottom: $mobile-spacing;
+  @include media($tablet) {
+      margin-bottom: $tablet-spacing;
+  }
+  @include media($desktop) {
+      margin-bottom: $desktop-spacing;
+  }
+
+  @include media($desktop-large) {
+       @include span-columns(10);
+      @include shift(1);
+  }
+  @include media($desktop-largest) {
+       @include span-columns(8);
+      @include shift(2);
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .about-service {
+    @include span-columns(4);
+
+    @include media($desktop) {
+        @include span-columns(6);
+        @include omega;
+    }
+
+    h2, h3{
+      @include span-columns(4);
+    }
+
+    h2 {
+      margin-left: 0;
+      font-weight: 400;
+      margin-bottom: .3em;
+    }
+    h3 {
+      margin-left: 0;
+      margin-bottom: 2em;
+    }
+  }
 }

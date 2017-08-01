@@ -2,21 +2,16 @@
 layout: default
 title: {{ page.title }}
 ---
-
 <div class="wrapper">
-  <div class="project-cover" style="background-image:url('/img/projects/{{ page.cover-image }}.jpg');">
-
-
-
-
+  <div class="project-cover" data-aos="fade-up" style="background-image:url('/img/projects/{{ page.cover-image }}.jpg');">
 
   </div>
-  <div class="project-title" style="background: -webkit-linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});
+  <div class="project-title" data-aos="fade-up" style="background: -webkit-linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});
 background: -o-linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});
 background: -moz-linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});
 background: linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});">
-    <h1 data-aos="fade-up" data-aos-delay="400" style="color:#{{ page.cover-text-color }}">{{ page.title }}</h1>
-    <h2 data-aos="fade-up" data-aos-delay="800" style="color:#{{ page.cover-text-color }}">for <strong>{{ page.client }}</strong></h2>
+    <h1 id="project-title-a" data-aos="fade-up" data-aos-delay="400" style="color:#{{ page.cover-text-color }}">{{ page.title }}</h1>
+    <h2 data-aos="fade-up" data-aos-delay="800" data-aos-anchor="#project-title-a" style="color:#{{ page.cover-text-color }}">for <strong>{{ page.client }}</strong></h2>
   </div>
 
   <div class="project-description">
@@ -32,11 +27,11 @@ background: linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.b
     {{ content }}
   </div>
 
-  <div class="back-work">
+  <div class="back-work" data-aos="fade-up">
     <a href="/work" class="page-link" title="work"><h2>Back to Work</h2></a>
   </div>
   <div class="nextprevious">
-    <div class="previous-project">
+    <!-- <div class="previous-project" data-aos="fade-up">
       {% if page.previous.url %} {% if page.previous.categories contains 'work' %}
       <a href="{{page.previous.url}}">
         <div class="center-text" style="background: -webkit-linear-gradient(to bottom right, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});
@@ -61,7 +56,7 @@ background: linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.b
       {% endif %} {% endif %}
     </div>
 
-    <div class="next-project" style="background: -webkit-linear-gradient(to bottom right, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
+    <div class="next-project" data-aos="fade-up" data-aos-delay="200" style="background: -webkit-linear-gradient(to bottom right, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
     background: -o-linear-gradient(to bottom right, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
     background: -moz-linear-gradient(to bottom right, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
     background: linear-gradient(to bottom right, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});">
@@ -69,6 +64,63 @@ background: linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.b
       <a href="{{page.next.url}}">
         <div class="center-text">
           <h2 style="color:#{{ page.next.cover-text-color }}">Next Project</h2>
+        </div>
+
+
+        <div class="project" style="background: -webkit-linear-gradient(to bottom right, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
+        background: -o-linear-gradient(to bottom right, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
+        background: -moz-linear-gradient(to bottom right, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});
+        background: linear-gradient(to bottom right, #{{ page.next.back-color1 }}, #{{ page.next.back-color2 }});">
+
+          <div class="project-info">
+            <div class="text">
+              <h2 style="color:#{{ page.next.cover-text-color }}">{{ page.next.title }}</h2>
+              <h3 style="color:#{{ page.next.cover-text-color }}">for <strong>{{ page.next.client }}</strong></h3>
+            </div>
+          </div>
+
+        </div>
+      </a>
+      {% endif %} {% endif %}
+    </div> -->
+
+    <div class="previous-project" data-aos="fade-up">
+      {% if page.previous.url %} {% if page.previous.categories contains 'work' %}
+      <a href="{{page.previous.url}}">
+        <div class="center-text">
+      <img src="/img/projects/{{ page.previous.cover-image }}.jpg" alt="{{ page.previous.title }}" srcset="/img/projects/{{ page.previous.cover-image }}-400.jpg 400w,
+    /img/projects/{{ page.previous.cover-image }}-600.jpg 600w,
+    /img/projects/{{ page.previous.cover-image }}-900.jpg 900w,
+    /img/projects/{{ page.previous.cover-image }}-900.jpg 1200w,
+    /img/projects/{{ page.previous.cover-image }}-900.jpg 1800w,
+    /img/projects/{{ page.previous.cover-image }}-900.jpg 2400w" />
+        </div>
+        <div class="project" style="background: -webkit-linear-gradient(to bottom right, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});
+      background: -o-linear-gradient(to bottom right, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});
+      background: -moz-linear-gradient(to bottom right, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});
+      background: linear-gradient(to bottom right, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});">
+          <div class="project-info">
+            <div class="text">
+              <h2 style="color:#{{ page.previous.cover-text-color }};">{{ page.previous.title }}</h2>
+              <h3 style="color:#{{ page.previous.cover-text-color }};">for <strong>{{ page.previous.client }}</strong></h3>
+            </div>
+          </div>
+
+        </div>
+      </a>
+      {% endif %} {% endif %}
+    </div>
+
+    <div class="next-project" data-aos="fade-up" data-aos-delay="200">
+      {% if page.next.url %} {% if page.next.categories contains 'work' %}
+      <a href="{{page.next.url}}">
+        <div class="center-text">
+          <img src="/img/projects/{{ page.next.cover-image }}.jpg" alt="{{ page.next.title }}" srcset="/img/projects/{{ page.next.cover-image }}-400.jpg 400w,
+        /img/projects/{{ page.next.cover-image }}-600.jpg 600w,
+        /img/projects/{{ page.next.cover-image }}-900.jpg 900w,
+        /img/projects/{{ page.next.cover-image }}-900.jpg 1200w,
+        /img/projects/{{ page.next.cover-image }}-900.jpg 1800w,
+        /img/projects/{{ page.next.cover-image }}-900.jpg 2400w" />
         </div>
 
 

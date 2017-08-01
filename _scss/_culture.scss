@@ -447,6 +447,12 @@
 .snapshots {
     @include span-columns(4);
     margin-bottom: $mobile-spacing;
+    @include media($tablet) {
+        margin-bottom: $tablet-spacing;
+    }
+    @include media($desktop) {
+        margin-bottom: $desktop-spacing;
+    }
 
     .snap-container{
       background-size:cover;
