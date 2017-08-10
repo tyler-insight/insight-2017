@@ -3,7 +3,6 @@ layout: blog
 title: Protect Your Wordpress Website From the Hacking Horde
 author: Bart Raboin
 tag: blog
-card: summary
 description: "There is a zombie horde out there in the digital world right now, constantly scratching at the door of your website, trying to get in and consume its delicate tasty bits."
 text-color: 'fff'
 back-color: '5f6154'

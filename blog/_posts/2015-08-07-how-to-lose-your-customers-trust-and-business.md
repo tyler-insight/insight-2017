@@ -2,11 +2,10 @@
 layout: blog
 title: How to Lose Your Customer's Trust and Business
 author: Jen Haas
-tag: blog
-card: summary
 description: "Unfortunately, versions of this incident happen frequently. So how can you prevent this? Here are three key lessons."
 text-color: 'fff'
 back-color: '15b618'
+tag: blog
 ---
 ![Faces](/img/blog/How-to-Lose-Your-Customers-Trust-and-Business.jpg)
 

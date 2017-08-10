@@ -4,7 +4,6 @@ title: Insight Creative, Inc. Enhances team with New Hires and a Promotion
 author: Jennifer Rogers
 tags:
 - blog
-- news
 card: summary
 description:
 text-color: 'fff'

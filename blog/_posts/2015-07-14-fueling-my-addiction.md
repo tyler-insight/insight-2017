@@ -3,7 +3,6 @@ layout: blog
 title: Fueling My Addiction
 author: Stacy Allen
 tag: blog
-card: summary
 description: "Sometimes we focus too much on what we can give away, rather than simply making a customer more comfortable, satisfied or happier."
 text-color: 'fff'
 back-color: '171312'
