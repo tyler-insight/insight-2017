@@ -71,7 +71,7 @@
                 width: 120px;
             }
             @include media($desktop-large) {
-                width: 200px;
+                width: 205px;
             }
 
             span {
@@ -388,12 +388,12 @@
                 span {
                   display:block;
                   line-height: .75em;
-                  padding:23px 0;
+                  padding:23px 5px;
                   font-size:.6em;
                   color:$brand-color;
 
                   @include media($desktop-largest) {
-                    padding:22px 0;
+                    padding:22px 10px;
                       font-size: .8em;
                   }
                 }

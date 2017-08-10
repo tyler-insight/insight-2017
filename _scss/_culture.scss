@@ -455,6 +455,7 @@
     }
 
     .snap-container{
+      @include span-columns(4);
       background-size:cover;
       background-position: center;
       height:300px;
@@ -491,6 +492,7 @@
 }
 .culture {
   .testimonial {
+    @include span-columns(4);
       margin-bottom: 0;
       padding-bottom:6em;
     }
@@ -521,7 +523,6 @@
         .bio {
             position: relative;
             @include span-columns(2);
-
         }
 
         h1 {
@@ -561,9 +562,11 @@
             display: none;
             line-height:1.2em;
             font-family: "futura-pt", sans-serif;
+
             @include media($desktop-large){
               @include span-columns(12);
               @include shift(0);
+
             }
             @include media($desktop-largest){
               @include span-columns(12);
@@ -620,8 +623,8 @@
         }
 
         p {
-          font-size:1.1em;
-          line-height: 1.5em;
+          font-size:1em;
+          line-height: 1.3em;
           display:inline-block;
         }
       }

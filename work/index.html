@@ -35,14 +35,21 @@ title: Work
                             <h3 style="color:#{{ post.cover-text-color }}">for <strong>{{ post.client }}</strong></h3>
                         </div>
                     </div>
-                    <div class="project-image-wrapper no-ie">
-                      <img src="/img/projects/{{ post.cover-image }}.jpg" alt="{{ post.title }}"
-                      srcset="/img/projects/{{ post.cover-image }}-400.jpg 400w,
-                      /img/projects/{{ post.cover-image }}-600.jpg 600w,
-                      /img/projects/{{ post.cover-image }}-900.jpg 900w,
-                      /img/projects/{{ post.cover-image }}-900.jpg 1200w,
-                      /img/projects/{{ post.cover-image }}-900.jpg 1800w,
-                      /img/projects/{{ post.cover-image }}-900.jpg 2400w" />
+                    <div class="project-image-wrapper">
+                    <img class="fit" src="/img/projects/{{ post.cover-image }}.jpg" alt="{{ post.title }}"
+                    srcset="/img/projects/{{ post.cover-image }}-900.jpg 2400w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1800w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 1200w,
+                    /img/projects/{{ post.cover-image }}-900.jpg 900w,
+                    /img/projects/{{ post.cover-image }}-600.jpg 600w,
+                    /img/projects/{{ post.cover-image }}-400.jpg 400w"
+
+                    sizes = "(min-width: 2400px) 900px,
+                             (min-width: 1800px) 600px,
+                             (min-width: 1200px) 500px,
+                             (min-width: 900px) 500px,
+                             (min-width: 600px) 600px,
+                             400px" />
                     </div>
                 </div>
             </a>

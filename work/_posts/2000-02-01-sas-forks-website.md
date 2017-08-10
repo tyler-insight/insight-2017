@@ -18,11 +18,11 @@ SAS Forks is an auto salvage equipment manufacturer. Insight Creative collaborat
 <div class="fill-back">
 <img data-aos="fade-up" data-featherlight="/img/projects/sas-forks-website/sas-forks-website-2.jpg"
 alt="SAS Forks Website" src="/img/projects/sas-forks-website/sas-forks-website-2.jpg"
-srcset="/img/projects/sas-forks-website/sas-forks-website-2-400.jpg 400w,
-/img/projects/sas-forks-website/sas-forks-website-2-600.jpg 600w,
-/img/projects/sas-forks-website/sas-forks-website-2-900.jpg 900w,
-/img/projects/sas-forks-website/sas-forks-website-2-1200.jpg 1200w,
+srcset="/img/projects/sas-forks-website/sas-forks-website-2-2400.jpg 2400w,
 /img/projects/sas-forks-website/sas-forks-website-2-1800.jpg 1800w,
-/img/projects/sas-forks-website/sas-forks-website-2-2400.jpg 2400w" />
+/img/projects/sas-forks-website/sas-forks-website-2-1200.jpg 1200w,
+/img/projects/sas-forks-website/sas-forks-website-2-900.jpg 900w,
+/img/projects/sas-forks-website/sas-forks-website-2-600.jpg 600w,
+/img/projects/sas-forks-website/sas-forks-website-2-400.jpg 400w" />
 </div>
 </div>

@@ -15,40 +15,44 @@ For over five decades, Valley Custom Door has been the exceptional source for hi
 
 <div class="images">
 
-<img class="full" data-aos="fade-up" data-featherlight="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-2.jpg" src="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-2.jpg"
+<img class="full fit" data-aos="fade-up" data-featherlight="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-2.jpg" src="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-2.jpg"
 alt="Valley Custom Door Product Catalog 2"
-srcset="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-2-400.jpg 400w,
-/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-2-600.jpg 600w,
-/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-2-900.jpg 900w,
-/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-2-1200.jpg 1200w,
+srcset="
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-2-2400.jpg 2400w,
 /img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-2-1800.jpg 1800w,
-/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-2-2400.jpg 2400w" />
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-2-1200.jpg 1200w,
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-2-900.jpg 900w,
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-2-600.jpg 600w,
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-2-400.jpg 400w" />
 
-<img class="third" data-aos="fade-up"  data-featherlight="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-1.jpg" src="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-1.jpg"
+<img class="third first fit" data-aos="fade-up"  data-featherlight="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-1.jpg" src="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-1.jpg"
 alt="Valley Custom Door Product Catalog 1"
-srcset="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-1-400.jpg 400w,
-/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-1-600.jpg 600w,
-/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-1-900.jpg 900w,
-/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-1-1200.jpg 1200w,
+srcset="
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-1-2400.jpg 2400w,
 /img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-1-1800.jpg 1800w,
-/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-1-2400.jpg 2400w" />
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-1-1200.jpg 1200w,
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-1-900.jpg 900w,
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-1-600.jpg 600w,
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-1-400.jpg 400w" />
 
-<img class="third" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-3.jpg" src="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-3.jpg"
+<img class="third fit" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-3.jpg" src="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-3.jpg"
 alt="Valley Custom Door Product Catalog 3"
-srcset="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-3-400.jpg 400w,
-/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-3-600.jpg 600w,
-/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-3-900.jpg 900w,
-/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-3-1200.jpg 1200w,
+srcset="
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-3-2400.jpg 2400w,
 /img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-3-1800.jpg 1800w,
-/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-3-2400.jpg 2400w" />
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-3-1200.jpg 1200w,
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-3-900.jpg 900w,
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-3-600.jpg 600w,
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-3-400.jpg 400w" />
 
-<img class="third" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-4.jpg" src="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-4.jpg"
+<img class="third last fit" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-4.jpg" src="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-4.jpg"
 alt="Valley Custom Door Product Catalog 4"
-srcset="/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-4-400.jpg 400w,
-/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-4-600.jpg 600w,
-/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-4-900.jpg 900w,
-/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-4-1200.jpg 1200w,
+srcset="
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-4-2400.jpg 2400w,
 /img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-4-1800.jpg 1800w,
-/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-4-2400.jpg 2400w" />
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-4-1200.jpg 1200w,
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-4-900.jpg 900w,
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-4-600.jpg 600w,
+/img/projects/valley-custom-door-product-catalog/valley-custom-door-product-catalog-4-400.jpg 400w" />
 
 </div>

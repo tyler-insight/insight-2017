@@ -2,6 +2,51 @@ $(function() {
   //Run Script that performs navigation hid/show and mobile function
   navigation();
 
+  //Run script that applies object-fit pollyfill from obi.min.js
+  objectFitImages();
+
+  //Fix image height issue with Safari AJAX loading
+
+  //Need to fix for homepage images and for resizing browser
+    function safariResize() {
+      console.log("Running safariResize");
+      var loaded = 1;
+      $('img').on('load',function(){
+        loaded++;
+        images = $('img');
+        if (loaded == $('img').length){
+          for (var i = 1; i < images.length; i++){
+            var naturalH = images[i].naturalHeight;
+            var naturalW = images[i].naturalWidth;
+            var ratio = naturalH / naturalW;
+            var newRatio = (images[i].width / naturalW);
+            var newH = naturalH * newRatio;
+            if ($(images[i]).css("object-fit") != 'cover'){
+              $(images[i]).css("height", newH + "px");
+            } else if ($(images[i]).css("object-fit") == 'cover'){
+              $(images[i]).css("height", newH + "px");
+            }
+          }
+        }
+
+      });
+      $( window ).resize(function() {
+        for (var i = 1; i < images.length; i++){
+          var naturalH = images[i].naturalHeight;
+          var naturalW = images[i].naturalWidth;
+          var ratio = naturalH / naturalW;
+          var newRatio = (images[i].width / naturalW);
+          var newH = naturalH * newRatio;
+          var newW = naturalW * newRatio;
+          if ($(images[i]).css("object-fit") != 'cover'){
+            $(images[i]).css("height", newH + "px");
+          } else if ($(images[i]).css("object-fit") == 'cover'){
+            $(images[i]).css("height", newH + "px");
+          }
+        }
+      });
+    }
+
   //Initialize all scripts for page
   init = function() {
       runScripts();
@@ -70,6 +115,7 @@ $(function() {
 
       }
     });
+
   };
 
   //Action to perform on link click
@@ -137,7 +183,11 @@ $(function() {
       });
 
     }
-
+    if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1)  {
+      safariResize();
+    } else if (navigator.userAgent.indexOf('iPad') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+      safariResize();
+    }
 
   });
 
@@ -507,6 +557,7 @@ $(function() {
 
 
   function runScripts() {
+
     // Find what current page is
     var page = $(location).attr('href');
 

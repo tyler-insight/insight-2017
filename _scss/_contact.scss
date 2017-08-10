@@ -11,11 +11,12 @@
 
     .banner {
         margin-bottom: $mobile-spacing;
-        min-height:100px;
+        min-height:200px;
         background: $brand-color;
         padding:2em;
         @include media($tablet) {
             margin-bottom: $tablet-spacing;
+            min-height:300px;
         }
         @include media($desktop) {
             margin-bottom: $desktop-spacing;
@@ -35,6 +36,7 @@
         h1,
         h2 {
           color: #fff;
+          line-height:1.3em;
             @include media($desktop-large) {
                  @include span-columns(12);
                 @include shift(0);
@@ -44,6 +46,7 @@
                 @include shift(0);
             }
         }
+
 
         .typed-cursor {
             -webkit-animation: blink 0.7s infinite;
@@ -141,13 +144,14 @@
     @include span-columns(4);
 
     img {
-        @include span-columns(4);
+
     }
 }
 
 #cd-google-map {
     position: relative;
     visibility: visible;
+    @include span-columns(4);
 
     margin-bottom: $mobile-spacing;
     @include media($tablet) {
@@ -375,6 +379,7 @@
     }
 
     ul.positions {
+      @include span-columns(4);
         li {
           padding:1em 0;
           @include transition(border-color .5s);

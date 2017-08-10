@@ -1,10 +1,13 @@
 .play {
-    margin-top: 30px;
+    @include span-columns(4);
+    margin-top: $mobile-spacing;
     margin-bottom: $mobile-spacing;
     @include media($tablet) {
+        margin-top: $tablet-spacing;
         margin-bottom: $tablet-spacing;
     }
     @include media($desktop) {
+        margin-top: $desktop-spacing;
         margin-bottom: $desktop-spacing;
     }
 
@@ -20,6 +23,9 @@
         font-weight: 200;
         text-align: center;
         margin-bottom: 1.5em;
+    }
+    .play-sub {
+      margin-bottom: $mobile-spacing;
     }
 
     .one-third {
@@ -375,9 +381,9 @@
     position: relative;
 
     img {
-      position: relative;
-      width:500px;
-      height:300px;
+        position: relative;
+        width: 500px;
+        height: 300px;
         float: none;
     }
 }

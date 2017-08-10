@@ -7,58 +7,60 @@ title: Agency
 
   <div class="agency-header" data-aos="fade-up">
     <div class="text">
-        <h1>The <strong>Agency</strong></h1>
+      <h1>The <strong>Agency</strong></h1>
     </div>
 
   </div>
 
 
-    <div class="agency" data-aos="fade-up">
-        <h1>Comprehensive Service Focused on You</h1>
-        <p>
-            Over the years we’ve found that the most effective and efficient approach to realizing your goals brings strategic, creative and tactical marketing functions together. That’s why we offer complete marketing communications expertise—from senior-level strategic
-            planning, art direction, creative copywriting and web development to photography, audio recording, video production, public relations and media buying—all in-house. Other agencies claim they’re “full-service.” In reality, they outsource many
-            of the services that drive up your costs. Not Insight. We’re not a virtual agency; we’re an actual agency—responsive, efficient, experienced and down to Earth. We strive to be good stewards of our clients’ budgets and brands—in short, taking
-            exceptional care of our clients’ needs.
-        </p>
-        <p>
-            <i>That’s the way we see it at Insight.</i>
-        </p>
-        <p>
-            <a href="/culture#employees">Meet the people</a> who make a difference at Insight.
-        </p>
-    </div>
+  <div class="agency" data-aos="fade-up">
+    <h1>Comprehensive Service Focused on You</h1>
+    <p>
+      Over the years we’ve found that the most effective and efficient approach to realizing your goals brings strategic, creative and tactical marketing functions together. That’s why we offer complete marketing communications expertise—from senior-level strategic
+      planning, art direction, creative copywriting and web development to photography, audio recording, video production, public relations and media buying—all in-house. Other agencies claim they’re “full-service.” In reality, they outsource many of
+      the services that drive up your costs. Not Insight. We’re not a virtual agency; we’re an actual agency—responsive, efficient, experienced and down to Earth. We strive to be good stewards of our clients’ budgets and brands—in short, taking exceptional
+      care of our clients’ needs.
+    </p>
+    <p>
+      <i>That’s the way we see it at Insight.</i>
+    </p>
+    <p>
+      <a href="/culture#employees">Meet the people</a> who make a difference at Insight.
+    </p>
+  </div>
 
-    <div class="studio-pano">
-      <img class="light" data-aos="fade-up" src="/img/agency/studio-panoramas-light.jpg" alt="Insight Studio Light"
-      srcset="/img/agency/studio-panoramas-light-400.jpg 400w,
-      /img/agency/studio-panoramas-light-600.jpg 600w,
-      /img/agency/studio-panoramas-light-900.jpg 900w,
-      /img/agency/studio-panoramas-light-1200.jpg 1200w,
+  <div class="studio-pano">
+    <img class="light" data-aos="fade-up" src="/img/agency/studio-panoramas-light.jpg" alt="Insight Studio Light"
+    srcset="
+      /img/agency/studio-panoramas-light-2400.jpg 2400w,
       /img/agency/studio-panoramas-light-1800.jpg 1800w,
-      /img/agency/studio-panoramas-light-2400.jpg 2400w"/>
-      <img class="dark" data-aos="fade-up" src="/img/agency/studio-panoramas-dark.jpg" alt="Insight Studio Dark"
-      srcset="/img/agency/studio-panoramas-dark-400.jpg 400w,
-      /img/agency/studio-panoramas-dark-600.jpg 600w,
-      /img/agency/studio-panoramas-dark-900.jpg 900w,
-      /img/agency/studio-panoramas-dark-1200.jpg 1200w,
+      /img/agency/studio-panoramas-light-1200.jpg 1200w,
+      /img/agency/studio-panoramas-light-900.jpg 900w,
+      /img/agency/studio-panoramas-light-600.jpg 600w,
+      /img/agency/studio-panoramas-light-400.jpg 400w" />
+
+    <img class="dark" data-aos="fade-up" src="/img/agency/studio-panoramas-dark.jpg" alt="Insight Studio Dark"
+    srcset="
+      /img/agency/studio-panoramas-dark-2400.jpg 2400w,
       /img/agency/studio-panoramas-dark-1800.jpg 1800w,
-      /img/agency/studio-panoramas-dark-2400.jpg 2400w"/>
+      /img/agency/studio-panoramas-dark-1200.jpg 1200w,
+      /img/agency/studio-panoramas-dark-900.jpg 900w,
+      /img/agency/studio-panoramas-dark-600.jpg 600w,
+      /img/agency/studio-panoramas-dark-400.jpg 400w" />
+  </div>
+
+  <div class="about-services">
+    <h1 data-aos="fade-up">Services</h1> {% for services in site.data.services %}
+    <div class="about-service" data-aos="fade-up">
+      <h2 class="service-name">{{ services.name }}</h2>
+      <h3>{{ services.keywords }}</h3>
     </div>
+    {% endfor %}
 
-    <div class="about-services">
-      <h1 data-aos="fade-up">Services</h1>
-        {% for services in site.data.services %}
-          <div class="about-service">
-            <h2 class="service-name">{{ services.name }}</h2>
-            <h3>{{ services.keywords }}</h3>
-          </div>
-        {% endfor %}
-
-    </div>
+  </div>
 
 
-    <!-- INSIGHT VIDEO
+  <!-- INSIGHT VIDEO
     <div id="video_container" data-aos="fade-up">
         <div id="main-image">
 
@@ -68,189 +70,207 @@ title: Agency
     </div>
   -->
 
-    <div class="clients">
-        <h1 data-aos="fade-up">Some Awesome Clients</h1>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/affinity-medical-group.jpg" alt="Affinity"
-            srcset="/img/agency/clients/affinity-medical-group-400.jpg 400w,
-            /img/agency/clients/affinity-medical-group-600.jpg 600w,
-            /img/agency/clients/affinity-medical-group-900.jpg 900w,
-            /img/agency/clients/affinity-medical-group-1200.jpg 1200w,
-            /img/agency/clients/affinity-medical-group-1800.jpg 1800w,
-            /img/agency/clients/affinity-medical-group-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/bank-of-luxemburg.jpg" alt="Affinity"
-            srcset="/img/agency/clients/bank-of-luxemburg-400.jpg 400w,
-            /img/agency/clients/bank-of-luxemburg-600.jpg 600w,
-            /img/agency/clients/bank-of-luxemburg-900.jpg 900w,
-            /img/agency/clients/bank-of-luxemburg-1200.jpg 1200w,
+  <div class="clients">
+    <h1 data-aos="fade-up">Some Awesome Clients</h1>
+    <div class="client" data-aos="fade-up">
+    <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/affinity-medical-group.jpg" alt="Affinity"
+    srcset="
+    /img/agency/clients/affinity-medical-group-2400.jpg 2400w,
+    /img/agency/clients/affinity-medical-group-1800.jpg 1800w,
+    /img/agency/clients/affinity-medical-group-1200.jpg 1200w,
+    /img/agency/clients/affinity-medical-group-900.jpg 900w,
+    /img/agency/clients/affinity-medical-group-600.jpg 600w,
+    /img/agency/clients/affinity-medical-group-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/bank-of-luxemburg.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/bank-of-luxemburg-2400.jpg 2400w,
             /img/agency/clients/bank-of-luxemburg-1800.jpg 1800w,
-            /img/agency/clients/bank-of-luxemburg-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/brown-county-home-builders.jpg" alt="Affinity"
-            srcset="/img/agency/clients/brown-county-home-builders-400.jpg 400w,
-            /img/agency/clients/brown-county-home-builders-600.jpg 600w,
-            /img/agency/clients/brown-county-home-builders-900.jpg 900w,
-            /img/agency/clients/brown-county-home-builders-1200.jpg 1200w,
+            /img/agency/clients/bank-of-luxemburg-1200.jpg 1200w,
+            /img/agency/clients/bank-of-luxemburg-900.jpg 900w,
+            /img/agency/clients/bank-of-luxemburg-600.jpg 600w,
+            /img/agency/clients/bank-of-luxemburg-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/brown-county-home-builders.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/brown-county-home-builders-2400.jpg 2400w,
             /img/agency/clients/brown-county-home-builders-1800.jpg 1800w,
-            /img/agency/clients/brown-county-home-builders-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/build-your-own-curriculum.jpg" alt="Affinity"
-            srcset="/img/agency/clients/build-your-own-curriculum-400.jpg 400w,
-            /img/agency/clients/build-your-own-curriculum-600.jpg 600w,
-            /img/agency/clients/build-your-own-curriculum-900.jpg 900w,
-            /img/agency/clients/build-your-own-curriculum-1200.jpg 1200w,
+            /img/agency/clients/brown-county-home-builders-1200.jpg 1200w,
+            /img/agency/clients/brown-county-home-builders-900.jpg 900w,
+            /img/agency/clients/brown-county-home-builders-600.jpg 600w,
+            /img/agency/clients/brown-county-home-builders-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/build-your-own-curriculum.jpg" alt="Affinity"
+      srcset="/img/agency/clients/build-your-own-curriculum-2400.jpg 2400w,
             /img/agency/clients/build-your-own-curriculum-1800.jpg 1800w,
-            /img/agency/clients/build-your-own-curriculum-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/community-connect.jpg" alt="Affinity"
-            srcset="/img/agency/clients/community-connect-400.jpg 400w,
-            /img/agency/clients/community-connect-600.jpg 600w,
-            /img/agency/clients/community-connect-900.jpg 900w,
-            /img/agency/clients/community-connect-1200.jpg 1200w,
+            /img/agency/clients/build-your-own-curriculum-1200.jpg 1200w,
+            /img/agency/clients/build-your-own-curriculum-900.jpg 900w,
+            /img/agency/clients/build-your-own-curriculum-600.jpg 600w,
+            /img/agency/clients/build-your-own-curriculum-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/community-connect.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/community-connect-2400.jpg 2400w,
             /img/agency/clients/community-connect-1800.jpg 1800w,
-            /img/agency/clients/community-connect-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/domino.jpg" alt="Affinity"
-            srcset="/img/agency/clients/domino-400.jpg 400w,
-            /img/agency/clients/domino-600.jpg 600w,
-            /img/agency/clients/domino-900.jpg 900w,
-            /img/agency/clients/domino-1200.jpg 1200w,
+            /img/agency/clients/community-connect-1200.jpg 1200w,
+            /img/agency/clients/community-connect-900.jpg 900w,
+            /img/agency/clients/community-connect-600.jpg 600w,
+            /img/agency/clients/community-connect-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/domino.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/domino-2400.jpg 2400w,
             /img/agency/clients/domino-1800.jpg 1800w,
-            /img/agency/clients/domino-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/door-county-distillery.jpg" alt="Affinity"
-            srcset="/img/agency/clients/door-county-distillery-400.jpg 400w,
-            /img/agency/clients/door-county-distillery-600.jpg 600w,
-            /img/agency/clients/door-county-distillery-900.jpg 900w,
-            /img/agency/clients/door-county-distillery-1200.jpg 1200w,
+            /img/agency/clients/domino-1200.jpg 1200w,
+            /img/agency/clients/domino-900.jpg 900w,
+            /img/agency/clients/domino-600.jpg 600w,
+            /img/agency/clients/domino-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/door-county-distillery.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/door-county-distillery-2400.jpg 2400w,
             /img/agency/clients/door-county-distillery-1800.jpg 1800w,
-            /img/agency/clients/door-county-distillery-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/door-peninsula-winery.jpg" alt="Affinity"
-            srcset="/img/agency/clients/door-peninsula-winery-400.jpg 400w,
-            /img/agency/clients/door-peninsula-winery-600.jpg 600w,
-            /img/agency/clients/door-peninsula-winery-900.jpg 900w,
-            /img/agency/clients/door-peninsula-winery-1200.jpg 1200w,
+            /img/agency/clients/door-county-distillery-1200.jpg 1200w,
+            /img/agency/clients/door-county-distillery-900.jpg 900w,
+            /img/agency/clients/door-county-distillery-600.jpg 600w,
+            /img/agency/clients/door-county-distillery-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/door-peninsula-winery.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/door-peninsula-winery-2400.jpg 2400w,
             /img/agency/clients/door-peninsula-winery-1800.jpg 1800w,
-            /img/agency/clients/door-peninsula-winery-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/fox-valley-symphony-orchestra.jpg" alt="Affinity"
-            srcset="/img/agency/clients/fox-valley-symphony-orchestra-400.jpg 400w,
-            /img/agency/clients/fox-valley-symphony-orchestra-600.jpg 600w,
-            /img/agency/clients/fox-valley-symphony-orchestra-900.jpg 900w,
-            /img/agency/clients/fox-valley-symphony-orchestra-1200.jpg 1200w,
+            /img/agency/clients/door-peninsula-winery-1200.jpg 1200w,
+            /img/agency/clients/door-peninsula-winery-900.jpg 900w,
+            /img/agency/clients/door-peninsula-winery-600.jpg 600w,
+            /img/agency/clients/door-peninsula-winery-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/fox-valley-symphony-orchestra.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/fox-valley-symphony-orchestra-2400.jpg 2400w,
             /img/agency/clients/fox-valley-symphony-orchestra-1800.jpg 1800w,
-            /img/agency/clients/fox-valley-symphony-orchestra-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/golden-house.jpg" alt="Affinity"
-            srcset="/img/agency/clients/golden-house-400.jpg 400w,
-            /img/agency/clients/golden-house-600.jpg 600w,
-            /img/agency/clients/golden-house-900.jpg 900w,
-            /img/agency/clients/golden-house-1200.jpg 1200w,
+            /img/agency/clients/fox-valley-symphony-orchestra-1200.jpg 1200w,
+            /img/agency/clients/fox-valley-symphony-orchestra-900.jpg 900w,
+            /img/agency/clients/fox-valley-symphony-orchestra-600.jpg 600w,
+            /img/agency/clients/fox-valley-symphony-orchestra-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/golden-house.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/golden-house-2400.jpg 2400w,
             /img/agency/clients/golden-house-1800.jpg 1800w,
-            /img/agency/clients/golden-house-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/goodwill.jpg" alt="Affinity"
-            srcset="/img/agency/clients/goodwill-400.jpg 400w,
-            /img/agency/clients/goodwill-600.jpg 600w,
-            /img/agency/clients/goodwill-900.jpg 900w,
-            /img/agency/clients/goodwill-1200.jpg 1200w,
+            /img/agency/clients/golden-house-1200.jpg 1200w,
+            /img/agency/clients/golden-house-900.jpg 900w,
+            /img/agency/clients/golden-house-600.jpg 600w,
+            /img/agency/clients/golden-house-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/goodwill.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/goodwill-2400.jpg 2400w,
             /img/agency/clients/goodwill-1800.jpg 1800w,
-            /img/agency/clients/goodwill-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/matthews-tire.jpg" alt="Affinity"
-            srcset="/img/agency/clients/matthews-tire-400.jpg 400w,
-            /img/agency/clients/matthews-tire-600.jpg 600w,
-            /img/agency/clients/matthews-tire-900.jpg 900w,
-            /img/agency/clients/matthews-tire-1200.jpg 1200w,
+            /img/agency/clients/goodwill-1200.jpg 1200w,
+            /img/agency/clients/goodwill-900.jpg 900w,
+            /img/agency/clients/goodwill-600.jpg 600w,
+            /img/agency/clients/goodwill-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/matthews-tire.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/matthews-tire-2400.jpg 2400w,
             /img/agency/clients/matthews-tire-1800.jpg 1800w,
-            /img/agency/clients/matthews-tire-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/mps-systems.jpg" alt="Affinity"
-            srcset="/img/agency/clients/mps-systems-400.jpg 400w,
-            /img/agency/clients/mps-systems-600.jpg 600w,
-            /img/agency/clients/mps-systems-900.jpg 900w,
-            /img/agency/clients/mps-systems-1200.jpg 1200w,
+            /img/agency/clients/matthews-tire-1200.jpg 1200w,
+            /img/agency/clients/matthews-tire-900.jpg 900w,
+            /img/agency/clients/matthews-tire-600.jpg 600w,
+            /img/agency/clients/matthews-tire-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/mps-systems.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/mps-systems-2400.jpg 2400w,
             /img/agency/clients/mps-systems-1800.jpg 1800w,
-            /img/agency/clients/mps-systems-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/national-railroad-museum.jpg" alt="Affinity"
-            srcset="/img/agency/clients/national-railroad-museum-400.jpg 400w,
-            /img/agency/clients/national-railroad-museum-600.jpg 600w,
-            /img/agency/clients/national-railroad-museum-900.jpg 900w,
-            /img/agency/clients/national-railroad-museum-1200.jpg 1200w,
+            /img/agency/clients/mps-systems-1200.jpg 1200w,
+            /img/agency/clients/mps-systems-900.jpg 900w,
+            /img/agency/clients/mps-systems-600.jpg 600w,
+            /img/agency/clients/mps-systems-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/national-railroad-museum.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/national-railroad-museum-2400.jpg 2400w,
             /img/agency/clients/national-railroad-museum-1800.jpg 1800w,
-            /img/agency/clients/national-railroad-museum-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/open-streets-green-bay.jpg" alt="Affinity"
-            srcset="/img/agency/clients/open-streets-green-bay-400.jpg 400w,
-            /img/agency/clients/open-streets-green-bay-600.jpg 600w,
-            /img/agency/clients/open-streets-green-bay-900.jpg 900w,
-            /img/agency/clients/open-streets-green-bay-1200.jpg 1200w,
+            /img/agency/clients/national-railroad-museum-1200.jpg 1200w,
+            /img/agency/clients/national-railroad-museum-900.jpg 900w,
+            /img/agency/clients/national-railroad-museum-600.jpg 600w,
+            /img/agency/clients/national-railroad-museum-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/open-streets-green-bay.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/open-streets-green-bay-2400.jpg 2400w,
             /img/agency/clients/open-streets-green-bay-1800.jpg 1800w,
-            /img/agency/clients/open-streets-green-bay-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/packer-fastener.jpg" alt="Affinity"
-            srcset="/img/agency/clients/packer-fastener-400.jpg 400w,
-            /img/agency/clients/packer-fastener-600.jpg 600w,
-            /img/agency/clients/packer-fastener-900.jpg 900w,
-            /img/agency/clients/packer-fastener-1200.jpg 1200w,
+            /img/agency/clients/open-streets-green-bay-1200.jpg 1200w,
+            /img/agency/clients/open-streets-green-bay-900.jpg 900w,
+            /img/agency/clients/open-streets-green-bay-600.jpg 600w,
+            /img/agency/clients/open-streets-green-bay-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/packer-fastener.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/packer-fastener-2400.jpg 2400w,
             /img/agency/clients/packer-fastener-1800.jpg 1800w,
-            /img/agency/clients/packer-fastener-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/paper-transport.jpg" alt="Affinity"
-            srcset="/img/agency/clients/paper-transport-400.jpg 400w,
-            /img/agency/clients/paper-transport-600.jpg 600w,
-            /img/agency/clients/paper-transport-900.jpg 900w,
-            /img/agency/clients/paper-transport-1200.jpg 1200w,
+            /img/agency/clients/packer-fastener-1200.jpg 1200w,
+            /img/agency/clients/packer-fastener-900.jpg 900w,
+            /img/agency/clients/packer-fastener-600.jpg 600w,
+            /img/agency/clients/packer-fastener-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/paper-transport.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/paper-transport-2400.jpg 2400w,
             /img/agency/clients/paper-transport-1800.jpg 1800w,
-            /img/agency/clients/paper-transport-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/river-valley-bank.jpg" alt="Affinity"
-            srcset="/img/agency/clients/river-valley-bank-400.jpg 400w,
-            /img/agency/clients/river-valley-bank-600.jpg 600w,
-            /img/agency/clients/river-valley-bank-900.jpg 900w,
-            /img/agency/clients/river-valley-bank-1200.jpg 1200w,
+            /img/agency/clients/paper-transport-1200.jpg 1200w,
+            /img/agency/clients/paper-transport-900.jpg 900w,
+            /img/agency/clients/paper-transport-600.jpg 600w,
+            /img/agency/clients/paper-transport-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/river-valley-bank.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/river-valley-bank-2400.jpg 2400w,
             /img/agency/clients/river-valley-bank-1800.jpg 1800w,
-            /img/agency/clients/river-valley-bank-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/vans-lumber.jpg" alt="Affinity"
-            srcset="/img/agency/clients/vans-lumber-400.jpg 400w,
-            /img/agency/clients/vans-lumber-600.jpg 600w,
-            /img/agency/clients/vans-lumber-900.jpg 900w,
-            /img/agency/clients/vans-lumber-1200.jpg 1200w,
+            /img/agency/clients/river-valley-bank-1200.jpg 1200w,
+            /img/agency/clients/river-valley-bank-900.jpg 900w,
+            /img/agency/clients/river-valley-bank-600.jpg 600w,
+            /img/agency/clients/river-valley-bank-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/vans-lumber.jpg" alt="Affinity"
+      srcset="
+            /img/agency/clients/vans-lumber-2400.jpg 2400w,
             /img/agency/clients/vans-lumber-1800.jpg 1800w,
-            /img/agency/clients/vans-lumber-2400.jpg 2400w"/>
-        </div>
-        <div class="client" >
-            <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/washington-island-ferry.jpg" alt="Affinity"
-            srcset="/img/agency/clients/washington-island-ferry-400.jpg 400w,
-            /img/agency/clients/washington-island-ferry-600.jpg 600w,
-            /img/agency/clients/washington-island-ferry-900.jpg 900w,
-            /img/agency/clients/washington-island-ferry-1200.jpg 1200w,
+            /img/agency/clients/vans-lumber-1200.jpg 1200w,
+            /img/agency/clients/vans-lumber-900.jpg 900w,
+            /img/agency/clients/vans-lumber-600.jpg 600w,
+            /img/agency/clients/vans-lumber-400.jpg 400w" />
+    </div>
+    <div class="client" data-aos="fade-up">
+      <img data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/washington-island-ferry.jpg" alt="Affinity"
+      srcset="/img/agency/clients/washington-island-ferry-2400.jpg 2400w,
             /img/agency/clients/washington-island-ferry-1800.jpg 1800w,
-            /img/agency/clients/washington-island-ferry-2400.jpg 2400w"/>
-        </div>
-        <!-- <div class="client" >
+            /img/agency/clients/washington-island-ferry-1200.jpg 1200w,
+            /img/agency/clients/washington-island-ferry-900.jpg 900w,
+            /img/agency/clients/washington-island-ferry-600.jpg 600w,
+            /img/agency/clients/washington-island-ferry-400.jpg 400w" />
+    </div>
+    <!-- <div class="client" >
             <img data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-offset="100" src="/img/agency/clients/gray_affinity.jpg" alt="Affinity"
             srcset="/img/agency/clients/gray_affinity-400.jpg 400w,
             /img/agency/clients/gray_affinity-600.jpg 600w,
@@ -398,5 +418,5 @@ title: Agency
             /img/agency/clients/gray_wif-1800.jpg 1800w,
             /img/agency/clients/gray_wif-2400.jpg 2400w" />
         </div> -->
-    </div>
+  </div>
 </div>

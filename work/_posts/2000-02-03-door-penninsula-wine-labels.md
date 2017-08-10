@@ -17,31 +17,31 @@ Located in Sturgeon Bay, Door Peninsula Winery is a locally owned establishment 
 
 <div class="images">
 
-<img class="half" data-aos="fade-up" data-featherlight="/img/projects/door-peninsula-wine-labels/dpw-label-1.jpg"
+<img class="half first fit" data-aos="fade-up" data-featherlight="/img/projects/door-peninsula-wine-labels/dpw-label-1.jpg"
 alt="Door Peninsula Winery Bottles 1" src="/img/projects/door-peninsula-wine-labels/dpw-label-1.jpg"
-srcset="/img/projects/door-peninsula-wine-labels/dpw-label-1-400.jpg 400w,
-/img/projects/door-peninsula-wine-labels/dpw-label-1-600.jpg 600w,
-/img/projects/door-peninsula-wine-labels/dpw-label-1-900.jpg 900w,
-/img/projects/door-peninsula-wine-labels/dpw-label-1-1200.jpg 1200w,
+srcset="/img/projects/door-peninsula-wine-labels/dpw-label-1-2400.jpg 2400w,
 /img/projects/door-peninsula-wine-labels/dpw-label-1-1800.jpg 1800w,
-/img/projects/door-peninsula-wine-labels/dpw-label-1-2400.jpg 2400w" />
+/img/projects/door-peninsula-wine-labels/dpw-label-1-1200.jpg 1200w,
+/img/projects/door-peninsula-wine-labels/dpw-label-1-900.jpg 900w,
+/img/projects/door-peninsula-wine-labels/dpw-label-1-600.jpg 600w,
+/img/projects/door-peninsula-wine-labels/dpw-label-1-400.jpg 400w" />
 
-<img class="half" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/door-peninsula-wine-labels/dpw-label-3.jpg"
+<img class="half last fit" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/door-peninsula-wine-labels/dpw-label-3.jpg"
 alt="Door Peninsula Winery Bottles 2" src="/img/projects/door-peninsula-wine-labels/dpw-label-3.jpg"
-srcset="/img/projects/door-peninsula-wine-labels/dpw-label-3-400.jpg 400w,
-/img/projects/door-peninsula-wine-labels/dpw-label-3-600.jpg 600w,
-/img/projects/door-peninsula-wine-labels/dpw-label-3-900.jpg 900w,
-/img/projects/door-peninsula-wine-labels/dpw-label-3-1200.jpg 1200w,
+srcset="/img/projects/door-peninsula-wine-labels/dpw-label-3-2400.jpg 2400w,
 /img/projects/door-peninsula-wine-labels/dpw-label-3-1800.jpg 1800w,
-/img/projects/door-peninsula-wine-labels/dpw-label-3-2400.jpg 2400w" />
+/img/projects/door-peninsula-wine-labels/dpw-label-3-1200.jpg 1200w,
+/img/projects/door-peninsula-wine-labels/dpw-label-3-900.jpg 900w,
+/img/projects/door-peninsula-wine-labels/dpw-label-3-600.jpg 600w,
+/img/projects/door-peninsula-wine-labels/dpw-label-3-400.jpg 400w" />
 
-<img class="full" data-aos="fade-up" data-featherlight="/img/projects/door-peninsula-wine-labels/dpw-label-2.jpg"
+<img class="full fit" data-aos="fade-up" data-featherlight="/img/projects/door-peninsula-wine-labels/dpw-label-2.jpg"
 alt="Door Peninsula Winery Bottles 3" src="/img/projects/door-peninsula-wine-labels/dpw-label-2.jpg"
-srcset="/img/projects/door-peninsula-wine-labels/dpw-label-2-400.jpg 400w,
-/img/projects/door-peninsula-wine-labels/dpw-label-2-600.jpg 600w,
-/img/projects/door-peninsula-wine-labels/dpw-label-2-900.jpg 900w,
-/img/projects/door-peninsula-wine-labels/dpw-label-2-1200.jpg 1200w,
+srcset="/img/projects/door-peninsula-wine-labels/dpw-label-2-2400.jpg 2400w,
 /img/projects/door-peninsula-wine-labels/dpw-label-2-1800.jpg 1800w,
-/img/projects/door-peninsula-wine-labels/dpw-label-2-2400.jpg 2400w" />
+/img/projects/door-peninsula-wine-labels/dpw-label-2-1200.jpg 1200w,
+/img/projects/door-peninsula-wine-labels/dpw-label-2-900.jpg 900w,
+/img/projects/door-peninsula-wine-labels/dpw-label-2-600.jpg 600w,
+/img/projects/door-peninsula-wine-labels/dpw-label-2-400.jpg 400w" />
 
 </div>

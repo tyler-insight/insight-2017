@@ -26,12 +26,13 @@ Together, Insight and Domino have helped to cure many of pharma’s serializatio
 The [campaign’s blog](http://codingforcompliance.com) was established as the primary hub for pharma packaging communication, educational resources and a forum for pharma professionals to talk directly with Domino’s experts. Social media channels including Twitter and Facebook pushed the Coding for Compliance name and message out to the appropriate audience. Facebook ads allowed for extremely detailed targeting to build campaign awareness and conversation with key decision makers.
 
 <img data-aos="fade-up" src="/img/projects/domino-printing-sciences-case-study/coding-for-compliance-website.jpg" alt="Domino Coding for Compliance"
-srcset="/img/projects/domino-printing-sciences-case-study/coding-for-compliance-website-400.jpg 400w,
-/img/projects/domino-printing-sciences-case-study/coding-for-compliance-website-600.jpg 600w,
-/img/projects/domino-printing-sciences-case-study/coding-for-compliance-website-900.jpg 900w,
-/img/projects/domino-printing-sciences-case-study/coding-for-compliance-website-1200.jpg 1200w,
+srcset="
+/img/projects/domino-printing-sciences-case-study/coding-for-compliance-website-2400.jpg 2400w,
 /img/projects/domino-printing-sciences-case-study/coding-for-compliance-website-1800.jpg 1800w,
-/img/projects/domino-printing-sciences-case-study/coding-for-compliance-website-2400.jpg 2400w" />
+/img/projects/domino-printing-sciences-case-study/coding-for-compliance-website-1200.jpg 1200w,
+/img/projects/domino-printing-sciences-case-study/coding-for-compliance-website-900.jpg 900w,
+/img/projects/domino-printing-sciences-case-study/coding-for-compliance-website-600.jpg 600w,
+/img/projects/domino-printing-sciences-case-study/coding-for-compliance-website-400.jpg 400w" />
 
 
 Insight then brought Domino’s presence from on-screen to in-person offering creative support at national trade show events. Cleverly placed floor decals, signage and creative educational videos added personality while educating and building relationships at shows. One video became such a useful vehicle for Domino’s mission that it was translated into German at the request of the European arm of the company.

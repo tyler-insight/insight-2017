@@ -98,6 +98,7 @@
 }
 
 .project-description {
+  @include span-columns(4);
     h2 {
         margin-bottom: 1em;
         font-weight: 400;
@@ -202,6 +203,7 @@
             padding-top: 0.2em 0;
             cursor: pointer;
             object-fit: cover;
+            object-position: center;
             @include media($desktop) {
                 padding: 0.2em;
 
@@ -352,13 +354,13 @@
     @include media($tablet) {
         .previous-project:hover {
             .center-text {
-                @include transform(translateX(100%));
+
                 @include transition(transform .5s $ease-in-cubic);
             }
 
             .project {
                 @include span-columns(8);
-                @include transform(translateX(0%));
+
                 @include transition(transform .5s $ease-in-cubic);
 
                 h2 {
@@ -369,13 +371,13 @@
 
         .next-project:hover {
             .center-text {
-                @include transform(translateX(-100%));
+
                 @include transition(transform .5s $ease-in-cubic);
             }
 
             .project {
                 @include span-columns(8);
-                @include transform(translateX(0%));
+
                 @include transition(transform .5s $ease-in-cubic);
 
                 h2 {
@@ -419,19 +421,21 @@
     .previous-project {
         position: relative;
         overflow: hidden;
-        height: 100px;
+        height: 200px;
         margin-bottom: 50px;
         @include span-columns(2);
         @include omega;
         width:50%;
         object-fit: cover;
+        object-position: center;
 
         @include media($tablet) {
             background: #fbfbfb;
             height: 300px;
             @include span-columns(4);
             @include omega;
-            width: 50%;
+            width:calc(50% - .4em);
+            margin: .4em .2em;
         }
         @include media($desktop) {
             height: 400px;
@@ -453,10 +457,12 @@
         .center-text {
             position: absolute;
             display: block;
-            /* display: table;   For next/previous solid color */ 
+            /* display: table;   For next/previous solid color */
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
+            margin:0;
 
             h2 {
                 position: relative;
@@ -503,6 +509,7 @@
         background-size: cover;
         background-position: center;
         display: none;
+        margin:0;
 
         .project-info {
             position: absolute;

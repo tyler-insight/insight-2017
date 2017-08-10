@@ -7,7 +7,7 @@ type: design
 
 ---
 
-<img src="/img/play/cherry-blossom-rendering/cherry-blossom-rendering.jpg" alt="Cherry Blossom Rendering" srcset="/img/play/cherry-blossom-rendering/cherry-blossom-rendering-400.jpg 400w,
+<img data-aos="fade-up" src="/img/play/cherry-blossom-rendering/cherry-blossom-rendering.jpg" alt="Cherry Blossom Rendering" srcset="/img/play/cherry-blossom-rendering/cherry-blossom-rendering-400.jpg 400w,
 /img/play/cherry-blossom-rendering/cherry-blossom-rendering-600.jpg 600w,
 /img/play/cherry-blossom-rendering/cherry-blossom-rendering-900.jpg 900w,
 /img/play/cherry-blossom-rendering/cherry-blossom-rendering-1200.jpg 1200w,

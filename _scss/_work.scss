@@ -124,7 +124,7 @@
     background-size: cover;
     background-position: center;
     display: none;
-    padding: 0.2em;
+    margin: 0.2em 0;
 
     .project-info {
         position: absolute;
@@ -181,14 +181,16 @@
     @include media($desktop) {
          @include span-columns(6);
         height: 400px;
-        width: 50%;
+        width: calc(50% - .4em);
         display: none;
+        margin: 0.2em 0.4em;
     }
     @include media($desktop-large) {
          @include span-columns(4);
         height: 300px;
-        width: calc(100% / 3);
+        width: calc((100% / 3) - .4em);
         display: none;
+        margin: 0.2em 0.4em;
     }
     @include media($desktop-largest) {
         height: 400px;
@@ -200,8 +202,8 @@
 
 .project:hover {
     .project-info {
-        width: calc(100% - .4em);
-        height: calc(100% - .4em);
+        width: calc(100%);
+        height: calc(100%);
         opacity: 1;
         @include transition(opacity .5s $ease-out-quint);
 
@@ -262,8 +264,11 @@
         min-height: 100%;
         object-fit: cover;
         object-position: center;
+        background: $light-gray;
     }
 }
+
+
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
     /* IE10+ specific styles go here */
     .project {
@@ -335,7 +340,7 @@
         @include media($desktop-large) {
              @include span-columns(4);
             height: 300px;
-            width: calc(99% / 3);
+            width: calc((99% / 3)-1px);
             display: none;
         }
         @include media($desktop-largest) {
@@ -346,11 +351,4 @@
         }
     }
 
-    .no-ie {
-        img {
-            min-width: 200%;
-            min-height: 100%;
-            transform: translateX(-25%);
-        }
-    }
 }

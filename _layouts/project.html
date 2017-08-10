@@ -14,16 +14,16 @@ background: linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.b
     <h2 data-aos="fade-up" data-aos-delay="800" data-aos-anchor="#project-title-a" style="color:#{{ page.cover-text-color }}">for <strong>{{ page.client }}</strong></h2>
   </div>
 
-  <div class="project-description">
+  <div class="project-description" data-aos="fade-up">
     <h2>{{ page.description }}</h2>
   </div>
-  <div class="description-after" style="background: -webkit-linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});
+  <div class="description-after" data-aos="fade-up" style="background: -webkit-linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});
 background: -o-linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});
 background: -moz-linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});
 background: linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.back-color2 }});">
 
   </div>
-  <div class="project-body">
+  <div class="project-body" data-aos="fade-up">
     {{ content }}
   </div>
 
@@ -88,12 +88,14 @@ background: linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.b
       {% if page.previous.url %} {% if page.previous.categories contains 'work' %}
       <a href="{{page.previous.url}}">
         <div class="center-text">
-      <img src="/img/projects/{{ page.previous.cover-image }}.jpg" alt="{{ page.previous.title }}" srcset="/img/projects/{{ page.previous.cover-image }}-400.jpg 400w,
-    /img/projects/{{ page.previous.cover-image }}-600.jpg 600w,
-    /img/projects/{{ page.previous.cover-image }}-900.jpg 900w,
-    /img/projects/{{ page.previous.cover-image }}-900.jpg 1200w,
-    /img/projects/{{ page.previous.cover-image }}-900.jpg 1800w,
-    /img/projects/{{ page.previous.cover-image }}-900.jpg 2400w" />
+      <img class="fit" src="/img/projects/{{ page.previous.cover-image }}.jpg" alt="{{ page.previous.title }}"
+      srcset="
+      /img/projects/{{ page.previous.cover-image }}-900.jpg 2400w,
+      /img/projects/{{ page.previous.cover-image }}-900.jpg 1800w,
+      /img/projects/{{ page.previous.cover-image }}-900.jpg 1200w,
+      /img/projects/{{ page.previous.cover-image }}-900.jpg 900w,
+      /img/projects/{{ page.previous.cover-image }}-600.jpg 600w,
+      /img/projects/{{ page.previous.cover-image }}-400.jpg 400w" />
         </div>
         <div class="project" style="background: -webkit-linear-gradient(to bottom right, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});
       background: -o-linear-gradient(to bottom right, #{{ page.previous.back-color1 }}, #{{ page.previous.back-color2 }});
@@ -115,12 +117,14 @@ background: linear-gradient(to bottom right, #{{ page.back-color1 }}, #{{ page.b
       {% if page.next.url %} {% if page.next.categories contains 'work' %}
       <a href="{{page.next.url}}">
         <div class="center-text">
-          <img src="/img/projects/{{ page.next.cover-image }}.jpg" alt="{{ page.next.title }}" srcset="/img/projects/{{ page.next.cover-image }}-400.jpg 400w,
-        /img/projects/{{ page.next.cover-image }}-600.jpg 600w,
-        /img/projects/{{ page.next.cover-image }}-900.jpg 900w,
-        /img/projects/{{ page.next.cover-image }}-900.jpg 1200w,
+          <img class="fit" src="/img/projects/{{ page.next.cover-image }}.jpg" alt="{{ page.next.title }}"
+        srcset="
+        /img/projects/{{ page.next.cover-image }}-900.jpg 2400w,
         /img/projects/{{ page.next.cover-image }}-900.jpg 1800w,
-        /img/projects/{{ page.next.cover-image }}-900.jpg 2400w" />
+        /img/projects/{{ page.next.cover-image }}-900.jpg 1200w,
+        /img/projects/{{ page.next.cover-image }}-900.jpg 900w,
+        /img/projects/{{ page.next.cover-image }}-600.jpg 600w,
+        /img/projects/{{ page.next.cover-image }}-400.jpg 400w" />
         </div>
 
 

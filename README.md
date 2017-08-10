@@ -101,7 +101,7 @@ tag: blog
 
 **Text-color:** This will set the color of the text for when the blog appears on the blog page, or at the bottom of another blog post.
  In most cases, it will be fff which is white. DO NOT use the # in these.
- 
+
 **Back-color:** This will be the background color for when the blog appears on the blog page, or at the bottom of another blog post. Typically, you want to use a color that either coincides with the blog post's imagery or theme.
 
 **Cover-image:** Sets the featured image for the blog post.
@@ -118,12 +118,12 @@ Images should also have this line of code in their tag, which will give them an 
 
 ```html
 <img data-aos="fade-up" src="/img/culture/header-1.jpg" alt="We Rock"
-srcset="/img/culture/header-1-400.jpg 400w,
-        /img/culture/header-1-600.jpg 600w,
-        /img/culture/header-1-900.jpg 900w,
-        /img/culture/header-1-1200.jpg 1200w,
+srcset="/img/culture/header-1-2400.jpg 2400w,
         /img/culture/header-1-1800.jpg 1800w,
-        /img/culture/header-1-2400.jpg 2400w"/>
+        /img/culture/header-1-1200.jpg 1200w,
+        /img/culture/header-1-900.jpg 900w,
+        /img/culture/header-1-600.jpg 600w,
+        /img/culture/header-1-400.jpg 400w"/>
 ```
 
 ## Adding a project
@@ -185,17 +185,21 @@ They should also get `data-featherlight="path/to/image"` which will cause them t
 ```html
 <img data-aos="fade-up" data-featherlight="/img/projects/vans-lumber-photography/vans-photography5.jpg" src="/img/projects/vans-lumber-photography/vans-photography5.jpg"
 alt="Vans Photography"
-srcset="/img/projects/vans-lumber-photography/vans-photography5-400.jpg 400w,
-/img/projects/vans-lumber-photography/vans-photography5-600.jpg 600w,
-/img/projects/vans-lumber-photography/vans-photography5-900.jpg 900w,
-/img/projects/vans-lumber-photography/vans-photography5-1200.jpg 1200w,
+srcset="/img/projects/vans-lumber-photography/vans-photography5-2400.jpg 2400w,
 /img/projects/vans-lumber-photography/vans-photography5-1800.jpg 1800w,
-/img/projects/vans-lumber-photography/vans-photography5-2400.jpg 2400w" />
+/img/projects/vans-lumber-photography/vans-photography5-1200.jpg 1200w,
+/img/projects/vans-lumber-photography/vans-photography5-900.jpg 900w,
+/img/projects/vans-lumber-photography/vans-photography5-600.jpg 600w,
+/img/projects/vans-lumber-photography/vans-photography5-400.jpg 400w" />
 ```
 
 ### Image Styling
 
 There are a few special ways setup to showcase the images in a project.
+
+#### Object Fit Pollyfill
+
+There is a special class you need to apply to images that use the object-fit property. These are images that you display in the grid setup on a project, and any other designated object-fit images. Simply apply the `fix` class to them images and the ofi.min.js will setup a polyfill for browsers that don't natively support object-fit.
 
 #### Grid Setup
 
@@ -206,58 +210,58 @@ This setup makes the images display in rows cropped to the same height. There ar
 
   <img class="half first" data-aos="fade-up" data-featherlight="/img/projects/vans-lumber-photography/vans-photography5.jpg" src="/img/projects/vans-lumber-photography/vans-photography5.jpg"
   alt="Vans Photography"
-  srcset="/img/projects/vans-lumber-photography/vans-photography5-400.jpg 400w,
-  /img/projects/vans-lumber-photography/vans-photography5-600.jpg 600w,
-  /img/projects/vans-lumber-photography/vans-photography5-900.jpg 900w,
-  /img/projects/vans-lumber-photography/vans-photography5-1200.jpg 1200w,
+  srcset="/img/projects/vans-lumber-photography/vans-photography5-2400.jpg 2400w,
   /img/projects/vans-lumber-photography/vans-photography5-1800.jpg 1800w,
-  /img/projects/vans-lumber-photography/vans-photography5-2400.jpg 2400w" />
-  
+  /img/projects/vans-lumber-photography/vans-photography5-1200.jpg 1200w,
+  /img/projects/vans-lumber-photography/vans-photography5-900.jpg 900w,
+  /img/projects/vans-lumber-photography/vans-photography5-600.jpg 600w,
+  /img/projects/vans-lumber-photography/vans-photography5-400.jpg 400w" />
+
   <img class="half last" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/vans-lumber-photography/vans-photography6.jpg" src="/img/projects/vans-lumber-photography/vans-photography6.jpg"
   alt="Vans Photography"
-  srcset="/img/projects/vans-lumber-photography/vans-photography6-400.jpg 400w,
-  /img/projects/vans-lumber-photography/vans-photography6-600.jpg 600w,
-  /img/projects/vans-lumber-photography/vans-photography6-900.jpg 900w,
-  /img/projects/vans-lumber-photography/vans-photography6-1200.jpg 1200w,
+  srcset="/img/projects/vans-lumber-photography/vans-photography6-2400.jpg 2400w,
   /img/projects/vans-lumber-photography/vans-photography6-1800.jpg 1800w,
-  /img/projects/vans-lumber-photography/vans-photography6-2400.jpg 2400w" />
-  
+  /img/projects/vans-lumber-photography/vans-photography6-1200.jpg 1200w,
+  /img/projects/vans-lumber-photography/vans-photography6-900.jpg 900w,
+  /img/projects/vans-lumber-photography/vans-photography6-600.jpg 600w,
+  /img/projects/vans-lumber-photography/vans-photography6-400.jpg 400w" />
+
   <img class="third first" data-aos="fade-up" data-featherlight="/img/projects/vans-lumber-photography/vans-photography7.jpg" src="/img/projects/vans-lumber-photography/vans-photography7.jpg"
   alt="Vans Photography"
-  srcset="/img/projects/vans-lumber-photography/vans-photography7-400.jpg 400w,
-  /img/projects/vans-lumber-photography/vans-photography7-600.jpg 600w,
-  /img/projects/vans-lumber-photography/vans-photography7-900.jpg 900w,
-  /img/projects/vans-lumber-photography/vans-photography7-1200.jpg 1200w,
+  srcset="/img/projects/vans-lumber-photography/vans-photography7-2400.jpg 2400w,
   /img/projects/vans-lumber-photography/vans-photography7-1800.jpg 1800w,
-  /img/projects/vans-lumber-photography/vans-photography7-2400.jpg 2400w" />
-  
+  /img/projects/vans-lumber-photography/vans-photography7-1200.jpg 1200w,
+  /img/projects/vans-lumber-photography/vans-photography7-900.jpg 900w,
+  /img/projects/vans-lumber-photography/vans-photography7-600.jpg 600w,
+  /img/projects/vans-lumber-photography/vans-photography7-400.jpg 400w" />
+
   <img class="third" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/vans-lumber-photography/vans-photography8.jpg" src="/img/projects/vans-lumber-photography/vans-photography8.jpg"
   alt="Vans Photography"
-  srcset="/img/projects/vans-lumber-photography/vans-photography8-400.jpg 400w,
-  /img/projects/vans-lumber-photography/vans-photography8-600.jpg 600w,
-  /img/projects/vans-lumber-photography/vans-photography8-900.jpg 900w,
-  /img/projects/vans-lumber-photography/vans-photography8-1200.jpg 1200w,
+  srcset="/img/projects/vans-lumber-photography/vans-photography8-2400.jpg 2400w,
   /img/projects/vans-lumber-photography/vans-photography8-1800.jpg 1800w,
-  /img/projects/vans-lumber-photography/vans-photography8-2400.jpg 2400w" />
-  
+  /img/projects/vans-lumber-photography/vans-photography8-1200.jpg 1200w,
+  /img/projects/vans-lumber-photography/vans-photography8-900.jpg 900w,
+  /img/projects/vans-lumber-photography/vans-photography8-600.jpg 600w,
+  /img/projects/vans-lumber-photography/vans-photography8-400.jpg 400w" />
+
   <img class="third last" data-aos="fade-up" data-aos-delay="400" data-featherlight="/img/projects/vans-lumber-photography/vans-photography9.jpg" src="/img/projects/vans-lumber-photography/vans-photography9.jpg"
   alt="Vans Photography"
-  srcset="/img/projects/vans-lumber-photography/vans-photography9-400.jpg 400w,
-  /img/projects/vans-lumber-photography/vans-photography9-600.jpg 600w,
-  /img/projects/vans-lumber-photography/vans-photography9-900.jpg 900w,
-  /img/projects/vans-lumber-photography/vans-photography9-1200.jpg 1200w,
+  srcset="/img/projects/vans-lumber-photography/vans-photography9-2400.jpg 2400w,
   /img/projects/vans-lumber-photography/vans-photography9-1800.jpg 1800w,
-  /img/projects/vans-lumber-photography/vans-photography9-2400.jpg 2400w" />
-  
-  
+  /img/projects/vans-lumber-photography/vans-photography9-1200.jpg 1200w,
+  /img/projects/vans-lumber-photography/vans-photography9-900.jpg 900w,
+  /img/projects/vans-lumber-photography/vans-photography9-600.jpg 600w,
+  /img/projects/vans-lumber-photography/vans-photography9-400.jpg 400w" />
+
+
   <img class="full" data-aos="fade-up" data-featherlight="/img/projects/vans-lumber-photography/vans-photography10.jpg" src="/img/projects/vans-lumber-photography/vans-photography10.jpg"
   alt="Vans Photography"
-  srcset="/img/projects/vans-lumber-photography/vans-photography10-400.jpg 400w,
-  /img/projects/vans-lumber-photography/vans-photography10-600.jpg 600w,
-  /img/projects/vans-lumber-photography/vans-photography10-900.jpg 900w,
-  /img/projects/vans-lumber-photography/vans-photography10-1200.jpg 1200w,
+  srcset="/img/projects/vans-lumber-photography/vans-photography10-2400.jpg 2400w,
   /img/projects/vans-lumber-photography/vans-photography10-1800.jpg 1800w,
-  /img/projects/vans-lumber-photography/vans-photography10-2400.jpg 2400w" />
+  /img/projects/vans-lumber-photography/vans-photography10-1200.jpg 1200w,
+  /img/projects/vans-lumber-photography/vans-photography10-900.jpg 900w,
+  /img/projects/vans-lumber-photography/vans-photography10-600.jpg 600w,
+  /img/projects/vans-lumber-photography/vans-photography10-400.jpg 400w" />
 
 </div>
 ```
@@ -271,12 +275,12 @@ When you have a very tall image that will need some scrolling and you don't want
   <div class="fill-back">
     <img data-aos="fade-up" data-featherlight="/img/projects/sas-forks-website/sas-forks-website-2.jpg"
     alt="SAS Forks Website" src="/img/projects/sas-forks-website/sas-forks-website-2.jpg"
-    srcset="/img/projects/sas-forks-website/sas-forks-website-2-400.jpg 400w,
-    /img/projects/sas-forks-website/sas-forks-website-2-600.jpg 600w,
-    /img/projects/sas-forks-website/sas-forks-website-2-900.jpg 900w,
-    /img/projects/sas-forks-website/sas-forks-website-2-1200.jpg 1200w,
+    srcset="/img/projects/sas-forks-website/sas-forks-website-2-2400.jpg 2400w,
     /img/projects/sas-forks-website/sas-forks-website-2-1800.jpg 1800w,
-    /img/projects/sas-forks-website/sas-forks-website-2-2400.jpg 2400w" />
+    /img/projects/sas-forks-website/sas-forks-website-2-1200.jpg 1200w,
+    /img/projects/sas-forks-website/sas-forks-website-2-900.jpg 900w,
+    /img/projects/sas-forks-website/sas-forks-website-2-600.jpg 600w,
+    /img/projects/sas-forks-website/sas-forks-website-2-400.jpg 400w" />
   </div>
 </div>
 
