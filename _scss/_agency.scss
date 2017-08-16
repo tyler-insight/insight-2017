@@ -179,7 +179,7 @@
     transition: opacity 0.5s;
     margin-bottom: $mobile-spacing;
     @include span-columns(4);
-    height: 80vh;
+
     overflow: hidden;
     @include media($tablet) {
         margin-bottom: $tablet-spacing;
@@ -205,6 +205,17 @@
         height: 100%;
         object-fit: cover;
     }
+}
+
+.design-pano {
+  margin-bottom: $mobile-spacing;
+  @include span-columns(4);
+  @include media($tablet) {
+      margin-bottom: $tablet-spacing;
+  }
+  @include media($desktop) {
+      margin-bottom: $desktop-spacing;
+  }
 }
 
 .about-services {
