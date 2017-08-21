@@ -13,4 +13,4 @@ If you have an Elf on a Shelf, show us how he keeps watch at your office. Catch 
 
 Get inspired and enjoy a [gallery of #elfinsights photos on our Facebook page.](https://www.facebook.com/media/set/?set=a.10151804863367727.1073741837.150343487726&type=1)
 
-![Ira the Insight Elf](/img/ira.jpg)
+![Ira the Insight Elf](/img/blog/ira-the-insight-elf.jpg)

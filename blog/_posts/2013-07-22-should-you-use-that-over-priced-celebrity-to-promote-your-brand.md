@@ -7,7 +7,7 @@ text-color: 'fff'
 back-color: '60A4E0'
 tag: blog
 ---
-![high-priced-spokesperson](/img/high-priced-spokesperson.jpg)
+![high-priced-spokesperson](/img/blog/should-you-use-that-over-priced-celebrity-to-promote-your-brand.jpg)
 
 When developing creative for a brand campaign, many companies incur the expense of high-priced celebrity spokespeople. Local radio DJs and TV news staff, national actors and athletes, even politicians have supplemented their income with brand gigs.
 

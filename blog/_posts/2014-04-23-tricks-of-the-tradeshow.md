@@ -16,49 +16,49 @@ While there, I analyzed the most interesting booth designs, taking note of the e
 
 GEA Group has one of the first booths near the entrance of the tradeshow and it was massive. Large industrial scaffolding framed their walls, all wrapped around a full-sized trailer showcasing their mobile unit service offerings. Because of its sheer size, you couldn’t help but take notice.
 
-![GEA Booth](/img/gea.jpg)
+![GEA Booth](/img/blog/tricks-of-the-trade-show-build-a standout-booth-1.jpg)
 
 ## Standout Strategy: Layout
 
 Optima’s booth also had a large footprint with a two-story display showcasing photos of on-site personnel, supported by their service messaging below. What I thought was interesting about their booth was a secondary private room. Because tradeshows are quite hectic, having the ability to sit down with a prospective client in a quiet area seemed to be a great feature.
 
-![Optima Booth](/img/optima.jpg)
+![Optima Booth](/img/blog/tricks-of-the-trade-show-build-a standout-booth-2.jpg)
 
 ## Standout Strategy: Color
 
 AZO really stood out to me in the sea of techie blues and grays with their bright orange footprint and signage. Having the TV stand on the edge of their area helped draw fringe wanderers, and their service messaging was very clear.
 
-![AZO Booth](/img/azo.jpg)
+![AZO Booth](/img/blog/tricks-of-the-trade-show-build-a standout-booth-3.jpg)
 
 ## Standout Strategy: Mystery
 
 Two things really struck me about the next booth. First, the great use of illuminated colors and shapes to visually attracted an audience. Second, it was completely void of all messaging, including the company name/logo. I never did get the company name, and perhaps it’s on an area I just can’t see in the photo, but it definitely caught my attention.
 
-![After AZO](/img/after-azo.jpg)
+![After AZO](/img/blog/tricks-of-the-trade-show-build-a standout-booth-4.jpg)
 
 ## Standout Strategy: Showcasing Purpose
 
 Probably the best example of showcasing a company’s mission statement, Saint-Gobain had a very nice booth design. With their service message spanning the entire length of their booth in a strong blue background, it captured your eye and brought you into examine the other great features within the booth.
 
-![Saint Gobain](/img/saint-gobain.jpg)
+![Saint Gobain](/img/blog/tricks-of-the-trade-show-build-a standout-booth-5.jpg)
 
 ## Standout Strategy: Shape
 
 Pall Corporation’s booth was built in a circular shape with glass walls. At the core, the overhead structure clearly displayed their service offerings and provided lighting for the show-room space below.
 
-![Pell](/img/pell.jpg)
+![Pell](/img/blog/tricks-of-the-trade-show-build-a standout-booth-6.jpg)
 
 ## Standout Strategy: Artistic Design
 
 In my opinion, DSM had the most interesting booth design at the show. Their use of repeating geometric shapes gave the sense of texture. Surrounded by hard, cold, high-tech designs, it really stood out.
 
-![DSM](/img/dsm.jpg)
+![DSM](/img/blog/tricks-of-the-trade-show-build-a standout-booth-7.jpg)
 
 ## Standout Strategy: Intentional Simplicity
 
 When it comes to design, some times the most admirable work shows restraint. Our client, Domino used white space to showcase what’s really important: the products. The white surrounding brought focus to their branding, product demonstration and showcasing real-world applications of their products.
 
-![Domino](/img/Domino.jpg)
+![Domino](/img/blog/tricks-of-the-trade-show-build-a standout-booth-8.jpg)
 
 In conclusion, while working at INTERPHEX 2014, I observed many different and effective booth designs – from mysterious to flashy, straightforward and some with interactive activities – all to attract visitors. Through my observations, I learned the most important thing to remember when designing a tradeshow booth is, in order to stand out and be noticed, you must do something different.
 

@@ -7,7 +7,7 @@ text-color: 'fff'
 back-color: 'E74445'
 tag: blog
 ---
-![Insight_Creative_Timber_Rattlers](/img/Insight_Creative_Timber_Rattlers.jpg)
+![Insight_Creative_Timber_Rattlers](/img/blog/timber-rattlers-game-with-insight-creative.jpg)
 
 On June 20, 2013, Insight Creative team members, families and friends celebrated the beginning of summer with at the Timber Rattlers game at the Fox Cities Stadium.
 

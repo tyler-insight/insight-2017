@@ -11,7 +11,7 @@ When I tell people that I work at a company called Insight Creative, they often 
 
 Creativity and innovation are two of the most admired characteristics of modern companies and leaders because they are essential for success in a world defined by new technology and new forms of marketing.
 
-![](/img/creative-workplace.jpg)
+![](/img/blog/five-ways-to-create-a-creative-workplace.jpg)
 
 However, as much as you may want your company to be creative, it can be difficult to know how to build an environment that encourages and supports the kind of creativity that success requires.
 

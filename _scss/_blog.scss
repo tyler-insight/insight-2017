@@ -396,7 +396,10 @@
         @include span-columns(4);
 
         p {
-            margin-top: 1em;
+
+            strong {
+              font-weight: 600;
+            }
         }
 
         a,
@@ -446,6 +449,13 @@
         h5 a {
             color: $brand-color;
         }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+          margin-bottom:1em;
+        }
 
       h2{
         margin-top:1em;
@@ -469,6 +479,7 @@
 
         img {
             width: 100%;
+            margin-bottom:1em;
         }
 
         video {
@@ -489,6 +500,7 @@
 
         ul{
           margin-top:1em;
+          margin-bottom:1em;
           list-style: disc;
           display:inline-block;
           padding-left:1em;
@@ -497,7 +509,7 @@
 
           }
           @include media($desktop-large){
-            font-size: 1.5em;
+            font-size: 1.3em;
             @include span-columns(10);
             @include shift(1);
           }
@@ -507,9 +519,197 @@
             @include shift(2);
           }
           li{
+            @include span-columns(4);
+            margin:0;
+            padding:0;
             line-height:1.5em;
             margin-bottom:.5em;
+            list-style: disc;
+            display: list-item;
+
+
+            strong {
+              font-weight: 600;
+            }
+
+            p {
+              @include span-columns(4);
+              padding:0;
+              font-size: 1em;
+              line-height: 1.6em;
+              margin:0;
+              margin-bottom: 1em;
+              @include media($tablet) {
+                font-size: 1em;
+                padding:0;
+                margin:0;
+                margin-bottom: 1em;
+              }
+              @include media($desktop-large) {
+                  font-size: 1em;
+                  @include span-columns(12);
+                  padding:0;
+                  margin:0;
+                  margin-bottom: 1em;
+              }
+              @include media($desktop-largest) {
+                font-size: 1em;
+                   @include span-columns(12);
+                   padding:0;
+                   margin:0;
+                   margin-bottom: 1em;
+              }
+            }
           }
+
+        }
+        ol {
+          margin-top:1em;
+          margin-bottom:1em;
+          list-style: decimal;
+          display:inline-block;
+          padding-left:1em;
+          @include media($tablet){
+            font-size: modular-scale(1);
+
+          }
+          @include media($desktop-large){
+            font-size: 1.3em;
+            @include span-columns(10);
+            @include shift(1);
+          }
+          @include media($desktop-largest){
+            font-size: 1.5em;
+            @include span-columns(8);
+            @include shift(2);
+          }
+          li{
+            @include span-columns(4);
+            margin:0;
+            padding:0;
+            line-height:1.5em;
+            margin-bottom:.5em;
+            list-style: decimal;
+            display: list-item;
+
+            strong {
+              font-weight: 600;
+            }
+
+            p {
+              @include span-columns(4);
+              padding:0;
+              font-size: 1em;
+              line-height: 1.6em;
+              margin:0;
+              margin-bottom: 1em;
+              @include media($tablet) {
+                font-size: 1em;
+                padding:0;
+                margin:0;
+                margin-bottom: 1em;
+              }
+              @include media($desktop-large) {
+                  font-size: 1em;
+                  @include span-columns(12);
+                  padding:0;
+                  margin:0;
+                  margin-bottom: 1em;
+              }
+              @include media($desktop-largest) {
+                font-size: 1em;
+                   @include span-columns(12);
+                   padding:0;
+                   margin:0;
+                   margin-bottom: 1em;
+              }
+            }
+            ul,ol {
+              font-size:1em;
+            }
+          }
+
+          ol {
+            margin-top:1em;
+            list-style: decimal;
+            display:inline-block;
+            padding-left:1em;
+            @include media($tablet){
+              font-size: modular-scale(1);
+
+            }
+            @include media($desktop-large){
+              font-size: 1.3em;
+              @include span-columns(10);
+              @include shift(1);
+            }
+            @include media($desktop-largest){
+              font-size: 1.5em;
+              @include span-columns(8);
+              @include shift(2);
+            }
+            li{
+              @include span-columns(4);
+              margin:0;
+              padding:0;
+              line-height:1.5em;
+              margin-bottom:.5em;
+              list-style: decimal;
+              display: list-item;
+
+              strong {
+                font-weight: 600;
+              }
+
+              p {
+                @include span-columns(4);
+                padding:0;
+                font-size: 1em;
+                line-height: 1.6em;
+                margin:0;
+                margin-bottom: 1em;
+                @include media($tablet) {
+                  font-size: 1em;
+                  padding:0;
+                  margin:0;
+                  margin-bottom: 1em;
+                }
+                @include media($desktop-large) {
+                    font-size: 1em;
+                    @include span-columns(12);
+                    padding:0;
+                    margin:0;
+                    margin-bottom: 1em;
+                }
+                @include media($desktop-largest) {
+                  font-size: 1em;
+                     @include span-columns(12);
+                     padding:0;
+                     margin:0;
+                     margin-bottom: 1em;
+                }
+              }
+              ul,ol {
+                font-size:1em;
+              }
+            }
+          }
+        }
+        blockquote {
+          @include span-columns(4);
+          height:auto;
+
+          @include media($desktop-large){
+            @include span-columns(10);
+            @include shift(1);
+          }
+          @include media($desktop-largest){
+            @include span-columns(8);
+            @include shift(2);
+          }
+        }
+        .twitter-tweet {
+
         }
     }
 

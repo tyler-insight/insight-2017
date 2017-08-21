@@ -10,9 +10,8 @@
 
 
     <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width">
-
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="viewport" content="width=device-width"> {% if page.description %}
+    <meta name="description" content="{{ page.description }}">{% endif %}
 
     <link href="/img/favicon.ico" rel="shortcut icon">
     <!-- Custom CSS -->
@@ -33,12 +32,12 @@
 
 <body>
 
-  <progress id="progress" value="0"></progress>
+    <progress id="progress" value="0"></progress> {% include header.html %}
 
-    {% include header.html %}
-
-    <div id="content">
-        {{ content }} {% include contact.html %}
+    <div id="barba-wrapper">
+        <div class="barba-container">
+            {{ content }} {% include contact.html %}
+        </div>
     </div>
 
     {% include social.html %} {% include footer.html %}

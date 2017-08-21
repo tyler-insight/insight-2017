@@ -11,7 +11,7 @@ tag: blog
 
 In 1915, a designer at from the Root Glass Company in Indiana was given an assignment: "Design a bottle that is still recognizable when broken into pieces." Can you identify this bottle?
 
-![](/img/bottle.jpg){: .no-border}
+![](/img/blog/strong-brands-smashable-brands-1.jpg)
 
 If you said Coke, you are absolutely right. The designer of this bottle absolutely succeeded in his assignment. In fact, the shape of the Coke bottle has become one of the elements that makes the Coke brand so strong. The shape is so unique and is used so consistently that people can identify the brand without seeing the label.
 
@@ -19,13 +19,13 @@ The Coke bottle example helps illustrate what Martin Lindstrom coined as a "Smas
 
 Below are some other brands that also have a smashable shape. Can you identify them by shape alone?
 
-![](/img/bottles.gif){: .no-border}
+![](/img/blog/strong-brands-smashable-brands-2.gif)
 
 ## You can smash a brand in more than one way.
 
 ### Can you identify this clothing brand that has smashed their photography?
 
-![](/img/benneton.gif){: .no-border}
+![](/img/blog/strong-brands-smashable-brands-3.gif)
 
 This clothing brand doesn’t even need to show their product. Their fans identify them immediately. The brand’s ideals and personality rings loud and clear in each photo and the color palette/lighting is always very similar too.
 
@@ -33,7 +33,7 @@ This clothing brand doesn’t even need to show their product. Their fans identi
 
 ### Can you identify this fast food chain that has smashed their colors?
 
-![Jimmy John's Color Palette](/img/color-300x108.gif){: .no-border}
+![Jimmy John's Color Palette](/img/blog/strong-brands-smashable-brands-4.gif)
 
 Everything from their building’s awning, to the employee uniforms to the packaging and print ads are dominated by these three colors.
 
@@ -89,4 +89,4 @@ Here is another example of a campaign that leveraged the power of the senses. Th
 
 Ask yourself, what sensory memories could your brand evoke? Make sure all your messages communicate a consistent message. The result will be a more recognizable brand. The more positive sensory memories your customers associate with your brand, the more trustworthy they will consider your brand to be.
 
-![](/img/strength-of-brands.gif)
+![](/img/blog/strong-brands-smashable-brands-5.gif)

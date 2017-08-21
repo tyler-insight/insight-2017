@@ -15,4 +15,4 @@ If you are an Insight e-blast subscriber, we've already provided an email educat
 
 Not an Insight e-blast subscriber? [Sign up here](http://visitor.r20.constantcontact.com/manage/optin/ea?v=001nxNUBQroFr26-H-ECAwD8pmvSYh8P1LCZNXEOEwN0olr4u3XtKrcE9sWS40jgnzzEAWFslQ0ZX4GKMoi4q0E5g%3D%3D) to receive information on our upcoming events, marketing tips and industry news.
 
-![](/img/gmail-screenshot-549x1024.png)
+![](/img/blog/google-plays-big-brother-with-new-gmail-inbox.png)

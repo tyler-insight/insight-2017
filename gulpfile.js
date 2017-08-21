@@ -88,7 +88,7 @@
      */
 
     gulp.task('optimize', function() {
-      gulp.src('img/**/*.{jpg,gif}')
+      gulp.src('img/**/*.{jpg}')
         .pipe(parallel(
           imageresize({
             quality: 0.8,
@@ -112,7 +112,7 @@
     [400, 600, 900, 1200, 1800, 2400].forEach(function(size) {
       var resizeImageTask = 'resize_' + size;
       gulp.task(resizeImageTask, function() {
-        gulp.src('unsized-img/**/*.{jpg,png,gif}')
+        gulp.src('unsized-img/**/*.{jpg,png}')
           .pipe(parallel(
             imageresize({
               width: size,
@@ -129,8 +129,6 @@
       });
       resizeImageTasks.push(resizeImageTask);
     });
-
-
 
     /**
      * Watch scss files for changes & recompile
