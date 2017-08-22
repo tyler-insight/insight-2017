@@ -8,46 +8,47 @@
     background-size: cover;
 
     h1 {
-      position: relative;
-      z-index: 1;
-      display: table-cell;
-      text-align: center;
-      vertical-align: middle;
-      color: white;
-      text-shadow: 0 0 10px rgba(0,0,0,.7);
-      font-family: sans-serif;
-      font-weight: 800;
-      @include center;
-
-      @include media($tablet) {
-          text-shadow: 0 0 15px rgba(0,0,0,.7);
-          font-size: modular-scale(4);
-      }
-      @include media($desktop) {
-          font-size: modular-scale(6);
-      }
-      @include media($desktop-large) {
-          text-shadow: 0 0 25px rgba(0,0,0,.7);
-          font-size: modular-scale(7);
-          width:100%;
-          float:none;
-          position: relative;
-          display: table-cell;
-          text-align: center;
-          vertical-align: middle;
-          @include span-columns(12);
-          @include shift(0);
-      }
-      @include media($desktop-largest) {
-          font-size: modular-scale(8);
-          @include span-columns(12);
-          @include shift(0);
-      }
-      @include media($desktop-super) {}
+        position: relative;
+        z-index: 1;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        color: white;
+        text-shadow: 0 0 10px rgba(0,0,0,.7);
+        font-family: sans-serif;
+        font-weight: 800;
+        @include center;
+        @include media($tablet) {
+            text-shadow: 0 0 15px rgba(0,0,0,.7);
+            font-size: modular-scale(4);
+        }
+        @include media($desktop) {
+            font-size: modular-scale(6);
+        }
+        @include media($desktop-large) {
+            text-shadow: 0 0 25px rgba(0,0,0,.7);
+            font-size: modular-scale(7);
+            width: 100%;
+            float: none;
+            position: relative;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            @include span-columns(12);
+            @include shift(0);
+        }
+        @include media($desktop-largest) {
+            font-size: modular-scale(8);
+            @include span-columns(12);
+            @include shift(0);
+        }
+        @include media($desktop-super) {}
     }
+
     .headline.slide {
-      position: absolute;
-      z-index:5;
+        position: absolute;
+        z-index: 5;
+
         span {
             display: inline;
             padding: 0.2em 0;
@@ -145,13 +146,14 @@
         .cd-img-container {
             z-index: 1;
             position: relative;
+
             img {
-              width:100%;
-              height:100%;
-              min-width: 100%;
-              min-height: 100%;
-              object-fit: cover;
-              object-position: center 20%;
+                width: 100%;
+                height: 100%;
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+                object-position: center 20%;
             }
         }
 
@@ -205,19 +207,20 @@
             }
         }
     }
-    .progress-bar{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height:4px;
-      width:0;
-      z-index:5;
-      background:#fff;
-      opacity:.5;
-      display: inline-block;
-    }
-    .cd-hero-slider {
 
+    .progress-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        width: 0;
+        z-index: 5;
+        background: #fff;
+        opacity: 0.5;
+        display: inline-block;
+    }
+
+    .cd-hero-slider {
         .cd-half-width {
             opacity: 0;
             @include transform(translateX(-40px));
@@ -294,9 +297,7 @@
         }
     }
 }
-
 // Animated Header image --------------------------------------------
-
 .intro {
     position: relative;
     display: table;
@@ -342,8 +343,8 @@
     @include media($desktop-large) {
         text-shadow: 0 0 25px rgba(0,0,0,.7);
         font-size: modular-scale(7);
-        width:100%;
-        float:none;
+        width: 100%;
+        float: none;
         position: relative;
         display: table-cell;
         text-align: center;
@@ -381,7 +382,6 @@
 #slideshow img {
     min-width: 100%;
     min-height: 100%;
-    
 }
 
 .words-wrapper {
@@ -409,8 +409,6 @@
         }
     }
 }
-
-
 @include keyframes(slide-in) {
     0% {
         opacity: 0;
@@ -454,49 +452,50 @@
         margin-bottom: $desktop-spacing;
     }
 
-    .snap-container{
-      @include span-columns(4);
-      background-size:cover;
-      background-position: center;
-      height:300px;
-      @include media($tablet) {
-          height: 400px;
-
-      }
-      @include media($desktop-large) {
-          height: 500px;
-      }
-      @include media($desktop-super) {
-          height: 600px;
-      }
+    .snap-container {
+        @include span-columns(4);
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        @include media($tablet) {
+            height: 400px;
+        }
+        @include media($desktop-large) {
+            height: 500px;
+        }
+        @include media($desktop-super) {
+            height: 600px;
+        }
     }
     @include media($desktop) {
+        .one-half {
+            @include span-columns(2);
+            @include omega;
+            width: 50%;
+        }
 
-      .one-half{
-        @include span-columns(2);
-        @include omega;
-        width:50%;
-      }
-      .one-third{
-        @include span-columns(2);
-        @include omega;
-        width:33.333%;
-      }
-      .two-thirds{
-        @include span-columns(2);
-        @include omega;
-        width:66.667%;
-      }
+        .one-third {
+            @include span-columns(2);
+            @include omega;
+            width: 33.333%;
+        }
+
+        .two-thirds {
+            @include span-columns(2);
+            @include omega;
+            width: 66.667%;
+        }
     }
-
 }
+
 .culture {
-  .testimonial {
-    @include span-columns(4);
-      margin-bottom: 0;
-      padding-bottom:6em;
+    .testimonial {
+        @include span-columns(4);
+        margin-bottom: 0;
+        padding-bottom: 6em;
     }
 }
+
 .clear {
     @include clearfix;
 }
@@ -505,9 +504,9 @@
     @include span-columns(4);
     position: relative;
 
-    h1{
-      text-align: center;
-      margin-bottom:2em;
+    h1 {
+        text-align: center;
+        margin-bottom: 2em;
     }
 
     .employee {
@@ -530,47 +529,45 @@
             color: #d31145;
             line-height: 1em;
             margin-bottom: 5px;
-            text-align:left;
-            @include media($desktop-large){
-              @include span-columns(12);
-              @include shift(0);
+            text-align: left;
+            @include media($desktop-large) {
+                 @include span-columns(12);
+                @include shift(0);
             }
-            @include media($desktop-largest){
-              @include span-columns(12);
-              @include shift(0);
+            @include media($desktop-largest) {
+                 @include span-columns(12);
+                @include shift(0);
             }
         }
 
         h2 {
             font-weight: 400;
-            font-size: .9em;
+            font-size: 0.9em;
             margin-bottom: 0.5em;
-            line-height:1em;
-            text-align:left;
-            @include media($desktop-large){
-              @include span-columns(12);
-              @include shift(0);
+            line-height: 1em;
+            text-align: left;
+            @include media($desktop-large) {
+                 @include span-columns(12);
+                @include shift(0);
             }
-            @include media($desktop-largest){
-              @include span-columns(12);
-              @include shift(0);
+            @include media($desktop-largest) {
+                 @include span-columns(12);
+                @include shift(0);
             }
         }
 
         p {
             font-size: 1.2em;
             display: none;
-            line-height:1.2em;
+            line-height: 1.2em;
             font-family: "futura-pt", sans-serif;
-
-            @include media($desktop-large){
-              @include span-columns(12);
-              @include shift(0);
-
+            @include media($desktop-large) {
+                 @include span-columns(12);
+                @include shift(0);
             }
-            @include media($desktop-largest){
-              @include span-columns(12);
-              @include shift(0);
+            @include media($desktop-largest) {
+                 @include span-columns(12);
+                @include shift(0);
             }
         }
     }
@@ -587,9 +584,7 @@
                 font-size: 1.1em;
             }
 
-            p {
-
-            }
+            p {}
         }
     }
     @include media($tablet) {
@@ -605,102 +600,99 @@
                 font-size: 1.1em;
             }
 
-            p {
+            p {}
+        }
+    }
+    @include media($desktop) {
+        .employee {
+            padding: 3em;
+            height: 500px;
 
+            h1 {
+                font-size: 3em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1em;
+                line-height: 1.3em;
+                display: inline-block;
             }
         }
     }
-    @include media($desktop){
-      .employee {
-        padding:3em;
-        height: 500px;
-        h1 {
-            font-size: 3em;
-        }
+    @include media($desktop-large) {
+        .employee {
+            padding: 3em;
+            height: 600px;
 
-        h2 {
-            font-size: 1.5em;
-        }
+            h1 {
+                font-size: 4em;
+            }
 
-        p {
-          font-size:1em;
-          line-height: 1.3em;
-          display:inline-block;
-        }
-      }
+            h2 {
+                font-size: 1.7em;
+            }
 
+            p {
+                font-size: 1.2em;
+                line-height: 1.5em;
+                display: inline-block;
+            }
+        }
     }
-    @include media($desktop-large){
-      .employee {
-        padding:3em;
-        height: 600px;
-        h1 {
-            font-size: 4em;
+    @include media($desktop-largest) {
+        .employee {
+            padding: 5em;
+            height: 700px;
+
+            h1 {
+                font-size: 5em;
+            }
+
+            h2 {
+                font-size: 2.5em;
+            }
+
+            p {
+                font-size: 1.4em;
+            }
         }
-
-        h2 {
-            font-size: 1.7em;
-        }
-
-        p {
-          font-size:1.2em;
-          line-height: 1.5em;
-          display:inline-block;
-
-        }
-      }
-
     }
-    @include media($desktop-largest){
-      .employee {
-        padding:5em;
-        height:700px;
-        h1{
-          font-size:5em;
+    @include media($desktop-super) {
+        .employee {
+            padding: 8em;
+            height: 800px;
         }
-        h2{
-          font-size:2.5em;
-        }
-        p{
-          font-size:1.4em;
-        }
-      }
-
-    }
-    @include media($desktop-super){
-      .employee {
-        padding:8em;
-        height:800px;
-      }
     }
 
     .employee-left {
         img {
-            margin-right:0;
+            margin-right: 0;
             position: absolute;
             bottom: 0;
             right: 3%;
             height: calc(100% + 20px);
             width: auto;
-
             @include media($large-phone) {
-              right: 3%;
+                right: 3%;
                 height: calc(100% + 25px);
             }
             @include media($tablet) {
-              right:3%;
+                right: 3%;
                 height: calc(100% + 50px);
             }
             @include media($desktop-large) {
-                right:3%;
+                right: 3%;
                 height: calc(100% + 50px);
             }
             @include media($desktop-largest) {
-                right:3%;
+                right: 3%;
                 height: calc(100% + 100px);
             }
         }
-
     }
 
     .employee-right {
@@ -712,18 +704,18 @@
             height: calc(100% + 20px);
             width: auto;
             @include media($large-phone) {
-                left:3%;
+                left: 3%;
                 height: calc(100% + 25px);
             }
             @include media($tablet) {
                 height: calc(100% + 50px);
             }
             @include media($desktop-large) {
-                left:3%;
+                left: 3%;
                 height: calc(100% + 50px);
             }
             @include media($desktop-largest) {
-                left:3%;
+                left: 3%;
                 height: calc(100% + 100px);
             }
         }
@@ -731,6 +723,14 @@
         .bio {
             @include span-columns(2);
             @include shift(2 of 4);
+
+            h1,
+            h2 {
+                text-align: right;
+                @include media($desktop) {
+                    text-align: left;
+                }
+            }
         }
     }
 

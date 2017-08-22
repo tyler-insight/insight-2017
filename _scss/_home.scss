@@ -341,6 +341,7 @@
 
 .home {
     .blogs {
+      @include span-columns(4);
         margin-bottom: $mobile-spacing;
         @include media($tablet) {
             margin-bottom: $tablet-spacing;

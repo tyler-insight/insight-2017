@@ -200,7 +200,9 @@
         height: 500px;
     }
 }
-
+.project-no-js {
+  display:block;
+}
 .project:hover {
     .project-info {
         width: calc(100%);

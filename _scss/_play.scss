@@ -17,7 +17,9 @@
         letter-spacing: 0.2em;
         font-weight: 300;
     }
-
+    a {
+      text-decoration: none;
+    }
     h2 {
         color: #fff;
         font-weight: 200;
@@ -214,6 +216,9 @@
             border: 10px solid $brand-color;
         }
 
+        a {
+          text-decoration: none;
+        }
         p {
             margin: 0;
         }

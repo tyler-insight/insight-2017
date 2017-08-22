@@ -122,15 +122,15 @@ description: An advertising agency with a vision to bring complete strategic dev
     </div>
 
     <div class="blogs">
-      <h1 data-aos="fade-up" style="text-align:center;">From the Blog</h1>
+      <h1 style="text-align:center;">From the Blog</h1>
       <div class="secondary-blogs">
         {% for post in site.categories.blog limit:1 %} {% assign loopindex = forloop.index | modulo: 2 %}
         <a href="{{ post.url }}">
-          <div class="blog-right" data-aos="fade-up" style="background-color:#{{ post.back-color }}">
+          <div class="blog-right" style="background-color:#{{ post.back-color }}">
             <div class="blog-thumbnail" style="background-image:url('/img/blog/{{ post.cover-image }}')"></div>
             <div class="blog-info">
-              <h2 data-aos="fade-up" data-aos-anchor=".blog-right" data-aos-delay="400" style="color:#{{ post.text-color }}">{{ post.title }}</h2>
-              <h3 data-aos="fade-up" data-aos-anchor=".blog-right" data-aos-delay="800" style="color:#{{ post.text-color }}">by <strong>{{ post.author }}</strong></h3>
+              <h2 style="color:#{{ post.text-color }}">{{ post.title }}</h2>
+              <h3 style="color:#{{ post.text-color }}">by <strong>{{ post.author }}</strong></h3>
             </div>
           </div>
         </a>

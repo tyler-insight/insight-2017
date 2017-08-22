@@ -382,7 +382,7 @@
       @include span-columns(4);
         li {
           padding:1em 0;
-          @include transition(border-color .5s);
+          @include transition(all .5s);
             @include span-columns(4);
             @include omega;
             @include media($desktop-large) {
@@ -403,12 +403,12 @@
         li:focus,
         li:hover + li{
           border-color:$dark-gray;
-          @include transition(border-color .5s);
+          @include transition(all .5s);
         }
         li:hover + li:last-child{
           border-top-color:$dark-gray;
           border-bottom-color:$dark-gray;
-          @include transition(border-color .5s);
+          @include transition(all .5s);
         }
     }
 

@@ -51,7 +51,7 @@
 
         img {
             width: 60px;
-            margin-top: 10px;
+            margin-top: 5px;
             transform-origin: 50% 51%;
             @include transition(transform .5s);
             @include media($desktop) {
@@ -62,13 +62,14 @@
 
         .brand-name {
             position: absolute;
-            top: 50%;
+            top: 40%;
             width: 160px;
             height: 80px;
             @include transform(translateY(-50%) translateX(80px));
             overflow: hidden;
             @include media($desktop) {
                 width: 120px;
+                top: 50%;
             }
             @include media($desktop-large) {
                 width: 205px;

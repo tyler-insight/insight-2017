@@ -32,6 +32,8 @@ $(function() {
              * Please note, newContainer is available just after newContainerLoading is resolved!
              */
             document.body.scrollTop = 0;
+
+            document.documentElement.scrollTop = 0;
             var _this = this;
             var page = $(location).attr('href');
             var $el = $(this.newContainer);
@@ -86,6 +88,7 @@ $(function() {
 
 
       if (page.indexOf("work") > 0) {
+        $('.project').removeClass('project-no-js');
         // Instantiate MixItUp:
         if ($('#container').mixItUp()){
           $('#container').mixItUp('destroy');
@@ -96,10 +99,11 @@ $(function() {
             duration: 1000,
             effects: 'fade translateY(10%)',
             easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
-            nudge: false,
+            nudge: true,
             animateResizeContainer: false
           }
         });
+        filter();
           console.log("Filter instance created");
       }
 
@@ -108,7 +112,7 @@ $(function() {
         typing();
         map();
       }
-      
+
       if (page.indexOf("contact") >= 0) {
         $(".typed").typed({
           stringsElement: $('.typed-strings'),
@@ -324,7 +328,7 @@ $(function() {
           tLeftButton.css("opacity", "1");
           tLeftButton.css("cursor", "pointer");
         }
-      }
+      };
 
       greyButton();
 
