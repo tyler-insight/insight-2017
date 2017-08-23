@@ -74,7 +74,7 @@ h5 {
     font-family: "futura-pt", sans-serif;
     font-weight: 600;
     color: $dark-gray;
-    line-height: 1em;
+    line-height: 1.2em;
     text-align: left;
     @include media($desktop-large) {
          @include span-columns(10);

@@ -183,23 +183,7 @@
             margin-top: $desktop-spacing;
         }
 
-        .fill-back {
-            background: #eee;
-            @include span-columns(4);
-            padding: 4em 2em;
 
-            img {
-                @include span-columns(4);
-                @include media($desktop-large) {
-                     @include span-columns(10);
-                    @include shift(1);
-                }
-                @include media($desktop-largest) {
-                     @include span-columns(8);
-                    @include shift(2);
-                }
-            }
-        }
 
         img {
             padding-top: 0.2em 0;
@@ -323,6 +307,29 @@
             &.no-crop {
                 object-fit: fill;
                 height: auto;
+            }
+        }
+        .fill-back {
+            background: #eee;
+            @include span-columns(4);
+            padding: 4em 2em;
+            position: relative;
+
+            img {
+                @include span-columns(4);
+                position: relative;
+                object-fit: fill;
+                cursor: default;
+                
+                @include media($desktop-large) {
+                     @include span-columns(10);
+                    @include shift(1);
+                }
+                @include media($desktop-largest) {
+                     @include span-columns(8);
+                    @include shift(2);
+
+                }
             }
         }
     }

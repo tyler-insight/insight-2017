@@ -8,8 +8,6 @@ cover-text-color: fff
 back-color1: e27670
 back-color2: 6f4c7c
 tags:
-- Graphic Design
-- Print
 - Packaging
 
 ---

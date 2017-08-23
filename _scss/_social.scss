@@ -11,13 +11,50 @@
 
 
 .social{
-  display:none;
+  position: relative;
+  @include span-columns(4);
+  width:100%;
+  margin-bottom:.5em;
+  ul {
+    margin:0 auto;
+    width:131px;
+    position: relative;
+    text-align: center;
+    li {
+      display:inline;
+      float:left;
+      padding:0 5px;
+    }
+  }
+  a{
+    color:$light-gray;
+    text-decoration: none;
+    display:inline-block;
+    margin-bottom:.4em;
+    font-size:1.2em;
+    @include transition(color .7s);
+  }
+  a:hover{
+    color:$dark-gray;
+    @include transition(color .7s);
+  }
+
   @include media($tablet){
     position: fixed;
+    margin:0;
     right:.8em;
     bottom:1em;
+    width: auto;
 
     display:inline-block;
+
+    ul {
+      width:auto;
+      li {
+        display:block;
+        float:none;
+      }
+    }
     a{
       color:$light-gray;
       text-decoration: none;

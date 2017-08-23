@@ -8,7 +8,7 @@ cover-text-color: fff
 back-color1: f2e2d1
 back-color2: ae9371
 tags:
-- Web
+- Web Digital
 ---
 
 Valley Cabinet is northeastern Wisconsin’s premiere choice for custom cabinetry. Using large-scale photography, rich colors and natural textures, Insight designed a website to exemplify the sophistication and elegance of the Valley Cabinet brand while showcasing the high-quality craftsmanship of their products and service offerings.

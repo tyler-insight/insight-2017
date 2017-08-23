@@ -9,7 +9,6 @@ back-color1: 606d38
 back-color2: 3c4918
 tags:
 - Packaging
-- Print
 
 ---
 

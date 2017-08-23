@@ -8,7 +8,6 @@ cover-text-color: fff
 back-color1: '664035'
 back-color2: '1c1314'
 tags:
-- Print
 - Packaging
 
 ---
