@@ -3,7 +3,7 @@ layout: project
 title: School Software Group Website
 client: School Software Group
 description: Interior and exterior photography of homes that Van's Lumber has built.
-cover-image: school-software-group-website/school-software-group-website-1
+cover-image: school-software-group-website/school-software-group-website-cover
 cover-text-color: fff
 back-color1: 42a97e
 back-color2: 0093c9
@@ -12,6 +12,8 @@ tags:
 ---
 
 School Software Group is the creator of BuildYourOwnCurriculum, an online application that helps teachers collaborate on curriculum across an entire school district from kindergarten to graduation while making sure it's aligned with state and federal standards. Insight Creative designed and developed a new mobile-friendly website to support the launch of the newest version of BuildYourOwnCurriculum.
+
+<a href="http://www.schoolsoftwaregroup.com/" target= "_blank" rel="noopener">View the Site</a>
 
 <div class="images">
 

@@ -3,7 +3,7 @@ layout: project
 title: Washington Island Ferry Website
 client: Washington Island Ferry
 description: Website created for the only ferry in Door County
-cover-image: washington-island-ferry/washington-island-ferry-website-1
+cover-image: washington-island-ferry/washington-island-ferry-website-cover
 cover-text-color: fff
 back-color1: aacbd9
 back-color2: 5d99b1

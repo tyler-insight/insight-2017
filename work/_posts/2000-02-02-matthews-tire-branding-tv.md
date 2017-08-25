@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Matthews Tire Branding TV
+title: TV Branding
 client: Matthews Tire
 description: Interior and exterior photography of homes that Van's Lumber has built.
 cover-image: matthews-tire-branding-tv/matthews-tire-branding-tv-cover
