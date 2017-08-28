@@ -73,7 +73,7 @@ $(function() {
 
 
     Barba.Pjax.start();
-
+    var mixRunning;
     //Run Script that performs navigation hid/show and mobile function
     navigation();
 
@@ -83,14 +83,15 @@ $(function() {
     pageCheckBefore();
     pageCheckAfter();
 
+
     function pageCheckBefore() {
       var page = $(location).attr('href');
 
 
-      if (page.indexOf("work") > 0) {
+      if ($("#workpage-flag").length > 0) {
         $('.project').removeClass('project-no-js');
         // Instantiate MixItUp:
-        if ($('#container').mixItUp()){
+        if (mixRunning == true){
           $('#container').mixItUp('destroy');
           console.log("Filter instance destroyed");
         }
@@ -104,7 +105,8 @@ $(function() {
           }
         });
         filter();
-          console.log("Filter instance created");
+        mixRunning = true;
+        console.log("Filter instance created");
       }
 
       //If contact page, run script for text typing and load google map
