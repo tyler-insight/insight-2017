@@ -211,3 +211,19 @@ img {
 	object-position: center;
 	font-family: 'object-fit: cover; object-position: center;'
 }
+
+.social-widgets {
+  @include span-columns(4);
+  margin: 1em 0;
+
+  @include media($desktop-large) {
+      font-size: 1.3em;
+      @include span-columns(10);
+      @include shift(1);
+  }
+  @include media($desktop-largest) {
+    font-size: 1.5em;
+       @include span-columns(8);
+      @include shift(2);
+  }
+}

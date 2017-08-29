@@ -143,6 +143,10 @@ $(function() {
         homeSlider();
         arrowSlider();
       }
+      if (page.indexOf("blog") >= 0) {
+        window.instgrm.Embeds.process();
+        twttr.widgets.load();
+      }
     }
 
     //Start of navigation script
