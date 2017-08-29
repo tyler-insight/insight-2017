@@ -22,28 +22,28 @@ Before running any commands, lets understand the file directories.
 Each individual page will be located inside the folder with its corresponding name.
 
 ### Work
-Projects can be found inside the **work/_posts** directory. They get sorted by date, so the first project is set to 2000-01-01 with each newer project being a day newer. So the newest projects will have the most recent date. DO NOT use the current date as the date for the project, simply follow the pattern that is already created.
+Projects can be found inside the **work/_posts** directory. They get sorted by date, so the first project is set to 2000-01-01 with each newer project being a day newer. So the newest projects will have the most recent date. DO NOT use the current date as the date for the project, simply follow the pattern that is already created. *Note: If two projects have the same date they will be shown in alphabetical order, meaning the project closer to A will be shown further down than the latter*
 
 ### Blog
 All blog posts are located inside the **blog/_posts** directory. For these, use the date of the day you would like the blog to get posted.
 
 ### Images
-All of the original images are located inside *unsized-img*, the reason for this is because there is a command that we run which will automatically resize images for different screen sizes and then place those images inside the *img* directory. So keep all of your original clean images inside the *unsized-img* directory. Typically these images should be around 1800px in width or height. They'll be optimized later so don't worry too much about that!
+All of the original images are located inside **unsized-img**, the reason for this is because there is a command that we run which will automatically resize images for different screen sizes and then place those images inside the **img** directory. So keep all of your original clean images inside the **unsized-img** directory. Typically these images should be around 2400px in width. They'll be optimized later so don't worry too much about that!
 
 ### Data
-Both the employee list and the services list can both be found under the *_data* directory.
+Both the employee list and the services list can both be found under the **_data** directory.
 
 ### Site
-The *_site* directory is the compiled directory with all of the final files. The contents of this folder is what will be uploaded to the actual website.
+The **_site** directory is the compiled directory with all of the final files. The contents of this folder is what will be uploaded to the actual website.
 
 ### Styles
-Do not make style changes in the *css* directory. The styles for the website are all in the *_scss* directory. Each individual page has had its own style sheet setup for styles unique to that page, and then there are sheets setup for general styling like the footer or typography. The *_variables.scss* sheet as site wide variables that can be used in your scss sheets.
+Do not make style changes in the **css** directory. The styles for the website are all in the **_scss** directory. Each individual page has had its own style sheet setup for styles unique to that page, and then there are sheets setup for general styling like the footer or typography. The **_variables.scss** sheet has site wide variables that can be used in your scss sheets.
 
 ## Usage
 
 ### 1. Resizing Images
 
-**Make sure any images you need are inside the *unsized-img* folder** and then run `gulp resize`. This is resize all the images and place them into the *img* folder. This may take a few minutes, so wait until it completes before doing anything else.
+**Make sure any images you need are inside the *unsized-img* folder** and then run `gulp resize`. This will resize all the images and place them into the **img** folder. This may take a few minutes, so wait until it completes before doing anything else.
 
 ```shell
 gulp resize
@@ -51,7 +51,7 @@ gulp resize
 
 ### 2. Optimizing Images
 
-Run `gulp min` which will optimize all of the images in the *img* folder. Once again, this will take a while.
+Run `gulp min` which will optimize all of the images in the **img** folder. Once again, this will take a while.
 
 ```shell
 gulp min
@@ -110,9 +110,9 @@ tag: blog
 
 ### Images
 
-Each image should be named the same as the blog and then numbered sequentially and placed in the *unsized-img* directory followed by the *blog* directory.
+Each image should be named the same as the blog and then numbered sequentially and placed in the **unsized-img** directory followed by the **blog** directory.
 
-When adding an image, do not use the markdown image treatment, instead, add an image using html srcset like below. Set the src as the original image name, then set up a srcset image with the image size following the name like below. All images get resized for screen sizes of 400px, 600px, 900px, 1200px, 1800px and 2400px wide.
+When adding an image, do not use the markdown image treatment, instead, add an image using html srcset like below. Set the src as the original image name, then set up a srcset image with the image size following the name like below. All images get resized for screen sizes of 400px, 600px, 900px, 1200px, 1800px and 2400px wide. *Note: when writing srcset, start with the largest image as Safari only looks at the first image.*
 
 Images should also have this line of code in their tag, which will give them an animation when scrolling: `data-aos="fade-up"`
 
@@ -160,27 +160,30 @@ tags:
 **Back-color2:** Second color in the background gradient.
 
 **Tags:** The list of categories the project falls under. List any that are relevant to the project, these include:
+- Audio address
+- Campaigns
 - Case Studies
 - Identity
 - Media Buying
 - Packaging
 - Photography
 - Print
+- Public Relations
 - Social Media
 - Video
-- Web
+- Web/Digital
 
 *The layout will always remain project*
 
 ### Images
 
-The images for a project should go in the *unsized-img* directory, followed by the *projects* folder, and then inside a directory with the exact same name as the project. Each image should be named the same as the project and then numbered sequentially.
+The images for a project should go in the **unsized-img** directory, followed by the **projects** folder, and then inside a directory with the exact same name as the project. Each image should be named the same as the project and then given a name relative to what its showing. Look at previous projects for example.
 
 When adding an image, do not use the markdown image treatment, instead, add an image using html srcset like below. Set the src as the original image name, then set up a srcset image with the image size following the name like below. All images get resized for screen sizes of 400px, 600px, 900px, 1200px, 1800px and 2400px wide.
 
 Images should also have this line of code in their tag, which will give them an animation when scrolling: `data-aos="fade-up"`. If there is more than one image in a single row on the page, add `data-aos-delay="200"` starting at 200 for the second image and if theirs a third image `data-aos-delay="400"`. This will offset their animations so they don't all fade in at the same time.
 
-They should also get `data-featherlight="path/to/image"` which will cause them to display in light box if clicked. These need to be within a `<div class="images">` element in order to work.
+If you want the image to pop up in light box when clicked, add `data-featherlight="path/to/image"`. These need to be within a `<div class="images">` element in order to work.
 
 ```html
 <img data-aos="fade-up" data-featherlight="/img/projects/vans-lumber-photography/vans-photography5.jpg" src="/img/projects/vans-lumber-photography/vans-photography5.jpg"
@@ -284,6 +287,23 @@ When you have a very tall image that will need some scrolling and you don't want
   </div>
 </div>
 
+```
+
+#### Full Width Standard Image
+
+Simply wrap the image inside two blank div tags (this is done because otherwise markup places it inside paragraph tags, which limits the width of the image to the width of the paragraph)
+
+```html
+<div>
+  <img data-aos="fade-up" src="/img/projects/vans-lumber-case-study/vans-lumber-case-study-binder.jpg"
+  alt="Vans Lumber Binder"
+  srcset="/img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-2400.jpg 2400w,
+  /img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-1800.jpg 1800w,
+  /img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-1200.jpg 1200w,
+  /img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-900.jpg 900w,
+  /img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-600.jpg 600w,
+  /img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-400.jpg 400w" />
+</div>
 ```
 
 ## Employees

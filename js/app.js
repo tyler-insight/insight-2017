@@ -54,9 +54,10 @@ $(function() {
                  */
 
                 _this.done();
-
+                //Run scripts that should run after content is shown
                 pageCheckAfter();
             });
+            //Run scripts that should be enabled before new content is shown
             pageCheckBefore();
             AOS.refreshHard();
         }
@@ -80,7 +81,10 @@ $(function() {
     //Run script that applies object-fit pollyfill from obi.min.js
     objectFitImages();
 
+    //Run scripts that should be enabled before new content is shown
     pageCheckBefore();
+
+    //Run scripts that should run after content is shown
     pageCheckAfter();
 
 
@@ -90,11 +94,13 @@ $(function() {
 
       if ($("#workpage-flag").length > 0) {
         $('.project').removeClass('project-no-js');
-        // Instantiate MixItUp:
+
+        // If mixitup is running kill it (can't have 2 instances)
         if (mixRunning == true){
           $('#container').mixItUp('destroy');
           console.log("Filter instance destroyed");
         }
+        // Instantiate MixItUp:
         $('#container').mixItUp({
           animation: {
             duration: 1000,
@@ -104,6 +110,7 @@ $(function() {
             animateResizeContainer: false
           }
         });
+        //Run script for filter dropdown
         filter();
         mixRunning = true;
         console.log("Filter instance created");
@@ -131,6 +138,7 @@ $(function() {
       var page = $(location).attr('href');
       runScripts();
 
+      //Run slider scripts for homepage (hero and testimonial)
       if ($("#homepage-flag").length > 0) {
         homeSlider();
         arrowSlider();

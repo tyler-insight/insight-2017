@@ -13,6 +13,8 @@ tags:
 ---
 Description of project goes here.
 
+<a href="http://matthewstire.com/" target= "_blank" rel="noopener">View the Site</a>
+
 <div>
 <img data-aos="fade-up" src="/img/projects/matthews-tire-website/matthews-tire-website-contact-mockup.jpg"
 alt="Matthews Tire Contact Page"
