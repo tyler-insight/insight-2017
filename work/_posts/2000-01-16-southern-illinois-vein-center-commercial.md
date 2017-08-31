@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  Southern Illinois Vein Center Commercial
+title:  Commercial
 client: Southern Illinois Vein Center
 description: A tasty commercial produced for Matthews Tire.
 cover-image: southern-illinois-vein-center-commercial/southern-illinois-vein-center-commercial-cover

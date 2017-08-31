@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Matthews Tire Charity Car\_Show"
+title: "Charity Car\_Show"
 client: Matthews Tire
 description: Interior and exterior photography of homes that Van's Lumber has built.
 cover-image: matthews-tire-charity-car-show/mustang-1

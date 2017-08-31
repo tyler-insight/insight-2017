@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Domino Printing Sciences Case&nbsp;Study
+title: Case&nbsp;Study
 client: Domino Printing Sciences
 description: Interior and exterior photography of homes that Van's Lumber has built.
 cover-image: domino-printing-sciences-case-study/domino-printing-sciences-case-study-cover

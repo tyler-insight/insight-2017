@@ -8,7 +8,7 @@ cover-text-color: fff
 back-color1: c6ba8d
 back-color2: b1a67e
 tags:
-- Campaigns
+- Social Media
 
 ---
 

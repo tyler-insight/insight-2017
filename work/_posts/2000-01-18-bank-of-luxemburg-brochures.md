@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Bank of Luxemburg Brochures
+title: Brochures
 client: Bank of Luxemburg
 description: Interior and exterior photography of homes that Van's Lumber has built.
 cover-image: bank-of-luxemburg-brochures/bank-of-luxemburg-brochures-1

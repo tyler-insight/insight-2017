@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  Valley Custom Door Product Catalog
+title:  Product Catalog
 client: Valley Custom Door
 description: A tasty commercial produced for Matthews Tire.
 cover-image: valley-custom-door-product-catalog/valley-custom-door-product-catalog-1

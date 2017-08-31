@@ -1,6 +1,6 @@
 ---
 layout: project
-title: SAS Forks Website
+title: Website
 client: SAS Forks
 description: Interior and exterior photography of homes that Van's Lumber has built.
 cover-image: sas-forks-website/sas-forks-website-cover

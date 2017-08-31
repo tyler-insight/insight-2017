@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  Ministry and Affinity Media Placement
+title:  Media Placement
 client: Ministry Health Care/Affinity Health System
 description: A tasty commercial produced for Matthews Tire.
 cover-image: ministry-affinity-media-placement/ministry-affinity-media-placement-cover
