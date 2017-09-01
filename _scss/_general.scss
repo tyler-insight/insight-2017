@@ -135,6 +135,10 @@ img {
     max-width: 100%;
 }
 
+em {
+  font-style: italic;
+}
+
 .clearfix {
     @include clearfix;
 }
