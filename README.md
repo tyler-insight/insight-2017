@@ -160,7 +160,7 @@ tags:
 **Back-color2:** Second color in the background gradient.
 
 **Tags:** The list of categories the project falls under. List any that are relevant to the project, these include:
-- Audio address
+- Audio Ads
 - Campaigns
 - Case Studies
 - Identity
@@ -202,7 +202,7 @@ There are a few special ways setup to showcase the images in a project.
 
 #### Object Fit Pollyfill
 
-There is a special class you need to apply to images that use the object-fit property. These are images that you display in the grid setup on a project, and any other designated object-fit images. Simply apply the `fix` class to them images and the ofi.min.js will setup a polyfill for browsers that don't natively support object-fit.
+There is a special class you need to apply to images that use the object-fit property. These are images that you display in the grid setup on a project, and any other designated object-fit images. Simply apply the `fix` class to them  and the ofi.min.js will setup a polyfill for browsers that don't natively support object-fit.
 
 #### Grid Setup
 
