@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Website
+title: 2014 Website
 client: School Software Group
 description: Interior and exterior photography of homes that Van's Lumber has built.
 cover-image: school-software-group-website/school-software-group-website-cover

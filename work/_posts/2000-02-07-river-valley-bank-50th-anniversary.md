@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Art Direction and Branding
+title: 50th Anniversary Branding 
 client: River Valley Bank
 description: An INCREDIBLE anniversary MARKETING campaign!
 cover-image: river-valley-bank-50th-anniversary/rvb-50th-cover

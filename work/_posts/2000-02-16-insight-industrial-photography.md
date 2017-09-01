@@ -15,7 +15,7 @@ Content here.
 
 <div class="images">
 <img class="half first fit" data-aos="fade-up" data-featherlight="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-3.jpg"
-alt="industrial Example 1" src="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-3.jpg"
+alt="Machine Example 1" src="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-3.jpg"
 srcset="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-3-2400.jpg 2400w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-machine-3-1800.jpg 1800w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-machine-3-1200.jpg 1200w,
@@ -24,7 +24,7 @@ srcset="/img/projects/insight-industrial-photography/insight-industrial-photogra
 /img/projects/insight-industrial-photography/insight-industrial-photography-machine-3-400.jpg 400w" />
 
 <img class="half last fit" data-aos="fade-up" data-featherlight="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-4.jpg"
-alt="industrial Example 1" src="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-4.jpg"
+alt="Machine Example 2" src="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-4.jpg"
 srcset="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-4-2400.jpg 2400w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-machine-4-1800.jpg 1800w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-machine-4-1200.jpg 1200w,
@@ -33,7 +33,7 @@ srcset="/img/projects/insight-industrial-photography/insight-industrial-photogra
 /img/projects/insight-industrial-photography/insight-industrial-photography-machine-4-400.jpg 400w" />
 
 <img class="full fit" data-aos="fade-up" data-featherlight="/img/projects/insight-industrial-photography/insight-industrial-photography-product-demonstration.jpg"
-alt="industrial Example 1" src="/img/projects/insight-industrial-photography/insight-industrial-photography-product-demonstration.jpg"
+alt="Product Demonstration" src="/img/projects/insight-industrial-photography/insight-industrial-photography-product-demonstration.jpg"
 srcset="/img/projects/insight-industrial-photography/insight-industrial-photography-product-demonstration-2400.jpg 2400w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-product-demonstration-1800.jpg 1800w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-product-demonstration-1200.jpg 1200w,
@@ -42,7 +42,7 @@ srcset="/img/projects/insight-industrial-photography/insight-industrial-photogra
 /img/projects/insight-industrial-photography/insight-industrial-photography-product-demonstration-400.jpg 400w" />
 
 <img class="half first fit" data-aos="fade-up" data-featherlight="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-1.jpg"
-alt="industrial Example 1" src="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-1.jpg"
+alt="Machine Example 3" src="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-1.jpg"
 srcset="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-1-2400.jpg 2400w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-machine-1-1800.jpg 1800w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-machine-1-1200.jpg 1200w,
@@ -51,7 +51,7 @@ srcset="/img/projects/insight-industrial-photography/insight-industrial-photogra
 /img/projects/insight-industrial-photography/insight-industrial-photography-machine-1-400.jpg 400w" />
 
 <img class="half last fit" data-aos="fade-up" data-featherlight="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-2.jpg"
-alt="industrial Example 1" src="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-2.jpg"
+alt="Machine Example 4" src="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-2.jpg"
 srcset="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-2-2400.jpg 2400w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-machine-2-1800.jpg 1800w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-machine-2-1200.jpg 1200w,
@@ -60,7 +60,7 @@ srcset="/img/projects/insight-industrial-photography/insight-industrial-photogra
 /img/projects/insight-industrial-photography/insight-industrial-photography-machine-2-400.jpg 400w" />
 
 <img class="full fit" data-aos="fade-up" data-featherlight="/img/projects/insight-industrial-photography/insight-industrial-photography-molten-3.jpg"
-alt="industrial Example 1" src="/img/projects/insight-industrial-photography/insight-industrial-photography-molten-3.jpg"
+alt="Molten fire 1" src="/img/projects/insight-industrial-photography/insight-industrial-photography-molten-3.jpg"
 srcset="/img/projects/insight-industrial-photography/insight-industrial-photography-molten-3-2400.jpg 2400w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-molten-3-1800.jpg 1800w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-molten-3-1200.jpg 1200w,
@@ -69,7 +69,7 @@ srcset="/img/projects/insight-industrial-photography/insight-industrial-photogra
 /img/projects/insight-industrial-photography/insight-industrial-photography-molten-3-400.jpg 400w" />
 
 <img class="half first fit" data-aos="fade-up" data-featherlight="/img/projects/insight-industrial-photography/insight-industrial-photography-molten.jpg"
-alt="industrial Example 1" src="/img/projects/insight-industrial-photography/insight-industrial-photography-molten.jpg"
+alt="Molten fire 2" src="/img/projects/insight-industrial-photography/insight-industrial-photography-molten.jpg"
 srcset="/img/projects/insight-industrial-photography/insight-industrial-photography-molten-2400.jpg 2400w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-molten-1800.jpg 1800w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-molten-1200.jpg 1200w,
@@ -78,7 +78,7 @@ srcset="/img/projects/insight-industrial-photography/insight-industrial-photogra
 /img/projects/insight-industrial-photography/insight-industrial-photography-molten-400.jpg 400w" />
 
 <img class="half last fit" data-aos="fade-up" data-featherlight="/img/projects/insight-industrial-photography/insight-industrial-photography-molten-2.jpg"
-alt="industrial Example 1" src="/img/projects/insight-industrial-photography/insight-industrial-photography-molten-2.jpg"
+alt="Man forming metal" src="/img/projects/insight-industrial-photography/insight-industrial-photography-molten-2.jpg"
 srcset="/img/projects/insight-industrial-photography/insight-industrial-photography-molten-2-2400.jpg 2400w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-molten-2-1800.jpg 1800w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-molten-2-1200.jpg 1200w,
@@ -87,7 +87,7 @@ srcset="/img/projects/insight-industrial-photography/insight-industrial-photogra
 /img/projects/insight-industrial-photography/insight-industrial-photography-molten-2-400.jpg 400w" />
 
 <img class="full fit" data-aos="fade-up" data-featherlight="/img/projects/insight-industrial-photography/insight-industrial-photography-rings.jpg"
-alt="industrial Example 1" src="/img/projects/insight-industrial-photography/insight-industrial-photography-rings.jpg"
+alt="Metal rings" src="/img/projects/insight-industrial-photography/insight-industrial-photography-rings.jpg"
 srcset="/img/projects/insight-industrial-photography/insight-industrial-photography-rings-2400.jpg 2400w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-rings-1800.jpg 1800w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-rings-1200.jpg 1200w,

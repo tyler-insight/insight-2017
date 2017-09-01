@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Case Study
+title: Pack Expo Case Study
 client: Domino Printing Sciences
 description: Summary of project
 cover-image: domino-case-study/domino-case-study-beer-mockup

@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Website
+title: 2014 Website
 client: Washington Island Ferry
 description: Website created for the only ferry in Door County
 cover-image: washington-island-ferry/washington-island-ferry-website-cover
