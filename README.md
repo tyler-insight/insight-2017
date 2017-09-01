@@ -181,7 +181,11 @@ The images for a project should go in the **unsized-img** directory, followed by
 
 When adding an image, do not use the markdown image treatment, instead, add an image using html srcset like below. Set the src as the original image name, then set up a srcset image with the image size following the name like below. All images get resized for screen sizes of 400px, 600px, 900px, 1200px, 1800px and 2400px wide.
 
+#### Scroll Animation
+
 Images should also have this line of code in their tag, which will give them an animation when scrolling: `data-aos="fade-up"`. If there is more than one image in a single row on the page, add `data-aos-delay="200"` starting at 200 for the second image and if theirs a third image `data-aos-delay="400"`. This will offset their animations so they don't all fade in at the same time.
+
+#### Lightbox
 
 If you want the image to pop up in light box when clicked, add `data-featherlight="path/to/image"`. These need to be within a `<div class="images">` element in order to work.
 
@@ -200,6 +204,23 @@ srcset="/img/projects/vans-lumber-photography/vans-photography5-2400.jpg 2400w,
 
 There are a few special ways setup to showcase the images in a project.
 
+#### Full Width Standard Image
+
+Simply wrap the image inside two blank div tags (this is done because otherwise markup places it inside paragraph tags, which limits the width of the image to the width of the paragraph)
+
+```html
+<div>
+  <img data-aos="fade-up" src="/img/projects/vans-lumber-case-study/vans-lumber-case-study-binder.jpg"
+  alt="Vans Lumber Binder"
+  srcset="/img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-2400.jpg 2400w,
+  /img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-1800.jpg 1800w,
+  /img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-1200.jpg 1200w,
+  /img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-900.jpg 900w,
+  /img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-600.jpg 600w,
+  /img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-400.jpg 400w" />
+</div>
+```
+
 #### Object Fit Pollyfill
 
 There is a special class you need to apply to images that use the object-fit property. These are images that you display in the grid setup on a project, and any other designated object-fit images. Simply apply the `fix` class to them  and the ofi.min.js will setup a polyfill for browsers that don't natively support object-fit.
@@ -211,7 +232,7 @@ This setup makes the images display in rows cropped to the same height. There ar
 ```html
 <div class="images">
 
-  <img class="half first" data-aos="fade-up" data-featherlight="/img/projects/vans-lumber-photography/vans-photography5.jpg" src="/img/projects/vans-lumber-photography/vans-photography5.jpg"
+  <img class="half fix first" data-aos="fade-up" data-featherlight="/img/projects/vans-lumber-photography/vans-photography5.jpg" src="/img/projects/vans-lumber-photography/vans-photography5.jpg"
   alt="Vans Photography"
   srcset="/img/projects/vans-lumber-photography/vans-photography5-2400.jpg 2400w,
   /img/projects/vans-lumber-photography/vans-photography5-1800.jpg 1800w,
@@ -220,7 +241,7 @@ This setup makes the images display in rows cropped to the same height. There ar
   /img/projects/vans-lumber-photography/vans-photography5-600.jpg 600w,
   /img/projects/vans-lumber-photography/vans-photography5-400.jpg 400w" />
 
-  <img class="half last" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/vans-lumber-photography/vans-photography6.jpg" src="/img/projects/vans-lumber-photography/vans-photography6.jpg"
+  <img class="half fix last" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/vans-lumber-photography/vans-photography6.jpg" src="/img/projects/vans-lumber-photography/vans-photography6.jpg"
   alt="Vans Photography"
   srcset="/img/projects/vans-lumber-photography/vans-photography6-2400.jpg 2400w,
   /img/projects/vans-lumber-photography/vans-photography6-1800.jpg 1800w,
@@ -229,7 +250,7 @@ This setup makes the images display in rows cropped to the same height. There ar
   /img/projects/vans-lumber-photography/vans-photography6-600.jpg 600w,
   /img/projects/vans-lumber-photography/vans-photography6-400.jpg 400w" />
 
-  <img class="third first" data-aos="fade-up" data-featherlight="/img/projects/vans-lumber-photography/vans-photography7.jpg" src="/img/projects/vans-lumber-photography/vans-photography7.jpg"
+  <img class="one-third fix first" data-aos="fade-up" data-featherlight="/img/projects/vans-lumber-photography/vans-photography7.jpg" src="/img/projects/vans-lumber-photography/vans-photography7.jpg"
   alt="Vans Photography"
   srcset="/img/projects/vans-lumber-photography/vans-photography7-2400.jpg 2400w,
   /img/projects/vans-lumber-photography/vans-photography7-1800.jpg 1800w,
@@ -238,7 +259,7 @@ This setup makes the images display in rows cropped to the same height. There ar
   /img/projects/vans-lumber-photography/vans-photography7-600.jpg 600w,
   /img/projects/vans-lumber-photography/vans-photography7-400.jpg 400w" />
 
-  <img class="third" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/vans-lumber-photography/vans-photography8.jpg" src="/img/projects/vans-lumber-photography/vans-photography8.jpg"
+  <img class="one-third fix" data-aos="fade-up" data-aos-delay="200" data-featherlight="/img/projects/vans-lumber-photography/vans-photography8.jpg" src="/img/projects/vans-lumber-photography/vans-photography8.jpg"
   alt="Vans Photography"
   srcset="/img/projects/vans-lumber-photography/vans-photography8-2400.jpg 2400w,
   /img/projects/vans-lumber-photography/vans-photography8-1800.jpg 1800w,
@@ -247,7 +268,7 @@ This setup makes the images display in rows cropped to the same height. There ar
   /img/projects/vans-lumber-photography/vans-photography8-600.jpg 600w,
   /img/projects/vans-lumber-photography/vans-photography8-400.jpg 400w" />
 
-  <img class="third last" data-aos="fade-up" data-aos-delay="400" data-featherlight="/img/projects/vans-lumber-photography/vans-photography9.jpg" src="/img/projects/vans-lumber-photography/vans-photography9.jpg"
+  <img class="one-third fix last" data-aos="fade-up" data-aos-delay="400" data-featherlight="/img/projects/vans-lumber-photography/vans-photography9.jpg" src="/img/projects/vans-lumber-photography/vans-photography9.jpg"
   alt="Vans Photography"
   srcset="/img/projects/vans-lumber-photography/vans-photography9-2400.jpg 2400w,
   /img/projects/vans-lumber-photography/vans-photography9-1800.jpg 1800w,
@@ -257,7 +278,7 @@ This setup makes the images display in rows cropped to the same height. There ar
   /img/projects/vans-lumber-photography/vans-photography9-400.jpg 400w" />
 
 
-  <img class="full" data-aos="fade-up" data-featherlight="/img/projects/vans-lumber-photography/vans-photography10.jpg" src="/img/projects/vans-lumber-photography/vans-photography10.jpg"
+  <img class="full fix" data-aos="fade-up" data-featherlight="/img/projects/vans-lumber-photography/vans-photography10.jpg" src="/img/projects/vans-lumber-photography/vans-photography10.jpg"
   alt="Vans Photography"
   srcset="/img/projects/vans-lumber-photography/vans-photography10-2400.jpg 2400w,
   /img/projects/vans-lumber-photography/vans-photography10-1800.jpg 1800w,
@@ -276,7 +297,7 @@ When you have a very tall image that will need some scrolling and you don't want
 ```html
 <div class="images">
   <div class="fill-back">
-    <img data-aos="fade-up" data-featherlight="/img/projects/sas-forks-website/sas-forks-website-2.jpg"
+    <img data-aos="fade-up"
     alt="SAS Forks Website" src="/img/projects/sas-forks-website/sas-forks-website-2.jpg"
     srcset="/img/projects/sas-forks-website/sas-forks-website-2-2400.jpg 2400w,
     /img/projects/sas-forks-website/sas-forks-website-2-1800.jpg 1800w,
@@ -287,23 +308,6 @@ When you have a very tall image that will need some scrolling and you don't want
   </div>
 </div>
 
-```
-
-#### Full Width Standard Image
-
-Simply wrap the image inside two blank div tags (this is done because otherwise markup places it inside paragraph tags, which limits the width of the image to the width of the paragraph)
-
-```html
-<div>
-  <img data-aos="fade-up" src="/img/projects/vans-lumber-case-study/vans-lumber-case-study-binder.jpg"
-  alt="Vans Lumber Binder"
-  srcset="/img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-2400.jpg 2400w,
-  /img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-1800.jpg 1800w,
-  /img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-1200.jpg 1200w,
-  /img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-900.jpg 900w,
-  /img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-600.jpg 600w,
-  /img/projects/vans-lumber-case-study/vans-lumber-case-study-binder-400.jpg 400w" />
-</div>
 ```
 
 ## Employees
