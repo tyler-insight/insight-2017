@@ -55,3 +55,15 @@ srcset="
 /img/projects/fox-cities-marathon-social-media/FCM-case-study-1-900.jpg 900w,
 /img/projects/fox-cities-marathon-social-media/FCM-case-study-1-600.jpg 600w,
 /img/projects/fox-cities-marathon-social-media/FCM-case-study-1-400.jpg 400w" />
+
+<div>
+<img data-aos="fade-up" data-aos-delay="200"  src="/img/projects/fox-cities-marathon-social-media/fox-cities-marathon-social-media-2017.jpg"
+alt="Fox Cities Marathon 2017"
+srcset="
+/img/projects/fox-cities-marathon-social-media/fox-cities-marathon-social-media-2017-2400.jpg 2400w,
+/img/projects/fox-cities-marathon-social-media/fox-cities-marathon-social-media-2017-1800.jpg 1800w,
+/img/projects/fox-cities-marathon-social-media/fox-cities-marathon-social-media-2017-1200.jpg 1200w,
+/img/projects/fox-cities-marathon-social-media/fox-cities-marathon-social-media-2017-900.jpg 900w,
+/img/projects/fox-cities-marathon-social-media/fox-cities-marathon-social-media-2017-600.jpg 600w,
+/img/projects/fox-cities-marathon-social-media/fox-cities-marathon-social-media-2017-400.jpg 400w" />
+</div>

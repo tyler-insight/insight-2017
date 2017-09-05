@@ -457,6 +457,7 @@
         h3,
         h4,
         h5 {
+          
           margin-bottom:1em;
         }
 
@@ -565,6 +566,21 @@
             }
           }
 
+        }
+        ul ul, ul ol, ol ol, ol ul {
+          @include media($tablet){
+            font-size: modular-scale(1);
+          }
+          @include media($desktop-large){
+            font-size: 1em;
+            @include span-columns(12);
+            @include shift(0);
+          }
+          @include media($desktop-largest){
+            font-size: 1em;
+            @include span-columns(12);
+            @include shift(0);
+          }
         }
         ol {
           margin-top:1em;

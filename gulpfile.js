@@ -88,11 +88,10 @@
      */
 
     gulp.task('optimize', function() {
-      gulp.src('img/**/*.{jpg}')
+      gulp.src('img/**/*.jpg')
         .pipe(parallel(
           imageresize({
-            quality: 0.7,
-            samplingFactor: [2, 2],
+            quality: 0.9,
             noProfile: true,
             interlace: true,
           }),
