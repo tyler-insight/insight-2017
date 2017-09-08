@@ -4,9 +4,9 @@ title: Case Study
 client: Van's Lumber & Custom Builders
 description: Summary of project.
 cover-image: vans-lumber-case-study/vans-lumber-case-study-cover
-cover-text-color: '003322'
-back-color1: ffffff
-back-color2: ededed
+cover-text-color: 'ffffff'
+back-color1: '0c4834'
+back-color2: '003322'
 tags:
 - Identity
 - Branding

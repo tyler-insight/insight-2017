@@ -3,7 +3,7 @@ layout: project
 title: Pack Expo Case Study
 client: Domino Printing Sciences
 description: Summary of project
-cover-image: domino-case-study/domino-case-study-beer-mockup
+cover-image: domino-case-study/domino-case-study-beer-mockup-closeup
 cover-text-color: fff
 back-color1: 54372b
 back-color2: 2c1c15

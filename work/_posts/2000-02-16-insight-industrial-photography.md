@@ -86,7 +86,7 @@ srcset="/img/projects/insight-industrial-photography/insight-industrial-photogra
 /img/projects/insight-industrial-photography/insight-industrial-photography-molten-2-600.jpg 600w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-molten-2-400.jpg 400w" />
 
-<img class="full fit" data-aos="fade-up" data-featherlight="/img/projects/insight-industrial-photography/insight-industrial-photography-rings.jpg"
+<img class="half first fit" data-aos="fade-up" data-featherlight="/img/projects/insight-industrial-photography/insight-industrial-photography-rings.jpg"
 alt="Metal rings" src="/img/projects/insight-industrial-photography/insight-industrial-photography-rings.jpg"
 srcset="/img/projects/insight-industrial-photography/insight-industrial-photography-rings-2400.jpg 2400w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-rings-1800.jpg 1800w,
@@ -94,5 +94,14 @@ srcset="/img/projects/insight-industrial-photography/insight-industrial-photogra
 /img/projects/insight-industrial-photography/insight-industrial-photography-rings-900.jpg 900w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-rings-600.jpg 600w,
 /img/projects/insight-industrial-photography/insight-industrial-photography-rings-400.jpg 400w" />
+
+<img class="half last fit" data-aos="fade-up" data-featherlight="/img/projects/insight-industrial-photography/insight-industrial-photography-panel-display.jpg"
+alt="Wood panel display" src="/img/projects/insight-industrial-photography/insight-industrial-photography-panel-display.jpg"
+srcset="/img/projects/insight-industrial-photography/insight-industrial-photography-panel-display-2400.jpg 2400w,
+/img/projects/insight-industrial-photography/insight-industrial-photography-panel-display-1800.jpg 1800w,
+/img/projects/insight-industrial-photography/insight-industrial-photography-panel-display-1200.jpg 1200w,
+/img/projects/insight-industrial-photography/insight-industrial-photography-panel-display-900.jpg 900w,
+/img/projects/insight-industrial-photography/insight-industrial-photography-panel-display-600.jpg 600w,
+/img/projects/insight-industrial-photography/insight-industrial-photography-panel-display-400.jpg 400w" />
 
 </div>
