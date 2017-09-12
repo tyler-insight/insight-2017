@@ -93,7 +93,6 @@
           imageresize({
             quality: 1,
             noProfile: true,
-            interlace: true,
           }),
           os.cpus().length
         ))
