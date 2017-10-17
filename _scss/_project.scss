@@ -3,7 +3,7 @@
     display: table;
     overflow: hidden;
     width: 100%;
-    height: calc(70vh - #{$nav-height});
+    height: calc(75vh - #{$nav-height});
     margin-bottom: 0;
     background: #eee;
     background-position: center;
@@ -46,7 +46,7 @@
 .project-title {
     position: relative;
     width: 100%;
-    padding: 2em;
+    padding: 1em 2em;
     margin-bottom: $mobile-spacing;
     @include media($tablet) {
         margin-bottom: $tablet-spacing;

@@ -110,7 +110,7 @@
         }
         @include media($desktop) {
             h2 {
-                font-size: 2.8em;
+                font-size: 2.5em;
             }
 
             h3 {
@@ -119,20 +119,20 @@
         }
         @include media($desktop-largest) {
             h2 {
-                font-size: 3.5em;
+                font-size: 3em;
             }
 
             h3 {
-                font-size: 2em;
+                font-size: 1.8em;
             }
         }
         @include media($desktop-super) {
             h2 {
-                font-size: 5em;
+                font-size: 4em;
             }
 
             h3 {
-                font-size: 2.5em;
+                font-size: 2.1em;
             }
         }
     }

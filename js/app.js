@@ -1,5 +1,4 @@
 $(function() {
-
     var FadeTransition = Barba.BaseTransition.extend({
         start: function() {
             /**
@@ -77,7 +76,7 @@ $(function() {
     var mixRunning;
     //Run Script that performs navigation hid/show and mobile function
     navigation();
-
+    
     //Run script that applies object-fit pollyfill from obi.min.js
     objectFitImages();
 

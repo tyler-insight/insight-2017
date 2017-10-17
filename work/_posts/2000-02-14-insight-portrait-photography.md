@@ -33,25 +33,7 @@ srcset="/img/projects/insight-portrait-photography/insight-portrait-photography-
 /img/projects/insight-portrait-photography/insight-portrait-photography-2-600.jpg 600w,
 /img/projects/insight-portrait-photography/insight-portrait-photography-2-400.jpg 400w" />
 
-<img class="full" data-aos="fade-up" data-featherlight="/img/projects/insight-portrait-photography/insight-portrait-photography-3.jpg"
-alt="Portrait of man" src="/img/projects/insight-portrait-photography/insight-portrait-photography-3.jpg"
-srcset="/img/projects/insight-portrait-photography/insight-portrait-photography-3-2400.jpg 2400w,
-/img/projects/insight-portrait-photography/insight-portrait-photography-3-1800.jpg 1800w,
-/img/projects/insight-portrait-photography/insight-portrait-photography-3-1200.jpg 1200w,
-/img/projects/insight-portrait-photography/insight-portrait-photography-3-900.jpg 900w,
-/img/projects/insight-portrait-photography/insight-portrait-photography-3-600.jpg 600w,
-/img/projects/insight-portrait-photography/insight-portrait-photography-3-400.jpg 400w" />
-
-<img class="half first fit" data-aos="fade-up" data-featherlight="/img/projects/insight-portrait-photography/insight-portrait-photography-4.jpg"
-alt="Portrait of man crossing arms" src="/img/projects/insight-portrait-photography/insight-portrait-photography-4.jpg"
-srcset="/img/projects/insight-portrait-photography/insight-portrait-photography-4-2400.jpg 2400w,
-/img/projects/insight-portrait-photography/insight-portrait-photography-4-1800.jpg 1800w,
-/img/projects/insight-portrait-photography/insight-portrait-photography-4-1200.jpg 1200w,
-/img/projects/insight-portrait-photography/insight-portrait-photography-4-900.jpg 900w,
-/img/projects/insight-portrait-photography/insight-portrait-photography-4-600.jpg 600w,
-/img/projects/insight-portrait-photography/insight-portrait-photography-4-400.jpg 400w" />
-
-<img class="half last fit" data-aos="fade-up" data-featherlight="/img/projects/insight-portrait-photography/insight-portrait-photography-8.jpg"
+<img class="full fit" data-aos="fade-up" data-featherlight="/img/projects/insight-portrait-photography/insight-portrait-photography-8.jpg"
 alt="Portrait of woman wearing mustache" src="/img/projects/insight-portrait-photography/insight-portrait-photography-8.jpg"
 srcset="/img/projects/insight-portrait-photography/insight-portrait-photography-8-2400.jpg 2400w,
 /img/projects/insight-portrait-photography/insight-portrait-photography-8-1800.jpg 1800w,
@@ -59,15 +41,6 @@ srcset="/img/projects/insight-portrait-photography/insight-portrait-photography-
 /img/projects/insight-portrait-photography/insight-portrait-photography-8-900.jpg 900w,
 /img/projects/insight-portrait-photography/insight-portrait-photography-8-600.jpg 600w,
 /img/projects/insight-portrait-photography/insight-portrait-photography-8-400.jpg 400w" />
-
-<img class="full fit" data-aos="fade-up" data-featherlight="/img/projects/insight-portrait-photography/insight-portrait-photography-10.jpg"
-alt="Portrait of young woman" src="/img/projects/insight-portrait-photography/insight-portrait-photography-10.jpg"
-srcset="/img/projects/insight-portrait-photography/insight-portrait-photography-10-2400.jpg 2400w,
-/img/projects/insight-portrait-photography/insight-portrait-photography-10-1800.jpg 1800w,
-/img/projects/insight-portrait-photography/insight-portrait-photography-10-1200.jpg 1200w,
-/img/projects/insight-portrait-photography/insight-portrait-photography-10-900.jpg 900w,
-/img/projects/insight-portrait-photography/insight-portrait-photography-10-600.jpg 600w,
-/img/projects/insight-portrait-photography/insight-portrait-photography-10-400.jpg 400w" />
 
 <img class="half first fit" data-aos="fade-up" data-featherlight="/img/projects/insight-portrait-photography/insight-portrait-photography-7.jpg"
 alt="Portrait of woman holding cereal box" src="/img/projects/insight-portrait-photography/insight-portrait-photography-7.jpg"

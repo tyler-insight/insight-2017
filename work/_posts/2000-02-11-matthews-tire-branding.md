@@ -8,7 +8,6 @@ cover-text-color: 'ffffff'
 back-color1: '004990'
 back-color2: '00407d'
 tags:
-- Branding
 - Video
 - Case Study
 

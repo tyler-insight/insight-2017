@@ -283,19 +283,20 @@
     }
 
     @include span-columns(4);
-
+    
     input {
         width: 100%;
         margin-top: 1em;
         padding: 0.5em;
 
         border: none;
-        border-bottom: 2px solid $dark-gray;
+        border-bottom: 2px solid #f1f1f1;
 
         font-family: "futura-pt", sans-serif;
         font-size: 1.5em;
 
         @include transition(all .5s)
+
     }
 
     ::-webkit-input-placeholder {
@@ -315,14 +316,19 @@
     :-ms-input-placeholder {
         color: $light-gray;
     }
+    input,
+    select,
+    textarea {
+        background: #f1f1f1;
+    }
 
-    button:focus,
+
     input:focus,
     select:focus,
     textarea:focus {
         border-bottom: 2px solid $brand-color;
         outline: none;
-
+        background: #f1f1f1;
         @include transition(all .5s);
     }
 
@@ -333,7 +339,7 @@
         padding: 0.5em;
 
         border: none;
-        border-bottom: 2px solid $dark-gray;
+        border-bottom: 2px solid #f1f1f1;
 
         font-family: "futura-pt", sans-serif;
         font-size: 1.5em;

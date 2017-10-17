@@ -91,8 +91,9 @@
       gulp.src('img/**/*.jpg')
         .pipe(parallel(
           imageresize({
-            quality: 1,
+            quality: 0.85,
             noProfile: true,
+            interlace: true,
           }),
           os.cpus().length
         ))

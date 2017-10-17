@@ -101,6 +101,51 @@ form {
          @include span-columns(8);
         @include shift(2);
     }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin-top:1em;
+        @include media($desktop-large) {
+             @include span-columns(12);
+            @include shift(0);
+        }
+        @include media($desktop-largest) {
+             @include span-columns(12);
+            @include shift(0);
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    input.form-checkbox {
+      width: auto;
+
+    }
+    label {
+      @include span-columns(4);
+      margin-top:1em;
+      font-size: 1.5em;
+      color: $dark-gray;
+    }
+    span {
+      font-size: 1.5em;
+    }
+    .check-group {
+      @include media($tablet) {
+        @include span-columns(4);
+        margin-right:0;
+      }
+      @include media($desktop-large) {
+        @include span-columns(5);
+      }
+      @include media($desktop-largest) {
+        @include span-columns(5);
+      }
+    }
 }
 
 h1 {
@@ -152,6 +197,12 @@ audio {
        @include span-columns(8);
       @include shift(2);
   }
+}
+
+::selection {
+  background: $brand-color;
+  opacity:1;
+  color:#fff;
 }
 
 .audio-box {
