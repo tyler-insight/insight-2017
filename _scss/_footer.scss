@@ -47,7 +47,9 @@
     }
 
 }
-
+.newsletter{
+  text-align: center;
+}
 .footer {
   @include span-columns(4);
   text-align:center;

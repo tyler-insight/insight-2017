@@ -2,7 +2,7 @@
 layout: project
 title: TV Branding
 client: Matthews Tire
-description: Interior and exterior photography of homes that Van's Lumber has built.
+description: Campaign that keeps new tire sales rolling
 cover-image: matthews-tire-branding-tv/matthews-tire-branding-tv-cover
 cover-text-color: fff
 back-color1: ffdd00
