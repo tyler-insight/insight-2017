@@ -2,7 +2,7 @@
 layout: project
 title: 2014 Website
 client: School Software Group
-description: Interior and exterior photography of homes that Van's Lumber has built.
+description: Website redesign is at the top of the class. Summa Cum Laude.
 cover-image: school-software-group-website/school-software-group-website-cover
 cover-text-color: fff
 back-color1: 42a97e

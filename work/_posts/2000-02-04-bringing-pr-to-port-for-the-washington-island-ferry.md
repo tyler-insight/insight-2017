@@ -2,7 +2,7 @@
 layout: project
 title:  "Bringing PR to Port"
 client: Washington Island Ferry Line
-description: Interior and exterior photography of homes that Van's Lumber has built.
+description: Making waves for greater awareness.
 cover-image: bringing-pr-to-port-washington/washington-island-ferry-website-devices
 cover-text-color: fff
 back-color1: 64d7db
@@ -12,7 +12,7 @@ tags:
 - Public Relations
 ---
 
-As the Washington Island Ferry crew prepared for their peak season in 2015, they also looked forward to celebrating a milestone anniversary; for 75 years, the Washington Island Ferry Line has provided safe and reliable round-trip service to residents and visitors of Washington Island.  
+As the Washington Island Ferry crew prepared for their peak season in 2015, they also looked forward to celebrating a milestone anniversary; for 75 years, the Washington Island Ferry Line has provided safe and reliable round-trip service to residents and visitors of Washington Island.
 
 ## Goal
 

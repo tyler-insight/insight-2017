@@ -2,7 +2,7 @@
 layout: project
 title: 2017 Website
 client: Landscape Associates
-description: Landscape Associates needed a new modern website that enabled them to show off their gorgeous work, share insightful tips, and make contacting them easy.
+description: Website redesign continues to generate more green than ever before.
 cover-image: landscape-associates-website/landscape-associates-website-cover
 cover-text-color: fff
 back-color1: 3db04c

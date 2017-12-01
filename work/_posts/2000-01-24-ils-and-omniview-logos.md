@@ -2,7 +2,7 @@
 layout: project
 title:  ILS and OmniView Logos
 client: Integrated Legacy Solutions
-description: Interior and exterior photography of homes that Van's Lumber has built.
+description: Shaping a recognizable legacy.
 cover-image: ils-and-omniview-logos/omniview-logo-3
 cover-text-color: fff
 back-color1: f61d2e

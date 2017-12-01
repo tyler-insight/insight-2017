@@ -2,7 +2,7 @@
 layout: project
 title: Product Packaging
 client: Jolly Wolly Fun Dips
-description: Food focused, colorful packaging.
+description: The perfect blend for a new package design that customers savor.
 cover-image: jolly-wolly-fun-dip/jolly-wolly-fun-dip-cover
 cover-text-color: fff
 back-color1: 606d38

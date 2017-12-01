@@ -2,7 +2,7 @@
 layout: project
 title: 2017 Website
 client: Prestige Custom Cabinetry and Millwork, Inc.
-description: Prestige needed a website update to show off big, bold images of their work.
+description: Website redesign opens new doors that bring home greater profits.
 cover-image: prestige-cabinetry-website/prestige-cabinetry-website-cover
 cover-text-color: fff
 back-color1: 203c55

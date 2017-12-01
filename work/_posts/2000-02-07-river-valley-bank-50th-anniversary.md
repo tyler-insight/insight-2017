@@ -1,8 +1,8 @@
 ---
 layout: project
-title: 50th Anniversary Branding 
+title: 50th Anniversary Branding
 client: River Valley Bank
-description: An INCREDIBLE anniversary MARKETING campaign!
+description: Creating magical results out of beans.
 cover-image: river-valley-bank-50th-anniversary/rvb-50th-cover
 cover-text-color: fff
 back-color1: a8d389
