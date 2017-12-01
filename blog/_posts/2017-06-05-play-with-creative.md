@@ -20,6 +20,8 @@ Basically, all I’m trying to say is this: **Play with creative**, it will keep
 
 Here are some experiments and things I've done for fun to develop my skills!
 
+<!-- ![Play With Creative](/img/blog/play-with-creative-design-with-passion.jpg)  -->
+
 <span class="wistia_embed wistia_async_cudcnh4olu popover=true popoverAnimateThumbnail=true" style="display:inline-block;height:500px;width:100%">&nbsp;</span>
 
 ![Snow Environment Rendering](/img/blog/play-with-creative-snow-environment.jpg)

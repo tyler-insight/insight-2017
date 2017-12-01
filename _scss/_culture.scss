@@ -737,6 +737,10 @@
     [data-color=gray] {
         @include radial-gradient(#e3e3e2, #cac8c9);
         background-color: #e3e3e2;
+
+        h1 {
+          color: #226594;
+        }
     }
 
     [data-color=black] {
@@ -753,7 +757,7 @@
         }
 
         p {
-            color: #a0a0a0;
+            color: #d9d9d9;
         }
     }
 
@@ -813,7 +817,7 @@
         }
 
         h2 {
-            color: #fff5e6;
+            color: #ffffff;
         }
 
         p {
@@ -829,11 +833,11 @@
         }
 
         h2 {
-            color: #d1a6ef;
+            color: #240833;
         }
 
         p {
-            color: #e1d6e8;
+            color: #f0ecf3;
         }
     }
 
@@ -909,11 +913,11 @@
         }
 
         h2 {
-            color: #c17e97;
+            color: #e2a4bb;
         }
 
         p {
-            color: #e1d6e8;
+            color: #f2ebf7;
         }
     }
 
@@ -925,7 +929,7 @@
         }
 
         h2 {
-            color: #b49879;
+            color: #d5bca0;
         }
 
         p {
@@ -941,11 +945,11 @@
         }
 
         h2 {
-            color: #697ec0;
+            color: #99b0e4;
         }
 
         p {
-            color: #c2c9e1;
+            color: #dbe0ee;
         }
     }
 
@@ -953,15 +957,15 @@
         @include radial-gradient(#f69679, #e56139);
 
         h1 {
-            color: #ffe26e;
+            color: #ffea98;
         }
 
         h2 {
-            color: #f3c2b3;
+            color: #ffe0d7;
         }
 
         p {
-            color: #f3e5e1;
+            color: #fff;
         }
     }
 

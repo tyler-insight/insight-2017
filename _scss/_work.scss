@@ -183,14 +183,14 @@
     @include media($desktop) {
          @include span-columns(6);
         height: 400px;
-        width: calc(50% - .4em);
+        width: calc(49% - .4em);
         display: none;
         margin: 0.2em 0.4em;
     }
     @include media($desktop-large) {
          @include span-columns(4);
         height: 300px;
-        width: calc((100% / 3) - .4em);
+        width: calc((99% / 3) - .4em);
         display: none;
         margin: 0.2em 0.4em;
     }
@@ -374,13 +374,13 @@
         @include media($desktop) {
              @include span-columns(6);
             height: 400px;
-            width: 50%;
+            width: 49%;
             display: none;
         }
         @include media($desktop-large) {
              @include span-columns(4);
             height: 300px;
-            width: calc((99% / 3)-1px);
+            width: calc((99% / 3) - 5px);
             display: none;
         }
         @include media($desktop-largest) {

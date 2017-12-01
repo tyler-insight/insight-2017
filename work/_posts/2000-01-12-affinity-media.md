@@ -2,7 +2,7 @@
 layout: project
 title:  Media Placement
 client: Ministry Health Care/Affinity Health System
-description: A tasty commercial produced for Matthews Tire.
+description: Making a Difference in Healthcare Awareness.
 cover-image: ministry-affinity-media-placement/ministry-affinity-media-placement-cover
 cover-text-color: fff
 back-color1: 3290d1
@@ -11,4 +11,4 @@ tags:
 - Media Buying
 ---
 
-Insight plans, buys and places all paid media for both Ministry and Affinity throughout northeast, central and northern Wisconsin—everything from ads in small high school sports programs to regional initiatives promoting all thirteen hospitals and 40+ clinics. Campaigns may feature oncology services, birthing centers, cardiology, orthopedics and more.  Most recently, St Elizabeth Hospital in Appleton, Wisconsin launched a new state-of-the-art hybrid OR. In four weeks time, Insight was able to deliver 1.2 million impressions and 1828 clicks to the website to view a video explaining the virtues of new facility—far exceeding the client’s goals for the campaign.
+For over 12 years, Insight planned, purchased and placed all paid media for both Ministry and Affinity throughout northeast, central and northern Wisconsin – everything from ads in small high school sports programs to regional initiatives promoting all thirteen hospitals and over 40 clinics. Campaigns featured oncology services, birthing centers, cardiology, orthopedics and more. When St. Elizabeth Hospital in Appleton launched a new state-of-the-art hybrid OR, Insight was able to deliver 1.2 million impressions and 1828 clicks to the website in only four weeks. The result far exceeded the client’s goal for the campaign.
