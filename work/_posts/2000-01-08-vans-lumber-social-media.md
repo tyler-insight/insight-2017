@@ -2,7 +2,7 @@
 layout: project
 title: Social Media
 client: Vans Lumber
-description: A tasty commercial produced for Matthews Tire.
+description: Successful social media exposure from the inside out.
 cover-image: vans-lumber-social-media/vans-lumber-social-media-cover
 cover-text-color: fff
 back-color1: '006443'

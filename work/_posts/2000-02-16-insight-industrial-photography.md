@@ -11,7 +11,7 @@ tags:
   - Photography
 ---
 
-Content here.
+Insight creates heavy hitting industrial images for all types of manufacturing. From paper to plastic manufacturing, Insight has the experience to illustrate your story with the greatest impact.
 
 <div class="images">
 <img class="half first fit" data-aos="fade-up" data-featherlight="/img/projects/insight-industrial-photography/insight-industrial-photography-machine-3.jpg"

@@ -2,7 +2,7 @@
 layout: project
 title: Video
 client: Valley Custom Door
-description: Interior and exterior photography of homes that Van's Lumber has built.
+description: It’s all in the details.
 cover-image: valley-custom-door-video/valley-custom-door-video-cover
 cover-text-color: fff
 back-color1: afb8c7

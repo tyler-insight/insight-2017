@@ -11,7 +11,7 @@ tags:
 - Identity
 ---
 
-Open Streets is an annual non-profit event held in downtown Green Bay where the streets are closed to vehicle traffic, and opened for fun! Transportation alternatives include biking, walking, running, skating and more. Insight created the Open Streets logo to convey community, motion, fun and the "openness" of the one-day event.
+Open Streets is an annual non-profit event held in downtown Green Bay where the streets are closed to vehicle traffic, and opened for fun! Transportation alternatives include biking, walking, running, skating and more. Insight created the Open Streets logo to convey community, motion, fun and the “openness” of the one-day event.
 
 <div class="images">
 

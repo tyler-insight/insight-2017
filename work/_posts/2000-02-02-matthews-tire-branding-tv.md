@@ -2,7 +2,7 @@
 layout: project
 title: TV Branding
 client: Matthews Tire
-description: Campaign that keeps new tire sales rolling
+description: A successful spot to keep sales going round.
 cover-image: matthews-tire-branding-tv/matthews-tire-branding-tv-cover
 cover-text-color: fff
 back-color1: ffdd00
