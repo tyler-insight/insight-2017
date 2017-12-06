@@ -2,7 +2,7 @@
 layout: project
 title: Landscaping Photography
 client: Schmalz Custom Landscaping and Garden Center
-description: Interior and exterior photography of homes that Van's Lumber has built.
+description: Planting the right image for quality  landscaping.
 cover-image: schmalz-landscaping-photography/schmalz-photography1
 cover-text-color: fff
 back-color1: c151ea

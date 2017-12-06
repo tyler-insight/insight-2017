@@ -2,7 +2,7 @@
 layout: project
 title: TV Commercial
 client: Matthews Tire
-description: A roundabout way to increase tire sales.
+description: An effective spot to keep tire sales going round.
 cover-image: matthews-tire-tv-commercial/matthews-tire-tv-commercial-cover
 cover-text-color: fff
 back-color1: ffdd00

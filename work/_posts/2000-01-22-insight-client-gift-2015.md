@@ -12,11 +12,7 @@ tags:
 
 ---
 
-Bake My Day is a small family-owned bakery in Green Bay offering fresh baked sweets for everyday and special occasions. After establishing an identity of all things cute, from pink polka dots to loopy fonts, Insight designed a logo that appeals to the Bake My Day audience and highlights their specialty made-from-scratch cupcakes.
-
-Bake My Day is a small family-owned bakery in Green Bay offering fresh baked sweets for everyday and special occasions. After establishing an identity of all things cute, from pink polka dots to loopy fonts, Insight designed a logo that appeals to the Bake My Day audience and highlights their specialty made-from-scratch cupcakes.
-
-Bake My Day is a small family-owned bakery in Green Bay offering fresh baked sweets for everyday and special occasions. After establishing an identity of all things cute, from pink polka dots to loopy fonts, Insight designed a logo that appeals to the Bake My Day audience and highlights their specialty made-from-scratch cupcakes.
+We’re grateful to our customers who have partnered with us for over 30 years! What better way to show our appreciation than with a Wisconsin favorite. Our gift design supplied all of the ingredients to enjoy a good old fashion in the comfort of their home. 
 
 <div class="images">
 <img class="full fit" data-aos="fade-up" src="/img/projects/insight-christmas-gift-2015/insight-christmas-gift-2015-assorted.jpg" data-featherlight="/img/projects/insight-christmas-gift-2015/insight-christmas-gift-2015-assorted.jpg"

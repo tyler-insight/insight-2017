@@ -2,7 +2,7 @@
 layout: project
 title: Online Ads
 client: Domino Printing Sciences
-description: Summary of project.
+description: A creative way for brewing new clients.
 cover-image: domino-expo-online-ads/domino-expo-online-ads-mockup
 cover-text-color: 'ffffff'
 back-color1: '009e5a'

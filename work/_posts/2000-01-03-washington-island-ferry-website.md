@@ -11,7 +11,7 @@ tags:
 - Web Digital
 ---
 
-The Washington Island Ferry Line is the only source of transport from the popular vacation destination of Door County to beautiful, undisturbed Washington Island. Insight revived the 73-year-old ferry line brand with a website that entices travelers by showcasing the island’s beauty and providing a full arsenal of tools and information to make the trip.
+The Washington Island Ferry Line is the only source of transport from the popular vacation destination of Door County to beautiful, undisturbed Washington Island. Insight revived the 73-year-old ferry line brand with a website that entices travelers by showcasing the island’s beauty. The site also provides a full arsenal of tools including a custom coded portal where passengers enter their trip plans and receive a custom schedule to make their trip a breeze. 
 
 <a href="http://www.wisferry.com/" target= "_blank" rel="noopener">View the Site</a>
 

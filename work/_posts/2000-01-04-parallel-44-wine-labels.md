@@ -11,7 +11,7 @@ tags:
 - Packaging
 ---
 
-Located just outside Green Bay, Parallel 44 makes wines from grapes grown and harvested in Wisconsin’s Frozen Tundra. From the frozen vineyard field to the frozen Packers football field, Wisconsin winters were the inspiration for these labels designed by Insight.
+Located just outside Green Bay, Parallel 44 makes wines from grapes grown and harvested in Wisconsin’s Frozen Tundra. The cold climate grapes grown near a town known for football were the inspiration of blending a vineyard and a football field into a memorable image and an effective label.
 
 <div class="images">
 <img class="half first fit" data-aos="fade-up" data-featherlight="/img/projects/parallel-44-wine-labels/parallel-44-labels-2.jpg" src="/img/projects/parallel-44-wine-labels/parallel-44-labels-2.jpg"

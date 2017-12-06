@@ -2,7 +2,7 @@
 layout: project
 title: 2015 Website
 client: Matthews Tire
-description: Description of project here
+description: A site that keeps tire sales rolling.
 cover-image: matthews-tire-website/matthews-tire-website-cover
 cover-text-color: fff
 back-color1: ffdd00

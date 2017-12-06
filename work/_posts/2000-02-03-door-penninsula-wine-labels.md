@@ -2,7 +2,7 @@
 layout: project
 title: Wine Labels
 client: Door Peninsula Winery
-description: Wine labels made for Door Peninsula Winery's best wines.
+description: Shining the light on a distinguished look.
 cover-image: door-peninsula-wine-labels/door-peninsula-wine-labels-cover
 cover-text-color: fff
 back-color1: e27670

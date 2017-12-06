@@ -2,7 +2,7 @@
 layout: project
 title: Online Ads
 client: Farmers & Merchants Union Bank
-description: Summary of project.
+description: Taking a bigger bite out of the Millennial market.
 cover-image: fmub-online-ads/fmub-online-ads-cover
 cover-text-color: 'ffffff'
 back-color1: 'c49a13'
@@ -12,7 +12,7 @@ tags:
 
 ---
 
-Content here.
+FMUB was searching for a new way to reach millennials while showcasing the advantages of opening new accounts with them.  Insight developed a series of online ads that were fun, exciting and hit the target market dead on. 
 
 <div>
 <img data-aos="fade-up"

@@ -15,9 +15,7 @@ tags:
 
 ---
 
-## Goal
-
-Content here.
+Van’s Lumber & Custom Builders needed a brand refresh that matched their reputation for building high end, showcase homes in Door and Kewaunee counties of northeastern Wisconsin. Insight
 
 <div>
 <img data-aos="fade-up" src="/img/projects/vans-lumber-case-study/vans-lumber-case-study-business-cards.jpg"
@@ -33,10 +31,6 @@ srcset="
 
 
 <div class="spacer"></div>
-
-## Result
-
-Content here.
 
 <div>
 <img data-aos="fade-up" src="/img/projects/vans-lumber-case-study/vans-lumber-case-study-binder.jpg"

@@ -2,7 +2,7 @@
 layout: project
 title: 2015 Website
 client: SAS Forks
-description: New website designed to crush the competition.
+description: A website designed to crush the competition.
 cover-image: sas-forks-website/sas-forks-website-cover
 cover-text-color: fff
 back-color1: 313131

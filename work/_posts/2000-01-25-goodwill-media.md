@@ -2,7 +2,7 @@
 layout: project
 title:  Media Placement
 client: Goodwill NCW
-description: Interior and exterior photography of homes that Van's Lumber has built.
+description: Warming up sales during uncertain forecast.
 cover-image: goodwill-media-placement/goodwill-media-placement-cover
 cover-text-color: fff
 back-color1: 00457e

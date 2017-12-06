@@ -2,7 +2,7 @@
 layout: project
 title: Branding
 client: Matthews Tire
-description: "How to develop and maintain a unique brand—as well as offering monthly, themed promotional print, TV, radio, social media, public relations and more—to drive traffic to an established chain of tire and auto repair shops?"
+description: "A successful brand refresh to keep sales from going flat."
 cover-image: matthews-tire-branding/matthews-tire-branding-billboard-dartboard
 cover-text-color: 'ffffff'
 back-color1: '004990'
@@ -12,6 +12,7 @@ tags:
 - Case Study
 
 ---
+How to develop and maintain a unique brand—as well as offering monthly, themed promotional print, TV, radio, social media, public relations and more—to drive traffic to an established chain of tire and auto repair shops?
 
 ## Goal
 

@@ -2,7 +2,7 @@
 layout: project
 title: 2017 Website
 client: Landscape Associates
-description: Website redesign continues to generate more green than ever before.
+description: Website redesign puts more green into landscaping sales.
 cover-image: landscape-associates-website/landscape-associates-website-cover
 cover-text-color: fff
 back-color1: 3db04c

@@ -2,7 +2,7 @@
 layout: project
 title: Client Gift 2016
 client: Insight Creative, Inc.
-description: We love our clients, so this year, we sent them some delicious coffee to help them stay energized.
+description: The perfect blend to a great relationship.
 cover-image: insight-christmas-gift-2016/insight-christmas-gift-2016-front
 cover-text-color: fff
 back-color1: '664035'

@@ -2,7 +2,7 @@
 layout: project
 title:  "Social&nbsp;Media"
 client: Fox Cities Marathon
-description: A tasty commercial produced for Matthews Tire.
+description: Breakthrough social media for a strong finish.
 cover-image: fox-cities-marathon-social-media/FCM-case-study-3
 cover-text-color: fff
 back-color1: 6b2e7c
