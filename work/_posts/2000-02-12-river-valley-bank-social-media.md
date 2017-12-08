@@ -2,7 +2,7 @@
 layout: project
 title: Social Media
 client: River Valley Bank
-description: Project summary
+description: Connecting with the community.
 cover-image: river-valley-bank-social-media/river-valley-bank-social-media-cover
 cover-text-color: fff
 back-color1: c6ba8d
@@ -11,6 +11,9 @@ tags:
 - Social Media
 
 ---
+River Valley Bank realizes the importance of a creating a great work culture and an incredible customer experience. They also realize the importance of being an active part in making each of their banking communities a better place to live.  Insight continues to utilize a variety of social media channels for RVB to engage with local community organizations and to participate in dialogues for finding solutions to community issues. In addition, social media plays an important part in the River Valley Bank exceptional culture by showcasing employee anniversaries, new hires and other employee achievements.
+
+Insight ensures that all content created for River Valley Bank’s ongoing advertising and PR campaigns is shared throughout every social media strategy.
 
 ## Daily Updates
 

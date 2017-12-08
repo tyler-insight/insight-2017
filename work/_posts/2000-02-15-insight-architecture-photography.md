@@ -2,7 +2,7 @@
 layout: project
 title: Architecture Photography Showcase
 client: Insight Creative, Inc.
-description: Examples of our architecture photography work.
+description: Impactful imagery with an artistic perspective.
 cover-image: insight-architecture-photography/insight-architecture-photography-exterior-7
 cover-text-color: fff
 back-color1: e22357
@@ -11,7 +11,7 @@ tags:
   - Photography
 ---
 
-Content here.
+Whether you need to showcase residential or commercial spaces, Insight can capture the best image with attention to detail. We apply advanced lighting and post-production techniques to create images that are inviting and that get recognized.
 
 <div class="images">
 <img class="full fit" data-aos="fade-up" data-featherlight="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2.jpg"

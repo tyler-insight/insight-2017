@@ -12,7 +12,7 @@ tags:
 
 ---
 
-FMUB was searching for a new way to reach millennials while showcasing the advantages of opening new accounts with them.  Insight developed a series of online ads that were fun, exciting and hit the target market dead on. 
+FMUB was searching for a new way to reach millennials while showcasing the advantages of opening new accounts with the bank.  Insight developed a series of online ads that were fun, exciting and hit the target market dead on.  
 
 <div>
 <img data-aos="fade-up"

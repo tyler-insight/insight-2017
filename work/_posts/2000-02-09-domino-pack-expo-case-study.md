@@ -2,7 +2,7 @@
 layout: project
 title: Pack Expo Case Study
 client: Domino Printing Sciences
-description: Summary of project
+description: It’s Showtime!
 cover-image: domino-case-study/domino-case-study-beer-mockup-closeup
 cover-text-color: fff
 back-color1: 54372b
@@ -14,11 +14,15 @@ tags:
 
 ---
 
-Content goes here.
+From pre-show to post-show, every year Insight provides the marketing, public relations and social media for Domino to make each show a success.
+
+Insight produces a wide variety of design materials from show invitations to stunning trade show booth graphics. Insight is instrumental in developing media kits, planning press events for industry trade publications and managing a Domino web site created exclusively for Pack Expo which includes client testimonials, industry news, downloadable materials and content from past shows.
+
+Insight also provides non-stop social media coverage at each show. Insight utilizes trending hashtags as well as informing attendees about how to find the Domino booth as well as keeping them posted about upcoming Domino events.
+
+Insight live tweets on Twitter on behalf of Domino and provides photos and videos to create an experience as though prospects and customers were actually attending the show.
 
 ## Pack Expo 2016
-
-Description of concept and reason for direction.
 
 <div>
 <img data-aos="fade-up" src="/img/projects/domino-case-study/domino-case-study-napa-mockup.jpg"
@@ -47,8 +51,6 @@ srcset="
 
 ## Pack Expo 2017
 
-Description of concept and reason for direction.
-
 <div>
 <img data-aos="fade-up" src="/img/projects/domino-case-study/domino-case-study-beer-mockup.jpg"
 alt="Domino 2017 Pack Expo Artwork"
@@ -64,8 +66,6 @@ srcset="
 <div class="spacer"></div>
 
 ## Pack Expo Website
-
-Description of its usefulness etc.
 
 <div>
 <img data-aos="fade-up" src="/img/projects/domino-case-study/domino-case-study-pack-expo-website-mockup.jpg"
