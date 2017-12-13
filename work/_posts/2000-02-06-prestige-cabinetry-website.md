@@ -2,7 +2,7 @@
 layout: project
 title: 2017 Website
 client: Prestige Custom Cabinetry and Millwork, Inc.
-description: Website redesign opens new doors that bring home greater profits.
+description: Website redesign opens doors to greater profits.
 cover-image: prestige-cabinetry-website/prestige-cabinetry-website-cover
 cover-text-color: fff
 back-color1: 203c55
@@ -11,7 +11,7 @@ tags:
 - Web Digital
 ---
 
-Content goes here.
+Prestige offers a variety of cabinetry lines to appeal to a wide range of residential and commercial clients. Insight’s design offers a clean and easy to navigate site that quickly educates the consumer of the award-winning cabinetry and millwork that Prestige Custom Cabinetry offers.
 
 <a href="http://prestigecab.com/" target= "_blank" rel="noopener">View the Site</a>
 

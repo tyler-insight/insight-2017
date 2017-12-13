@@ -12,7 +12,7 @@ tags:
 
 ---
 
-Roehl, a trucking company with over 50 years of success needed a brochure introducing their transportation services to prospective customers. Insight delivered with an eye-catching dimensional,  die-cut piece that safely passed by their competition.
+Roehl, a trucking company with over 50 years of success needed a brochure introducing their transportation services to prospective customers. Insight delivered with an eye-catching, dimensional,  die-cut piece that safely passed by their competition.
 
 <div class="images">
 <img class="half first fit" data-aos="fade-up" data-featherlight="/img/projects/roehl-brochure/roehl-brochure-cover.jpg"

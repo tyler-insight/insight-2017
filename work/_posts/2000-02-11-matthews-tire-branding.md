@@ -16,7 +16,7 @@ How to develop and maintain a unique brand—as well as offering monthly, themed
 
 ## Goal
 
-In business since 1952, Matthews Tire is a successful chain of tire and automotive repair shops in Northeast Wisconsin. The tire business is extremely competitive—with constant pressure from car dealerships, big box stores and internet sales. Insight was determined to help Matthews consistently build on their reputation as a locally owned company known for great service, value and a unmatched tire expertise.
+In business since 1952, Matthews Tire is a successful chain of tire and automotive repair shops in Northeast Wisconsin. The tire business is extremely competitive—with constant pressure from car dealerships, big box stores and internet sales. Insight was determined to help Matthews consistently build on their reputation as a locally owned company known for great service, value and unmatched tire expertise.
 
 <div>
 <img data-aos="fade-up" src="/img/projects/matthews-tire-branding/matthews-tire-branding-billboard-basketball.jpg"
@@ -34,7 +34,7 @@ srcset="
 
 ## Result
 
-Matthews branding is ahead of the pack with a successful radio, TV, outdoor and print campaign—as well as a winning website—that sets them apart from area competitors. In addition Matthews has a strong social media presence on Facebook and Twitter, plus helpful YouTube videos and more. And customer satisfaction is constantly monitored via an online satisfaction survey. Together, these efforts keep Matthews’ marketing hitting on all cylinders!
+Matthews branding is ahead of the pack with a successful radio, TV, outdoor and print campaign—as well as a winning website—that sets them apart from area competitors. In addition, Matthews has a strong social media presence on Facebook and Twitter, plus helpful YouTube videos and more. And customer satisfaction is constantly monitored via an online satisfaction survey. Together, these efforts keep Matthews’ marketing firing on all cylinders!
 
 <div>
 <img data-aos="fade-up" src="/img/projects/matthews-tire-branding/matthews-tire-branding-print.jpg"

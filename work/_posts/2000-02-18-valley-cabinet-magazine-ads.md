@@ -2,7 +2,7 @@
 layout: project
 title: Magazine Ads
 client: Valley Cabinet Inc.
-description: Summary of project.
+description: All the essential ingredients for a successful print campaign.
 cover-image: valley-cabinet-magazine-ads/valley-cabinet-magazine-ads-1
 cover-text-color: 'ffffff'
 back-color1: '85653e'
@@ -12,7 +12,7 @@ tags:
 
 ---
 
-Content here.
+Insight created a series of print ads to highlight all of the fresh features and delicious details that Valley Cabinet offers their customers. Insight blended together flavorful copywriting, fresh photography and expertly placed media, providing all of the essential ingredients for success.
 
 <div class="images">
 <img class="half first fit" data-aos="fade-up" data-featherlight="/img/projects/valley-cabinet-magazine-ads/valley-cabinet-magazine-ads-1.jpg"

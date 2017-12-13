@@ -2,7 +2,7 @@
 layout: project
 title: Online Ads
 client: Domino Printing Sciences
-description: A creative way for brewing new clients.
+description: If you Geofence them, they will come!
 cover-image: domino-expo-online-ads/domino-expo-online-ads-mockup
 cover-text-color: 'ffffff'
 back-color1: '009e5a'
@@ -12,7 +12,7 @@ tags:
 
 ---
 
-Content here.
+When Domino needed to ensure top attendance at their Pack Expo booth, Insight rounded up additional attendees utilizing Geofencing. The industry experts that were targeted at the event easily discovered the Domino booth and the solutions they offer to the printing industry.
 
 <div>
 <img data-aos="fade-up"

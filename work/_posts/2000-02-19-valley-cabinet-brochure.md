@@ -2,7 +2,7 @@
 layout: project
 title: Brochure
 client: Valley Cabinet Inc.
-description: Summary of project.
+description: The beauty of brand consistency.
 cover-image: valley-cabinet-brochure/valley-cabinet-brochure-cover
 cover-text-color: 'ffffff'
 back-color1: '85653e'
@@ -12,7 +12,7 @@ tags:
 
 ---
 
-Content here.
+Insight designed and produced Valley Cabinet’s Signature brochure and folder providing a consistent look throughout. The final result was a success utilizing Insight’s in-house design, copywriting, photo styling and post production techniques. 
 
 <div class="images">
 <img class="half first fit" data-aos="fade-up" data-featherlight="/img/projects/valley-cabinet-brochure/valley-cabinet-brochure-front.jpg"
