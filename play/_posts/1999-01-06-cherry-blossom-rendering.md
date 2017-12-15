@@ -2,7 +2,7 @@
 layout: play-design
 title: Cherry Blossom Rendering
 cover-image: cherry-blossom-rendering/cherry-blossom-rendering
-size: two-thirds
+size: one-third
 type: design
 
 ---

@@ -2,7 +2,7 @@
 layout: project
 title: Case Study
 client: Van's Lumber & Custom Builders
-description: Summary of project.
+description: Building the perfect site to showcase a quality builder.
 cover-image: vans-lumber-case-study/vans-lumber-case-study-cover
 cover-text-color: 'ffffff'
 back-color1: '0c4834'

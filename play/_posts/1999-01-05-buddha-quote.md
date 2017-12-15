@@ -5,7 +5,7 @@ quote: "What you <em>think</em>, you <strong>become</strong>.<br>
 What you <em>feel</em>, you <strong>attract</strong>.<br>
 What you <em>imagine</em>, you <strong>create</strong>."
 person: "Buddha"
-size: one-third
+size: full
 type: quote
 
 ---

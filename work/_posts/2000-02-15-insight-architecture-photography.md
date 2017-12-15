@@ -14,14 +14,14 @@ tags:
 Whether you need to showcase residential or commercial spaces, Insight can capture the best image with attention to detail. We apply advanced lighting and post-production techniques to create images that are inviting and that get recognized.
 
 <div class="images">
-<img class="full fit" data-aos="fade-up" data-featherlight="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2.jpg"
-alt="Home Exterior 1" src="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2.jpg"
-srcset="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2-2400.jpg 2400w,
-/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2-1800.jpg 1800w,
-/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2-1200.jpg 1200w,
-/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2-900.jpg 900w,
-/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2-600.jpg 600w,
-/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2-400.jpg 400w" />
+<img class="full fit" data-aos="fade-up" data-featherlight="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-3.jpg"
+alt="Home Exterior 3" src="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-3.jpg"
+srcset="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-3-2400.jpg 2400w,
+/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-3-1800.jpg 1800w,
+/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-3-1200.jpg 1200w,
+/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-3-900.jpg 900w,
+/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-3-600.jpg 600w,
+/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-3-400.jpg 400w" />
 
 <img class="half first fit" data-aos="fade-up" data-featherlight="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-1.jpg"
 alt="Home Exterior 2" src="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-1.jpg"
@@ -32,14 +32,14 @@ srcset="/img/projects/insight-architecture-photography/insight-architecture-phot
 /img/projects/insight-architecture-photography/insight-architecture-photography-exterior-1-600.jpg 600w,
 /img/projects/insight-architecture-photography/insight-architecture-photography-exterior-1-400.jpg 400w" />
 
-<img class="half last fit" data-aos="fade-up" data-featherlight="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-3.jpg"
-alt="Home Exterior 3" src="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-3.jpg"
-srcset="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-3-2400.jpg 2400w,
-/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-3-1800.jpg 1800w,
-/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-3-1200.jpg 1200w,
-/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-3-900.jpg 900w,
-/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-3-600.jpg 600w,
-/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-3-400.jpg 400w" />
+<img class="half last fit" data-aos="fade-up" data-featherlight="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2.jpg"
+alt="Home Exterior 1" src="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2.jpg"
+srcset="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2-2400.jpg 2400w,
+/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2-1800.jpg 1800w,
+/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2-1200.jpg 1200w,
+/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2-900.jpg 900w,
+/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2-600.jpg 600w,
+/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-2-400.jpg 400w" />
 
 <img class="full" data-aos="fade-up" data-featherlight="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-4.jpg"
 alt="Home Exterior 4" src="/img/projects/insight-architecture-photography/insight-architecture-photography-exterior-4.jpg"

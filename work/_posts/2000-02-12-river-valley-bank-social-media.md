@@ -17,7 +17,7 @@ Insight ensures that all content created for River Valley Bank’s ongoing adver
 
 ## Daily Updates
 
-Content here.
+Insight provides ongoing daily updates about everyday life at all of RVB’s 15 locations. These updates are delivered to RVB’s social media channels to keep customers and employees informed. These updates include special events, changes in branch hours, employee announcements, holidays and more.
 
 <div>
 <img data-aos="fade-up" src="/img/projects/river-valley-bank-social-media/river-valley-bank-social-media-daily-content.jpg"
@@ -34,7 +34,7 @@ srcset="
 
 ## #RiverValleyExperience
 
-Content here.
+River Valley Bank wanted to showcase the uniqueness and importance of the River Valley Bank experience.  Insight created the hashtag RiverValleyExperience to demonstrate that everything the bank does, both internally and externally, reinforces their brand experience. In addition, Insight imports all content to the RVB website, so it can be viewed even outside of a social connection.
 
 <div>
 <img data-aos="fade-up" src="/img/projects/river-valley-bank-social-media/river-valley-bank-social-media-experience-mockup.jpg"
@@ -62,7 +62,7 @@ srcset="
 
 ## 50 Reasons
 
-Content here.
+The 50 Reasons social media campaign was developed specifically for RVB’s 50th anniversary. This campaign tied in 50 reasons for customers to love their bank in conjunction with the 50 years that RVB has been in business. For 50 weeks out of the year, a different reason was presented on social media to showcase everything that makes River Valley Bank great. 
 
 <div>
 <img data-aos="fade-up" src="/img/projects/river-valley-bank-social-media/river-valley-bank-social-media-50-reasons.jpg"

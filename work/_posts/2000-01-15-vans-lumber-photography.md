@@ -2,7 +2,7 @@
 layout: project
 title: Architecture Photography
 client: Van's Lumber
-description: Interior and exterior photography of homes that Van's Lumber has built.
+description: Creating a strong visual foundation through eye-catching images.
 cover-image: vans-lumber-photography/vans-lumber-photography-cover
 cover-text-color: fff
 back-color1: 484948

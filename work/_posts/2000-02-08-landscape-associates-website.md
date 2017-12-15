@@ -2,7 +2,7 @@
 layout: project
 title: 2017 Website
 client: Landscape Associates
-description: Website redesign puts more green into landscaping sales.
+description: It’s a natural.
 cover-image: landscape-associates-website/landscape-associates-website-cover
 cover-text-color: fff
 back-color1: 3db04c
@@ -11,7 +11,9 @@ tags:
 - Web Digital
 ---
 
-Project info goes here.
+Standing out in the competitive green industry requires an image that is as big as the wide-open spaces of the great outdoors. Insight designed and programmed a site for Landscape Associates that focused on the beautiful imagery of the client’s past projects. The clean site offers its users easy navigation and is optimized for mobile devices and SEO.
+
+The site is successful for generating numerous new leads and has customers beating a path to their door. It’s okay… Landscape Associates can re-sod.
 
 <a href="https://landscape-associates.com/" target= "_blank" rel="noopener">View the Site</a>
 

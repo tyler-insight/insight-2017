@@ -434,6 +434,28 @@
       }
     }
 }
+
+.blog-body {
+  iframe {
+      margin: 30px 0;
+      @include span-columns(4);
+      min-height: 400px;
+      @include media($desktop-large){
+        @include span-columns(10);
+        @include shift(1);
+        max-width: 100%;
+      }
+      @include media($desktop-largest){
+        @include span-columns(8);
+        @include shift(2);
+        max-width: 100%;
+      }
+  }
+  img {
+      width: 100%;
+      margin-bottom:1em;
+  }
+}
 .blog-body, .project-body {
     margin-bottom: $mobile-spacing;
     @include media($tablet) {
@@ -511,25 +533,10 @@
     margin-top:1em;
   }
 
-    iframe {
-        margin: 30px 0;
-        @include span-columns(4);
-        min-height: 400px;
-        @include media($desktop-large){
-          @include span-columns(10);
-          @include shift(1);
-          max-width: 100%;
-        }
-        @include media($desktop-largest){
-          @include span-columns(8);
-          @include shift(2);
-          max-width: 100%;
-        }
-    }
+
 
     img {
         width: 100%;
-        margin-bottom:1em;
     }
 
     video {

@@ -2,7 +2,7 @@
 layout: project
 title: Portrait Photography Showcase
 client: Insight Creative, Inc.
-description: Examples of our portrait photography work.
+description: Let your personality shine through!
 cover-image: insight-portrait-photography/insight-portrait-photography-cover
 cover-text-color: fff
 back-color1: e22357
@@ -11,7 +11,7 @@ tags:
   - Photography
 ---
 
-Content here.
+Insight produces well executed portraits and headshots that can be an important element in marketing your business. Our photographers are experts at capturing the personality of executives and business professionals who want to look their best. Come to our studio or we’ll come to you with our studio lighting system. We make getting a great business headshot or portrait a breeze.
 
 <div class="images">
 

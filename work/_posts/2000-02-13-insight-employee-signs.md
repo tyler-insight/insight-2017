@@ -2,7 +2,7 @@
 layout: project
 title: Door Sign Photography
 client: Insight Creative, Inc.
-description: We wanted to spice up our office by adding some door signs with all of our beautiful mugs on display.
+description: It’s what is on the inside that counts.
 cover-image: insight-employee-signs/insight-employee-signs-cover
 cover-text-color: fff
 back-color1: e22357
@@ -11,9 +11,7 @@ tags:
   - Photography
 ---
 
-Content here.
-
-Each department was shot using a different color and a different theme.
+Usually we’re busy working on great projects for our clients. However, on occasion, we take a moment to create something fun for our own office. Here’s an example of a quick internal assignment to show the personalities of the people behind the doors of our offices. Each department was photographed using a different color and a different theme. The result was a fun introduction to the team members in each department.
 
 <div class="images">
 
