@@ -2,7 +2,7 @@
 layout: project
 title: Logo Design
 client: Bake My Day
-description: A sweet new identity is the icing on the Cupcake.
+description: A sweet new identity is the icing on the cupcake.
 cover-image: bake-my-day/bake-my-day-logo-1
 cover-text-color: fff
 back-color1: c3dc93

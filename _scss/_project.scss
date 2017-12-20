@@ -3,12 +3,15 @@
     display: table;
     overflow: hidden;
     width: 100%;
-    height: calc(75vh - #{$nav-height});
+    height: calc(60vh - #{$nav-height});
     margin-bottom: 0;
     background: #eee;
     background-position: center;
     background-size: cover;
 
+    @include media($desktop-large) {
+        height: calc(75vh - #{$nav-height});
+    }
 
     .color-overlay {
         position: absolute;

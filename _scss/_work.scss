@@ -119,7 +119,7 @@
 .project {
     @include span-columns(4);
     position: relative;
-    height: 300px;
+    height: 250px;
     overflow: hidden;
     object-fit: cover;
     background-size: cover;
@@ -178,11 +178,11 @@
         }
     }
     @include media($tablet) {
-        height: 500px;
+        height: 350px;
     }
     @include media($desktop) {
          @include span-columns(6);
-        height: 400px;
+
         width: calc(49% - .4em);
         display: none;
         margin: 0.2em 0.4em;
@@ -261,13 +261,13 @@
     position: relative;
     overflow: hidden;
     z-index: 0;
-    height: 300px;
+    height: 250px;
 
     @include media($tablet) {
-        height: 500px;
+        height: 350px;
     }
     @include media($desktop) {
-        height: 400px;
+
     }
     @include media($desktop-large) {
         height: 300px;
@@ -288,13 +288,13 @@
         background: $light-gray;
         left:0;
 
-        height: 300px;
+        height: 250px;
 
         @include media($tablet) {
-            height: 500px;
+            height: 350px;
         }
         @include media($desktop) {
-            height: 400px;
+
         }
         @include media($desktop-large) {
             height: 300px;

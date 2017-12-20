@@ -2,7 +2,7 @@
 layout: project
 title: That's Commitment Campaign
 client: River Valley Bank
-description: River Valley Bank needed a way to show their commitment to their customers.
+description: A memorable campaign to show customer commitment.
 cover-image: river-valley-bank-thats-commitment/river-valley-bank-thats-commitment-cover
 cover-text-color: fff
 back-color1: 17355d

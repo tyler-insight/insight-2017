@@ -2,7 +2,7 @@
 layout: project
 title:  Coding for Compliance Interview Video
 client: Domino Printing Sciences
-description: Interior and exterior photography of homes that Van's Lumber has built.
+description: Providing clarity for an industry facing uncertainty.
 cover-image: domino-coding-for-compliance-video/domino-coding-for-compliance-video-cover
 cover-text-color: fff
 back-color1: 229ed8
