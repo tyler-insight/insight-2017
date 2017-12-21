@@ -13,6 +13,7 @@ var rename = require("gulp-rename");
 var changed = require('gulp-changed');
 var parallel = require("concurrent-transform");
 var os = require("os");
+var deploy = require('gulp-gh-pages');
 
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -129,6 +130,11 @@ var resizeImageTasks = [];
     resizeImageTasks.push(resizeImageTask);
 });
 
+gulp.task("deploy", function() {
+    return gulp.src("./_site/**/*")
+        .pipe(deploy());
+});
+
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
@@ -157,8 +163,3 @@ gulp.task('min', ['optimize']);
 /**
  * Deploys to Github
  */
-
-gulp.task("deploy", function() {
-    return gulp.src("./_site/**/*")
-        .pipe(deploy());
-});
