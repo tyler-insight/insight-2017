@@ -2,7 +2,7 @@
 layout: project
 title: 2015 Website
 client: Matthews Tire
-description: A site that keeps tire sales rolling.
+description: Keeping tire sales rolling.
 cover-image: matthews-tire-website/matthews-tire-website-cover
 cover-text-color: fff
 back-color1: ffdd00
@@ -11,7 +11,12 @@ tags:
 - Web Digital
 
 ---
-Description of project goes here.
+Matthews Tire is a locally owned tire and auto repair center known for providing great service, value and a no excuses satisfaction policy since 1952.
+
+Insight developed a new Matthews Tire website that incorporates their current branding and services. The focus was creating a clean and organized design that provides a fresh new look and makes it easy for visitors to navigate.
+
+The site also incorporates a new responsive design to allow easy navigation on all mobile devices. The end result is an effective new website that keeps new tire sales rolling along.
+
 
 <a href="http://matthewstire.com/" target= "_blank" rel="noopener">View the Site</a>
 
