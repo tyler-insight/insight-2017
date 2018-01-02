@@ -2,7 +2,7 @@
 layout: project
 title: Case Study
 client: Van's Lumber & Custom Builders
-description: Building the perfect site to showcase a quality builder.
+description: Building the perfect brand.
 cover-image: vans-lumber-case-study/vans-lumber-case-study-cover
 cover-text-color: 'ffffff'
 back-color1: '0c4834'
@@ -15,7 +15,7 @@ tags:
 
 ---
 
-Van’s Lumber & Custom Builders needed a brand refresh that matched their reputation for building high end, showcase homes in Door and Kewaunee counties of northeastern Wisconsin. Insight
+Van’s Lumber & Custom Builders needed a brand refresh that matched their reputation for building high end, showcase homes in Door and Kewaunee counties of northeastern Wisconsin.
 
 <div>
 <img data-aos="fade-up" src="/img/projects/vans-lumber-case-study/vans-lumber-case-study-business-cards.jpg"

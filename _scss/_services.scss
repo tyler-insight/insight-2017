@@ -5,6 +5,17 @@
         margin-bottom: $tablet-spacing;
     }
 
+    h1 {
+        @include media($desktop-large) {
+             @include span-columns(12);
+            @include shift(0);
+        }
+        @include media($desktop-largest) {
+             @include span-columns(12);
+            @include shift(0);
+        }
+    }
+
     p {
         margin-bottom: $mobile-spacing;
     }
@@ -15,12 +26,10 @@
             @include span-columns(4);
             @include omega;
             @include media($desktop-large) {
-                 @include span-columns(10);
-                @include shift(1);
+              
             }
             @include media($desktop-largest) {
-                 @include span-columns(8);
-                @include shift(2);
+                
             }
             border-top: 5px solid $light-gray;
 
