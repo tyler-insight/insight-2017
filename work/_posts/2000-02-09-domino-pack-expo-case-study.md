@@ -3,10 +3,10 @@ layout: project
 title: Pack Expo Case Study
 client: Domino Printing Sciences
 description: It’s Showtime!
-cover-image: domino-case-study/domino-case-study-beer-mockup-closeup
+cover-image: domino-case-study/domino-case-study-pack-expo-wall-art-mockup-2
 cover-text-color: fff
-back-color1: 54372b
-back-color2: 2c1c15
+back-color1: 12cd7a 
+back-color2: 009e58
 tags:
 - Branding
 - Print

@@ -3,7 +3,7 @@ layout: project
 title: 2017 Website
 client: Landscape Associates
 description: It’s a natural.
-cover-image: landscape-associates-website/landscape-associates-website-cover
+cover-image: landscape-associates-website/landscape-associates-website-assorted-devices
 cover-text-color: fff
 back-color1: 3db04c
 back-color2: 2a9038
@@ -18,14 +18,14 @@ The site is successful for generating numerous new leads and has customers beati
 <a href="https://landscape-associates.com/" target= "_blank" rel="noopener">View the Site</a>
 
 <div>
-<img data-aos="fade-up" src="/img/projects/landscape-associates-website/landscape-associates-website-assorted-devices.jpg"
+<img data-aos="fade-up" src="/img/projects/landscape-associates-website/landscape-associates-website-cover.jpg"
 alt="Responsive Design on Devices"
-srcset="/img/projects/landscape-associates-website/landscape-associates-website-assorted-devices-2400.jpg 2400w,
-/img/projects/landscape-associates-website/landscape-associates-website-assorted-devices-1800.jpg 1800w,
-/img/projects/landscape-associates-website/landscape-associates-website-assorted-devices-1200.jpg 1200w,
-/img/projects/landscape-associates-website/landscape-associates-website-assorted-devices-900.jpg 900w,
-/img/projects/landscape-associates-website/landscape-associates-website-assorted-devices-600.jpg 600w,
-/img/projects/landscape-associates-website/landscape-associates-website-assorted-devices-400.jpg 400w" />
+srcset="/img/projects/landscape-associates-website/landscape-associates-website-cover-2400.jpg 2400w,
+/img/projects/landscape-associates-website/landscape-associates-website-cover-1800.jpg 1800w,
+/img/projects/landscape-associates-website/landscape-associates-website-cover-1200.jpg 1200w,
+/img/projects/landscape-associates-website/landscape-associates-website-cover-900.jpg 900w,
+/img/projects/landscape-associates-website/landscape-associates-website-cover-600.jpg 600w,
+/img/projects/landscape-associates-website/landscape-associates-website-cover-400.jpg 400w" />
 </div>
 
 <div class="images">
@@ -53,3 +53,4 @@ srcset="/img/projects/landscape-associates-website/landscape-associates-website-
 /img/projects/landscape-associates-website/landscape-associates-website-services-page-400.jpg 400w" />
 </div>
 </div>
+

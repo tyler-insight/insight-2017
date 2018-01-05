@@ -3,7 +3,7 @@ layout: project
 title: Branding
 client: Matthews Tire
 description: "A successful brand refresh to keep sales from going flat."
-cover-image: matthews-tire-branding/matthews-tire-branding-billboard-dartboard
+cover-image: matthews-tire-branding/matthews-tire-branding-billboard-cover
 cover-text-color: 'ffffff'
 back-color1: '004990'
 back-color2: '00407d'

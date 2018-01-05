@@ -15,7 +15,7 @@ tags:
 
 ---
 
-Van’s Lumber & Custom Builders needed a brand refresh that matched their reputation for building high end, showcase homes in Door and Kewaunee counties of northeastern Wisconsin.
+Van’s Lumber & Custom Builders needed a brand refresh that matched their reputation for building high end, showcase homes in Door and Kewaunee counties of northeastern Wisconsin. Insight developed a new, clean look that was implemented throughout all of Van’s advertising and marketing materials from business cards to billboards. 
 
 <div>
 <img data-aos="fade-up" src="/img/projects/vans-lumber-case-study/vans-lumber-case-study-business-cards.jpg"
