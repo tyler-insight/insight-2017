@@ -3,7 +3,7 @@ layout: project
 title:  "Social&nbsp;Media"
 client: Fox Cities Marathon
 description: Breakthrough social media for a strong finish.
-cover-image: fox-cities-marathon-social-media/FCM-case-study-2
+cover-image: fox-cities-marathon-social-media/fox-cities-marathon-social-media-cover
 cover-text-color: fff
 back-color1: 6b2e7c
 back-color2: 127264
