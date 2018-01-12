@@ -1,4 +1,5 @@
 $(function() {
+  console.log('%c Insight Creative 2018 by Tyler Bramer','background: red; color: white; padding: 5px 10px;');
     var FadeTransition = Barba.BaseTransition.extend({
         start: function() {
             /**
