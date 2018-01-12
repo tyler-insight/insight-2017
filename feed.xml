@@ -7,6 +7,51 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>A Fresh New Design</title>
+        <description>&lt;p&gt;&lt;img data-aos=&quot;fade-up&quot; src=&quot;/img/blog/a-fresh-new-design-cover.jpg&quot; alt=&quot;Comparison New Site Versus Old Site&quot; srcset=&quot; /img/blog/a-fresh-new-design-cover-2400.jpg 2400w, /img/blog/a-fresh-new-design-cover-1800.jpg 1800w, /img/blog/a-fresh-new-design-cover-1200.jpg 1200w, /img/blog/a-fresh-new-design-cover-900.jpg 900w, /img/blog/a-fresh-new-design-cover-600.jpg 600w, /img/blog/a-fresh-new-design-cover-400.jpg 400w&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With the new year here, Insight Creative, Inc. is happy to release its new website. The new design isn’t just an aesthetic change, but a complete overhaul of the frontend. Over the last few years development on the web has been changing at an extremely accelerated rate: &lt;a href=&quot;https://en.wikipedia.org/wiki/HTTP/2&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;HTTP/2&lt;/a&gt; was released, there was a massive movement to improve performance due to mobile connectivity, ADA compliance has become a priority, and many other things released that we won’t have time to talk about here. With everything that happened, it was time that we upgraded our site.&lt;/p&gt;
+
+&lt;p&gt;Thanks to new techniques like img srcset, which allows you to set different images depending on the screen size, and cloud delivery networks that enable better caching and delivery of files, we are able to display much larger images without causing the website to load slower. In fact, sometimes even when displaying many larger images, pages are loading even faster than before when there were much smaller images being delivered.&lt;/p&gt;
+
+&lt;h5 id=&quot;new-website-imagery&quot;&gt;New Website Imagery&lt;/h5&gt;
+&lt;p&gt;&lt;img data-aos=&quot;fade-up&quot; src=&quot;/img/blog/a-fresh-new-design-new-imagery.jpg&quot; class=&quot;light-shadow&quot; alt=&quot;New Website Imagery&quot; srcset=&quot; /img/blog/a-fresh-new-design-new-imagery-2400.jpg 2400w, /img/blog/a-fresh-new-design-new-imagery-1800.jpg 1800w, /img/blog/a-fresh-new-design-new-imagery-1200.jpg 1200w, /img/blog/a-fresh-new-design-new-imagery-900.jpg 900w, /img/blog/a-fresh-new-design-new-imagery-600.jpg 600w, /img/blog/a-fresh-new-design-new-imagery-400.jpg 400w&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;old-website-imagery&quot;&gt;Old Website Imagery&lt;/h5&gt;
+&lt;p&gt;&lt;img data-aos=&quot;fade-up&quot; src=&quot;/img/blog/a-fresh-new-design-old-imagery.jpg&quot; class=&quot;light-shadow&quot; alt=&quot;Old Website Imagery&quot; srcset=&quot; /img/blog/a-fresh-new-design-old-imagery-2400.jpg 2400w, /img/blog/a-fresh-new-design-old-imagery-1800.jpg 1800w, /img/blog/a-fresh-new-design-old-imagery-1200.jpg 1200w, /img/blog/a-fresh-new-design-old-imagery-900.jpg 900w, /img/blog/a-fresh-new-design-old-imagery-600.jpg 600w, /img/blog/a-fresh-new-design-old-imagery-400.jpg 400w&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s compare the new homepage against the old homepage. Since the homepage is most likely the first page a visitor sees, it is essential that it loads fast not only on mobile but on desktop as well. You also want to keep in mind the amount of data that is on the page, since most mobile users have a data plan, which the website is going to use.&lt;/p&gt;
+
+&lt;h5 id=&quot;new-website-scores-via-gtmetrix&quot;&gt;New Website Scores via &lt;a href=&quot;https://gtmetrix.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GTmetrix&lt;/a&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;img data-aos=&quot;fade-up&quot; src=&quot;/img/blog/a-fresh-new-design-new-home-page-speeds.jpg&quot; class=&quot;light-shadow&quot; alt=&quot;New Website Scores&quot; srcset=&quot; /img/blog/a-fresh-new-design-new-home-page-speeds-2400.jpg 2400w, /img/blog/a-fresh-new-design-new-home-page-speeds-1800.jpg 1800w, /img/blog/a-fresh-new-design-new-home-page-speeds-1200.jpg 1200w, /img/blog/a-fresh-new-design-new-home-page-speeds-900.jpg 900w, /img/blog/a-fresh-new-design-new-home-page-speeds-600.jpg 600w, /img/blog/a-fresh-new-design-new-home-page-speeds-400.jpg 400w&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;old-website-scores-via-gtmetrix&quot;&gt;Old Website Scores via &lt;a href=&quot;https://gtmetrix.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GTmetrix&lt;/a&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;img data-aos=&quot;fade-up&quot; src=&quot;/img/blog/a-fresh-new-design-old-homepage-speeds.jpg&quot; class=&quot;light-shadow&quot; alt=&quot;Old Website Scores&quot; srcset=&quot; /img/blog/a-fresh-new-design-old-homepage-speeds-2400.jpg 2400w, /img/blog/a-fresh-new-design-old-homepage-speeds-1800.jpg 1800w, /img/blog/a-fresh-new-design-old-homepage-speeds-1200.jpg 1200w, /img/blog/a-fresh-new-design-old-homepage-speeds-900.jpg 900w, /img/blog/a-fresh-new-design-old-homepage-speeds-600.jpg 600w, /img/blog/a-fresh-new-design-old-homepage-speeds-400.jpg 400w&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see, the total load time and page size between the homepages is drastically different. This is in part due to the fact that the old homepage had an autoplay video that looped in the banner.&lt;/p&gt;
+
+&lt;h5 id=&quot;new-website-home-page&quot;&gt;New Website Home Page&lt;/h5&gt;
+&lt;p&gt;&lt;img data-aos=&quot;fade-up&quot; src=&quot;/img/blog/a-fresh-new-design-new-home-page.jpg&quot; class=&quot;light-shadow&quot; alt=&quot;New Website Home Page&quot; srcset=&quot; /img/blog/a-fresh-new-design-new-home-page-2400.jpg 2400w, /img/blog/a-fresh-new-design-new-home-page-1800.jpg 1800w, /img/blog/a-fresh-new-design-new-home-page-1200.jpg 1200w, /img/blog/a-fresh-new-design-new-home-page-900.jpg 900w, /img/blog/a-fresh-new-design-new-home-page-600.jpg 600w, /img/blog/a-fresh-new-design-new-home-page-400.jpg 400w&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;old-website-home-page&quot;&gt;Old Website Home Page&lt;/h5&gt;
+&lt;p&gt;&lt;img data-aos=&quot;fade-up&quot; src=&quot;/img/blog/a-fresh-new-design-old-home-page.jpg&quot; class=&quot;light-shadow&quot; alt=&quot;Old Website Home Page&quot; srcset=&quot; /img/blog/a-fresh-new-design-old-home-page-2400.jpg 2400w, /img/blog/a-fresh-new-design-old-home-page-1800.jpg 1800w, /img/blog/a-fresh-new-design-old-home-page-1200.jpg 1200w, /img/blog/a-fresh-new-design-old-home-page-900.jpg 900w, /img/blog/a-fresh-new-design-old-home-page-600.jpg 600w, /img/blog/a-fresh-new-design-old-home-page-400.jpg 400w&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Optimizations aside, we wanted to bring more life and energy into the website. We accomplished this through new animations and imagery. For example, if you visit our culture page and hover over an employee’s bio, you’ll see a series of images that rotate out to show a little bit of their personality. This gives the staff bios so much more life than just showing a simple thumbnail!&lt;/p&gt;
+
+&lt;h5 id=&quot;new-website-culture-page&quot;&gt;New Website Culture Page&lt;/h5&gt;
+&lt;p&gt;&lt;img data-aos=&quot;fade-up&quot; src=&quot;/img/blog/a-fresh-new-design-new-culture-page.jpg&quot; class=&quot;light-shadow&quot; alt=&quot;New Website Culture Page&quot; srcset=&quot; /img/blog/a-fresh-new-design-new-culture-page-2400.jpg 2400w, /img/blog/a-fresh-new-design-new-culture-page-1800.jpg 1800w, /img/blog/a-fresh-new-design-new-culture-page-1200.jpg 1200w, /img/blog/a-fresh-new-design-new-culture-page-900.jpg 900w, /img/blog/a-fresh-new-design-new-culture-page-600.jpg 600w, /img/blog/a-fresh-new-design-new-culture-page-400.jpg 400w&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;old-website-culture-page&quot;&gt;Old Website Culture Page&lt;/h5&gt;
+&lt;p&gt;&lt;img data-aos=&quot;fade-up&quot; src=&quot;/img/blog/a-fresh-new-design-old-culture-page.jpg&quot; class=&quot;light-shadow&quot; alt=&quot;Old Website Culture Page&quot; srcset=&quot; /img/blog/a-fresh-new-design-old-culture-page-2400.jpg 2400w, /img/blog/a-fresh-new-design-old-culture-page-1800.jpg 1800w, /img/blog/a-fresh-new-design-old-culture-page-1200.jpg 1200w, /img/blog/a-fresh-new-design-old-culture-page-900.jpg 900w, /img/blog/a-fresh-new-design-old-culture-page-600.jpg 600w, /img/blog/a-fresh-new-design-old-culture-page-400.jpg 400w&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We hope you enjoy the new design and have fun browsing all the awesome stuff here. Fingers crossed your new year starts off just as great as we feel ours has with this redesign!&lt;/p&gt;
+</description>
+        <pubDate>Mon, 01 Jan 2018 00:00:00 -0600</pubDate>
+        <link>//blog/a-fresh-new-design.html</link>
+        <guid isPermaLink="true">//blog/a-fresh-new-design.html</guid>
+      </item>
+    
+      <item>
         <title>Can Music Impact a Buying Decision?</title>
         <description>&lt;p&gt;&lt;img src=&quot;/img/blog/can-music-impact-a-buying-decision.jpg&quot; alt=&quot;Power of Music&quot; /&gt;&lt;/p&gt;
 
@@ -322,28 +367,6 @@ help each other build stronger communities. From brat frys and volunteering to r
         <pubDate>Mon, 15 May 2017 00:00:00 -0500</pubDate>
         <link>//blog/b2b-vs-b2b-what-you-need.html</link>
         <guid isPermaLink="true">//blog/b2b-vs-b2b-what-you-need.html</guid>
-      </item>
-    
-      <item>
-        <title>Media Director/Account Executive Andy VanRemortel Graduates from Leadership Green Bay</title>
-        <description>&lt;p&gt;Insight Creative Account Executive/Media Director Andy VanRemortel graduated in the class of 2017 from &lt;a href=&quot;http://www.greatergbc.org/programs/leadership/leadership-green-bay&quot;&gt;Leadership Green Bay&lt;/a&gt; this May. The community-based program led by the Green Bay Chamber of Commerce admits 45 outstanding area professionals each year and runs from September to May.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/blog/media-director-andy-vanremortel-graduates.jpg&quot; alt=&quot;Andy VanRemortel at Leadership Green Bay&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Through the course of the program, professionals attend monthly meetings focusing on a variety of topics including government, economic development, education, health and human services and more equipping them to lead programs that affect change in our communities. For the final phase of the program, students assemble into teams, choose a local cause or problem to address, and develop sustainable solutions to ultimately contribute to the betterment of greater Green Bay.&lt;/p&gt;
-
-&lt;p&gt;VanRemortel’s team selected the Dr. Rosa Minoka-Hill School for their final project. As an alternative K-12 school, the Minoka-Hill School serves students with a continuum of unique learning needs. Students are provided support to overcome personal challenges with the goal of transitioning back to their neighborhood or choice school, and ultimately graduating college, to be career and community ready.&lt;/p&gt;
-
-&lt;p&gt;Van Remortel’s team identified that, due to a lack of funds, the school has never held a formal graduation. Their Leadership Green Bay team developed a sustainable graduation ceremony for the school that now includes caps and gowns, two $1,000 scholarships for the next five years and a venue (Green Bay East High School).&lt;/p&gt;
-
-&lt;p&gt;“Leadership Green Bay is a fantastic program,” said VanRemortel. “It helps you look outside your regular day-to-day life and realize your community really needs you.” While completing the program, VanRemortel became inspired to extend his leadership talents beyond the duties of the program. He recently accepted positions on the board of directors for Golden House and the board of appeals for the City of De Pere.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Are YOU a Leader?&lt;/strong&gt;
-The Green Bay Chamber of Commerce is currently taking applications for Leadership Green Bay Class of 2018. &lt;a href=&quot;http://www.greatergbc.org/media/428896/lgb%20app%20class%20of%202018.pdf&quot;&gt;Apply now!&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 10 May 2017 00:00:00 -0500</pubDate>
-        <link>//blog/media-director-account-executive-andy-vanremortel-graduates-from-leadership-green-bay.html</link>
-        <guid isPermaLink="true">//blog/media-director-account-executive-andy-vanremortel-graduates-from-leadership-green-bay.html</guid>
       </item>
     
   </channel>
