@@ -130,11 +130,6 @@ var resizeImageTasks = [];
     resizeImageTasks.push(resizeImageTask);
 });
 
-gulp.task("deploy", function() {
-    return gulp.src("./_site/**/*")
-        .pipe(deploy());
-});
-
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
@@ -163,3 +158,7 @@ gulp.task('min', ['optimize']);
 /**
  * Deploys to Github
  */
+gulp.task("deploy", function() {
+    return gulp.src(["./_site/**/*","./_site/.*"])
+        .pipe(deploy());
+});
