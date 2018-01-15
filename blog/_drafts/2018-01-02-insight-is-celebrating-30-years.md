@@ -7,7 +7,6 @@ text-color: 'fff'
 back-color: 'd31145'
 cover-image: insight-is-celebrating-30-years-cover.jpg
 tag: blog
-
 ---
 
 <video autoplay loop preload="none">

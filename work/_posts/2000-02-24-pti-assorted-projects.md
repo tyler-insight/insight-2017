@@ -15,7 +15,7 @@ tags:
 
 ---
 
-Need content.
+Need content written.
 
 <div class="images">
 
