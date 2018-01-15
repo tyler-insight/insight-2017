@@ -2,7 +2,7 @@
 layout: project
 title: Assorted Projects
 client: Paper Transport, Inc.
-description: Creating collateral for the long haul.
+description: Branding & Recruitment
 cover-image: pti-assorted-projects/pti-cover
 cover-text-color: 'ffffff'
 back-color1: 'f03836'
@@ -15,7 +15,12 @@ tags:
 
 ---
 
-Need content written.
+When PTI needed assistance with driver recruitment and retention, Insight delivered with the right marketing direction to keep PTI miles ahead of their competition.
+
+From a multiple-state digital billboard campaign to recruit new drivers to driver safety and orientation videos, Insight provided the guidance to find and retain quality drivers.
+
+In addition, Insight designed dynamic interior graphics to highlight PTI’s building interior and trade show graphics, logos and animations to support PTI’s brand when they take their message on the road.
+
 
 <div class="images">
 
