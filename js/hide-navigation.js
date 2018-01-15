@@ -1,1 +1,101 @@
-jQuery(document).ready(function(e){function n(){var n=e(window).scrollTop();o.length>0?i(n):s(n),c=n,l=!1}function s(e){c-e>v?a.removeClass("is-hidden"):e-c>v&&e>h&&a.addClass("is-hidden")}function i(e){var n=o.offset().top-d.height()-a.height();c>=e?e<n?(a.removeClass("is-hidden"),d.removeClass("fixed slide-up"),o.removeClass("secondary-nav-fixed")):c-e>v&&(a.removeClass("is-hidden"),d.removeClass("slide-up").addClass("fixed"),o.addClass("secondary-nav-fixed")):e>n+h?(a.addClass("is-hidden"),d.addClass("fixed slide-up"),o.addClass("secondary-nav-fixed")):e>n&&(a.removeClass("is-hidden"),d.addClass("fixed").removeClass("slide-up"),o.addClass("secondary-nav-fixed"))}var a=e(".cd-auto-hide-header"),d=e(".cd-secondary-nav"),o=e(".sub-nav-hero"),t=a.height(),r=!1,l=!1,c=0,v=10,h=0;a.on("click",".nav-trigger",function(n){n.preventDefault(),r||(e(this).parents(".csstransitions").length>=0&&(r=!0),a.toggleClass("nav-open"),e(".cd-navigation-wrapper").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend",function(){r=!1}))}),e(window).on("scroll",function(){l||a.hasClass("nav-open")||(l=!0,window.requestAnimationFrame?requestAnimationFrame(n):setTimeout(n,250))}),e(window).on("resize",function(){t=a.height()})});
+jQuery(document).ready(function($){
+
+	var mainHeader = $('.cd-auto-hide-header'),
+		secondaryNavigation = $('.cd-secondary-nav'),
+		//this applies only if secondary nav is below intro section
+		belowNavHeroContent = $('.sub-nav-hero'),
+		headerHeight = mainHeader.height();
+var isLateralNavAnimating = false;
+
+	//set scrolling variables
+	var scrolling = false,
+		previousTop = 0,
+		currentTop = 0,
+		scrollDelta = 10,
+		scrollOffset = 0;
+
+	mainHeader.on('click', '.nav-trigger', function(event){
+		// open primary navigation on mobile
+		event.preventDefault();
+		if( !isLateralNavAnimating ) {
+			if($(this).parents('.csstransitions').length >= 0 ) isLateralNavAnimating = true;
+
+
+				mainHeader.toggleClass('nav-open');
+				$('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+					//animation is over
+					isLateralNavAnimating = false;
+				});
+				}
+	});
+
+	$(window).on('scroll', function(){
+		if( !scrolling && !mainHeader.hasClass("nav-open"))  {
+			scrolling = true;
+			(!window.requestAnimationFrame)
+				? setTimeout(autoHideHeader, 250)
+				: requestAnimationFrame(autoHideHeader);
+		}
+	});
+
+	$(window).on('resize', function(){
+		headerHeight = mainHeader.height();
+	});
+
+	function autoHideHeader() {
+		var currentTop = $(window).scrollTop();
+
+		( belowNavHeroContent.length > 0 )
+			? checkStickyNavigation(currentTop) // secondary navigation below intro
+			: checkSimpleNavigation(currentTop);
+
+	   	previousTop = currentTop;
+		scrolling = false;
+	}
+
+	function checkSimpleNavigation(currentTop) {
+		//there's no secondary nav or secondary nav is below primary nav
+	    if (previousTop - currentTop > scrollDelta) {
+	    	//if scrolling up...
+	    	mainHeader.removeClass('is-hidden');
+	    } else if( currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
+	    	//if scrolling down...
+	    	mainHeader.addClass('is-hidden');
+	    }
+	}
+
+	function checkStickyNavigation(currentTop) {
+		//secondary nav below intro section - sticky secondary nav
+		var secondaryNavOffsetTop = belowNavHeroContent.offset().top - secondaryNavigation.height() - mainHeader.height();
+
+		if (previousTop >= currentTop ) {
+	    	//if scrolling up...
+	    	if( currentTop < secondaryNavOffsetTop ) {
+	    		//secondary nav is not fixed
+	    		mainHeader.removeClass('is-hidden');
+	    		secondaryNavigation.removeClass('fixed slide-up');
+	    		belowNavHeroContent.removeClass('secondary-nav-fixed');
+	    	} else if( previousTop - currentTop > scrollDelta ) {
+	    		//secondary nav is fixed
+	    		mainHeader.removeClass('is-hidden');
+	    		secondaryNavigation.removeClass('slide-up').addClass('fixed');
+	    		belowNavHeroContent.addClass('secondary-nav-fixed');
+	    	}
+
+	    } else {
+	    	//if scrolling down...
+	 	  	if( currentTop > secondaryNavOffsetTop + scrollOffset ) {
+	 	  		//hide primary nav
+	    		mainHeader.addClass('is-hidden');
+	    		secondaryNavigation.addClass('fixed slide-up');
+	    		belowNavHeroContent.addClass('secondary-nav-fixed');
+	    	} else if( currentTop > secondaryNavOffsetTop ) {
+	    		//once the secondary nav is fixed, do not hide primary nav if you haven't scrolled more than scrollOffset
+	    		mainHeader.removeClass('is-hidden');
+	    		secondaryNavigation.addClass('fixed').removeClass('slide-up');
+	    		belowNavHeroContent.addClass('secondary-nav-fixed');
+	    	}
+
+	    }
+	}
+});
