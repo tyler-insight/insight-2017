@@ -98,7 +98,7 @@ $(function() {
         // If mixitup is running kill it (can't have 2 instances)
         if (mixRunning == true){
           $('#container').mixItUp('destroy');
-          console.log("Filter instance destroyed");
+          // console.log("Filter instance destroyed");
         }
         // Instantiate MixItUp:
         $('#container').mixItUp({
@@ -113,7 +113,7 @@ $(function() {
         //Run script for filter dropdown
         filter();
         mixRunning = true;
-        console.log("Filter instance created");
+        // console.log("Filter instance created");
       }
 
       //If contact page, run script for text typing and load google map
@@ -151,7 +151,7 @@ $(function() {
 
     //Start of navigation script
     function navigation() {
-      console.log("Navigation script running");
+      // console.log("Navigation script running");
       var mainHeader = $('.cd-auto-hide-header'),
         secondaryNavigation = $('.cd-secondary-nav'),
         //this applies only if secondary nav is below intro section
@@ -288,7 +288,7 @@ $(function() {
 
     function arrowSlider() {
       // Get carousel elements
-      console.log("Testimonial script running");
+      // console.log("Testimonial script running");
       var tLeftButton = $("#testimonials-l");
       var tRightButton = $("#testimonials-r");
 
@@ -355,7 +355,7 @@ $(function() {
 
     //Start of map script
     function map() {
-      console.log("Map script running");
+      // console.log("Map script running");
       //set your google maps parameters
       var latitude = 44.485759,
         longitude = -87.992912,
@@ -673,7 +673,7 @@ $(function() {
 
     //Start of culture script
     function cultureHeader() {
-      console.log("Culture script running");
+      // console.log("Culture script running");
       //set animation timing
       var animationDelay = 5000,
         //loading bar effect
@@ -1011,7 +1011,7 @@ $(function() {
 
     //Start of typing script
     function typing() {
-      console.log("Typing script running");
+      // console.log("Typing script running");
       var Typed = function(el, options) {
 
         // chosen element to manipulate text
@@ -1111,7 +1111,7 @@ $(function() {
           if (this.stringsElement) {
             this.strings = [];
             this.stringsElement.hide();
-            console.log(this.stringsElement.children());
+            // console.log(this.stringsElement.children());
             var strings = this.stringsElement.children();
             $.each(strings, function(key, value) {
               self.strings.push($(value).html());
@@ -1432,7 +1432,7 @@ $(function() {
       // Find what current page is
       var page = $(location).attr('href');
 
-      console.log("Main scripts running");
+      // console.log("Main scripts running");
 
       //Run script that cycles employee images on hover
       employees();
@@ -1793,7 +1793,7 @@ $(function() {
 
       //Start of accordion script
       function accordion() {
-        console.log("Accordion script running");
+        // console.log("Accordion script running");
         var acc = document.getElementsByClassName("accordion");
         var i;
 
@@ -1818,7 +1818,7 @@ $(function() {
 
       //Start of employees script
       function employees() {
-        console.log("Employees script running");
+        // console.log("Employees script running");
         /*
          * Images rotation jQuery plugin | 2014-08-12
          * Copyright (c) 2013-2014 sladex | MIT License
@@ -1912,7 +1912,7 @@ $(function() {
 
       //Start of video script
       function video() {
-        console.log("Video script running");
+        // console.log("Video script running");
         var fullScreenVideo = fullScreenVideo || {};
         var containerHeight = 0;
 
