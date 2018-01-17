@@ -1,8 +1,8 @@
 ---
 layout: project
-title: Assorted Projects
+title: Branding & Recruitment
 client: Paper Transport, Inc.
-description: Branding & Recruitment
+description: Marketing That Delivers.
 cover-image: pti-assorted-projects/pti-cover
 cover-text-color: 'ffffff'
 back-color1: 'f03836'

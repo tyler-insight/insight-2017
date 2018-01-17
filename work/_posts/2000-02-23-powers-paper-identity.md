@@ -2,7 +2,7 @@
 layout: project
 title: Identity
 client: Powers Paper
-description: A Powerful Brand Launch
+description: A Powerful Brand Launch.
 cover-image: powers-paper-identity/powers-paper-identity-logo
 cover-text-color: 'ffffff'
 back-color1: '0c4834'
